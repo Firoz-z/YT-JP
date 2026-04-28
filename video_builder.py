@@ -6,7 +6,7 @@ from PIL import Image, ImageDraw, ImageFont, ImageFilter
 from config import *
 from tts import generate_speech
 
-AUDIO_PADDING = 0.8
+AUDIO_PADDING = 0.15
 
 
 # ---------- font loading ----------
@@ -282,10 +282,16 @@ def _tts_with_retry(text: str, path: str, lang: str = "jp",
             time.sleep(3 * (attempt + 1))
 
 
-def _multi_tts(segments: list, out: str, gap_sec: float = 0.35) -> None:
-    """Generate TTS for each segment and concatenate with small gaps.
+def _multi_tts(segments: list, out: str, default_gap: float = 0.05) -> None:
+    """Generate TTS for each segment and concatenate them.
 
-    segments = [{"text": str, "lang": "en"|"jp", "rate": "+0%"}, ...]
+    segments = [{"text": str, "lang": "en"|"jp", "rate": "+0%",
+                 "pause_after": 0.0 (optional)}, ...]
+
+    `default_gap` is used between segments that don't specify `pause_after`.
+    Set very small (0.05s) so a single sentence split across voices flows
+    naturally. Use larger explicit `pause_after` between distinct items
+    (e.g. listing synonyms).
     """
     audio_paths = []
     for i, seg in enumerate(segments):
@@ -299,19 +305,24 @@ def _multi_tts(segments: list, out: str, gap_sec: float = 0.35) -> None:
         os.replace(audio_paths[0], out)
         return
 
-    silence = out + ".silence.mp3"
-    subprocess.run([
-        "ffmpeg", "-y",
-        "-f", "lavfi", "-i", "anullsrc=r=44100:cl=mono",
-        "-t", str(gap_sec), "-q:a", "9", "-acodec", "libmp3lame",
-        silence,
-    ], check=True, capture_output=True)
+    # Build per-gap silence files (different gaps may differ between segments)
+    silences = []
+    for i in range(len(segments) - 1):
+        gap = segments[i].get("pause_after", default_gap)
+        sil = out + f".sil{i}.mp3"
+        subprocess.run([
+            "ffmpeg", "-y",
+            "-f", "lavfi", "-i", "anullsrc=r=44100:cl=mono",
+            "-t", f"{gap:.3f}", "-q:a", "9", "-acodec", "libmp3lame",
+            sil,
+        ], check=True, capture_output=True)
+        silences.append(sil)
 
     interleaved = []
     for i, audio in enumerate(audio_paths):
         interleaved.append(audio)
-        if i < len(audio_paths) - 1:
-            interleaved.append(silence)
+        if i < len(silences):
+            interleaved.append(silences[i])
 
     cmd = ["ffmpeg", "-y"]
     for inp in interleaved:
@@ -328,30 +339,45 @@ def _multi_tts(segments: list, out: str, gap_sec: float = 0.35) -> None:
     cmd += ["-filter_complex", fc, "-map", "[out]", out]
     subprocess.run(cmd, check=True, capture_output=True)
 
-    for p in audio_paths + [silence]:
+    for p in audio_paths + silences:
         if os.path.exists(p):
             os.remove(p)
 
 
 def _render_one_scene(img: Image.Image, audio: str, duration: float,
                       out: str, w: int, h: int) -> None:
+    """Render a single scene with tightly-aligned audio.
+
+    The output clip is exactly `duration` seconds long. Audio plays from
+    t=0 and is padded with silence to match the video duration so concat
+    later doesn't drop frames or drift.
+    """
     png = out + ".png"
     img.save(png)
     subprocess.run([
         "ffmpeg", "-y",
-        "-loop", "1", "-i", png,
+        "-loop", "1", "-framerate", str(FPS), "-t", f"{duration:.3f}", "-i", png,
         "-i", audio,
+        # Pad audio with silence to exactly match video length
+        "-af", f"apad,atrim=0:{duration:.3f},asetpts=PTS-STARTPTS",
         "-c:v", "libx264", "-preset", "fast", "-crf", "23",
         "-pix_fmt", "yuv420p",
         "-c:a", "aac", "-b:a", "192k", "-ar", "44100", "-ac", "1",
-        "-vf", f"scale={w}:{h},fps={FPS}",
-        "-t", str(duration),
+        "-vf", f"scale={w}:{h},fps={FPS},setpts=PTS-STARTPTS",
+        "-vsync", "cfr",
+        "-t", f"{duration:.3f}",
         out,
     ], check=True, capture_output=True)
     os.remove(png)
 
 
 def _concat_clips(clips: list, output: str) -> None:
+    """Concat clips with re-encoding to keep audio/video locked in sync.
+
+    Stream copy (-c copy) preserves per-clip PTS offsets which can drift
+    when clips have slightly different audio durations; re-encoding with
+    a uniform fps and sample rate keeps everything aligned.
+    """
     lst = output + ".list.txt"
     with open(lst, "w") as f:
         for p in clips:
@@ -359,7 +385,11 @@ def _concat_clips(clips: list, output: str) -> None:
     subprocess.run([
         "ffmpeg", "-y",
         "-f", "concat", "-safe", "0", "-i", lst,
-        "-c", "copy", "-movflags", "+faststart",
+        "-c:v", "libx264", "-preset", "fast", "-crf", "23",
+        "-pix_fmt", "yuv420p",
+        "-c:a", "aac", "-b:a", "192k", "-ar", "44100", "-ac", "1",
+        "-vsync", "cfr", "-r", str(FPS),
+        "-movflags", "+faststart",
         output,
     ], check=True, capture_output=True)
     os.remove(lst)
@@ -428,11 +458,19 @@ def create_short(word_data: dict, output_path: str,
         })
         img_slot += 1
 
-    # Scene 5: synonyms — EN intro, then each synonym pronounced individually in JP
+    # Scene 5: synonyms — EN intro, then each synonym pronounced individually in JP.
+    # Larger pause_after between synonyms so each word has room to land.
     if syns:
-        syn_segments = [{"text": "Related words.", "lang": "en", "rate": "+10%"}]
-        for s in syns[:3]:
-            syn_segments.append({"text": s, "lang": "jp", "rate": "-15%"})
+        syn_segments = [
+            {"text": "Related words.", "lang": "en", "rate": "+10%",
+             "pause_after": 0.30},
+        ]
+        top = syns[:3]
+        for j, s in enumerate(top):
+            syn_segments.append({
+                "text": s, "lang": "jp", "rate": "-15%",
+                "pause_after": 0.25 if j < len(top) - 1 else 0.0,
+            })
         specs.append({
             "frame":    _make_synonyms_frame(word_data, WIDTH, HEIGHT, img(img_slot)),
             "segments": syn_segments,
