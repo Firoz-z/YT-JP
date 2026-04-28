@@ -282,28 +282,55 @@ def _tts_with_retry(text: str, path: str, lang: str = "jp",
             time.sleep(3 * (attempt + 1))
 
 
-def _concat_audio_pair(jp_path: str, en_path: str, out: str,
-                        gap_sec: float = 0.4) -> None:
-    """Concat JP audio + small gap + EN audio."""
+def _multi_tts(segments: list, out: str, gap_sec: float = 0.35) -> None:
+    """Generate TTS for each segment and concatenate with small gaps.
+
+    segments = [{"text": str, "lang": "en"|"jp", "rate": "+0%"}, ...]
+    """
+    audio_paths = []
+    for i, seg in enumerate(segments):
+        path = out + f".seg{i}.mp3"
+        _tts_with_retry(seg["text"], path,
+                        lang=seg.get("lang", "en"),
+                        rate=seg.get("rate", "+0%"))
+        audio_paths.append(path)
+
+    if len(audio_paths) == 1:
+        os.replace(audio_paths[0], out)
+        return
+
     silence = out + ".silence.mp3"
     subprocess.run([
         "ffmpeg", "-y",
-        "-f", "lavfi", "-i", f"anullsrc=r=44100:cl=mono",
-        "-t", str(gap_sec),
-        "-q:a", "9", "-acodec", "libmp3lame",
+        "-f", "lavfi", "-i", "anullsrc=r=44100:cl=mono",
+        "-t", str(gap_sec), "-q:a", "9", "-acodec", "libmp3lame",
         silence,
     ], check=True, capture_output=True)
 
-    inputs = ["-i", jp_path, "-i", silence, "-i", en_path]
-    fc = ("[0:a]aformat=sample_rates=44100:channel_layouts=mono[a0];"
-          "[1:a]aformat=sample_rates=44100:channel_layouts=mono[a1];"
-          "[2:a]aformat=sample_rates=44100:channel_layouts=mono[a2];"
-          "[a0][a1][a2]concat=n=3:v=0:a=1[out]")
-    subprocess.run(["ffmpeg", "-y"] + inputs +
-                   ["-filter_complex", fc, "-map", "[out]", out],
-                   check=True, capture_output=True)
-    if os.path.exists(silence):
-        os.remove(silence)
+    interleaved = []
+    for i, audio in enumerate(audio_paths):
+        interleaved.append(audio)
+        if i < len(audio_paths) - 1:
+            interleaved.append(silence)
+
+    cmd = ["ffmpeg", "-y"]
+    for inp in interleaved:
+        cmd += ["-i", inp]
+
+    n = len(interleaved)
+    aformat = "".join(
+        f"[{i}:a]aformat=sample_rates=44100:channel_layouts=mono[a{i}];"
+        for i in range(n)
+    )
+    concat_in = "".join(f"[a{i}]" for i in range(n))
+    fc = aformat + concat_in + f"concat=n={n}:v=0:a=1[out]"
+
+    cmd += ["-filter_complex", fc, "-map", "[out]", out]
+    subprocess.run(cmd, check=True, capture_output=True)
+
+    for p in audio_paths + [silence]:
+        if os.path.exists(p):
+            os.remove(p)
 
 
 def _render_one_scene(img: Image.Image, audio: str, duration: float,
@@ -358,91 +385,82 @@ def create_short(word_data: dict, output_path: str,
 
     img_slot = 0
 
-    # Scene 1: hook (English) — "Do you know what 勉強 means?"
+    # Scene 1: hook — bilingual (EN voice asks, JP voice says the word, EN voice closes)
     specs = [{
         "frame": _make_hook_frame(word_data, WIDTH, HEIGHT),
-        "tts":   f"Do you know what {kanji} means?",
-        "rate":  "+30%",
-        "lang":  "en",
+        "segments": [
+            {"text": "Do you know what",  "lang": "en", "rate": "+15%"},
+            {"text": kanji,                "lang": "jp", "rate": "-15%"},
+            {"text": "means?",             "lang": "en", "rate": "+15%"},
+        ],
     }]
 
     # Scene 2: pronunciation — say the word in Japanese twice
     specs.append({
         "frame": _make_word_frame(word_data, WIDTH, HEIGHT),
-        "tts":   f"{kanji}。{kanji}。",
-        "rate":  "-15%",
-        "lang":  "jp",
+        "segments": [
+            {"text": kanji, "lang": "jp", "rate": "-20%"},
+            {"text": kanji, "lang": "jp", "rate": "-20%"},
+        ],
     })
 
     # Scene 3: definition — read English definition
     specs.append({
         "frame": _make_definition_frame(word_data, WIDTH, HEIGHT, bg_image=img(img_slot)),
-        "tts":   (f"{pos}. " if pos else "") + defn + ".",
-        "rate":  "+10%",
-        "lang":  "en",
+        "segments": [
+            {"text": (f"{pos}. " if pos else "") + defn + ".",
+             "lang": "en", "rate": "+10%"},
+        ],
     })
     img_slot += 1
 
-    # Scene 4: example sentence (Japanese audio + English translation)
+    # Scene 4: example sentence (JP voice for sentence + EN voice for translation)
     example_jp = word_data.get("example_jp", "")
     example_en = word_data.get("example_en", "")
     if example_jp:
+        ex_segments = [{"text": example_jp, "lang": "jp", "rate": "-10%"}]
+        if example_en:
+            ex_segments.append({"text": f"In English: {example_en}",
+                                 "lang": "en", "rate": "+10%"})
         specs.append({
-            "frame":     _make_example_frame(word_data, WIDTH, HEIGHT, img(img_slot)),
-            "example":   True,
-            "jp_text":   example_jp,
-            "en_text":   f"In English: {example_en}" if example_en else "",
+            "frame":    _make_example_frame(word_data, WIDTH, HEIGHT, img(img_slot)),
+            "segments": ex_segments,
         })
         img_slot += 1
 
-    # Scene 5: synonyms / related
+    # Scene 5: synonyms — EN intro, then each synonym pronounced individually in JP
     if syns:
+        syn_segments = [{"text": "Related words.", "lang": "en", "rate": "+10%"}]
+        for s in syns[:3]:
+            syn_segments.append({"text": s, "lang": "jp", "rate": "-15%"})
         specs.append({
-            "frame": _make_synonyms_frame(word_data, WIDTH, HEIGHT, img(img_slot)),
-            "tts":   "Related words: " + ", ".join(syns[:3]) + ".",
-            "rate":  "-10%",
-            "lang":  "jp",
+            "frame":    _make_synonyms_frame(word_data, WIDTH, HEIGHT, img(img_slot)),
+            "segments": syn_segments,
         })
         img_slot += 1
 
-    # Scene 6: memory tip (English)
+    # Scene 6: memory tip (English only)
     if tip:
         specs.append({
             "frame": _make_tip_frame(word_data, tip, WIDTH, HEIGHT, img(img_slot)),
-            "tts":   f"Memory tip. {tip}",
-            "rate":  "+15%",
-            "lang":  "en",
+            "segments": [
+                {"text": f"Memory tip. {tip}", "lang": "en", "rate": "+15%"},
+            ],
         })
 
     # Scene 7: recap — final pronunciation
     specs.append({
         "frame": _make_word_frame(word_data, WIDTH, HEIGHT),
-        "tts":   f"{kanji}。",
-        "rate":  "+0%",
-        "lang":  "jp",
+        "segments": [
+            {"text": kanji, "lang": "jp", "rate": "-10%"},
+        ],
     })
 
-    # Render each scene
+    # Render each scene: build audio (multi-segment) then mux with frame
     clip_paths = []
     for i, spec in enumerate(specs):
-        if spec.get("example"):
-            jp_path = os.path.join(TEMP_DIR, f"short_a_{i}_jp.mp3")
-            en_path = os.path.join(TEMP_DIR, f"short_a_{i}_en.mp3")
-            apath   = os.path.join(TEMP_DIR, f"short_a_{i}.mp3")
-            _tts_with_retry(spec["jp_text"], jp_path, lang="jp", rate="-10%")
-            if spec.get("en_text"):
-                _tts_with_retry(spec["en_text"], en_path, lang="en", rate="+10%")
-                _concat_audio_pair(jp_path, en_path, apath)
-            else:
-                os.rename(jp_path, apath)
-            for p in (jp_path, en_path):
-                if os.path.exists(p):
-                    os.remove(p)
-        else:
-            apath = os.path.join(TEMP_DIR, f"short_a_{i}.mp3")
-            _tts_with_retry(spec["tts"], apath,
-                            lang=spec.get("lang", "en"),
-                            rate=spec.get("rate", "+0%"))
+        apath = os.path.join(TEMP_DIR, f"short_a_{i}.mp3")
+        _multi_tts(spec["segments"], apath)
 
         dur  = get_audio_duration(apath) + AUDIO_PADDING
         clip = os.path.join(TEMP_DIR, f"short_clip_{i}.mp4")
