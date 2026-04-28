@@ -27,14 +27,6 @@ def _kana_of(text: str) -> str:
     return hira
 
 
-def _romaji_of(text: str) -> str:
-    """Return the Hepburn romaji of any Japanese text."""
-    if not text:
-        return ""
-    parts = _kks_render.convert(text)
-    return " ".join(p["hepburn"] for p in parts if p["hepburn"]).strip()
-
-
 # ---------- font loading ----------
 
 def _load_font(style: str, size: int) -> ImageFont.FreeTypeFont:
@@ -269,37 +261,33 @@ def _make_synonyms_frame(word_data: dict, w: int, h: int,
     draw   = ImageDraw.Draw(img)
     _draw_brand(draw, w, h)
 
-    f_kanji      = _load_font("bold",    int(80 * scale))
-    f_kana_top   = _load_font("regular", int(40 * scale))
-    f_label      = _load_font("regular", int(44 * scale))
-    f_syn        = _load_font("regular", int(56 * scale))
-    f_syn_kana   = _load_font("regular", int(34 * scale))
-    f_syn_romaji = _load_font("italic",  int(30 * scale))
+    f_kanji    = _load_font("bold",    int(80 * scale))
+    f_kana_top = _load_font("regular", int(40 * scale))
+    f_label    = _load_font("regular", int(44 * scale))
+    f_syn      = _load_font("regular", int(60 * scale))
+    f_syn_kana = _load_font("regular", int(36 * scale))
 
     kanji = word_data["kanji"]
     kana_top = _kana_of(kanji)
 
-    y = int(h * 0.10)
-    y = _draw_centered(draw, kanji, f_kanji, WORD_COLOR, y, w) + int(6 * scale)
+    y = int(h * 0.12)
+    y = _draw_centered(draw, kanji, f_kanji, WORD_COLOR, y, w) + int(8 * scale)
     if kana_top:
-        y = _draw_centered(draw, kana_top, f_kana_top, KANA_COLOR, y, w) + int(20 * scale)
+        y = _draw_centered(draw, kana_top, f_kana_top, KANA_COLOR, y, w) + int(24 * scale)
     else:
-        y += int(20 * scale)
-    y = _draw_centered(draw, "Related", f_label, ROMAJI_COLOR, y, w) + int(10 * scale)
+        y += int(24 * scale)
+    y = _draw_centered(draw, "Related", f_label, ROMAJI_COLOR, y, w) + int(12 * scale)
     draw.line([(w // 4, y + 8), (3 * w // 4, y + 8)], fill=(55, 55, 75), width=2)
-    y += int(28 * scale) + int(12 * scale)
+    y += int(28 * scale) + int(16 * scale)
 
-    # Show top 3 synonyms with their hiragana reading + romaji underneath each
+    # Show top 3 synonyms with their hiragana reading underneath each
     for syn in word_data.get("synonyms", [])[:3]:
-        y = _draw_centered(draw, syn, f_syn, WORD_COLOR, y, w) + int(2 * scale)
+        y = _draw_centered(draw, syn, f_syn, WORD_COLOR, y, w) + int(4 * scale)
         syn_kana = _kana_of(syn)
         if syn_kana:
-            y = _draw_centered(draw, syn_kana, f_syn_kana, KANA_COLOR, y, w) + int(2 * scale)
-        syn_romaji = _romaji_of(syn)
-        if syn_romaji:
-            y = _draw_centered(draw, syn_romaji, f_syn_romaji, ROMAJI_COLOR, y, w) + int(20 * scale)
+            y = _draw_centered(draw, syn_kana, f_syn_kana, KANA_COLOR, y, w) + int(22 * scale)
         else:
-            y += int(20 * scale)
+            y += int(22 * scale)
     return img
 
 
@@ -406,14 +394,10 @@ def _multi_tts(segments: list, out: str, default_gap: float = 0.0) -> None:
         os.replace(audio_paths[0], out)
         return
 
-    # Build per-gap silence files only when a real (positive) gap is
-    # requested. Skipping zero-duration silence avoids ffmpeg failing to
-    # produce an empty mp3 (lavfi anullsrc + -t 0 returns no output).
-    silences = {}
+    # Build per-gap silence files (different gaps may differ between segments)
+    silences = []
     for i in range(len(segments) - 1):
         gap = segments[i].get("pause_after", default_gap)
-        if gap <= 0.001:
-            continue
         sil = out + f".sil{i}.mp3"
         subprocess.run([
             "ffmpeg", "-y",
@@ -421,12 +405,12 @@ def _multi_tts(segments: list, out: str, default_gap: float = 0.0) -> None:
             "-t", f"{gap:.3f}", "-q:a", "9", "-acodec", "libmp3lame",
             sil,
         ], check=True, capture_output=True)
-        silences[i] = sil
+        silences.append(sil)
 
     interleaved = []
     for i, audio in enumerate(audio_paths):
         interleaved.append(audio)
-        if i in silences:
+        if i < len(silences):
             interleaved.append(silences[i])
 
     cmd = ["ffmpeg", "-y"]
@@ -444,7 +428,7 @@ def _multi_tts(segments: list, out: str, default_gap: float = 0.0) -> None:
     cmd += ["-filter_complex", fc, "-map", "[out]", out]
     subprocess.run(cmd, check=True, capture_output=True)
 
-    for p in audio_paths + list(silences.values()):
+    for p in audio_paths + silences:
         if os.path.exists(p):
             os.remove(p)
 
