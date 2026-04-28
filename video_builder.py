@@ -293,22 +293,40 @@ def _multi_tts(segments: list, out: str, default_gap: float = 0.05) -> None:
     naturally. Use larger explicit `pause_after` between distinct items
     (e.g. listing synonyms).
     """
+    # edge-tts pads each MP3 with ~200-400ms of silence at both ends. With a
+    # 50ms intentional gap this turns into ~700ms of dead air per boundary,
+    # which is what makes "Do you know what.....benkyou.....means?" feel slow.
+    # Strip leading/trailing silence below -40dB before concatenating.
     audio_paths = []
     for i, seg in enumerate(segments):
+        raw  = out + f".raw{i}.mp3"
         path = out + f".seg{i}.mp3"
-        _tts_with_retry(seg["text"], path,
+        _tts_with_retry(seg["text"], raw,
                         lang=seg.get("lang", "en"),
                         rate=seg.get("rate", "+0%"))
+        subprocess.run([
+            "ffmpeg", "-y", "-i", raw,
+            "-af",
+            "silenceremove=start_periods=1:start_duration=0.05:start_threshold=-40dB:"
+            "stop_periods=-1:stop_duration=0.05:stop_threshold=-40dB",
+            "-q:a", "4", "-acodec", "libmp3lame",
+            path,
+        ], check=True, capture_output=True)
+        os.remove(raw)
         audio_paths.append(path)
 
     if len(audio_paths) == 1:
         os.replace(audio_paths[0], out)
         return
 
-    # Build per-gap silence files (different gaps may differ between segments)
+    # Build per-gap silence files; skip when gap is effectively zero (lavfi
+    # rejects -t 0, and there's no point inserting zero-duration silence).
     silences = []
     for i in range(len(segments) - 1):
         gap = segments[i].get("pause_after", default_gap)
+        if gap <= 0.001:
+            silences.append(None)
+            continue
         sil = out + f".sil{i}.mp3"
         subprocess.run([
             "ffmpeg", "-y",
@@ -321,7 +339,7 @@ def _multi_tts(segments: list, out: str, default_gap: float = 0.05) -> None:
     interleaved = []
     for i, audio in enumerate(audio_paths):
         interleaved.append(audio)
-        if i < len(silences):
+        if i < len(silences) and silences[i] is not None:
             interleaved.append(silences[i])
 
     cmd = ["ffmpeg", "-y"]
@@ -339,7 +357,7 @@ def _multi_tts(segments: list, out: str, default_gap: float = 0.05) -> None:
     cmd += ["-filter_complex", fc, "-map", "[out]", out]
     subprocess.run(cmd, check=True, capture_output=True)
 
-    for p in audio_paths + silences:
+    for p in audio_paths + [s for s in silences if s]:
         if os.path.exists(p):
             os.remove(p)
 
@@ -415,12 +433,17 @@ def create_short(word_data: dict, output_path: str,
 
     img_slot = 0
 
-    # Scene 1: hook — bilingual (EN voice asks, JP voice says the word, EN voice closes)
+    # Scene 1: hook — bilingual, must flow as ONE sentence ("Do you know what
+    # 勉強 means?"). JP word at +25% so it doesn't drag relative to the
+    # surrounding English; pause_after=0 between segments so they butt up
+    # directly (silenceremove already strips edge-tts's edge padding).
     specs = [{
         "frame": _make_hook_frame(word_data, WIDTH, HEIGHT),
         "segments": [
-            {"text": "Do you know what",  "lang": "en", "rate": "+15%"},
-            {"text": kanji,                "lang": "jp", "rate": "-15%"},
+            {"text": "Do you know what",  "lang": "en", "rate": "+15%",
+             "pause_after": 0.0},
+            {"text": kanji,                "lang": "jp", "rate": "+25%",
+             "pause_after": 0.0},
             {"text": "means?",             "lang": "en", "rate": "+15%"},
         ],
     }]
