@@ -37,23 +37,32 @@ LONG_SCENE4_DUR = 10.0
 TEMP_DIR   = os.path.join(BASE_DIR, "temp")
 OUTPUT_DIR = os.path.join(BASE_DIR, "output")
 
-# Font search order — Japanese-capable fonts first (Noto CJK), then fallbacks
+# Font search order — Japanese-capable fonts first (Noto CJK on Linux,
+# Hiragino on macOS), then fallbacks
 FONT_PATHS = {
     "bold": [
+        # Linux (GitHub Actions)
         "/usr/share/fonts/opentype/noto/NotoSansCJK-Bold.ttc",
         "/usr/share/fonts/truetype/noto/NotoSansCJK-Bold.ttc",
         "/usr/share/fonts/opentype/noto/NotoSansJP-Bold.otf",
+        # macOS (local testing)
+        "/System/Library/Fonts/Hiragino Sans GB.ttc",
+        "/System/Library/Fonts/PingFang.ttc",
+        # Fallback
         "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf",
     ],
     "regular": [
         "/usr/share/fonts/opentype/noto/NotoSansCJK-Regular.ttc",
         "/usr/share/fonts/truetype/noto/NotoSansCJK-Regular.ttc",
         "/usr/share/fonts/opentype/noto/NotoSansJP-Regular.otf",
+        "/System/Library/Fonts/Hiragino Sans GB.ttc",
+        "/System/Library/Fonts/PingFang.ttc",
         "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf",
     ],
     "italic": [
         "/usr/share/fonts/opentype/noto/NotoSansCJK-Regular.ttc",
         "/usr/share/fonts/truetype/noto/NotoSansCJK-Regular.ttc",
+        "/System/Library/Fonts/Hiragino Sans GB.ttc",
         "/usr/share/fonts/truetype/dejavu/DejaVuSans-Oblique.ttf",
     ],
 }
