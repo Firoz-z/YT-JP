@@ -3,28 +3,10 @@ import subprocess
 import textwrap
 import time
 from PIL import Image, ImageDraw, ImageFont, ImageFilter
-from pykakasi import kakasi
 from config import *
 from tts import generate_speech
 
 AUDIO_PADDING = 0.15
-
-# Shared kana converter for displaying readings below kanji
-_kks_render = kakasi()
-
-
-def _kana_of(text: str) -> str:
-    """Return the hiragana reading of any Japanese text. Returns '' for
-    text that is already pure hiragana/katakana (so we don't render a
-    duplicate line)."""
-    if not text:
-        return ""
-    parts = _kks_render.convert(text)
-    hira = "".join(p["hira"] for p in parts).strip()
-    # Skip if input has no kanji (already pure kana) — hira will equal text
-    if hira == text:
-        return ""
-    return hira
 
 
 # ---------- font loading ----------
@@ -215,40 +197,21 @@ def _make_example_frame(word_data: dict, w: int, h: int,
     draw   = ImageDraw.Draw(img)
     _draw_brand(draw, w, h)
 
-    f_kanji     = _load_font("bold",    int(80 * scale))
-    f_kana_top  = _load_font("regular", int(40 * scale))
-    f_label     = _load_font("regular", int(44 * scale))
-    f_jp        = _load_font("regular", int(54 * scale))
-    f_jp_kana   = _load_font("regular", int(40 * scale))
-    f_en        = _load_font("italic",  int(44 * scale))
-
-    kanji = word_data["kanji"]
-    kana_top = _kana_of(kanji)
+    f_kanji = _load_font("bold",    int(80 * scale))
+    f_label = _load_font("regular", int(44 * scale))
+    f_jp    = _load_font("regular", int(54 * scale))
+    f_en    = _load_font("italic",  int(44 * scale))
 
     y = int(h * 0.10)
-    y = _draw_centered(draw, kanji, f_kanji, WORD_COLOR, y, w) + int(8 * scale)
-    if kana_top:
-        y = _draw_centered(draw, kana_top, f_kana_top, KANA_COLOR, y, w) + int(20 * scale)
-    else:
-        y += int(20 * scale)
+    y = _draw_centered(draw, word_data["kanji"], f_kanji, WORD_COLOR, y, w) + int(28 * scale)
     y = _draw_centered(draw, "Example", f_label, ROMAJI_COLOR, y, w) + int(12 * scale)
     draw.line([(w // 4, y + 8), (3 * w // 4, y + 8)], fill=(55, 55, 75), width=2)
     y += int(28 * scale) + int(20 * scale)
 
-    example_jp   = word_data.get("example_jp", "")
-    example_kana = word_data.get("example_kana", "")
-    example_en   = word_data.get("example_en", "")
-
+    example_jp = word_data.get("example_jp", "")
+    example_en = word_data.get("example_en", "")
     if example_jp:
-        y = _draw_wrapped_jp(draw, example_jp, f_jp, DEFINITION_COLOR, y, w) + int(12 * scale)
-        # All-hiragana reading of the example sentence (from LLM, falls back
-        # to pykakasi if not provided)
-        if not example_kana:
-            example_kana = _kana_of(example_jp)
-        if example_kana and example_kana != example_jp:
-            y = _draw_wrapped_jp(draw, example_kana, f_jp_kana, KANA_COLOR, y, w) + int(24 * scale)
-        else:
-            y += int(20 * scale)
+        y = _draw_wrapped_jp(draw, example_jp, f_jp, DEFINITION_COLOR, y, w) + int(28 * scale)
     if example_en:
         _draw_wrapped(draw, f'"{example_en}"', f_en, EXAMPLE_COLOR, y, w)
     return img
@@ -261,33 +224,18 @@ def _make_synonyms_frame(word_data: dict, w: int, h: int,
     draw   = ImageDraw.Draw(img)
     _draw_brand(draw, w, h)
 
-    f_kanji    = _load_font("bold",    int(80 * scale))
-    f_kana_top = _load_font("regular", int(40 * scale))
-    f_label    = _load_font("regular", int(44 * scale))
-    f_syn      = _load_font("regular", int(60 * scale))
-    f_syn_kana = _load_font("regular", int(36 * scale))
-
-    kanji = word_data["kanji"]
-    kana_top = _kana_of(kanji)
+    f_kanji = _load_font("bold",    int(80 * scale))
+    f_label = _load_font("regular", int(44 * scale))
+    f_syn   = _load_font("regular", int(64 * scale))
 
     y = int(h * 0.12)
-    y = _draw_centered(draw, kanji, f_kanji, WORD_COLOR, y, w) + int(8 * scale)
-    if kana_top:
-        y = _draw_centered(draw, kana_top, f_kana_top, KANA_COLOR, y, w) + int(24 * scale)
-    else:
-        y += int(24 * scale)
+    y = _draw_centered(draw, word_data["kanji"], f_kanji, WORD_COLOR, y, w) + int(32 * scale)
     y = _draw_centered(draw, "Related", f_label, ROMAJI_COLOR, y, w) + int(12 * scale)
     draw.line([(w // 4, y + 8), (3 * w // 4, y + 8)], fill=(55, 55, 75), width=2)
-    y += int(28 * scale) + int(16 * scale)
+    y += int(28 * scale) + int(20 * scale)
 
-    # Show top 3 synonyms with their hiragana reading underneath each
-    for syn in word_data.get("synonyms", [])[:3]:
-        y = _draw_centered(draw, syn, f_syn, WORD_COLOR, y, w) + int(4 * scale)
-        syn_kana = _kana_of(syn)
-        if syn_kana:
-            y = _draw_centered(draw, syn_kana, f_syn_kana, KANA_COLOR, y, w) + int(22 * scale)
-        else:
-            y += int(22 * scale)
+    for syn in word_data.get("synonyms", [])[:4]:
+        y = _draw_centered(draw, syn, f_syn, KANA_COLOR, y, w) + int(20 * scale)
     return img
 
 
@@ -298,20 +246,12 @@ def _make_tip_frame(word_data: dict, tip: str, w: int, h: int,
     draw   = ImageDraw.Draw(img)
     _draw_brand(draw, w, h)
 
-    f_kanji    = _load_font("bold",    int(80 * scale))
-    f_kana_top = _load_font("regular", int(40 * scale))
-    f_label    = _load_font("regular", int(44 * scale))
-    f_tip      = _load_font("italic",  int(46 * scale))
-
-    kanji = word_data["kanji"]
-    kana_top = _kana_of(kanji)
+    f_kanji = _load_font("bold",    int(80 * scale))
+    f_label = _load_font("regular", int(44 * scale))
+    f_tip   = _load_font("italic",  int(46 * scale))
 
     y = int(h * 0.12)
-    y = _draw_centered(draw, kanji, f_kanji, WORD_COLOR, y, w) + int(8 * scale)
-    if kana_top:
-        y = _draw_centered(draw, kana_top, f_kana_top, KANA_COLOR, y, w) + int(24 * scale)
-    else:
-        y += int(24 * scale)
+    y = _draw_centered(draw, word_data["kanji"], f_kanji, WORD_COLOR, y, w) + int(32 * scale)
     y = _draw_centered(draw, "Memory Tip", f_label, ROMAJI_COLOR, y, w) + int(12 * scale)
     draw.line([(w // 4, y + 8), (3 * w // 4, y + 8)], fill=(55, 55, 75), width=2)
     y += int(28 * scale) + int(20 * scale)
@@ -342,52 +282,23 @@ def _tts_with_retry(text: str, path: str, lang: str = "jp",
             time.sleep(3 * (attempt + 1))
 
 
-def _trim_silence(in_path: str, out_path: str) -> None:
-    """Trim leading + trailing silence from a TTS audio file.
-
-    edge-tts pads the start and end of every MP3 with ~200-400ms of
-    silence. Concatenating those padded clips creates audible gaps
-    even when our explicit between-segment gap is near zero. Stripping
-    the silence first lets us control pacing precisely.
-    """
-    subprocess.run([
-        "ffmpeg", "-y", "-i", in_path,
-        "-af",
-        # First filter: trim leading silence
-        # Second filter: reverse, trim leading (= original trailing), reverse back
-        "silenceremove=start_periods=1:start_silence=0:start_threshold=-45dB,"
-        "areverse,silenceremove=start_periods=1:start_silence=0:start_threshold=-45dB,areverse",
-        "-q:a", "4", "-acodec", "libmp3lame",
-        out_path,
-    ], check=True, capture_output=True)
-
-
-def _multi_tts(segments: list, out: str, default_gap: float = 0.0) -> None:
-    """Generate TTS for each segment, trim TTS-added silence, and
-    concatenate them.
+def _multi_tts(segments: list, out: str, default_gap: float = 0.05) -> None:
+    """Generate TTS for each segment and concatenate them.
 
     segments = [{"text": str, "lang": "en"|"jp", "rate": "+0%",
                  "pause_after": 0.0 (optional)}, ...]
 
-    `default_gap` is used between segments that don't specify
-    `pause_after`. With silence-trimming on each segment, a default of
-    0 still leaves a natural micro-gap from the TTS engine itself, so
-    bilingual sentences like "Do you know what 勉強 means?" flow as one
-    continuous utterance.
+    `default_gap` is used between segments that don't specify `pause_after`.
+    Set very small (0.05s) so a single sentence split across voices flows
+    naturally. Use larger explicit `pause_after` between distinct items
+    (e.g. listing synonyms).
     """
     audio_paths = []
     for i, seg in enumerate(segments):
-        raw  = out + f".seg{i}.raw.mp3"
         path = out + f".seg{i}.mp3"
-        _tts_with_retry(seg["text"], raw,
+        _tts_with_retry(seg["text"], path,
                         lang=seg.get("lang", "en"),
                         rate=seg.get("rate", "+0%"))
-        try:
-            _trim_silence(raw, path)
-            os.remove(raw)
-        except subprocess.CalledProcessError:
-            # Trim failed (rare) — fall back to untrimmed
-            os.replace(raw, path)
         audio_paths.append(path)
 
     if len(audio_paths) == 1:
@@ -504,17 +415,13 @@ def create_short(word_data: dict, output_path: str,
 
     img_slot = 0
 
-    # Scene 1: hook — bilingual, intended to flow as ONE sentence:
-    # "Do you know what {kanji} means?" with no perceptible pauses between
-    # voices. Each segment's silence is trimmed before concat (see
-    # _trim_silence) and the JP word is spoken at natural pace so it
-    # doesn't drag the line down.
+    # Scene 1: hook — bilingual (EN voice asks, JP voice says the word, EN voice closes)
     specs = [{
         "frame": _make_hook_frame(word_data, WIDTH, HEIGHT),
         "segments": [
-            {"text": "Do you know what",  "lang": "en", "rate": "+10%"},
-            {"text": kanji,                "lang": "jp", "rate": "+5%"},
-            {"text": "means?",             "lang": "en", "rate": "+10%"},
+            {"text": "Do you know what",  "lang": "en", "rate": "+15%"},
+            {"text": kanji,                "lang": "jp", "rate": "-15%"},
+            {"text": "means?",             "lang": "en", "rate": "+15%"},
         ],
     }]
 
