@@ -3,10 +3,32 @@ import subprocess
 import textwrap
 import time
 from PIL import Image, ImageDraw, ImageFont, ImageFilter
+from pykakasi import kakasi
 from config import *
 from tts import generate_speech
 
 AUDIO_PADDING = 0.15
+
+# Shared converter for showing reading aids under kanji
+_kks_render = kakasi()
+
+
+def _kana_of(text: str) -> str:
+    """Hiragana reading of any Japanese text. Returns '' if the text is
+    already pure kana (so we don't render a duplicate line)."""
+    if not text:
+        return ""
+    parts = _kks_render.convert(text)
+    hira = "".join(p["hira"] for p in parts).strip()
+    return "" if hira == text else hira
+
+
+def _romaji_of(text: str) -> str:
+    """Hepburn romaji for any Japanese text."""
+    if not text:
+        return ""
+    parts = _kks_render.convert(text)
+    return " ".join(p["hepburn"] for p in parts if p["hepburn"]).strip()
 
 
 # ---------- font loading ----------
@@ -105,25 +127,36 @@ def _make_hook_frame(word_data: dict, w: int, h: int) -> Image.Image:
     draw   = ImageDraw.Draw(img)
     _draw_brand(draw, w, h)
 
-    f_hook = _load_font("regular", int(52 * scale))
-    f_word = _load_font("bold",    int(160 * scale))
-    f_kana = _load_font("regular", int(56 * scale))
+    f_hook   = _load_font("regular", int(52 * scale))
+    f_word   = _load_font("bold",    int(150 * scale))
+    f_kana   = _load_font("regular", int(54 * scale))
+    f_romaji = _load_font("italic",  int(44 * scale))
 
-    kanji = word_data["kanji"]
-    kana  = word_data.get("kana", "")
+    kanji  = word_data["kanji"]
+    kana   = word_data.get("kana", "")
+    romaji = word_data.get("romaji", "")
 
-    h_top  = f_hook.getbbox("Do you know what")[3]
-    h_kanji = f_word.getbbox(kanji)[3]
-    h_kana  = f_kana.getbbox(kana)[3] if kana else 0
-    h_bot  = f_hook.getbbox("means?")[3]
-    gap    = int(24 * scale)
-    total  = h_top + gap + h_kanji + (gap + h_kana if kana else 0) + gap + h_bot
-    y      = (h - total) // 2
+    show_kana   = bool(kana)   and kana   != kanji
+    show_romaji = bool(romaji) and romaji != kanji
+
+    h_top    = f_hook.getbbox("Do you know what")[3]
+    h_kanji  = f_word.getbbox(kanji)[3]
+    h_kana   = f_kana.getbbox(kana)[3]     if show_kana   else 0
+    h_rom    = f_romaji.getbbox(romaji)[3] if show_romaji else 0
+    h_bot    = f_hook.getbbox("means?")[3]
+    gap      = int(20 * scale)
+    total    = (h_top + gap + h_kanji
+                + (gap + h_kana if show_kana   else 0)
+                + (gap + h_rom  if show_romaji else 0)
+                + gap + h_bot)
+    y = (h - total) // 2
 
     y = _draw_centered(draw, "Do you know what", f_hook, DEFINITION_COLOR, y, w) + gap
-    y = _draw_centered(draw, kanji,             f_word, WORD_COLOR,       y, w) + gap
-    if kana and kana != kanji:
+    y = _draw_centered(draw, kanji, f_word, WORD_COLOR, y, w) + gap
+    if show_kana:
         y = _draw_centered(draw, kana, f_kana, KANA_COLOR, y, w) + gap
+    if show_romaji:
+        y = _draw_centered(draw, romaji, f_romaji, ROMAJI_COLOR, y, w) + gap
     _draw_centered(draw, "means?", f_hook, DEFINITION_COLOR, y, w)
     return img
 
@@ -166,25 +199,29 @@ def _make_definition_frame(word_data: dict, w: int, h: int,
     draw   = ImageDraw.Draw(img)
     _draw_brand(draw, w, h)
 
-    f_kanji = _load_font("bold",    int(110 * scale))
-    f_kana  = _load_font("regular", int(52 * scale))
-    f_label = _load_font("regular", int(40 * scale))
-    f_def   = _load_font("regular", int(56 * scale))
+    f_kanji  = _load_font("bold",    int(100 * scale))
+    f_kana   = _load_font("regular", int(48 * scale))
+    f_romaji = _load_font("italic",  int(40 * scale))
+    f_label  = _load_font("regular", int(40 * scale))
+    f_def    = _load_font("regular", int(56 * scale))
 
-    kanji = word_data["kanji"]
-    kana  = word_data.get("kana", "")
-    pos   = word_data.get("part_of_speech", "")
-    defn  = word_data.get("definition", "")
+    kanji  = word_data["kanji"]
+    kana   = word_data.get("kana", "")
+    romaji = word_data.get("romaji", "")
+    pos    = word_data.get("part_of_speech", "")
+    defn   = word_data.get("definition", "")
 
-    y = int(h * 0.13)
-    y = _draw_centered(draw, kanji, f_kanji, WORD_COLOR, y, w) + int(20 * scale)
+    y = int(h * 0.11)
+    y = _draw_centered(draw, kanji, f_kanji, WORD_COLOR, y, w) + int(14 * scale)
     if kana and kana != kanji:
-        y = _draw_centered(draw, kana, f_kana, KANA_COLOR, y, w) + int(24 * scale)
+        y = _draw_centered(draw, kana, f_kana, KANA_COLOR, y, w) + int(10 * scale)
+    if romaji:
+        y = _draw_centered(draw, romaji, f_romaji, ROMAJI_COLOR, y, w) + int(20 * scale)
     if pos:
         y = _draw_centered(draw, pos, f_label, ROMAJI_COLOR, y, w) + int(20 * scale)
     lx1, lx2 = w // 4, 3 * w // 4
     draw.line([(lx1, y + 8), (lx2, y + 8)], fill=(55, 55, 75), width=2)
-    y += int(36 * scale)
+    y += int(32 * scale)
     if defn:
         _draw_wrapped(draw, defn, f_def, DEFINITION_COLOR, y, w)
     return img
@@ -197,21 +234,38 @@ def _make_example_frame(word_data: dict, w: int, h: int,
     draw   = ImageDraw.Draw(img)
     _draw_brand(draw, w, h)
 
-    f_kanji = _load_font("bold",    int(80 * scale))
-    f_label = _load_font("regular", int(44 * scale))
-    f_jp    = _load_font("regular", int(54 * scale))
-    f_en    = _load_font("italic",  int(44 * scale))
+    f_kanji   = _load_font("bold",    int(72 * scale))
+    f_kana    = _load_font("regular", int(40 * scale))
+    f_romaji  = _load_font("italic",  int(36 * scale))
+    f_label   = _load_font("regular", int(40 * scale))
+    f_jp      = _load_font("regular", int(50 * scale))
+    f_jp_kana = _load_font("regular", int(38 * scale))
+    f_en      = _load_font("italic",  int(42 * scale))
 
-    y = int(h * 0.10)
-    y = _draw_centered(draw, word_data["kanji"], f_kanji, WORD_COLOR, y, w) + int(28 * scale)
-    y = _draw_centered(draw, "Example", f_label, ROMAJI_COLOR, y, w) + int(12 * scale)
+    kanji  = word_data["kanji"]
+    kana   = word_data.get("kana", "")
+    romaji = word_data.get("romaji", "")
+
+    y = int(h * 0.08)
+    y = _draw_centered(draw, kanji, f_kanji, WORD_COLOR, y, w) + int(8 * scale)
+    if kana and kana != kanji:
+        y = _draw_centered(draw, kana, f_kana, KANA_COLOR, y, w) + int(6 * scale)
+    if romaji:
+        y = _draw_centered(draw, romaji, f_romaji, ROMAJI_COLOR, y, w) + int(20 * scale)
+    y = _draw_centered(draw, "Example", f_label, ROMAJI_COLOR, y, w) + int(10 * scale)
     draw.line([(w // 4, y + 8), (3 * w // 4, y + 8)], fill=(55, 55, 75), width=2)
-    y += int(28 * scale) + int(20 * scale)
+    y += int(28 * scale)
 
-    example_jp = word_data.get("example_jp", "")
-    example_en = word_data.get("example_en", "")
+    example_jp   = word_data.get("example_jp", "")
+    example_kana = word_data.get("example_kana", "")
+    example_en   = word_data.get("example_en", "")
+
     if example_jp:
-        y = _draw_wrapped_jp(draw, example_jp, f_jp, DEFINITION_COLOR, y, w) + int(28 * scale)
+        y = _draw_wrapped_jp(draw, example_jp, f_jp, DEFINITION_COLOR, y, w) + int(8 * scale)
+        if not example_kana:
+            example_kana = _kana_of(example_jp)
+        if example_kana and example_kana != example_jp:
+            y = _draw_wrapped_jp(draw, example_kana, f_jp_kana, KANA_COLOR, y, w) + int(20 * scale)
     if example_en:
         _draw_wrapped(draw, f'"{example_en}"', f_en, EXAMPLE_COLOR, y, w)
     return img
@@ -224,18 +278,38 @@ def _make_synonyms_frame(word_data: dict, w: int, h: int,
     draw   = ImageDraw.Draw(img)
     _draw_brand(draw, w, h)
 
-    f_kanji = _load_font("bold",    int(80 * scale))
-    f_label = _load_font("regular", int(44 * scale))
-    f_syn   = _load_font("regular", int(64 * scale))
+    f_kanji      = _load_font("bold",    int(72 * scale))
+    f_kana_top   = _load_font("regular", int(40 * scale))
+    f_romaji_top = _load_font("italic",  int(36 * scale))
+    f_label      = _load_font("regular", int(40 * scale))
+    f_syn        = _load_font("bold",    int(54 * scale))
+    f_syn_kana   = _load_font("regular", int(36 * scale))
+    f_syn_rom    = _load_font("italic",  int(32 * scale))
 
-    y = int(h * 0.12)
-    y = _draw_centered(draw, word_data["kanji"], f_kanji, WORD_COLOR, y, w) + int(32 * scale)
-    y = _draw_centered(draw, "Related", f_label, ROMAJI_COLOR, y, w) + int(12 * scale)
+    kanji  = word_data["kanji"]
+    kana   = word_data.get("kana", "")
+    romaji = word_data.get("romaji", "")
+
+    y = int(h * 0.09)
+    y = _draw_centered(draw, kanji, f_kanji, WORD_COLOR, y, w) + int(8 * scale)
+    if kana and kana != kanji:
+        y = _draw_centered(draw, kana, f_kana_top, KANA_COLOR, y, w) + int(6 * scale)
+    if romaji:
+        y = _draw_centered(draw, romaji, f_romaji_top, ROMAJI_COLOR, y, w) + int(18 * scale)
+    y = _draw_centered(draw, "Related", f_label, ROMAJI_COLOR, y, w) + int(10 * scale)
     draw.line([(w // 4, y + 8), (3 * w // 4, y + 8)], fill=(55, 55, 75), width=2)
-    y += int(28 * scale) + int(20 * scale)
+    y += int(24 * scale)
 
-    for syn in word_data.get("synonyms", [])[:4]:
-        y = _draw_centered(draw, syn, f_syn, KANA_COLOR, y, w) + int(20 * scale)
+    for syn in word_data.get("synonyms", [])[:3]:
+        y = _draw_centered(draw, syn, f_syn, WORD_COLOR, y, w) + int(4 * scale)
+        syn_kana = _kana_of(syn)
+        if syn_kana:
+            y = _draw_centered(draw, syn_kana, f_syn_kana, KANA_COLOR, y, w) + int(2 * scale)
+        syn_rom = _romaji_of(syn)
+        if syn_rom:
+            y = _draw_centered(draw, syn_rom, f_syn_rom, ROMAJI_COLOR, y, w) + int(20 * scale)
+        else:
+            y += int(16 * scale)
     return img
 
 
@@ -246,15 +320,25 @@ def _make_tip_frame(word_data: dict, tip: str, w: int, h: int,
     draw   = ImageDraw.Draw(img)
     _draw_brand(draw, w, h)
 
-    f_kanji = _load_font("bold",    int(80 * scale))
-    f_label = _load_font("regular", int(44 * scale))
-    f_tip   = _load_font("italic",  int(46 * scale))
+    f_kanji  = _load_font("bold",    int(72 * scale))
+    f_kana   = _load_font("regular", int(40 * scale))
+    f_romaji = _load_font("italic",  int(36 * scale))
+    f_label  = _load_font("regular", int(40 * scale))
+    f_tip    = _load_font("italic",  int(46 * scale))
 
-    y = int(h * 0.12)
-    y = _draw_centered(draw, word_data["kanji"], f_kanji, WORD_COLOR, y, w) + int(32 * scale)
-    y = _draw_centered(draw, "Memory Tip", f_label, ROMAJI_COLOR, y, w) + int(12 * scale)
+    kanji  = word_data["kanji"]
+    kana   = word_data.get("kana", "")
+    romaji = word_data.get("romaji", "")
+
+    y = int(h * 0.10)
+    y = _draw_centered(draw, kanji, f_kanji, WORD_COLOR, y, w) + int(8 * scale)
+    if kana and kana != kanji:
+        y = _draw_centered(draw, kana, f_kana, KANA_COLOR, y, w) + int(6 * scale)
+    if romaji:
+        y = _draw_centered(draw, romaji, f_romaji, ROMAJI_COLOR, y, w) + int(20 * scale)
+    y = _draw_centered(draw, "Memory Tip", f_label, ROMAJI_COLOR, y, w) + int(10 * scale)
     draw.line([(w // 4, y + 8), (3 * w // 4, y + 8)], fill=(55, 55, 75), width=2)
-    y += int(28 * scale) + int(20 * scale)
+    y += int(28 * scale)
     _draw_wrapped(draw, tip, f_tip, DEFINITION_COLOR, y, w)
     return img
 
