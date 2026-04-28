@@ -433,65 +433,65 @@ def create_short(word_data: dict, output_path: str,
 
     img_slot = 0
 
-    # Scene 1: hook — bilingual, must flow as ONE sentence ("Do you know what
-    # 勉強 means?"). JP word at +10% so it keeps pace with the surrounding
-    # English; pause_after=0 so segments butt up directly with no silence
-    # between them (silenceremove already strips edge-tts padding).
+    # Speeds match the YT (English) channel exactly:
+    #   hook +50%, word/recap +0%, definition/example/tip +25%, synonyms +0%.
+
+    # Scene 1: hook — flows as ONE sentence ("Do you know what 勉強 means?")
     specs = [{
         "frame": _make_hook_frame(word_data, WIDTH, HEIGHT),
         "segments": [
-            {"text": "Do you know what",  "lang": "en", "rate": "+15%",
+            {"text": "Do you know what",  "lang": "en", "rate": "+50%",
              "pause_after": 0.0},
-            {"text": kanji,                "lang": "jp", "rate": "+10%",
+            {"text": kanji,                "lang": "jp", "rate": "+50%",
              "pause_after": 0.0},
-            {"text": "means?",             "lang": "en", "rate": "+15%"},
+            {"text": "means?",             "lang": "en", "rate": "+50%"},
         ],
     }]
 
-    # Scene 2: pronunciation — say the word in Japanese twice
+    # Scene 2: pronunciation — say the word in Japanese twice (natural pace)
     specs.append({
         "frame": _make_word_frame(word_data, WIDTH, HEIGHT),
         "segments": [
-            {"text": kanji, "lang": "jp", "rate": "-20%"},
-            {"text": kanji, "lang": "jp", "rate": "-20%"},
+            {"text": kanji, "lang": "jp", "rate": "+0%",
+             "pause_after": 0.30},
+            {"text": kanji, "lang": "jp", "rate": "+0%"},
         ],
     })
 
-    # Scene 3: definition — read English definition
+    # Scene 3: definition
     specs.append({
         "frame": _make_definition_frame(word_data, WIDTH, HEIGHT, bg_image=img(img_slot)),
         "segments": [
             {"text": (f"{pos}. " if pos else "") + defn + ".",
-             "lang": "en", "rate": "+10%"},
+             "lang": "en", "rate": "+25%"},
         ],
     })
     img_slot += 1
 
-    # Scene 4: example sentence (JP voice for sentence + EN voice for translation)
+    # Scene 4: example sentence
     example_jp = word_data.get("example_jp", "")
     example_en = word_data.get("example_en", "")
     if example_jp:
-        ex_segments = [{"text": example_jp, "lang": "jp", "rate": "-10%"}]
+        ex_segments = [{"text": example_jp, "lang": "jp", "rate": "+25%"}]
         if example_en:
             ex_segments.append({"text": f"In English: {example_en}",
-                                 "lang": "en", "rate": "+10%"})
+                                 "lang": "en", "rate": "+25%"})
         specs.append({
             "frame":    _make_example_frame(word_data, WIDTH, HEIGHT, img(img_slot)),
             "segments": ex_segments,
         })
         img_slot += 1
 
-    # Scene 5: synonyms — EN intro, then each synonym pronounced individually in JP.
-    # Larger pause_after between synonyms so each word has room to land.
+    # Scene 5: synonyms — EN intro then each related word in JP
     if syns:
         syn_segments = [
-            {"text": "Related words.", "lang": "en", "rate": "+10%",
-             "pause_after": 0.30},
+            {"text": "Related words.", "lang": "en", "rate": "+0%",
+             "pause_after": 0.25},
         ]
         top = syns[:3]
         for j, s in enumerate(top):
             syn_segments.append({
-                "text": s, "lang": "jp", "rate": "-15%",
+                "text": s, "lang": "jp", "rate": "+0%",
                 "pause_after": 0.25 if j < len(top) - 1 else 0.0,
             })
         specs.append({
@@ -500,12 +500,12 @@ def create_short(word_data: dict, output_path: str,
         })
         img_slot += 1
 
-    # Scene 6: memory tip (English only)
+    # Scene 6: memory tip
     if tip:
         specs.append({
             "frame": _make_tip_frame(word_data, tip, WIDTH, HEIGHT, img(img_slot)),
             "segments": [
-                {"text": f"Memory tip. {tip}", "lang": "en", "rate": "+15%"},
+                {"text": f"Memory tip. {tip}", "lang": "en", "rate": "+25%"},
             ],
         })
 
@@ -513,7 +513,7 @@ def create_short(word_data: dict, output_path: str,
     specs.append({
         "frame": _make_word_frame(word_data, WIDTH, HEIGHT),
         "segments": [
-            {"text": kanji, "lang": "jp", "rate": "-10%"},
+            {"text": kanji, "lang": "jp", "rate": "+25%"},
         ],
     })
 
