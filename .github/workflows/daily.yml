@@ -1,0 +1,42 @@
+name: Daily Japanese Word Video
+
+on:
+  schedule:
+    - cron: "0 8 * * *"    # slot 0 — 8 AM UTC
+    - cron: "0 14 * * *"   # slot 1 — 2 PM UTC
+    - cron: "0 19 * * *"   # slot 2 — 7 PM UTC
+  workflow_dispatch:        # manual trigger (skips random sleep)
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Random delay (0–59 min) — skipped on manual runs
+        if: github.event_name == 'schedule'
+        run: sleep $((RANDOM % 3600))
+
+      - name: Checkout repo
+        uses: actions/checkout@v4.2.2
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5.3.0
+        with:
+          python-version: "3.11"
+
+      - name: Install system dependencies
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y ffmpeg fonts-noto-cjk fonts-noto-cjk-extra fonts-dejavu-core
+
+      - name: Install Python dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run pipeline
+        env:
+          YOUTUBE_CLIENT_ID:     ${{ secrets.YOUTUBE_CLIENT_ID }}
+          YOUTUBE_CLIENT_SECRET: ${{ secrets.YOUTUBE_CLIENT_SECRET }}
+          YOUTUBE_REFRESH_TOKEN: ${{ secrets.YOUTUBE_REFRESH_TOKEN }}
+          PEXELS_API_KEY:        ${{ secrets.PEXELS_API_KEY }}
+          GROQ_API_KEY:          ${{ secrets.GROQ_API_KEY }}
+        run: python pipeline.py
