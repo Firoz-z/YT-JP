@@ -13,7 +13,7 @@ AUDIO_PADDING = 0.15
 
 # Background music — drop .mp3/.m4a/.wav files into music/ to enable
 MUSIC_DIR        = os.path.join(BASE_DIR, "music")
-MUSIC_VOLUME_DB  = -22     # background level relative to speech (dB)
+MUSIC_VOLUME_DB  = -18     # background level relative to speech (dB)
 MUSIC_FADE_SEC   = 1.5     # fade in/out duration
 
 # Shared converter for showing reading aids under kanji
