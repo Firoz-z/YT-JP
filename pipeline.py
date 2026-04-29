@@ -13,6 +13,39 @@ from config import TEMP_DIR, OUTPUT_DIR
 
 VIDEOS_PER_DAY = 3
 
+UPLOAD_LOG = "uploads.md"
+UPLOAD_LOG_HEADER = (
+    "# Upload History\n\n"
+    "Every published Short, in chronological order. Appended automatically\n"
+    "by the pipeline after each successful upload.\n\n"
+    "| Date | Slot | Kanji | Kana | Romaji | JLPT | Meaning | Video |\n"
+    "|------|------|-------|------|--------|------|---------|-------|\n"
+)
+
+
+def _log_upload(word_data: dict, video_id: str, slot: int) -> None:
+    """Append a row to uploads.md so we have a permanent history of what
+    was published when. The GitHub Actions workflow commits this file
+    back to the repo after the pipeline succeeds."""
+    path = os.path.join(os.path.dirname(__file__), UPLOAD_LOG)
+    if not os.path.exists(path):
+        with open(path, "w", encoding="utf-8") as f:
+            f.write(UPLOAD_LOG_HEADER)
+    today = date.today().isoformat()
+    kanji  = word_data.get("kanji", "")
+    kana   = word_data.get("kana", "") or "—"
+    romaji = word_data.get("romaji", "") or "—"
+    jlpt   = word_data.get("jlpt_level", "") or "—"
+    defn   = (word_data.get("definition", "") or "")
+    # Markdown table cells can't contain raw pipes — escape them
+    defn   = defn.replace("|", "\\|")
+    url    = f"https://youtube.com/shorts/{video_id}"
+    row = (f"| {today} | {slot} | {kanji} | {kana} | {romaji} | "
+           f"{jlpt} | {defn} | [link]({url}) |\n")
+    with open(path, "a", encoding="utf-8") as f:
+        f.write(row)
+    print(f"  history → {UPLOAD_LOG}")
+
 
 def _get_word(slot: int) -> str:
     """Pick a unique Japanese word for today's slot."""
@@ -68,6 +101,9 @@ def run(slot: int = 0) -> None:
     # 5 — upload
     short_id = upload_short_only(short_path, word_data)
     print(f"  short  → https://youtube.com/shorts/{short_id}")
+
+    # 6 — append to upload history (committed back by the workflow)
+    _log_upload(word_data, short_id, slot)
 
 
 def _slot_from_hour() -> int:
