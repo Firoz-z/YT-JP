@@ -1,4 +1,6 @@
+import glob
 import os
+import random
 import subprocess
 import textwrap
 import time
@@ -8,6 +10,11 @@ from config import *
 from tts import generate_speech
 
 AUDIO_PADDING = 0.15
+
+# Background music — drop .mp3/.m4a/.wav files into music/ to enable
+MUSIC_DIR        = os.path.join(BASE_DIR, "music")
+MUSIC_VOLUME_DB  = -22     # background level relative to speech (dB)
+MUSIC_FADE_SEC   = 1.5     # fade in/out duration
 
 # Shared converter for showing reading aids under kanji
 _kks_render = kakasi()
@@ -562,6 +569,47 @@ def _concat_clips(clips: list, output: str) -> None:
     os.remove(lst)
 
 
+# ---------- background music ----------
+
+def _select_music_track() -> str | None:
+    """Pick a random music file from MUSIC_DIR. Returns None if the
+    directory is empty or missing — pipeline runs without music in that
+    case (no breakage)."""
+    if not os.path.isdir(MUSIC_DIR):
+        return None
+    tracks = []
+    for ext in ("*.mp3", "*.m4a", "*.wav", "*.ogg", "*.aac"):
+        tracks.extend(glob.glob(os.path.join(MUSIC_DIR, ext)))
+    if not tracks:
+        return None
+    return random.choice(tracks)
+
+
+def _mix_background_music(video_in: str, music_path: str, video_out: str) -> None:
+    """Overlay music under speech. Music is lowered to -22dB, looped if
+    shorter than the video, trimmed to video length, and fades in at the
+    start and out at the end."""
+    dur = get_audio_duration(video_in)
+    fade_out_start = max(0.0, dur - MUSIC_FADE_SEC)
+    music_filter = (
+        f"[1:a]volume={MUSIC_VOLUME_DB}dB,"
+        f"afade=t=in:st=0:d={MUSIC_FADE_SEC},"
+        f"afade=t=out:st={fade_out_start:.3f}:d={MUSIC_FADE_SEC}[m];"
+        f"[0:a][m]amix=inputs=2:duration=first:dropout_transition=0[a]"
+    )
+    subprocess.run([
+        "ffmpeg", "-y",
+        "-i", video_in,
+        "-stream_loop", "-1", "-i", music_path,
+        "-filter_complex", music_filter,
+        "-map", "0:v", "-map", "[a]",
+        "-c:v", "copy",
+        "-c:a", "aac", "-b:a", "192k", "-ar", "44100",
+        "-shortest", "-movflags", "+faststart",
+        video_out,
+    ], check=True, capture_output=True)
+
+
 # ---------- public API ----------
 
 def create_short(word_data: dict, output_path: str,
@@ -680,7 +728,17 @@ def create_short(word_data: dict, output_path: str,
         if os.path.exists(apath):
             os.remove(apath)
 
-    _concat_clips(clip_paths, output_path)
+    # Step 1: concat all scene clips into one continuous video
+    music = _select_music_track()
+    if music:
+        # Concat into a temp file first, then mix music on top
+        pre_music = output_path + ".no_music.mp4"
+        _concat_clips(clip_paths, pre_music)
+        print(f"  [music] mixing {os.path.basename(music)}")
+        _mix_background_music(pre_music, music, output_path)
+        os.remove(pre_music)
+    else:
+        _concat_clips(clip_paths, output_path)
 
     for p in clip_paths:
         if os.path.exists(p):
