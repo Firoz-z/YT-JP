@@ -1,12 +1,41 @@
+import glob
 import os
+import random
 import subprocess
 import textwrap
 import time
 from PIL import Image, ImageDraw, ImageFont, ImageFilter
+from pykakasi import kakasi
 from config import *
 from tts import generate_speech
 
 AUDIO_PADDING = 0.15
+
+# Background music — drop .mp3/.m4a/.wav files into music/ to enable
+MUSIC_DIR        = os.path.join(BASE_DIR, "music")
+MUSIC_VOLUME_DB  = -18     # background level relative to speech (dB)
+MUSIC_FADE_SEC   = 1.5     # fade in/out duration
+
+# Shared converter for showing reading aids under kanji
+_kks_render = kakasi()
+
+
+def _kana_of(text: str) -> str:
+    """Hiragana reading of any Japanese text. Returns '' if the text is
+    already pure kana (so we don't render a duplicate line)."""
+    if not text:
+        return ""
+    parts = _kks_render.convert(text)
+    hira = "".join(p["hira"] for p in parts).strip()
+    return "" if hira == text else hira
+
+
+def _romaji_of(text: str) -> str:
+    """Hepburn romaji for any Japanese text."""
+    if not text:
+        return ""
+    parts = _kks_render.convert(text)
+    return " ".join(p["hepburn"] for p in parts if p["hepburn"]).strip()
 
 
 # ---------- font loading ----------
@@ -105,25 +134,36 @@ def _make_hook_frame(word_data: dict, w: int, h: int) -> Image.Image:
     draw   = ImageDraw.Draw(img)
     _draw_brand(draw, w, h)
 
-    f_hook = _load_font("regular", int(52 * scale))
-    f_word = _load_font("bold",    int(160 * scale))
-    f_kana = _load_font("regular", int(56 * scale))
+    f_hook   = _load_font("regular", int(52 * scale))
+    f_word   = _load_font("bold",    int(150 * scale))
+    f_kana   = _load_font("regular", int(54 * scale))
+    f_romaji = _load_font("italic",  int(44 * scale))
 
-    kanji = word_data["kanji"]
-    kana  = word_data.get("kana", "")
+    kanji  = word_data["kanji"]
+    kana   = word_data.get("kana", "")
+    romaji = word_data.get("romaji", "")
 
-    h_top  = f_hook.getbbox("Do you know what")[3]
-    h_kanji = f_word.getbbox(kanji)[3]
-    h_kana  = f_kana.getbbox(kana)[3] if kana else 0
-    h_bot  = f_hook.getbbox("means?")[3]
-    gap    = int(24 * scale)
-    total  = h_top + gap + h_kanji + (gap + h_kana if kana else 0) + gap + h_bot
-    y      = (h - total) // 2
+    show_kana   = bool(kana)   and kana   != kanji
+    show_romaji = bool(romaji) and romaji != kanji
+
+    h_top    = f_hook.getbbox("Do you know what")[3]
+    h_kanji  = f_word.getbbox(kanji)[3]
+    h_kana   = f_kana.getbbox(kana)[3]     if show_kana   else 0
+    h_rom    = f_romaji.getbbox(romaji)[3] if show_romaji else 0
+    h_bot    = f_hook.getbbox("means?")[3]
+    gap      = int(20 * scale)
+    total    = (h_top + gap + h_kanji
+                + (gap + h_kana if show_kana   else 0)
+                + (gap + h_rom  if show_romaji else 0)
+                + gap + h_bot)
+    y = (h - total) // 2
 
     y = _draw_centered(draw, "Do you know what", f_hook, DEFINITION_COLOR, y, w) + gap
-    y = _draw_centered(draw, kanji,             f_word, WORD_COLOR,       y, w) + gap
-    if kana and kana != kanji:
+    y = _draw_centered(draw, kanji, f_word, WORD_COLOR, y, w) + gap
+    if show_kana:
         y = _draw_centered(draw, kana, f_kana, KANA_COLOR, y, w) + gap
+    if show_romaji:
+        y = _draw_centered(draw, romaji, f_romaji, ROMAJI_COLOR, y, w) + gap
     _draw_centered(draw, "means?", f_hook, DEFINITION_COLOR, y, w)
     return img
 
@@ -161,30 +201,39 @@ def _make_word_frame(word_data: dict, w: int, h: int,
 
 def _make_definition_frame(word_data: dict, w: int, h: int,
                             bg_image: Image.Image | None = None) -> Image.Image:
+    """Definition scene — vertically centered in the YouTube safe zone
+    (top 6% to bottom 82%; bottom 18% is reserved for YouTube's overlay UI)."""
     scale  = w / 1080
     img    = _make_bg(w, h, bg_image)
     draw   = ImageDraw.Draw(img)
     _draw_brand(draw, w, h)
 
-    f_kanji = _load_font("bold",    int(110 * scale))
-    f_kana  = _load_font("regular", int(52 * scale))
-    f_label = _load_font("regular", int(40 * scale))
-    f_def   = _load_font("regular", int(56 * scale))
+    f_kanji  = _load_font("bold",    int(130 * scale))
+    f_kana   = _load_font("regular", int(64 * scale))
+    f_romaji = _load_font("italic",  int(48 * scale))
+    f_label  = _load_font("regular", int(50 * scale))
+    f_def    = _load_font("regular", int(68 * scale))
 
-    kanji = word_data["kanji"]
-    kana  = word_data.get("kana", "")
-    pos   = word_data.get("part_of_speech", "")
-    defn  = word_data.get("definition", "")
+    kanji  = word_data["kanji"]
+    kana   = word_data.get("kana", "")
+    romaji = word_data.get("romaji", "")
+    pos    = word_data.get("part_of_speech", "")
+    defn   = word_data.get("definition", "")
 
-    y = int(h * 0.13)
-    y = _draw_centered(draw, kanji, f_kanji, WORD_COLOR, y, w) + int(20 * scale)
+    safe_top    = int(h * 0.06)
+    safe_bottom = int(h * 0.82)
+    y = safe_top + int(40 * scale)
+
+    y = _draw_centered(draw, kanji, f_kanji, WORD_COLOR, y, w) + int(14 * scale)
     if kana and kana != kanji:
-        y = _draw_centered(draw, kana, f_kana, KANA_COLOR, y, w) + int(24 * scale)
+        y = _draw_centered(draw, kana, f_kana, KANA_COLOR, y, w) + int(10 * scale)
+    if romaji:
+        y = _draw_centered(draw, romaji, f_romaji, ROMAJI_COLOR, y, w) + int(28 * scale)
     if pos:
-        y = _draw_centered(draw, pos, f_label, ROMAJI_COLOR, y, w) + int(20 * scale)
-    lx1, lx2 = w // 4, 3 * w // 4
+        y = _draw_centered(draw, pos, f_label, ROMAJI_COLOR, y, w) + int(24 * scale)
+    lx1, lx2 = w // 5, 4 * w // 5
     draw.line([(lx1, y + 8), (lx2, y + 8)], fill=(55, 55, 75), width=2)
-    y += int(36 * scale)
+    y += int(48 * scale)
     if defn:
         _draw_wrapped(draw, defn, f_def, DEFINITION_COLOR, y, w)
     return img
@@ -192,26 +241,47 @@ def _make_definition_frame(word_data: dict, w: int, h: int,
 
 def _make_example_frame(word_data: dict, w: int, h: int,
                          bg_image: Image.Image | None = None) -> Image.Image:
+    """Example scene — header sized for impact; body fills the safe zone
+    so the short doesn't feel top-heavy on a phone screen."""
     scale  = w / 1080
     img    = _make_bg(w, h, bg_image)
     draw   = ImageDraw.Draw(img)
     _draw_brand(draw, w, h)
 
-    f_kanji = _load_font("bold",    int(80 * scale))
-    f_label = _load_font("regular", int(44 * scale))
-    f_jp    = _load_font("regular", int(54 * scale))
-    f_en    = _load_font("italic",  int(44 * scale))
+    f_kanji   = _load_font("bold",    int(96 * scale))
+    f_kana    = _load_font("regular", int(50 * scale))
+    f_romaji  = _load_font("italic",  int(40 * scale))
+    f_label   = _load_font("regular", int(46 * scale))
+    f_jp      = _load_font("regular", int(64 * scale))
+    f_jp_kana = _load_font("regular", int(46 * scale))
+    f_en      = _load_font("italic",  int(52 * scale))
 
-    y = int(h * 0.10)
-    y = _draw_centered(draw, word_data["kanji"], f_kanji, WORD_COLOR, y, w) + int(28 * scale)
+    kanji  = word_data["kanji"]
+    kana   = word_data.get("kana", "")
+    romaji = word_data.get("romaji", "")
+
+    safe_top = int(h * 0.06)
+    y = safe_top + int(40 * scale)
+
+    y = _draw_centered(draw, kanji, f_kanji, WORD_COLOR, y, w) + int(10 * scale)
+    if kana and kana != kanji:
+        y = _draw_centered(draw, kana, f_kana, KANA_COLOR, y, w) + int(8 * scale)
+    if romaji:
+        y = _draw_centered(draw, romaji, f_romaji, ROMAJI_COLOR, y, w) + int(28 * scale)
     y = _draw_centered(draw, "Example", f_label, ROMAJI_COLOR, y, w) + int(12 * scale)
-    draw.line([(w // 4, y + 8), (3 * w // 4, y + 8)], fill=(55, 55, 75), width=2)
-    y += int(28 * scale) + int(20 * scale)
+    draw.line([(w // 5, y + 8), (4 * w // 5, y + 8)], fill=(55, 55, 75), width=2)
+    y += int(36 * scale)
 
-    example_jp = word_data.get("example_jp", "")
-    example_en = word_data.get("example_en", "")
+    example_jp   = word_data.get("example_jp", "")
+    example_kana = word_data.get("example_kana", "")
+    example_en   = word_data.get("example_en", "")
+
     if example_jp:
-        y = _draw_wrapped_jp(draw, example_jp, f_jp, DEFINITION_COLOR, y, w) + int(28 * scale)
+        y = _draw_wrapped_jp(draw, example_jp, f_jp, DEFINITION_COLOR, y, w) + int(12 * scale)
+        if not example_kana:
+            example_kana = _kana_of(example_jp)
+        if example_kana and example_kana != example_jp:
+            y = _draw_wrapped_jp(draw, example_kana, f_jp_kana, KANA_COLOR, y, w) + int(28 * scale)
     if example_en:
         _draw_wrapped(draw, f'"{example_en}"', f_en, EXAMPLE_COLOR, y, w)
     return img
@@ -219,42 +289,121 @@ def _make_example_frame(word_data: dict, w: int, h: int,
 
 def _make_synonyms_frame(word_data: dict, w: int, h: int,
                           bg_image: Image.Image | None = None) -> Image.Image:
+    """Synonyms scene — vertically centered in the YouTube safe zone with
+    larger type so the layout fills the visual frame instead of clustering
+    at the top."""
     scale  = w / 1080
     img    = _make_bg(w, h, bg_image)
     draw   = ImageDraw.Draw(img)
     _draw_brand(draw, w, h)
 
-    f_kanji = _load_font("bold",    int(80 * scale))
-    f_label = _load_font("regular", int(44 * scale))
-    f_syn   = _load_font("regular", int(64 * scale))
+    f_kanji      = _load_font("bold",    int(110 * scale))
+    f_kana_top   = _load_font("regular", int(56 * scale))
+    f_romaji_top = _load_font("italic",  int(44 * scale))
+    f_label      = _load_font("regular", int(48 * scale))
+    f_syn        = _load_font("bold",    int(78 * scale))
+    f_syn_kana   = _load_font("regular", int(44 * scale))
+    f_syn_rom    = _load_font("italic",  int(38 * scale))
 
-    y = int(h * 0.12)
-    y = _draw_centered(draw, word_data["kanji"], f_kanji, WORD_COLOR, y, w) + int(32 * scale)
-    y = _draw_centered(draw, "Related", f_label, ROMAJI_COLOR, y, w) + int(12 * scale)
-    draw.line([(w // 4, y + 8), (3 * w // 4, y + 8)], fill=(55, 55, 75), width=2)
-    y += int(28 * scale) + int(20 * scale)
+    kanji  = word_data["kanji"]
+    kana   = word_data.get("kana", "")
+    romaji = word_data.get("romaji", "")
+    syns   = word_data.get("synonyms", [])[:3]
 
-    for syn in word_data.get("synonyms", [])[:4]:
-        y = _draw_centered(draw, syn, f_syn, KANA_COLOR, y, w) + int(20 * scale)
+    show_kana   = bool(kana)   and kana   != kanji
+    show_romaji = bool(romaji)
+
+    # Pre-compute total content height so we can vertically center the
+    # whole block inside the safe zone (top 6% to bottom 82%).
+    h_kanji   = f_kanji.getbbox(kanji)[3]
+    h_kana    = f_kana_top.getbbox(kana)[3]    if show_kana   else 0
+    h_romaji  = f_romaji_top.getbbox(romaji)[3] if show_romaji else 0
+    h_label   = f_label.getbbox("Related")[3]
+
+    gap_after_kanji  = int(10 * scale)
+    gap_after_kana   = int(8 * scale)
+    gap_after_romaji = int(28 * scale)
+    gap_after_label  = int(20 * scale)
+    gap_after_line   = int(40 * scale)
+    gap_between_syns = int(36 * scale)
+
+    syn_block_heights = []
+    for syn in syns:
+        sh = f_syn.getbbox(syn)[3]
+        sk = _kana_of(syn)
+        if sk:
+            sh += int(8 * scale) + f_syn_kana.getbbox(sk)[3]
+        sr = _romaji_of(syn)
+        if sr:
+            sh += int(6 * scale) + f_syn_rom.getbbox(sr)[3]
+        syn_block_heights.append(sh)
+
+    total_syn_h = (sum(syn_block_heights)
+                   + gap_between_syns * max(0, len(syns) - 1))
+
+    total_h = (h_kanji + gap_after_kanji
+               + (h_kana   + gap_after_kana   if show_kana   else 0)
+               + (h_romaji + gap_after_romaji if show_romaji else 0)
+               + h_label + gap_after_label
+               + gap_after_line
+               + total_syn_h)
+
+    safe_top    = int(h * 0.06)
+    safe_bottom = int(h * 0.82)
+    y = max(safe_top, safe_top + (safe_bottom - safe_top - total_h) // 2)
+
+    y = _draw_centered(draw, kanji, f_kanji, WORD_COLOR, y, w) + gap_after_kanji
+    if show_kana:
+        y = _draw_centered(draw, kana, f_kana_top, KANA_COLOR, y, w) + gap_after_kana
+    if show_romaji:
+        y = _draw_centered(draw, romaji, f_romaji_top, ROMAJI_COLOR, y, w) + gap_after_romaji
+    y = _draw_centered(draw, "Related", f_label, ROMAJI_COLOR, y, w) + gap_after_label
+    draw.line([(w // 5, y + 8), (4 * w // 5, y + 8)], fill=(55, 55, 75), width=2)
+    y += gap_after_line
+
+    for j, syn in enumerate(syns):
+        y = _draw_centered(draw, syn, f_syn, WORD_COLOR, y, w) + int(8 * scale)
+        sk = _kana_of(syn)
+        if sk:
+            y = _draw_centered(draw, sk, f_syn_kana, KANA_COLOR, y, w) + int(6 * scale)
+        sr = _romaji_of(syn)
+        if sr:
+            y = _draw_centered(draw, sr, f_syn_rom, ROMAJI_COLOR, y, w)
+        if j < len(syns) - 1:
+            y += gap_between_syns
     return img
 
 
 def _make_tip_frame(word_data: dict, tip: str, w: int, h: int,
                      bg_image: Image.Image | None = None) -> Image.Image:
+    """Memory-tip scene — header sized for impact, tip body at a comfortable
+    reading size, all anchored within the YouTube safe zone."""
     scale  = w / 1080
     img    = _make_bg_clear(w, h, bg_image)
     draw   = ImageDraw.Draw(img)
     _draw_brand(draw, w, h)
 
-    f_kanji = _load_font("bold",    int(80 * scale))
-    f_label = _load_font("regular", int(44 * scale))
-    f_tip   = _load_font("italic",  int(46 * scale))
+    f_kanji  = _load_font("bold",    int(110 * scale))
+    f_kana   = _load_font("regular", int(56 * scale))
+    f_romaji = _load_font("italic",  int(44 * scale))
+    f_label  = _load_font("regular", int(48 * scale))
+    f_tip    = _load_font("italic",  int(58 * scale))
 
-    y = int(h * 0.12)
-    y = _draw_centered(draw, word_data["kanji"], f_kanji, WORD_COLOR, y, w) + int(32 * scale)
+    kanji  = word_data["kanji"]
+    kana   = word_data.get("kana", "")
+    romaji = word_data.get("romaji", "")
+
+    safe_top = int(h * 0.06)
+    y = safe_top + int(40 * scale)
+
+    y = _draw_centered(draw, kanji, f_kanji, WORD_COLOR, y, w) + int(10 * scale)
+    if kana and kana != kanji:
+        y = _draw_centered(draw, kana, f_kana, KANA_COLOR, y, w) + int(8 * scale)
+    if romaji:
+        y = _draw_centered(draw, romaji, f_romaji, ROMAJI_COLOR, y, w) + int(28 * scale)
     y = _draw_centered(draw, "Memory Tip", f_label, ROMAJI_COLOR, y, w) + int(12 * scale)
-    draw.line([(w // 4, y + 8), (3 * w // 4, y + 8)], fill=(55, 55, 75), width=2)
-    y += int(28 * scale) + int(20 * scale)
+    draw.line([(w // 5, y + 8), (4 * w // 5, y + 8)], fill=(55, 55, 75), width=2)
+    y += int(40 * scale)
     _draw_wrapped(draw, tip, f_tip, DEFINITION_COLOR, y, w)
     return img
 
@@ -282,7 +431,8 @@ def _tts_with_retry(text: str, path: str, lang: str = "jp",
             time.sleep(3 * (attempt + 1))
 
 
-def _multi_tts(segments: list, out: str, default_gap: float = 0.05) -> None:
+def _multi_tts(segments: list, out: str, default_gap: float = 0.05,
+               trim_silence: bool = False) -> None:
     """Generate TTS for each segment and concatenate them.
 
     segments = [{"text": str, "lang": "en"|"jp", "rate": "+0%",
@@ -292,6 +442,11 @@ def _multi_tts(segments: list, out: str, default_gap: float = 0.05) -> None:
     Set very small (0.05s) so a single sentence split across voices flows
     naturally. Use larger explicit `pause_after` between distinct items
     (e.g. listing synonyms).
+
+    `trim_silence` strips edge-tts's ~200-400ms of leading/trailing silence
+    from each segment before concatenation. Off by default; turn on for
+    scenes that need to flow as a single sentence across multiple voices
+    (e.g. the hook).
     """
     # Generate each segment then aggressively trim leading/trailing silence.
     # edge-tts pads every utterance with ~200-400ms of silence at both ends,
@@ -300,19 +455,24 @@ def _multi_tts(segments: list, out: str, default_gap: float = 0.05) -> None:
     for i, seg in enumerate(segments):
         raw  = out + f".raw{i}.mp3"
         path = out + f".seg{i}.mp3"
-        _tts_with_retry(seg["text"], raw,
-                        lang=seg.get("lang", "en"),
-                        rate=seg.get("rate", "+0%"))
-        # Strip silence from both ends (anything below -40dB for >50ms)
-        subprocess.run([
-            "ffmpeg", "-y", "-i", raw,
-            "-af",
-            "silenceremove=start_periods=1:start_duration=0.05:start_threshold=-40dB:"
-            "stop_periods=-1:stop_duration=0.05:stop_threshold=-40dB",
-            "-q:a", "4", "-acodec", "libmp3lame",
-            path,
-        ], check=True, capture_output=True)
-        os.remove(raw)
+        if trim_silence:
+            raw = out + f".raw{i}.mp3"
+            _tts_with_retry(seg["text"], raw,
+                            lang=seg.get("lang", "en"),
+                            rate=seg.get("rate", "+0%"))
+            subprocess.run([
+                "ffmpeg", "-y", "-i", raw,
+                "-af",
+                "silenceremove=start_periods=1:start_duration=0.05:start_threshold=-40dB:"
+                "stop_periods=-1:stop_duration=0.05:stop_threshold=-40dB",
+                "-q:a", "4", "-acodec", "libmp3lame",
+                path,
+            ], check=True, capture_output=True)
+            os.remove(raw)
+        else:
+            _tts_with_retry(seg["text"], path,
+                            lang=seg.get("lang", "en"),
+                            rate=seg.get("rate", "+0%"))
         audio_paths.append(path)
 
     if len(audio_paths) == 1:
@@ -320,7 +480,7 @@ def _multi_tts(segments: list, out: str, default_gap: float = 0.05) -> None:
         return
 
     # Build per-gap silence files; skip when gap is effectively zero (lavfi
-    # rejects -t 0 and we don't need a silence stream we'll never use).
+    # rejects -t 0 anyway).
     silences = []
     for i in range(len(segments) - 1):
         gap = segments[i].get("pause_after", default_gap)
@@ -413,6 +573,47 @@ def _concat_clips(clips: list, output: str) -> None:
     os.remove(lst)
 
 
+# ---------- background music ----------
+
+def _select_music_track() -> str | None:
+    """Pick a random music file from MUSIC_DIR. Returns None if the
+    directory is empty or missing — pipeline runs without music in that
+    case (no breakage)."""
+    if not os.path.isdir(MUSIC_DIR):
+        return None
+    tracks = []
+    for ext in ("*.mp3", "*.m4a", "*.wav", "*.ogg", "*.aac"):
+        tracks.extend(glob.glob(os.path.join(MUSIC_DIR, ext)))
+    if not tracks:
+        return None
+    return random.choice(tracks)
+
+
+def _mix_background_music(video_in: str, music_path: str, video_out: str) -> None:
+    """Overlay music under speech. Music is lowered to -22dB, looped if
+    shorter than the video, trimmed to video length, and fades in at the
+    start and out at the end."""
+    dur = get_audio_duration(video_in)
+    fade_out_start = max(0.0, dur - MUSIC_FADE_SEC)
+    music_filter = (
+        f"[1:a]volume={MUSIC_VOLUME_DB}dB,"
+        f"afade=t=in:st=0:d={MUSIC_FADE_SEC},"
+        f"afade=t=out:st={fade_out_start:.3f}:d={MUSIC_FADE_SEC}[m];"
+        f"[0:a][m]amix=inputs=2:duration=first:dropout_transition=0[a]"
+    )
+    subprocess.run([
+        "ffmpeg", "-y",
+        "-i", video_in,
+        "-stream_loop", "-1", "-i", music_path,
+        "-filter_complex", music_filter,
+        "-map", "0:v", "-map", "[a]",
+        "-c:v", "copy",
+        "-c:a", "aac", "-b:a", "192k", "-ar", "44100",
+        "-shortest", "-movflags", "+faststart",
+        video_out,
+    ], check=True, capture_output=True)
+
+
 # ---------- public API ----------
 
 def create_short(word_data: dict, output_path: str,
@@ -433,20 +634,17 @@ def create_short(word_data: dict, output_path: str,
 
     img_slot = 0
 
-    # Pace is intentionally slower than the YT (English) channel: Japanese
-    # learners need time to register each kanji's pronunciation, so most
-    # scenes run at the natural rate (+0%). Only English narration that's
-    # not the focus (definition / memory tip) gets a small +10% bump.
-
-    # Scene 1: hook — flows as ONE sentence ("Do you know what 勉強 means?")
+    # Scene 1: hook — single English voice reading the romanized word
+    # inline so the sentence flows from one speaker. Splitting between
+    # the EN narration voice and the JP word voice made it sound like
+    # two different people in conversation. The viewer still hears the
+    # authentic Japanese pronunciation in scene 2 immediately after.
+    hook_word = romaji or kanji
     specs = [{
         "frame": _make_hook_frame(word_data, WIDTH, HEIGHT),
         "segments": [
-            {"text": "Do you know what",  "lang": "en", "rate": "+10%",
-             "pause_after": 0.0},
-            {"text": kanji,                "lang": "jp", "rate": "+0%",
-             "pause_after": 0.0},
-            {"text": "means?",             "lang": "en", "rate": "+10%"},
+            {"text": f"Do you know what {hook_word} means?",
+             "lang": "en", "rate": "+15%"},
         ],
     }]
 
@@ -523,7 +721,8 @@ def create_short(word_data: dict, output_path: str,
     clip_paths = []
     for i, spec in enumerate(specs):
         apath = os.path.join(TEMP_DIR, f"short_a_{i}.mp3")
-        _multi_tts(spec["segments"], apath)
+        _multi_tts(spec["segments"], apath,
+                   trim_silence=spec.get("trim_silence", False))
 
         dur  = get_audio_duration(apath) + AUDIO_PADDING
         clip = os.path.join(TEMP_DIR, f"short_clip_{i}.mp4")
@@ -533,7 +732,17 @@ def create_short(word_data: dict, output_path: str,
         if os.path.exists(apath):
             os.remove(apath)
 
-    _concat_clips(clip_paths, output_path)
+    # Step 1: concat all scene clips into one continuous video
+    music = _select_music_track()
+    if music:
+        # Concat into a temp file first, then mix music on top
+        pre_music = output_path + ".no_music.mp4"
+        _concat_clips(clip_paths, pre_music)
+        print(f"  [music] mixing {os.path.basename(music)}")
+        _mix_background_music(pre_music, music, output_path)
+        os.remove(pre_music)
+    else:
+        _concat_clips(clip_paths, output_path)
 
     for p in clip_paths:
         if os.path.exists(p):

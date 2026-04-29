@@ -10,6 +10,9 @@ on:
 jobs:
   publish:
     runs-on: ubuntu-latest
+    # Needed so the bot can commit uploads.md back to the repo
+    permissions:
+      contents: write
 
     steps:
       - name: Random delay (0–59 min) — skipped on manual runs
@@ -40,3 +43,18 @@ jobs:
           PEXELS_API_KEY:        ${{ secrets.PEXELS_API_KEY }}
           GROQ_API_KEY:          ${{ secrets.GROQ_API_KEY }}
         run: python pipeline.py
+
+      - name: Commit upload history
+        # Run even if the pipeline failed — uploads.md only changes when
+        # an upload actually succeeded, so committing is always safe.
+        if: always()
+        run: |
+          if [ -f uploads.md ] && ! git diff --quiet uploads.md; then
+            git config user.name  "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add uploads.md
+            git commit -m "Log upload: $(date -u +%Y-%m-%d) slot ${{ github.run_id }}"
+            git push
+          else
+            echo "uploads.md unchanged, nothing to commit"
+          fi

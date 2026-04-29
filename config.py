@@ -74,4 +74,4 @@ YT_TAGS = [
     "japanese pronunciation", "japanese language", "shorts",
 ]
 YT_CATEGORY_ID = "27"   # Education
-YT_CHANNEL_NAME = "@DailyNihongo"
+YT_CHANNEL_NAME = "@EverydayJapanese"
