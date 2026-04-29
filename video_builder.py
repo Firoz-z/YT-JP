@@ -366,7 +366,8 @@ def _tts_with_retry(text: str, path: str, lang: str = "jp",
             time.sleep(3 * (attempt + 1))
 
 
-def _multi_tts(segments: list, out: str, default_gap: float = 0.05) -> None:
+def _multi_tts(segments: list, out: str, default_gap: float = 0.05,
+               trim_silence: bool = False) -> None:
     """Generate TTS for each segment and concatenate them.
 
     segments = [{"text": str, "lang": "en"|"jp", "rate": "+0%",
@@ -376,23 +377,47 @@ def _multi_tts(segments: list, out: str, default_gap: float = 0.05) -> None:
     Set very small (0.05s) so a single sentence split across voices flows
     naturally. Use larger explicit `pause_after` between distinct items
     (e.g. listing synonyms).
+
+    `trim_silence` strips edge-tts's ~200-400ms of leading/trailing silence
+    from each segment before concatenation. Off by default; turn on for
+    scenes that need to flow as a single sentence across multiple voices
+    (e.g. the hook).
     """
     audio_paths = []
     for i, seg in enumerate(segments):
         path = out + f".seg{i}.mp3"
-        _tts_with_retry(seg["text"], path,
-                        lang=seg.get("lang", "en"),
-                        rate=seg.get("rate", "+0%"))
+        if trim_silence:
+            raw = out + f".raw{i}.mp3"
+            _tts_with_retry(seg["text"], raw,
+                            lang=seg.get("lang", "en"),
+                            rate=seg.get("rate", "+0%"))
+            subprocess.run([
+                "ffmpeg", "-y", "-i", raw,
+                "-af",
+                "silenceremove=start_periods=1:start_duration=0.05:start_threshold=-40dB:"
+                "stop_periods=-1:stop_duration=0.05:stop_threshold=-40dB",
+                "-q:a", "4", "-acodec", "libmp3lame",
+                path,
+            ], check=True, capture_output=True)
+            os.remove(raw)
+        else:
+            _tts_with_retry(seg["text"], path,
+                            lang=seg.get("lang", "en"),
+                            rate=seg.get("rate", "+0%"))
         audio_paths.append(path)
 
     if len(audio_paths) == 1:
         os.replace(audio_paths[0], out)
         return
 
-    # Build per-gap silence files (different gaps may differ between segments)
+    # Build per-gap silence files; skip when gap is effectively zero (lavfi
+    # rejects -t 0 anyway).
     silences = []
     for i in range(len(segments) - 1):
         gap = segments[i].get("pause_after", default_gap)
+        if gap <= 0.001:
+            silences.append(None)
+            continue
         sil = out + f".sil{i}.mp3"
         subprocess.run([
             "ffmpeg", "-y",
@@ -405,7 +430,7 @@ def _multi_tts(segments: list, out: str, default_gap: float = 0.05) -> None:
     interleaved = []
     for i, audio in enumerate(audio_paths):
         interleaved.append(audio)
-        if i < len(silences):
+        if i < len(silences) and silences[i] is not None:
             interleaved.append(silences[i])
 
     cmd = ["ffmpeg", "-y"]
@@ -423,7 +448,7 @@ def _multi_tts(segments: list, out: str, default_gap: float = 0.05) -> None:
     cmd += ["-filter_complex", fc, "-map", "[out]", out]
     subprocess.run(cmd, check=True, capture_output=True)
 
-    for p in audio_paths + silences:
+    for p in audio_paths + [s for s in silences if s]:
         if os.path.exists(p):
             os.remove(p)
 
@@ -499,12 +524,19 @@ def create_short(word_data: dict, output_path: str,
 
     img_slot = 0
 
-    # Scene 1: hook — bilingual (EN voice asks, JP voice says the word, EN voice closes)
+    # Scene 1: hook — must flow as ONE sentence ("Do you know what 勉強
+    # means?"). trim_silence strips the ~600ms of edge-tts padding that
+    # shows up at every voice swap; pause_after=0 keeps segments butted
+    # up; JP word at +20% so it doesn't drag relative to the surrounding
+    # English at +15%.
     specs = [{
         "frame": _make_hook_frame(word_data, WIDTH, HEIGHT),
+        "trim_silence": True,
         "segments": [
-            {"text": "Do you know what",  "lang": "en", "rate": "+15%"},
-            {"text": kanji,                "lang": "jp", "rate": "-15%"},
+            {"text": "Do you know what",  "lang": "en", "rate": "+15%",
+             "pause_after": 0.0},
+            {"text": kanji,                "lang": "jp", "rate": "+20%",
+             "pause_after": 0.0},
             {"text": "means?",             "lang": "en", "rate": "+15%"},
         ],
     }]
@@ -582,7 +614,8 @@ def create_short(word_data: dict, output_path: str,
     clip_paths = []
     for i, spec in enumerate(specs):
         apath = os.path.join(TEMP_DIR, f"short_a_{i}.mp3")
-        _multi_tts(spec["segments"], apath)
+        _multi_tts(spec["segments"], apath,
+                   trim_silence=spec.get("trim_silence", False))
 
         dur  = get_audio_duration(apath) + AUDIO_PADDING
         clip = os.path.join(TEMP_DIR, f"short_clip_{i}.mp4")
