@@ -194,16 +194,18 @@ def _make_word_frame(word_data: dict, w: int, h: int,
 
 def _make_definition_frame(word_data: dict, w: int, h: int,
                             bg_image: Image.Image | None = None) -> Image.Image:
+    """Definition scene — vertically centered in the YouTube safe zone
+    (top 6% to bottom 82%; bottom 18% is reserved for YouTube's overlay UI)."""
     scale  = w / 1080
     img    = _make_bg(w, h, bg_image)
     draw   = ImageDraw.Draw(img)
     _draw_brand(draw, w, h)
 
-    f_kanji  = _load_font("bold",    int(100 * scale))
-    f_kana   = _load_font("regular", int(48 * scale))
-    f_romaji = _load_font("italic",  int(40 * scale))
-    f_label  = _load_font("regular", int(40 * scale))
-    f_def    = _load_font("regular", int(56 * scale))
+    f_kanji  = _load_font("bold",    int(130 * scale))
+    f_kana   = _load_font("regular", int(64 * scale))
+    f_romaji = _load_font("italic",  int(48 * scale))
+    f_label  = _load_font("regular", int(50 * scale))
+    f_def    = _load_font("regular", int(68 * scale))
 
     kanji  = word_data["kanji"]
     kana   = word_data.get("kana", "")
@@ -211,17 +213,20 @@ def _make_definition_frame(word_data: dict, w: int, h: int,
     pos    = word_data.get("part_of_speech", "")
     defn   = word_data.get("definition", "")
 
-    y = int(h * 0.11)
+    safe_top    = int(h * 0.06)
+    safe_bottom = int(h * 0.82)
+    y = safe_top + int(40 * scale)
+
     y = _draw_centered(draw, kanji, f_kanji, WORD_COLOR, y, w) + int(14 * scale)
     if kana and kana != kanji:
         y = _draw_centered(draw, kana, f_kana, KANA_COLOR, y, w) + int(10 * scale)
     if romaji:
-        y = _draw_centered(draw, romaji, f_romaji, ROMAJI_COLOR, y, w) + int(20 * scale)
+        y = _draw_centered(draw, romaji, f_romaji, ROMAJI_COLOR, y, w) + int(28 * scale)
     if pos:
-        y = _draw_centered(draw, pos, f_label, ROMAJI_COLOR, y, w) + int(20 * scale)
-    lx1, lx2 = w // 4, 3 * w // 4
+        y = _draw_centered(draw, pos, f_label, ROMAJI_COLOR, y, w) + int(24 * scale)
+    lx1, lx2 = w // 5, 4 * w // 5
     draw.line([(lx1, y + 8), (lx2, y + 8)], fill=(55, 55, 75), width=2)
-    y += int(32 * scale)
+    y += int(48 * scale)
     if defn:
         _draw_wrapped(draw, defn, f_def, DEFINITION_COLOR, y, w)
     return img
@@ -229,43 +234,47 @@ def _make_definition_frame(word_data: dict, w: int, h: int,
 
 def _make_example_frame(word_data: dict, w: int, h: int,
                          bg_image: Image.Image | None = None) -> Image.Image:
+    """Example scene — header sized for impact; body fills the safe zone
+    so the short doesn't feel top-heavy on a phone screen."""
     scale  = w / 1080
     img    = _make_bg(w, h, bg_image)
     draw   = ImageDraw.Draw(img)
     _draw_brand(draw, w, h)
 
-    f_kanji   = _load_font("bold",    int(72 * scale))
-    f_kana    = _load_font("regular", int(40 * scale))
-    f_romaji  = _load_font("italic",  int(36 * scale))
-    f_label   = _load_font("regular", int(40 * scale))
-    f_jp      = _load_font("regular", int(50 * scale))
-    f_jp_kana = _load_font("regular", int(38 * scale))
-    f_en      = _load_font("italic",  int(42 * scale))
+    f_kanji   = _load_font("bold",    int(96 * scale))
+    f_kana    = _load_font("regular", int(50 * scale))
+    f_romaji  = _load_font("italic",  int(40 * scale))
+    f_label   = _load_font("regular", int(46 * scale))
+    f_jp      = _load_font("regular", int(64 * scale))
+    f_jp_kana = _load_font("regular", int(46 * scale))
+    f_en      = _load_font("italic",  int(52 * scale))
 
     kanji  = word_data["kanji"]
     kana   = word_data.get("kana", "")
     romaji = word_data.get("romaji", "")
 
-    y = int(h * 0.08)
-    y = _draw_centered(draw, kanji, f_kanji, WORD_COLOR, y, w) + int(8 * scale)
+    safe_top = int(h * 0.06)
+    y = safe_top + int(40 * scale)
+
+    y = _draw_centered(draw, kanji, f_kanji, WORD_COLOR, y, w) + int(10 * scale)
     if kana and kana != kanji:
-        y = _draw_centered(draw, kana, f_kana, KANA_COLOR, y, w) + int(6 * scale)
+        y = _draw_centered(draw, kana, f_kana, KANA_COLOR, y, w) + int(8 * scale)
     if romaji:
-        y = _draw_centered(draw, romaji, f_romaji, ROMAJI_COLOR, y, w) + int(20 * scale)
-    y = _draw_centered(draw, "Example", f_label, ROMAJI_COLOR, y, w) + int(10 * scale)
-    draw.line([(w // 4, y + 8), (3 * w // 4, y + 8)], fill=(55, 55, 75), width=2)
-    y += int(28 * scale)
+        y = _draw_centered(draw, romaji, f_romaji, ROMAJI_COLOR, y, w) + int(28 * scale)
+    y = _draw_centered(draw, "Example", f_label, ROMAJI_COLOR, y, w) + int(12 * scale)
+    draw.line([(w // 5, y + 8), (4 * w // 5, y + 8)], fill=(55, 55, 75), width=2)
+    y += int(36 * scale)
 
     example_jp   = word_data.get("example_jp", "")
     example_kana = word_data.get("example_kana", "")
     example_en   = word_data.get("example_en", "")
 
     if example_jp:
-        y = _draw_wrapped_jp(draw, example_jp, f_jp, DEFINITION_COLOR, y, w) + int(8 * scale)
+        y = _draw_wrapped_jp(draw, example_jp, f_jp, DEFINITION_COLOR, y, w) + int(12 * scale)
         if not example_kana:
             example_kana = _kana_of(example_jp)
         if example_kana and example_kana != example_jp:
-            y = _draw_wrapped_jp(draw, example_kana, f_jp_kana, KANA_COLOR, y, w) + int(20 * scale)
+            y = _draw_wrapped_jp(draw, example_kana, f_jp_kana, KANA_COLOR, y, w) + int(28 * scale)
     if example_en:
         _draw_wrapped(draw, f'"{example_en}"', f_en, EXAMPLE_COLOR, y, w)
     return img
@@ -273,72 +282,121 @@ def _make_example_frame(word_data: dict, w: int, h: int,
 
 def _make_synonyms_frame(word_data: dict, w: int, h: int,
                           bg_image: Image.Image | None = None) -> Image.Image:
+    """Synonyms scene — vertically centered in the YouTube safe zone with
+    larger type so the layout fills the visual frame instead of clustering
+    at the top."""
     scale  = w / 1080
     img    = _make_bg(w, h, bg_image)
     draw   = ImageDraw.Draw(img)
     _draw_brand(draw, w, h)
 
-    f_kanji      = _load_font("bold",    int(72 * scale))
-    f_kana_top   = _load_font("regular", int(40 * scale))
-    f_romaji_top = _load_font("italic",  int(36 * scale))
-    f_label      = _load_font("regular", int(40 * scale))
-    f_syn        = _load_font("bold",    int(54 * scale))
-    f_syn_kana   = _load_font("regular", int(36 * scale))
-    f_syn_rom    = _load_font("italic",  int(32 * scale))
+    f_kanji      = _load_font("bold",    int(110 * scale))
+    f_kana_top   = _load_font("regular", int(56 * scale))
+    f_romaji_top = _load_font("italic",  int(44 * scale))
+    f_label      = _load_font("regular", int(48 * scale))
+    f_syn        = _load_font("bold",    int(78 * scale))
+    f_syn_kana   = _load_font("regular", int(44 * scale))
+    f_syn_rom    = _load_font("italic",  int(38 * scale))
 
     kanji  = word_data["kanji"]
     kana   = word_data.get("kana", "")
     romaji = word_data.get("romaji", "")
+    syns   = word_data.get("synonyms", [])[:3]
 
-    y = int(h * 0.09)
-    y = _draw_centered(draw, kanji, f_kanji, WORD_COLOR, y, w) + int(8 * scale)
-    if kana and kana != kanji:
-        y = _draw_centered(draw, kana, f_kana_top, KANA_COLOR, y, w) + int(6 * scale)
-    if romaji:
-        y = _draw_centered(draw, romaji, f_romaji_top, ROMAJI_COLOR, y, w) + int(18 * scale)
-    y = _draw_centered(draw, "Related", f_label, ROMAJI_COLOR, y, w) + int(10 * scale)
-    draw.line([(w // 4, y + 8), (3 * w // 4, y + 8)], fill=(55, 55, 75), width=2)
-    y += int(24 * scale)
+    show_kana   = bool(kana)   and kana   != kanji
+    show_romaji = bool(romaji)
 
-    for syn in word_data.get("synonyms", [])[:3]:
-        y = _draw_centered(draw, syn, f_syn, WORD_COLOR, y, w) + int(4 * scale)
-        syn_kana = _kana_of(syn)
-        if syn_kana:
-            y = _draw_centered(draw, syn_kana, f_syn_kana, KANA_COLOR, y, w) + int(2 * scale)
-        syn_rom = _romaji_of(syn)
-        if syn_rom:
-            y = _draw_centered(draw, syn_rom, f_syn_rom, ROMAJI_COLOR, y, w) + int(20 * scale)
-        else:
-            y += int(16 * scale)
+    # Pre-compute total content height so we can vertically center the
+    # whole block inside the safe zone (top 6% to bottom 82%).
+    h_kanji   = f_kanji.getbbox(kanji)[3]
+    h_kana    = f_kana_top.getbbox(kana)[3]    if show_kana   else 0
+    h_romaji  = f_romaji_top.getbbox(romaji)[3] if show_romaji else 0
+    h_label   = f_label.getbbox("Related")[3]
+
+    gap_after_kanji  = int(10 * scale)
+    gap_after_kana   = int(8 * scale)
+    gap_after_romaji = int(28 * scale)
+    gap_after_label  = int(20 * scale)
+    gap_after_line   = int(40 * scale)
+    gap_between_syns = int(36 * scale)
+
+    syn_block_heights = []
+    for syn in syns:
+        sh = f_syn.getbbox(syn)[3]
+        sk = _kana_of(syn)
+        if sk:
+            sh += int(8 * scale) + f_syn_kana.getbbox(sk)[3]
+        sr = _romaji_of(syn)
+        if sr:
+            sh += int(6 * scale) + f_syn_rom.getbbox(sr)[3]
+        syn_block_heights.append(sh)
+
+    total_syn_h = (sum(syn_block_heights)
+                   + gap_between_syns * max(0, len(syns) - 1))
+
+    total_h = (h_kanji + gap_after_kanji
+               + (h_kana   + gap_after_kana   if show_kana   else 0)
+               + (h_romaji + gap_after_romaji if show_romaji else 0)
+               + h_label + gap_after_label
+               + gap_after_line
+               + total_syn_h)
+
+    safe_top    = int(h * 0.06)
+    safe_bottom = int(h * 0.82)
+    y = max(safe_top, safe_top + (safe_bottom - safe_top - total_h) // 2)
+
+    y = _draw_centered(draw, kanji, f_kanji, WORD_COLOR, y, w) + gap_after_kanji
+    if show_kana:
+        y = _draw_centered(draw, kana, f_kana_top, KANA_COLOR, y, w) + gap_after_kana
+    if show_romaji:
+        y = _draw_centered(draw, romaji, f_romaji_top, ROMAJI_COLOR, y, w) + gap_after_romaji
+    y = _draw_centered(draw, "Related", f_label, ROMAJI_COLOR, y, w) + gap_after_label
+    draw.line([(w // 5, y + 8), (4 * w // 5, y + 8)], fill=(55, 55, 75), width=2)
+    y += gap_after_line
+
+    for j, syn in enumerate(syns):
+        y = _draw_centered(draw, syn, f_syn, WORD_COLOR, y, w) + int(8 * scale)
+        sk = _kana_of(syn)
+        if sk:
+            y = _draw_centered(draw, sk, f_syn_kana, KANA_COLOR, y, w) + int(6 * scale)
+        sr = _romaji_of(syn)
+        if sr:
+            y = _draw_centered(draw, sr, f_syn_rom, ROMAJI_COLOR, y, w)
+        if j < len(syns) - 1:
+            y += gap_between_syns
     return img
 
 
 def _make_tip_frame(word_data: dict, tip: str, w: int, h: int,
                      bg_image: Image.Image | None = None) -> Image.Image:
+    """Memory-tip scene — header sized for impact, tip body at a comfortable
+    reading size, all anchored within the YouTube safe zone."""
     scale  = w / 1080
     img    = _make_bg_clear(w, h, bg_image)
     draw   = ImageDraw.Draw(img)
     _draw_brand(draw, w, h)
 
-    f_kanji  = _load_font("bold",    int(72 * scale))
-    f_kana   = _load_font("regular", int(40 * scale))
-    f_romaji = _load_font("italic",  int(36 * scale))
-    f_label  = _load_font("regular", int(40 * scale))
-    f_tip    = _load_font("italic",  int(46 * scale))
+    f_kanji  = _load_font("bold",    int(110 * scale))
+    f_kana   = _load_font("regular", int(56 * scale))
+    f_romaji = _load_font("italic",  int(44 * scale))
+    f_label  = _load_font("regular", int(48 * scale))
+    f_tip    = _load_font("italic",  int(58 * scale))
 
     kanji  = word_data["kanji"]
     kana   = word_data.get("kana", "")
     romaji = word_data.get("romaji", "")
 
-    y = int(h * 0.10)
-    y = _draw_centered(draw, kanji, f_kanji, WORD_COLOR, y, w) + int(8 * scale)
+    safe_top = int(h * 0.06)
+    y = safe_top + int(40 * scale)
+
+    y = _draw_centered(draw, kanji, f_kanji, WORD_COLOR, y, w) + int(10 * scale)
     if kana and kana != kanji:
-        y = _draw_centered(draw, kana, f_kana, KANA_COLOR, y, w) + int(6 * scale)
+        y = _draw_centered(draw, kana, f_kana, KANA_COLOR, y, w) + int(8 * scale)
     if romaji:
-        y = _draw_centered(draw, romaji, f_romaji, ROMAJI_COLOR, y, w) + int(20 * scale)
-    y = _draw_centered(draw, "Memory Tip", f_label, ROMAJI_COLOR, y, w) + int(10 * scale)
-    draw.line([(w // 4, y + 8), (3 * w // 4, y + 8)], fill=(55, 55, 75), width=2)
-    y += int(28 * scale)
+        y = _draw_centered(draw, romaji, f_romaji, ROMAJI_COLOR, y, w) + int(28 * scale)
+    y = _draw_centered(draw, "Memory Tip", f_label, ROMAJI_COLOR, y, w) + int(12 * scale)
+    draw.line([(w // 5, y + 8), (4 * w // 5, y + 8)], fill=(55, 55, 75), width=2)
+    y += int(40 * scale)
     _draw_wrapped(draw, tip, f_tip, DEFINITION_COLOR, y, w)
     return img
 
