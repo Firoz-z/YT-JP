@@ -524,20 +524,17 @@ def create_short(word_data: dict, output_path: str,
 
     img_slot = 0
 
-    # Scene 1: hook — must flow as ONE sentence ("Do you know what 勉強
-    # means?"). trim_silence strips the ~600ms of edge-tts padding that
-    # shows up at every voice swap; pause_after=0 keeps segments butted
-    # up; JP word at +20% so it doesn't drag relative to the surrounding
-    # English at +15%.
+    # Scene 1: hook — single English voice reading the romanized word
+    # inline so the sentence flows from one speaker. Splitting between
+    # the EN narration voice and the JP word voice made it sound like
+    # two different people in conversation. The viewer still hears the
+    # authentic Japanese pronunciation in scene 2 immediately after.
+    hook_word = romaji or kanji
     specs = [{
         "frame": _make_hook_frame(word_data, WIDTH, HEIGHT),
-        "trim_silence": True,
         "segments": [
-            {"text": "Do you know what",  "lang": "en", "rate": "+15%",
-             "pause_after": 0.0},
-            {"text": kanji,                "lang": "jp", "rate": "+20%",
-             "pause_after": 0.0},
-            {"text": "means?",             "lang": "en", "rate": "+15%"},
+            {"text": f"Do you know what {hook_word} means?",
+             "lang": "en", "rate": "+15%"},
         ],
     }]
 
