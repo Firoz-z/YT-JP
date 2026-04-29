@@ -5,7 +5,7 @@ import random
 from datetime import date, datetime, timezone
 
 from word_fetcher import fetch_word_data
-from video_builder import create_short
+from video_builder import create_short, create_thumbnail
 from image_fetcher import fetch_word_images
 from llm import enrich_word_data
 from uploader import upload_short_only
@@ -60,13 +60,16 @@ def run(slot: int = 0) -> None:
 
     today = date.today().isoformat()
 
-    # 4 — build Short
-    safe_name = word_data["romaji"].replace(" ", "_") or "word"
-    short_path = os.path.join(OUTPUT_DIR, f"{safe_name}_{today}_s{slot}_short.mp4")
+    # 4 — build Short and thumbnail
+    safe_name      = word_data["romaji"].replace(" ", "_") or "word"
+    short_path     = os.path.join(OUTPUT_DIR, f"{safe_name}_{today}_s{slot}_short.mp4")
+    thumbnail_path = os.path.join(OUTPUT_DIR, f"{safe_name}_{today}_s{slot}_thumb.jpg")
     create_short(word_data, short_path, word_images=word_images)
+    create_thumbnail(word_data, thumbnail_path, word_images=word_images)
 
-    # 5 — upload
-    short_id = upload_short_only(short_path, word_data)
+    # 5 — upload (video + thumbnail)
+    short_id = upload_short_only(short_path, word_data,
+                                 thumbnail_path=thumbnail_path)
     print(f"  short  → https://youtube.com/shorts/{short_id}")
 
 

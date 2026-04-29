@@ -610,6 +610,91 @@ def _mix_background_music(video_in: str, music_path: str, video_out: str) -> Non
     ], check=True, capture_output=True)
 
 
+# ---------- thumbnail ----------
+
+def _make_thumbnail(word_data: dict, w: int, h: int,
+                    bg_image: Image.Image | None = None) -> Image.Image:
+    """Build a high-impact YouTube Shorts thumbnail.
+
+    Layout: a Pexels background image (full quality, lightly darkened —
+    no Gaussian blur unlike video frames so the visual is crisp), with
+    a huge bold kanji centered, kana below it, and romaji under that.
+    Text uses a thick dark stroke so it's legible against any background.
+    """
+    scale = w / 1080
+
+    # Background — clean (not blurred) Pexels image with mild dark overlay
+    if bg_image is not None:
+        img = bg_image.resize((w, h), Image.LANCZOS)
+        overlay = Image.new("RGB", (w, h), (0, 0, 0))
+        img = Image.blend(img, overlay, alpha=0.40)
+    else:
+        img = _make_bg(w, h)
+
+    draw = ImageDraw.Draw(img)
+
+    f_kanji  = _load_font("bold",    int(420 * scale))
+    f_kana   = _load_font("regular", int(110 * scale))
+    f_romaji = _load_font("italic",  int(86 * scale))
+    f_brand  = _load_font("bold",    int(56 * scale))
+
+    kanji  = word_data["kanji"]
+    kana   = word_data.get("kana", "")
+    romaji = word_data.get("romaji", "")
+
+    show_kana   = bool(kana)   and kana   != kanji
+    show_romaji = bool(romaji)
+
+    # Pre-compute total text-block height so we can vertically center
+    h_kanji  = f_kanji.getbbox(kanji)[3]
+    h_kana   = f_kana.getbbox(kana)[3]     if show_kana   else 0
+    h_romaji = f_romaji.getbbox(romaji)[3] if show_romaji else 0
+    gap_kk   = int(40 * scale)
+    gap_kr   = int(24 * scale)
+    total    = (h_kanji
+                + (gap_kk + h_kana   if show_kana   else 0)
+                + (gap_kr + h_romaji if show_romaji else 0))
+    y = (h - total) // 2 - int(60 * scale)
+
+    # Stroke makes text pop on any background
+    stroke_w = max(6, int(10 * scale))
+
+    def _draw_thumb_text(text, font, color, y, stroke_color=(0, 0, 0)):
+        bbox = font.getbbox(text)
+        tw   = bbox[2] - bbox[0]
+        th   = bbox[3] - bbox[1]
+        x    = (w - tw) // 2
+        draw.text((x, y), text, font=font, fill=color,
+                  stroke_width=stroke_w, stroke_fill=stroke_color)
+        return y + th
+
+    y = _draw_thumb_text(kanji, f_kanji, (255, 255, 255), y) + gap_kk
+    if show_kana:
+        y = _draw_thumb_text(kana, f_kana, (255, 200, 100), y) + gap_kr
+    if show_romaji:
+        _draw_thumb_text(romaji, f_romaji, (240, 240, 240), y)
+
+    # Channel handle at bottom for brand recall
+    brand_text = YT_CHANNEL_NAME
+    bbox = f_brand.getbbox(brand_text)
+    bw = bbox[2] - bbox[0]
+    by = h - int(140 * scale)
+    draw.text(((w - bw) // 2, by), brand_text, font=f_brand,
+              fill=BRAND_COLOR, stroke_width=max(3, int(5 * scale)),
+              stroke_fill=(0, 0, 0))
+
+    return img
+
+
+def create_thumbnail(word_data: dict, output_path: str,
+                     word_images: list = None) -> None:
+    """Render the Shorts thumbnail to output_path (JPG, ≤2MB for YouTube)."""
+    bg = (word_images[0] if word_images else None)
+    img = _make_thumbnail(word_data, WIDTH, HEIGHT, bg_image=bg)
+    img.convert("RGB").save(output_path, format="JPEG", quality=88,
+                            optimize=True, progressive=True)
+
+
 # ---------- public API ----------
 
 def create_short(word_data: dict, output_path: str,

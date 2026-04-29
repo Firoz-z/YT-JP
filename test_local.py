@@ -19,7 +19,7 @@ import sys
 from datetime import date
 
 from word_fetcher import fetch_word_data
-from video_builder import create_short
+from video_builder import create_short, create_thumbnail
 from image_fetcher import fetch_word_images
 from llm import enrich_word_data
 from config import TEMP_DIR, OUTPUT_DIR
@@ -52,15 +52,19 @@ def main():
     word_images = fetch_word_images(word_data, count=5)
     print(f"  images     : {len(word_images)} fetched")
 
-    print("\n[4/4] Building video (TTS + frames + ffmpeg)...")
+    print("\n[4/4] Building video (TTS + frames + ffmpeg) and thumbnail...")
     today = date.today().isoformat()
     safe_name = word_data["romaji"].replace(" ", "_") or "test"
-    output_path = os.path.join(OUTPUT_DIR, f"TEST_{safe_name}_{today}.mp4")
+    output_path    = os.path.join(OUTPUT_DIR, f"TEST_{safe_name}_{today}.mp4")
+    thumbnail_path = os.path.join(OUTPUT_DIR, f"TEST_{safe_name}_{today}_thumb.jpg")
     create_short(word_data, output_path, word_images=word_images)
+    create_thumbnail(word_data, thumbnail_path, word_images=word_images)
 
     print(f"\n=== DONE ===")
-    print(f"Video: {output_path}")
-    print(f"Open with: open '{output_path}'")
+    print(f"Video    : {output_path}")
+    print(f"Thumbnail: {thumbnail_path}")
+    print(f"Open video    : open '{output_path}'")
+    print(f"Open thumbnail: open '{thumbnail_path}'")
     return 0
 
 

@@ -13,10 +13,32 @@ def _get_client():
         token_uri="https://oauth2.googleapis.com/token",
         client_id=os.environ["YOUTUBE_CLIENT_ID"],
         client_secret=os.environ["YOUTUBE_CLIENT_SECRET"],
-        scopes=["https://www.googleapis.com/auth/youtube.upload"],
+        scopes=[
+            "https://www.googleapis.com/auth/youtube.upload",
+            # Needed to call thumbnails().set() — youtube.upload alone is
+            # insufficient for setting custom thumbnails.
+            "https://www.googleapis.com/auth/youtube",
+        ],
     )
     creds.refresh(Request())
     return build("youtube", "v3", credentials=creds)
+
+
+def _set_thumbnail(yt, video_id: str, thumbnail_path: str) -> None:
+    """Upload a custom thumbnail for the given video. Channel must be
+    verified for this to succeed; if it isn't, YouTube will return 400
+    and we just log + continue (video is still live)."""
+    if not thumbnail_path or not os.path.exists(thumbnail_path):
+        return
+    try:
+        yt.thumbnails().set(
+            videoId=video_id,
+            media_body=MediaFileUpload(thumbnail_path, mimetype="image/jpeg"),
+        ).execute()
+        print(f"  thumbnail set: {os.path.basename(thumbnail_path)}")
+    except Exception as e:
+        print(f"  [thumbnail] could not set custom thumbnail: {e}")
+        print(f"  [thumbnail] video is still live with auto-picked frame")
 
 
 def _build_description(word_data: dict) -> str:
@@ -71,8 +93,10 @@ def _insert(yt, video_path: str, title: str, description: str, tags: list) -> st
     return response["id"]
 
 
-def upload_short_only(short_path: str, word_data: dict) -> str:
-    """Upload only the Short. Returns video ID."""
+def upload_short_only(short_path: str, word_data: dict,
+                      thumbnail_path: str | None = None) -> str:
+    """Upload the Short and optionally set a custom thumbnail.
+    Returns video ID."""
     kanji       = word_data["kanji"]
     romaji      = word_data.get("romaji", "")
     base_tags   = YT_TAGS + [kanji, romaji, f"learn {romaji}", f"{romaji} japanese"]
@@ -85,9 +109,11 @@ def upload_short_only(short_path: str, word_data: dict) -> str:
     title_parts.append("| Japanese Word of the Day #shorts")
     title = " ".join(title_parts)
 
-    return _insert(
+    video_id = _insert(
         yt, short_path,
         title       = title,
         description = description + "\n\n#japanese #learnjapanese #nihongo #jlpt #shorts",
         tags        = base_tags + ["shorts"],
     )
+    _set_thumbnail(yt, video_id, thumbnail_path)
+    return video_id
