@@ -11,7 +11,7 @@ from llm import enrich_word_data
 from uploader import upload_short_only
 from config import TEMP_DIR, OUTPUT_DIR
 
-VIDEOS_PER_DAY = 3
+VIDEOS_PER_DAY = 4
 
 UPLOAD_LOG = "uploads.md"
 UPLOAD_LOG_HEADER = (
@@ -107,11 +107,18 @@ def run(slot: int = 0) -> None:
 
 
 def _slot_from_hour() -> int:
-    """Map current UTC hour to a slot (0-2) matching the cron schedule."""
+    """Map current UTC hour to a slot (0-3) matching the cron schedule.
+
+    Cron fires at 08:00, 14:00, 19:00, 23:00 UTC.
+    Each branch covers the window up to (but not including) the next
+    cron, so a workflow that runs slightly late still picks the right
+    slot it was meant for.
+    """
     hour = datetime.now(timezone.utc).hour
-    if hour < 12:   return 0
-    elif hour < 17: return 1
-    else:           return 2
+    if hour < 12:   return 0   # 8 AM UTC run
+    elif hour < 17: return 1   # 2 PM UTC run
+    elif hour < 22: return 2   # 7 PM UTC run
+    else:           return 3   # 11 PM UTC run
 
 
 if __name__ == "__main__":

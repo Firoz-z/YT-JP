@@ -2,9 +2,10 @@ name: Daily Japanese Word Video
 
 on:
   schedule:
-    - cron: "0 8 * * *"    # slot 0 — 8 AM UTC
-    - cron: "0 14 * * *"   # slot 1 — 2 PM UTC
-    - cron: "0 19 * * *"   # slot 2 — 7 PM UTC
+    - cron: "0 8 * * *"    # slot 0 — 8 AM UTC  (Asia/India morning, UK breakfast)
+    - cron: "0 14 * * *"   # slot 1 — 2 PM UTC  (India evening peak, UK afternoon)
+    - cron: "0 19 * * *"   # slot 2 — 7 PM UTC  (UK prime, US East working hours)
+    - cron: "0 23 * * *"   # slot 3 — 11 PM UTC (US East evening peak — biggest English-audience window)
   workflow_dispatch:        # manual trigger (skips random sleep)
 
 jobs:
