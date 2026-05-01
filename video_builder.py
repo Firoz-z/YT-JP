@@ -146,21 +146,19 @@ def _make_hook_frame(word_data: dict, w: int, h: int) -> Image.Image:
     show_kana   = bool(kana)   and kana   != kanji
     show_romaji = bool(romaji) and romaji != kanji
 
-    # CJK font ascent often exceeds what getbbox reports — the kanji's
-    # strokes can render below the bottom edge of its bbox, causing the
-    # kana underneath to visually overlap. We pad the kanji height by
-    # ~20% to account for that, and use a generous gap below the kanji
-    # specifically. Subsequent reading-aid lines stay tight because
-    # they belong to the kanji as one visual cluster.
+    # CJK font glyphs render slightly below the bottom edge of getbbox,
+    # so we pad the kanji height a little (~10%) to clear the overshoot.
+    # That alone is enough to stop overlap — no need for an additional
+    # large gap below it.
     h_top    = f_hook.getbbox("Do you know what")[3]
     raw_kanji_h = f_word.getbbox(kanji)[3]
-    h_kanji  = int(raw_kanji_h * 1.20)
+    h_kanji  = int(raw_kanji_h * 1.10)
     h_kana   = f_kana.getbbox(kana)[3]     if show_kana   else 0
     h_rom    = f_romaji.getbbox(romaji)[3] if show_romaji else 0
     h_bot    = f_hook.getbbox("means?")[3]
 
     gap_outer        = int(44 * scale)
-    gap_below_kanji  = int(54 * scale)
+    gap_below_kanji  = int(12 * scale)
     gap_inner        = int(18 * scale)
     total = (h_top + gap_outer + h_kanji
              + (gap_below_kanji + h_kana if show_kana   else 0)
