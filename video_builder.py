@@ -146,25 +146,34 @@ def _make_hook_frame(word_data: dict, w: int, h: int) -> Image.Image:
     show_kana   = bool(kana)   and kana   != kanji
     show_romaji = bool(romaji) and romaji != kanji
 
+    # CJK font ascent often exceeds what getbbox reports — the kanji's
+    # strokes can render below the bottom edge of its bbox, causing the
+    # kana underneath to visually overlap. We pad the kanji height by
+    # ~20% to account for that, and use a generous gap below the kanji
+    # specifically. Subsequent reading-aid lines stay tight because
+    # they belong to the kanji as one visual cluster.
     h_top    = f_hook.getbbox("Do you know what")[3]
-    h_kanji  = f_word.getbbox(kanji)[3]
+    raw_kanji_h = f_word.getbbox(kanji)[3]
+    h_kanji  = int(raw_kanji_h * 1.20)
     h_kana   = f_kana.getbbox(kana)[3]     if show_kana   else 0
     h_rom    = f_romaji.getbbox(romaji)[3] if show_romaji else 0
     h_bot    = f_hook.getbbox("means?")[3]
-    # Bigger gap above/below the kanji block — CJK glyphs render with
-    # taller visual mass than getbbox reports, so a 20px gap looked
-    # like the lines were almost touching. Reading-aid lines stay
-    # tight because they belong to the kanji as one visual cluster.
-    gap_outer = int(44 * scale)
-    gap_inner = int(14 * scale)
-    total    = (h_top + gap_outer + h_kanji
-                + (gap_inner + h_kana if show_kana   else 0)
-                + (gap_inner + h_rom  if show_romaji else 0)
-                + gap_outer + h_bot)
+
+    gap_outer        = int(44 * scale)
+    gap_below_kanji  = int(54 * scale)
+    gap_inner        = int(18 * scale)
+    total = (h_top + gap_outer + h_kanji
+             + (gap_below_kanji + h_kana if show_kana   else 0)
+             + (gap_inner       + h_rom  if show_romaji else 0)
+             + gap_outer + h_bot)
     y = (h - total) // 2
 
-    y = _draw_centered(draw, "Do you know what", f_hook, DEFINITION_COLOR, y, w) + gap_outer
-    y = _draw_centered(draw, kanji, f_word, WORD_COLOR, y, w) + gap_inner
+    y = _draw_centered(draw, "Do you know what", f_hook,
+                       DEFINITION_COLOR, y, w) + gap_outer
+    # Draw kanji at its raw position but advance y by the padded height
+    # so the next line starts well clear of any glyph overshoot.
+    _draw_centered(draw, kanji, f_word, WORD_COLOR, y, w)
+    y += h_kanji + gap_below_kanji
     if show_kana:
         y = _draw_centered(draw, kana, f_kana, KANA_COLOR, y, w) + gap_inner
     if show_romaji:
