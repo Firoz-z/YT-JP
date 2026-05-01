@@ -47,19 +47,66 @@ def _log_upload(word_data: dict, video_id: str, slot: int) -> None:
     print(f"  history → {UPLOAD_LOG}")
 
 
+def _already_uploaded() -> set:
+    """Return the set of kanji headwords already published, parsed from
+    uploads.md. Used to skip duplicates when two runs happen in the same
+    slot window (manual workflow_dispatch + the scheduled cron, or a
+    retried run, etc.)."""
+    path = os.path.join(os.path.dirname(__file__), UPLOAD_LOG)
+    if not os.path.exists(path):
+        return set()
+    used = set()
+    with open(path, encoding="utf-8") as f:
+        for line in f:
+            # Markdown table row: "| 2026-04-29 | 2 | 嫌い | ... |"
+            parts = [p.strip() for p in line.split("|")]
+            if len(parts) < 5:
+                continue
+            date_cell = parts[1]
+            kanji_cell = parts[3]
+            if not (len(date_cell) >= 4 and date_cell[:4].isdigit()):
+                continue   # skip header / separator rows
+            if kanji_cell:
+                used.add(kanji_cell)
+    return used
+
+
 def _get_word(slot: int) -> str:
-    """Pick a unique Japanese word for today's slot."""
+    """Pick a Japanese word for this slot.
+
+    The base position is deterministic from date + slot, but we then
+    walk forward in the shuffled list past any word that's already
+    appeared in uploads.md. That guarantees no repeat even when a
+    manual run collides with the cron, or when VIDEOS_PER_DAY shifts
+    the position formula mid-cycle.
+    """
     with open("words.txt") as f:
         words = [
             w.strip()
             for w in f
             if w.strip() and not w.startswith("#")
         ]
+    used = _already_uploaded()
+
     days        = (date.today() - date(2024, 1, 1)).days
     global_slot = days * VIDEOS_PER_DAY + slot
     cycle       = global_slot // len(words)
     position    = global_slot % len(words)
 
+    # Walk through the shuffled list, advancing across cycle boundaries
+    # if needed, until we find a word that hasn't been uploaded yet.
+    for offset in range(len(words) * 4):
+        c = cycle + (position + offset) // len(words)
+        i = (position + offset) % len(words)
+        rng = random.Random(c)
+        shuffled = words[:]
+        rng.shuffle(shuffled)
+        candidate = shuffled[i]
+        if candidate not in used:
+            return candidate
+
+    # Astronomically unlikely — would mean every word was already used
+    # across 4 full cycles. Fall back to the deterministic pick.
     rng = random.Random(cycle)
     shuffled = words[:]
     rng.shuffle(shuffled)
