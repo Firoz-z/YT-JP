@@ -12,3 +12,4 @@ by the pipeline after each successful upload.
 | 2026-04-30 | 2 | 温泉 | おんせん | onsen | N2 | Natural hot spring water | [link](https://youtube.com/shorts/8FYZStVlYHI) |
 | 2026-05-01 | 0 | 選ぶ | えらぶ | erabu | N4 | To choose or select something | [link](https://youtube.com/shorts/PjAbNPoua0Q) |
 | 2026-05-01 | 0 | 選ぶ | えらぶ | erabu | N4 | To choose or select something | [link](https://youtube.com/shorts/zNXA0NQ409E) |
+| 2026-05-01 | 1 | 正義 | せいぎ | seigi | N1 | Moral rightness | [link](https://youtube.com/shorts/HmpeAPugBuQ) |
