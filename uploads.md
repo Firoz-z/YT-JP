@@ -14,3 +14,4 @@ by the pipeline after each successful upload.
 | 2026-05-01 | 0 | 選ぶ | えらぶ | erabu | N4 | To choose or select something | [link](https://youtube.com/shorts/zNXA0NQ409E) |
 | 2026-05-01 | 1 | 正義 | せいぎ | seigi | N1 | Moral rightness | [link](https://youtube.com/shorts/HmpeAPugBuQ) |
 | 2026-05-01 | 2 | 芸術 | げいじゅつ | geijutsu | N3 | Art and creative activities | [link](https://youtube.com/shorts/h3_CIED9HNU) |
+| 2026-05-02 | 0 | 祭り | まつり | matsuri | N3 | Japanese festival or celebration | [link](https://youtube.com/shorts/h6YrdhfxqSc) |
