@@ -16,3 +16,4 @@ by the pipeline after each successful upload.
 | 2026-05-01 | 2 | 芸術 | げいじゅつ | geijutsu | N3 | Art and creative activities | [link](https://youtube.com/shorts/h3_CIED9HNU) |
 | 2026-05-02 | 0 | 祭り | まつり | matsuri | N3 | Japanese festival or celebration | [link](https://youtube.com/shorts/h6YrdhfxqSc) |
 | 2026-05-02 | 0 | 気持ち | きもち | kimochi | N4 | Emotional feeling or mood | [link](https://youtube.com/shorts/fnSnMaJg-l0) |
+| 2026-05-02 | 1 | 忍者 | にんじゃ | ninja | — | Trained covert agent | [link](https://youtube.com/shorts/vkpNPd6DfJw) |
