@@ -21,3 +21,4 @@ by the pipeline after each successful upload.
 | 2026-05-03 | 0 | 真面目 | まじめ | majime | N3 | Serious and responsible person | [link](https://youtube.com/shorts/sYPefyeXUOM) |
 | 2026-05-03 | 0 | 辞める | やめる | yameru | N3 | To quit or resign | [link](https://youtube.com/shorts/M8BvSH00cLA) |
 | 2026-05-03 | 1 | 辞める | やめる | yameru | N3 | To quit or resign | [link](https://youtube.com/shorts/kSHvFk9pEeE) |
+| 2026-05-03 | 2 | 雨 | あめ | ame | N5 | Water falling from sky | [link](https://youtube.com/shorts/HnI7HArdCBg) |
