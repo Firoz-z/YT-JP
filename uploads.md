@@ -19,3 +19,4 @@ by the pipeline after each successful upload.
 | 2026-05-02 | 1 | 忍者 | にんじゃ | ninja | — | Trained covert agent | [link](https://youtube.com/shorts/vkpNPd6DfJw) |
 | 2026-05-02 | 2 | 茶道 | さどう | sadou | — | Japanese tea ceremony | [link](https://youtube.com/shorts/ujy7nvq8Nhg) |
 | 2026-05-03 | 0 | 真面目 | まじめ | majime | N3 | Serious and responsible person | [link](https://youtube.com/shorts/sYPefyeXUOM) |
+| 2026-05-03 | 0 | 辞める | やめる | yameru | N3 | To quit or resign | [link](https://youtube.com/shorts/M8BvSH00cLA) |
