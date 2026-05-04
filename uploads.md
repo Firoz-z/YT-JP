@@ -25,3 +25,4 @@ by the pipeline after each successful upload.
 | 2026-05-03 | 3 | 特別 | とくべつ | tokubetsu | N4 | Something special or unique | [link](https://youtube.com/shorts/RRTSfjBODEI) |
 | 2026-05-04 | 0 | 疑う | うたがう | utagau | N3 | To doubt or distrust | [link](https://youtube.com/shorts/KUBuIQ3tcSo) |
 | 2026-05-04 | 1 | 先生 | せんせい | sensei | N5 | Teacher or instructor | [link](https://youtube.com/shorts/irIrrBTdn2A) |
+| 2026-05-04 | 2 | 休む | やすむ | yasumu | N5 | to take a day off | [link](https://youtube.com/shorts/I5dqthtW2zU) |
