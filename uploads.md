@@ -26,3 +26,4 @@ by the pipeline after each successful upload.
 | 2026-05-04 | 0 | 疑う | うたがう | utagau | N3 | To doubt or distrust | [link](https://youtube.com/shorts/KUBuIQ3tcSo) |
 | 2026-05-04 | 1 | 先生 | せんせい | sensei | N5 | Teacher or instructor | [link](https://youtube.com/shorts/irIrrBTdn2A) |
 | 2026-05-04 | 2 | 休む | やすむ | yasumu | N5 | to take a day off | [link](https://youtube.com/shorts/I5dqthtW2zU) |
+| 2026-05-04 | 3 | 覚える | おぼえる | oboeru | N5 | To memorize | [link](https://youtube.com/shorts/2TCodVfibNQ) |
