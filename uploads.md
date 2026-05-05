@@ -28,3 +28,4 @@ by the pipeline after each successful upload.
 | 2026-05-04 | 2 | 休む | やすむ | yasumu | N5 | to take a day off | [link](https://youtube.com/shorts/I5dqthtW2zU) |
 | 2026-05-04 | 3 | 覚える | おぼえる | oboeru | N5 | To memorize | [link](https://youtube.com/shorts/2TCodVfibNQ) |
 | 2026-05-05 | 0 | 涙 | なみだ | namida | N3 | Drop of fluid from the eye | [link](https://youtube.com/shorts/IJBtJ51yA_8) |
+| 2026-05-05 | 2 | 大きい | おおきい | ookii | N5 | Big or large | [link](https://youtube.com/shorts/XAWJ-ogNA1w) |
