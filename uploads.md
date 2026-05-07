@@ -32,3 +32,4 @@ by the pipeline after each successful upload.
 | 2026-05-06 | 0 | 断る | ことわる | kotowaru | N3 | To refuse or reject something | [link](https://youtube.com/shorts/JY_wyrdCTo4) |
 | 2026-05-06 | 1 | 山 | やま | yama | N5 | Mountain or hill | [link](https://youtube.com/shorts/hK7OFhVLaVc) |
 | 2026-05-07 | 0 | 駅 | えき | eki | N5 | Train or railway station | [link](https://youtube.com/shorts/OCoyrVDofOk) |
+| 2026-05-07 | 0 | 寝る | ねる | neru | N5 | To sleep lying down | [link](https://youtube.com/shorts/iPf6ne-3IiQ) |
