@@ -34,3 +34,4 @@ by the pipeline after each successful upload.
 | 2026-05-07 | 0 | 駅 | えき | eki | N5 | Train or railway station | [link](https://youtube.com/shorts/OCoyrVDofOk) |
 | 2026-05-07 | 0 | 寝る | ねる | neru | N5 | To sleep lying down | [link](https://youtube.com/shorts/iPf6ne-3IiQ) |
 | 2026-05-07 | 1 | 信じる | しんじる | shinjiru | N3 | To believe or trust | [link](https://youtube.com/shorts/R7vDRXejsHo) |
+| 2026-05-07 | 2 | 意外 | いがい | igai | N3 | Unexpected or surprising event | [link](https://youtube.com/shorts/3Ka8Jlm0Mrk) |
