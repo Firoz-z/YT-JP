@@ -31,3 +31,4 @@ by the pipeline after each successful upload.
 | 2026-05-05 | 2 | 大きい | おおきい | ookii | N5 | Big or large | [link](https://youtube.com/shorts/XAWJ-ogNA1w) |
 | 2026-05-06 | 0 | 断る | ことわる | kotowaru | N3 | To refuse or reject something | [link](https://youtube.com/shorts/JY_wyrdCTo4) |
 | 2026-05-06 | 1 | 山 | やま | yama | N5 | Mountain or hill | [link](https://youtube.com/shorts/hK7OFhVLaVc) |
+| 2026-05-07 | 0 | 駅 | えき | eki | N5 | Train or railway station | [link](https://youtube.com/shorts/OCoyrVDofOk) |
