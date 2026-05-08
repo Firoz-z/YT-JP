@@ -59,3 +59,24 @@ jobs:
           else
             echo "uploads.md unchanged, nothing to commit"
           fi
+
+      - name: Alert on failure
+        if: failure()
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          SLOT=$(python3 -c "
+          from datetime import datetime, timezone
+          h = datetime.now(timezone.utc).hour
+          print(0 if h < 12 else 1 if h < 17 else 2 if h < 22 else 3)
+          ")
+          gh issue create \
+            --title "Pipeline failure — $(date -u +%Y-%m-%d) slot ${SLOT}" \
+            --body "The YT-JP daily pipeline failed.
+
+          **Date:** $(date -u +%Y-%m-%dT%H:%M:%SZ)
+          **Slot:** ${SLOT}
+          **Run:** ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+
+          Check the run logs above to identify which step failed (word fetch, LLM enrichment, image fetch, video build, or YouTube upload)." \
+            --label "bug" || true

@@ -1,0 +1,84 @@
+name: Daily Health Check
+
+on:
+  schedule:
+    - cron: "0 10 * * *"   # 10 AM UTC — after all morning slots have had time to run
+  workflow_dispatch:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      issues: write
+      actions: read
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4.2.2
+
+      - name: Check yesterday's upload count
+        id: upload_check
+        run: |
+          YESTERDAY=$(date -u -d "yesterday" +%Y-%m-%d)
+          echo "Checking uploads for $YESTERDAY"
+
+          COUNT=$(grep -c "^| $YESTERDAY" uploads.md 2>/dev/null || echo 0)
+          echo "count=$COUNT" >> "$GITHUB_OUTPUT"
+          echo "date=$YESTERDAY"  >> "$GITHUB_OUTPUT"
+          echo "Uploads found for $YESTERDAY: $COUNT"
+
+      - name: Check for failed workflow runs yesterday
+        id: run_check
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          YESTERDAY=$(date -u -d "yesterday" +%Y-%m-%d)
+          # List recent runs of the daily pipeline, filter to yesterday, check conclusions
+          FAILURES=$(gh run list \
+            --workflow daily.yml \
+            --created "$YESTERDAY" \
+            --json conclusion \
+            --jq '[.[] | select(.conclusion == "failure")] | length' 2>/dev/null || echo 0)
+
+          echo "failures=$FAILURES" >> "$GITHUB_OUTPUT"
+          echo "Failed runs on $YESTERDAY: $FAILURES"
+
+      - name: Open alert issue if something is wrong
+        if: steps.upload_check.outputs.count == '0' || steps.run_check.outputs.failures != '0'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          UPLOAD_COUNT: ${{ steps.upload_check.outputs.count }}
+          FAILED_RUNS: ${{ steps.run_check.outputs.failures }}
+          CHECK_DATE: ${{ steps.upload_check.outputs.date }}
+        run: |
+          PROBLEMS=""
+
+          if [ "$UPLOAD_COUNT" = "0" ]; then
+            PROBLEMS="${PROBLEMS}- No videos were uploaded on **${CHECK_DATE}** (uploads.md has 0 entries for that date)\n"
+          fi
+
+          if [ "$FAILED_RUNS" != "0" ]; then
+            PROBLEMS="${PROBLEMS}- **${FAILED_RUNS}** pipeline run(s) failed on **${CHECK_DATE}**\n"
+          fi
+
+          # Skip if a matching open issue already exists (avoids duplicate spam)
+          EXISTING=$(gh issue list \
+            --label "monitoring" \
+            --state open \
+            --search "Health check alert ${CHECK_DATE}" \
+            --json number \
+            --jq 'length' 2>/dev/null || echo 0)
+
+          if [ "$EXISTING" != "0" ]; then
+            echo "Alert issue for $CHECK_DATE already open — skipping duplicate."
+            exit 0
+          fi
+
+          printf "Problems detected on %s:\n\n%b\n**Run log:** %s/%s/actions\n" \
+            "$CHECK_DATE" "$PROBLEMS" \
+            "${{ github.server_url }}" "${{ github.repository }}" \
+            | gh issue create \
+                --title "Health check alert ${CHECK_DATE}" \
+                --label "monitoring,bug" \
+                --body-file -
