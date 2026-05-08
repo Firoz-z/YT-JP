@@ -36,3 +36,4 @@ by the pipeline after each successful upload.
 | 2026-05-07 | 1 | 信じる | しんじる | shinjiru | N3 | To believe or trust | [link](https://youtube.com/shorts/R7vDRXejsHo) |
 | 2026-05-07 | 2 | 意外 | いがい | igai | N3 | Unexpected or surprising event | [link](https://youtube.com/shorts/3Ka8Jlm0Mrk) |
 | 2026-05-08 | 0 | 記憶 | きおく | kioku | N3 | Memory or recollection | [link](https://youtube.com/shorts/12Y5FUBD7tk) |
+| 2026-05-08 | 0 | 正直 | しょうじき | shoujiki | N3 | Honest and truthful | [link](https://youtube.com/shorts/Ih5jp1iZBb8) |
