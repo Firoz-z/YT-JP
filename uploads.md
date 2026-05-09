@@ -40,3 +40,4 @@ by the pipeline after each successful upload.
 | 2026-05-08 | 1 | 人気 | にんき | ninki | N3 | Public favor or popularity | [link](https://youtube.com/shorts/_9eoF7Uu-jI) |
 | 2026-05-08 | 2 | 昼 | ひる | hiru | N5 | Time of day: noon | [link](https://youtube.com/shorts/K6dvghmS4kQ) |
 | 2026-05-08 | 3 | 東京 | とうきょう | toukyou | — | Capital city of Japan | [link](https://youtube.com/shorts/QxuxV6jDiWQ) |
+| 2026-05-09 | 0 | 読む | よむ | yomu | N5 | To read something | [link](https://youtube.com/shorts/QtXChg9N29s) |
