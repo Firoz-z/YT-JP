@@ -43,3 +43,4 @@ by the pipeline after each successful upload.
 | 2026-05-09 | 0 | 読む | よむ | yomu | N5 | To read something | [link](https://youtube.com/shorts/QtXChg9N29s) |
 | 2026-05-09 | 1 | 電話 | でんわ | denwa | N5 | Phone call | [link](https://youtube.com/shorts/1wJBehIXoa0) |
 | 2026-05-09 | 2 | 丁寧 | ていねい | teinei | N4 | Polite and courteous behavior | [link](https://youtube.com/shorts/T4EoSkCZgLk) |
+| 2026-05-09 | 3 | 集まる | あつまる | atsumaru | N4 | To gather or assemble | [link](https://youtube.com/shorts/kl58gF6GIB4) |
