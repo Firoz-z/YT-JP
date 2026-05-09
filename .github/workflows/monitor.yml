@@ -1,0 +1,92 @@
+name: Daily Upload Monitor
+
+on:
+  schedule:
+    # 10:00 AM UTC — slot 0 (8 AM + up to 59 min sleep + runtime) should be done
+    - cron: "0 10 * * *"
+  workflow_dispatch:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      issues: write
+
+    steps:
+      - name: Checkout repo (main branch)
+        uses: actions/checkout@v4.2.2
+        with:
+          ref: main
+
+      - name: Check for today's uploads in uploads.md
+        id: check
+        run: |
+          TODAY=$(date -u +%Y-%m-%d)
+          echo "Checking uploads.md for $TODAY …"
+
+          if grep -qF "| $TODAY |" uploads.md; then
+            COUNT=$(grep -cF "| $TODAY |" uploads.md)
+            echo "status=ok" >> "$GITHUB_OUTPUT"
+            echo "count=$COUNT" >> "$GITHUB_OUTPUT"
+            echo "today=$TODAY" >> "$GITHUB_OUTPUT"
+            echo "✅  Found $COUNT upload(s) for $TODAY"
+          else
+            echo "status=missing" >> "$GITHUB_OUTPUT"
+            echo "count=0" >> "$GITHUB_OUTPUT"
+            echo "today=$TODAY" >> "$GITHUB_OUTPUT"
+            echo "⚠️  No uploads found for $TODAY — opening alert issue"
+          fi
+
+      - name: Open alert issue if no uploads detected
+        if: steps.check.outputs.status == 'missing'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const today = '${{ steps.check.outputs.today }}';
+            const actionsUrl = `https://github.com/${context.repo.owner}/${context.repo.repo}/actions`;
+
+            // Skip if an alert issue for today is already open
+            const { data: open } = await github.rest.issues.listForRepo({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              state: 'open',
+              labels: 'pipeline-failure',
+            });
+            if (open.some(i => i.title.includes(today))) {
+              console.log('Alert issue already open for today — skipping.');
+              return;
+            }
+
+            await github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title: `🚨 No upload detected — ${today}`,
+              body: [
+                `The morning monitor found **no uploads for ${today}** in \`uploads.md\`.`,
+                ``,
+                `The 8 AM UTC slot should have completed by now.`,
+                ``,
+                `**Possible causes:**`,
+                `- Pipeline crashed without an error (check workflow logs)`,
+                `- YouTube OAuth token expired`,
+                `- Jisho / Groq / Pexels API failure`,
+                `- GitHub Actions runner issue`,
+                ``,
+                `**Check workflow runs:** ${actionsUrl}`,
+                ``,
+                `Close this issue once the problem is resolved.`,
+              ].join('\n'),
+              labels: ['pipeline-failure'],
+            });
+
+      - name: Summary
+        run: |
+          echo "### Monitor result" >> "$GITHUB_STEP_SUMMARY"
+          echo "- Date checked: ${{ steps.check.outputs.today }}" >> "$GITHUB_STEP_SUMMARY"
+          echo "- Uploads found: ${{ steps.check.outputs.count }}" >> "$GITHUB_STEP_SUMMARY"
+          if [ "${{ steps.check.outputs.status }}" = "ok" ]; then
+            echo "- Status: ✅ All good" >> "$GITHUB_STEP_SUMMARY"
+          else
+            echo "- Status: 🚨 Alert issue opened" >> "$GITHUB_STEP_SUMMARY"
+          fi

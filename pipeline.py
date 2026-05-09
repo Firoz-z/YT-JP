@@ -123,8 +123,7 @@ def run(slot: int = 0) -> None:
     # 1 — fetch from Jisho (kanji, kana, romaji, definition)
     word_data = fetch_word_data(word)
     if not word_data:
-        print(f"  skipping — no Jisho data for '{word}'")
-        return
+        raise RuntimeError(f"No data from Jisho for '{word}' — pipeline aborted")
 
     # 2 — enrich with Groq (example sentence in JP+EN, memory tip)
     word_data = enrich_word_data(word, word_data)

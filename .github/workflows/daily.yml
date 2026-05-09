@@ -11,9 +11,10 @@ on:
 jobs:
   publish:
     runs-on: ubuntu-latest
-    # Needed so the bot can commit uploads.md back to the repo
+    # contents:write — commit uploads.md; issues:write — open alert on failure
     permissions:
       contents: write
+      issues: write
 
     steps:
       - name: Random delay (0–59 min) — skipped on manual runs
@@ -59,3 +60,45 @@ jobs:
           else
             echo "uploads.md unchanged, nothing to commit"
           fi
+
+      - name: Alert on failure
+        if: failure()
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const today = new Date().toISOString().split('T')[0];
+            const runUrl = `https://github.com/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}`;
+
+            // Avoid duplicate issues for the same day
+            const { data: open } = await github.rest.issues.listForRepo({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              state: 'open',
+              labels: 'pipeline-failure',
+            });
+            if (open.some(i => i.title.includes(today))) {
+              console.log('Alert issue already open for today — skipping.');
+              return;
+            }
+
+            await github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title: `🚨 Pipeline failure — ${today}`,
+              body: [
+                `The daily pipeline failed on **${today}**.`,
+                ``,
+                `**Workflow run:** ${runUrl}`,
+                ``,
+                `**Possible causes:**`,
+                `- YouTube OAuth token expired or revoked`,
+                `- Jisho API unreachable`,
+                `- Groq API down or quota exceeded`,
+                `- Pexels API key invalid`,
+                `- Video build error (ffmpeg / font issue)`,
+                ``,
+                `Check the run logs linked above for the exact error.`,
+                `Close this issue once resolved.`,
+              ].join('\n'),
+              labels: ['pipeline-failure'],
+            });
