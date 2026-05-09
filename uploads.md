@@ -41,3 +41,4 @@ by the pipeline after each successful upload.
 | 2026-05-08 | 2 | 昼 | ひる | hiru | N5 | Time of day: noon | [link](https://youtube.com/shorts/K6dvghmS4kQ) |
 | 2026-05-08 | 3 | 東京 | とうきょう | toukyou | — | Capital city of Japan | [link](https://youtube.com/shorts/QxuxV6jDiWQ) |
 | 2026-05-09 | 0 | 読む | よむ | yomu | N5 | To read something | [link](https://youtube.com/shorts/QtXChg9N29s) |
+| 2026-05-09 | 1 | 電話 | でんわ | denwa | N5 | Phone call | [link](https://youtube.com/shorts/1wJBehIXoa0) |
