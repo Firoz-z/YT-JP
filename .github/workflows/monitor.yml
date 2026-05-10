@@ -1,0 +1,90 @@
+name: Morning Health Check
+
+on:
+  schedule:
+    # 9:30 AM UTC — after the 8 AM slot should have completed (including random delay)
+    - cron: "30 9 * * *"
+  workflow_dispatch:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      issues: write
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4.2.2
+
+      - name: Check yesterday's upload completeness
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const fs = require('fs');
+
+            const today = new Date();
+            const yesterday = new Date(today);
+            yesterday.setDate(yesterday.getDate() - 1);
+            const yesterdayStr = yesterday.toISOString().slice(0, 10);
+            const todayStr = today.toISOString().slice(0, 10);
+
+            const content = fs.readFileSync('uploads.md', 'utf8');
+
+            // Count rows matching yesterday's date (each successful upload appends one row)
+            const yesterdayRows = content.split('\n').filter(l => {
+              const parts = l.split('|');
+              return parts.length >= 3 && parts[1].trim() === yesterdayStr;
+            });
+
+            // Count today's rows (slot 0 should have run by now)
+            const todayRows = content.split('\n').filter(l => {
+              const parts = l.split('|');
+              return parts.length >= 3 && parts[1].trim() === todayStr;
+            });
+
+            const problems = [];
+
+            if (yesterdayRows.length < 4) {
+              problems.push(`Yesterday (${yesterdayStr}): only ${yesterdayRows.length}/4 slots uploaded.`);
+            }
+
+            if (todayRows.length < 1) {
+              problems.push(`Today (${todayStr}): slot 0 (8 AM UTC) has not uploaded yet.`);
+            }
+
+            if (problems.length === 0) {
+              console.log(`✅ All checks passed. Yesterday: ${yesterdayRows.length}/4, Today so far: ${todayRows.length}.`);
+              return;
+            }
+
+            // Check for a duplicate open issue for today to avoid spam
+            const { data: openIssues } = await github.rest.issues.listForRepo({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              state: 'open',
+              labels: '',
+            });
+            const alreadyReported = openIssues.some(i =>
+              i.title.includes('Missing uploads') && i.title.includes(todayStr)
+            );
+            if (alreadyReported) {
+              console.log('Duplicate issue already open, skipping.');
+              return;
+            }
+
+            const runUrl = `https://github.com/${context.repo.owner}/${context.repo.repo}/actions`;
+            await github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title: `🚨 Missing uploads detected — ${todayStr}`,
+              body: [
+                `The morning health check has detected missing uploads.`,
+                ``,
+                ...problems.map(p => `- ${p}`),
+                ``,
+                `**Action needed:** Check the [Actions tab](${runUrl}) for failed runs.`,
+                `Possible causes: YouTube API auth expired, Groq/Pexels API failure, or workflow not triggered.`,
+              ].join('\n'),
+            });

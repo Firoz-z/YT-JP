@@ -11,9 +11,9 @@ on:
 jobs:
   publish:
     runs-on: ubuntu-latest
-    # Needed so the bot can commit uploads.md back to the repo
     permissions:
       contents: write
+      issues: write
 
     steps:
       - name: Random delay (0–59 min) — skipped on manual runs
@@ -44,6 +44,30 @@ jobs:
           PEXELS_API_KEY:        ${{ secrets.PEXELS_API_KEY }}
           GROQ_API_KEY:          ${{ secrets.GROQ_API_KEY }}
         run: python pipeline.py
+
+      - name: Report pipeline failure
+        if: failure()
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const date = new Date().toISOString().slice(0, 10);
+            const runUrl = `https://github.com/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}`;
+            await github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title: `🚨 Pipeline FAILED — ${date}`,
+              body: [
+                `The YT-JP daily pipeline has failed.`,
+                ``,
+                `**Date:** ${date}`,
+                `**Triggered by:** ${context.eventName}`,
+                `**Run logs:** ${runUrl}`,
+                ``,
+                `Possible causes: YouTube API auth expired, Groq API failure, Pexels API failure, or video build error.`,
+                `Check the run logs above for the exact error.`,
+              ].join('\n'),
+            });
 
       - name: Commit upload history
         # Run even if the pipeline failed — uploads.md only changes when
