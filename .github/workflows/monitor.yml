@@ -1,0 +1,35 @@
+name: Morning Health Check
+
+# Runs every morning at 9:30 AM UTC — 90 min after the first daily slot fires,
+# enough time for the random sleep (0-59 min) + pipeline (~15 min) to finish.
+# Checks uploads.md for stale entries and sends an email alert if a gap is found.
+#
+# Required GitHub secrets:
+#   GMAIL_FROM          your Gmail address
+#   GMAIL_APP_PASSWORD  Gmail App Password (not your login password)
+#   ALERT_EMAIL         address to receive the alert (can equal GMAIL_FROM)
+
+on:
+  schedule:
+    - cron: "30 9 * * *"   # 9:30 AM UTC every day
+  workflow_dispatch:        # allow manual run for testing
+
+jobs:
+  health-check:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo (default branch — latest uploads.md)
+        uses: actions/checkout@v4.2.2
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5.3.0
+        with:
+          python-version: "3.11"
+
+      - name: Run health check
+        env:
+          GMAIL_FROM:         ${{ secrets.GMAIL_FROM }}
+          GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+          ALERT_EMAIL:        ${{ secrets.ALERT_EMAIL }}
+        run: python monitor.py

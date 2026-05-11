@@ -45,6 +45,15 @@ jobs:
           GROQ_API_KEY:          ${{ secrets.GROQ_API_KEY }}
         run: python pipeline.py
 
+      - name: Alert on pipeline failure
+        if: failure()
+        env:
+          GMAIL_FROM:         ${{ secrets.GMAIL_FROM }}
+          GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+          ALERT_EMAIL:        ${{ secrets.ALERT_EMAIL }}
+          FAILURE_REASON:     "Run ${{ github.run_id }} failed (slot ${{ github.run_attempt }})"
+        run: python monitor.py || true   # never block the commit step below
+
       - name: Commit upload history
         # Run even if the pipeline failed — uploads.md only changes when
         # an upload actually succeeded, so committing is always safe.
