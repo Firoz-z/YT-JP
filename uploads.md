@@ -47,3 +47,4 @@ by the pipeline after each successful upload.
 | 2026-05-10 | 0 | 冒険 | ぼうけん | bouken | N3 | Exciting or risky experience | [link](https://youtube.com/shorts/B63qSpvnH24) |
 | 2026-05-11 | 2 | アニメ | アニメ | anime | — | Japanese animated film or cartoon | [link](https://youtube.com/shorts/3evn0mz4tNg) |
 | 2026-05-11 | 2 | 暗い | くらい | kurai | N5 | Dark or gloomy | [link](https://youtube.com/shorts/J038yno4URk) |
+| 2026-05-11 | 2 | 流行 | りゅうこう | ryuukou | N3 | Current fashion or trend | [link](https://youtube.com/shorts/qTZ7bRPlSS4) |
