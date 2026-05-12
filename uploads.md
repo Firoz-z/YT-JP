@@ -50,3 +50,4 @@ by the pipeline after each successful upload.
 | 2026-05-11 | 2 | 流行 | りゅうこう | ryuukou | N3 | Current fashion or trend | [link](https://youtube.com/shorts/qTZ7bRPlSS4) |
 | 2026-05-11 | 3 | 子供 | こども | kodomo | N5 | Child or children | [link](https://youtube.com/shorts/giRKE9_3MCU) |
 | 2026-05-12 | 0 | 態度 | たいど | taido | N3 | Attitude or behavior | [link](https://youtube.com/shorts/swm0_mZY-Ns) |
+| 2026-05-12 | 1 | 怒る | おこる | okoru | N4 | To get angry | [link](https://youtube.com/shorts/FdScnNOVqy4) |
