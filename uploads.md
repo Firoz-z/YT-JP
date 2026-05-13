@@ -53,3 +53,4 @@ by the pipeline after each successful upload.
 | 2026-05-12 | 1 | 怒る | おこる | okoru | N4 | To get angry | [link](https://youtube.com/shorts/FdScnNOVqy4) |
 | 2026-05-12 | 2 | 情報 | じょうほう | jouhou | N3 | News or information | [link](https://youtube.com/shorts/yEUdDnCRWDo) |
 | 2026-05-13 | 2 | 拉麺 | ラーメン | raamen | — | Japanese noodle soup dish | [link](https://youtube.com/shorts/QGAdG7elQko) |
+| 2026-05-13 | 2 | 拉麺 | ラーメン | raamen | — | Japanese noodle soup dish | [link](https://youtube.com/shorts/ro7v1PPAQpI) |
