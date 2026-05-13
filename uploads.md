@@ -54,3 +54,4 @@ by the pipeline after each successful upload.
 | 2026-05-12 | 2 | 情報 | じょうほう | jouhou | N3 | News or information | [link](https://youtube.com/shorts/yEUdDnCRWDo) |
 | 2026-05-13 | 2 | 拉麺 | ラーメン | raamen | — | Japanese noodle soup dish | [link](https://youtube.com/shorts/QGAdG7elQko) |
 | 2026-05-13 | 2 | 拉麺 | ラーメン | raamen | — | Japanese noodle soup dish | [link](https://youtube.com/shorts/ro7v1PPAQpI) |
+| 2026-05-13 | 3 | 説明 | せつめい | setsumei | N4 | Detailed explanation | [link](https://youtube.com/shorts/3EzcqBKGX2o) |
