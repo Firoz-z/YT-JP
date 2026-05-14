@@ -57,3 +57,4 @@ by the pipeline after each successful upload.
 | 2026-05-13 | 3 | 説明 | せつめい | setsumei | N4 | Detailed explanation | [link](https://youtube.com/shorts/3EzcqBKGX2o) |
 | 2026-05-14 | 0 | 細い | ほそい | hosoi | N5 | Something that is thin | [link](https://youtube.com/shorts/9M_WrgBGOJI) |
 | 2026-05-14 | 2 | 社会 | しゃかい | shakai | N4 | Group of people living together | [link](https://youtube.com/shorts/oc_YwuSOvJA) |
+| 2026-05-14 | 2 | 評判 | ひょうばん | hyouban | N3 | Public reputation or estimation | [link](https://youtube.com/shorts/TU3tijBxrYU) |
