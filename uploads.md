@@ -61,3 +61,4 @@ by the pipeline after each successful upload.
 | 2026-05-14 | 3 | 文学 | ぶんがく | bungaku | N4 | Written works of art | [link](https://youtube.com/shorts/Kj80XgyVcsQ) |
 | 2026-05-15 | 0 | 俳句 | はいく | haiku | N2 | Traditional Japanese poem | [link](https://youtube.com/shorts/8Z-iQssPufU) |
 | 2026-05-15 | 1 | 友達 | ともだち | tomodachi | N5 | Close friend or companion | [link](https://youtube.com/shorts/GSPpAMYm8Q8) |
+| 2026-05-15 | 2 | 苦い | にがい | nigai | N4 | Having a bitter taste | [link](https://youtube.com/shorts/sLFIaNflgqM) |
