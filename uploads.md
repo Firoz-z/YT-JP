@@ -59,3 +59,4 @@ by the pipeline after each successful upload.
 | 2026-05-14 | 2 | 社会 | しゃかい | shakai | N4 | Group of people living together | [link](https://youtube.com/shorts/oc_YwuSOvJA) |
 | 2026-05-14 | 2 | 評判 | ひょうばん | hyouban | N3 | Public reputation or estimation | [link](https://youtube.com/shorts/TU3tijBxrYU) |
 | 2026-05-14 | 3 | 文学 | ぶんがく | bungaku | N4 | Written works of art | [link](https://youtube.com/shorts/Kj80XgyVcsQ) |
+| 2026-05-15 | 0 | 俳句 | はいく | haiku | N2 | Traditional Japanese poem | [link](https://youtube.com/shorts/8Z-iQssPufU) |
