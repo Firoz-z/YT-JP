@@ -65,3 +65,4 @@ by the pipeline after each successful upload.
 | 2026-05-15 | 3 | 雪 | ゆき | yuki | N5 | Snow or snowfall | [link](https://youtube.com/shorts/ljijV17S9kI) |
 | 2026-05-16 | 0 | 本 | ほん | hon | N5 | Book | [link](https://youtube.com/shorts/VHxKwtxk59I) |
 | 2026-05-16 | 1 | 寺 | てら | tera | N4 | Buddhist temple | [link](https://youtube.com/shorts/PRkuGG9Qo40) |
+| 2026-05-16 | 2 | 平和 | へいわ | heiwa | N3 | State of peace and harmony | [link](https://youtube.com/shorts/WDPd69lGEas) |
