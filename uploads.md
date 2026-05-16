@@ -63,3 +63,4 @@ by the pipeline after each successful upload.
 | 2026-05-15 | 1 | 友達 | ともだち | tomodachi | N5 | Close friend or companion | [link](https://youtube.com/shorts/GSPpAMYm8Q8) |
 | 2026-05-15 | 2 | 苦い | にがい | nigai | N4 | Having a bitter taste | [link](https://youtube.com/shorts/sLFIaNflgqM) |
 | 2026-05-15 | 3 | 雪 | ゆき | yuki | N5 | Snow or snowfall | [link](https://youtube.com/shorts/ljijV17S9kI) |
+| 2026-05-16 | 0 | 本 | ほん | hon | N5 | Book | [link](https://youtube.com/shorts/VHxKwtxk59I) |
