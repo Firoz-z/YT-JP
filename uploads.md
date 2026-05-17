@@ -67,3 +67,4 @@ by the pipeline after each successful upload.
 | 2026-05-16 | 1 | 寺 | てら | tera | N4 | Buddhist temple | [link](https://youtube.com/shorts/PRkuGG9Qo40) |
 | 2026-05-16 | 2 | 平和 | へいわ | heiwa | N3 | State of peace and harmony | [link](https://youtube.com/shorts/WDPd69lGEas) |
 | 2026-05-16 | 3 | 旅行 | りょこう | ryokou | N5 | Trip or journey | [link](https://youtube.com/shorts/0EQ3soRKKTU) |
+| 2026-05-17 | 0 | 聞く | きく | kiku | N5 | To hear or listen | [link](https://youtube.com/shorts/0OjE9B3CfwQ) |
