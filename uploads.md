@@ -69,3 +69,4 @@ by the pipeline after each successful upload.
 | 2026-05-16 | 3 | 旅行 | りょこう | ryokou | N5 | Trip or journey | [link](https://youtube.com/shorts/0EQ3soRKKTU) |
 | 2026-05-17 | 0 | 聞く | きく | kiku | N5 | To hear or listen | [link](https://youtube.com/shorts/0OjE9B3CfwQ) |
 | 2026-05-17 | 1 | 小さい | ちいさい | chiisai | N5 | Something small in size | [link](https://youtube.com/shorts/ghrx9gwcUd8) |
+| 2026-05-17 | 2 | 仕事 | しごと | shigoto | N5 | Job or work activity | [link](https://youtube.com/shorts/WIrpahVO3Fg) |
