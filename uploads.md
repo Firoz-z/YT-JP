@@ -71,3 +71,4 @@ by the pipeline after each successful upload.
 | 2026-05-17 | 1 | 小さい | ちいさい | chiisai | N5 | Something small in size | [link](https://youtube.com/shorts/ghrx9gwcUd8) |
 | 2026-05-17 | 2 | 仕事 | しごと | shigoto | N5 | Job or work activity | [link](https://youtube.com/shorts/WIrpahVO3Fg) |
 | 2026-05-17 | 3 | 学校 | がっこう | gakkou | N5 | Place for education | [link](https://youtube.com/shorts/9vJArcOLXcQ) |
+| 2026-05-18 | 1 | 新しい | あたらしい | atarashii | N5 | New or modern thing | [link](https://youtube.com/shorts/0G2tlTgunG0) |
