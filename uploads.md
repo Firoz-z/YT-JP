@@ -73,3 +73,4 @@ by the pipeline after each successful upload.
 | 2026-05-17 | 3 | 学校 | がっこう | gakkou | N5 | Place for education | [link](https://youtube.com/shorts/9vJArcOLXcQ) |
 | 2026-05-18 | 1 | 新しい | あたらしい | atarashii | N5 | New or modern thing | [link](https://youtube.com/shorts/0G2tlTgunG0) |
 | 2026-05-18 | 2 | 空 | そら | sora | N5 | The sky or air around us | [link](https://youtube.com/shorts/-1a1sBxe0Ak) |
+| 2026-05-18 | 2 | 遅い | おそい | osoi | N5 | Moving or happening slowly | [link](https://youtube.com/shorts/XhgXU8LZoiI) |
