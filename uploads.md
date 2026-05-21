@@ -75,3 +75,4 @@ by the pipeline after each successful upload.
 | 2026-05-18 | 2 | 空 | そら | sora | N5 | The sky or air around us | [link](https://youtube.com/shorts/-1a1sBxe0Ak) |
 | 2026-05-18 | 2 | 遅い | おそい | osoi | N5 | Moving or happening slowly | [link](https://youtube.com/shorts/XhgXU8LZoiI) |
 | 2026-05-21 | 2 | 作る | つくる | tsukuru | N2 | to make something | [link](https://youtube.com/shorts/ZEnNkVrdxTI) |
+| 2026-05-21 | 3 | 時間 | じかん | jikan | N5 | Time or period | [link](https://youtube.com/shorts/0rNNQWIdOuQ) |
