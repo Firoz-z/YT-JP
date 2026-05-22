@@ -77,3 +77,4 @@ by the pipeline after each successful upload.
 | 2026-05-21 | 2 | 作る | つくる | tsukuru | N2 | to make something | [link](https://youtube.com/shorts/ZEnNkVrdxTI) |
 | 2026-05-21 | 3 | 時間 | じかん | jikan | N5 | Time or period | [link](https://youtube.com/shorts/0rNNQWIdOuQ) |
 | 2026-05-22 | 0 | 分 | ぶん | bun | N3 | Part or portion of something | [link](https://youtube.com/shorts/_p_0WtbNsPM) |
+| 2026-05-22 | 1 | 食べる | たべる | taberu | N5 | To eat | [link](https://youtube.com/shorts/FzIotNv61ek) |
