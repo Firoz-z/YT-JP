@@ -79,3 +79,4 @@ by the pipeline after each successful upload.
 | 2026-05-22 | 0 | 分 | ぶん | bun | N3 | Part or portion of something | [link](https://youtube.com/shorts/_p_0WtbNsPM) |
 | 2026-05-22 | 1 | 食べる | たべる | taberu | N5 | To eat | [link](https://youtube.com/shorts/FzIotNv61ek) |
 | 2026-05-22 | 2 | 太い | ふとい | futoi | N5 | Fat or thick | [link](https://youtube.com/shorts/0-bfGhJU__E) |
+| 2026-05-22 | 3 | 効果 | こうか | kouka | N3 | Result or outcome of something | [link](https://youtube.com/shorts/_VnEEVbHjdY) |
