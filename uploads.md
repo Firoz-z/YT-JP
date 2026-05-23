@@ -81,3 +81,4 @@ by the pipeline after each successful upload.
 | 2026-05-22 | 2 | 太い | ふとい | futoi | N5 | Fat or thick | [link](https://youtube.com/shorts/0-bfGhJU__E) |
 | 2026-05-22 | 3 | 効果 | こうか | kouka | N3 | Result or outcome of something | [link](https://youtube.com/shorts/_VnEEVbHjdY) |
 | 2026-05-23 | 0 | 話す | はなす | hanasu | N5 | To talk or speak | [link](https://youtube.com/shorts/qJEaHiuwig4) |
+| 2026-05-23 | 0 | 当然 | とうぜん | touzen | — | Natural or obvious thing | [link](https://youtube.com/shorts/9tZ0vAXsbjU) |
