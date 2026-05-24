@@ -86,3 +86,4 @@ by the pipeline after each successful upload.
 | 2026-05-23 | 3 | 英語 | えいご | eigo | N5 | English language | [link](https://youtube.com/shorts/Xgdewr2p-1A) |
 | 2026-05-24 | 0 | 増える | ふえる | fueru | N4 | To increase in number | [link](https://youtube.com/shorts/ZyiSoaaJTRM) |
 | 2026-05-24 | 1 | 浴衣 | ゆかた | yukata | N2 | Light cotton summer kimono | [link](https://youtube.com/shorts/Dw7blx3BlGw) |
+| 2026-05-24 | 2 | 元気 | げんき | genki | N5 | Full of energy and spirit | [link](https://youtube.com/shorts/5WDqepzou6g) |
