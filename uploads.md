@@ -88,3 +88,4 @@ by the pipeline after each successful upload.
 | 2026-05-24 | 1 | 浴衣 | ゆかた | yukata | N2 | Light cotton summer kimono | [link](https://youtube.com/shorts/Dw7blx3BlGw) |
 | 2026-05-24 | 2 | 元気 | げんき | genki | N5 | Full of energy and spirit | [link](https://youtube.com/shorts/5WDqepzou6g) |
 | 2026-05-24 | 3 | 父 | ちち | chichi | — | Male parent | [link](https://youtube.com/shorts/RNjvmMFoIF8) |
+| 2026-05-25 | 1 | 案内 | あんない | annai | N3 | Guiding someone | [link](https://youtube.com/shorts/maKF4XZBdf4) |
