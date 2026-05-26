@@ -94,3 +94,4 @@ by the pipeline after each successful upload.
 | 2026-05-25 | 3 | 言葉 | ことば | kotoba | N5 | Language or dialect | [link](https://youtube.com/shorts/ozB_FlJ9GMo) |
 | 2026-05-26 | 2 | 春 | はる | haru | N5 | Spring season | [link](https://youtube.com/shorts/AxQSNTC38ko) |
 | 2026-05-26 | 2 | 感謝 | かんしゃ | kansha | N3 | Feeling of thanks | [link](https://youtube.com/shorts/JQnYEBGCq80) |
+| 2026-05-26 | 3 | 富士山 | ふじさん | fujisan | — | Mount Fuji mountain | [link](https://youtube.com/shorts/3fjV2Yjj2Qo) |
