@@ -92,3 +92,4 @@ by the pipeline after each successful upload.
 | 2026-05-25 | 2 | 立つ | たつ | tatsu | N2 | to stand (up); to rise; to get to one's feet | [link](https://youtube.com/shorts/dGDP6Ts7_NY) |
 | 2026-05-25 | 2 | 新幹線 | しんかんせん | shinkansen | N2 | High-speed bullet train | [link](https://youtube.com/shorts/EeRJzxizV-0) |
 | 2026-05-25 | 3 | 言葉 | ことば | kotoba | N5 | Language or dialect | [link](https://youtube.com/shorts/ozB_FlJ9GMo) |
+| 2026-05-26 | 2 | 春 | はる | haru | N5 | Spring season | [link](https://youtube.com/shorts/AxQSNTC38ko) |
