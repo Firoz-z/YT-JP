@@ -96,3 +96,4 @@ by the pipeline after each successful upload.
 | 2026-05-26 | 2 | 感謝 | かんしゃ | kansha | N3 | Feeling of thanks | [link](https://youtube.com/shorts/JQnYEBGCq80) |
 | 2026-05-26 | 3 | 富士山 | ふじさん | fujisan | — | Mount Fuji mountain | [link](https://youtube.com/shorts/3fjV2Yjj2Qo) |
 | 2026-05-27 | 1 | 天気 | てんき | tenki | N5 | Weather condition | [link](https://youtube.com/shorts/pfbdwnlmFOU) |
+| 2026-05-27 | 2 | 酸っぱい | すっぱい | suppai | N2 | Sour taste | [link](https://youtube.com/shorts/Z8jMtDHCSFw) |
