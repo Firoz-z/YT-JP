@@ -100,3 +100,4 @@ by the pipeline after each successful upload.
 | 2026-05-27 | 2 | 肉 | にく | niku | N5 | Meat or animal flesh | [link](https://youtube.com/shorts/UGqbxHdZXbs) |
 | 2026-05-28 | 0 | 比べる | くらべる | kuraberu | N4 | to compare; to make a comparison (between) | [link](https://youtube.com/shorts/CHhMlILXdJM) |
 | 2026-05-28 | 1 | 紹介 | しょうかい | shoukai | N4 | Introduction to someone | [link](https://youtube.com/shorts/HCVZheHO0ic) |
+| 2026-05-28 | 2 | 発見 | はっけん | hakken | N3 | Finding something new | [link](https://youtube.com/shorts/ufsh9XDu89s) |
