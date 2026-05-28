@@ -98,3 +98,4 @@ by the pipeline after each successful upload.
 | 2026-05-27 | 1 | 天気 | てんき | tenki | N5 | Weather condition | [link](https://youtube.com/shorts/pfbdwnlmFOU) |
 | 2026-05-27 | 2 | 酸っぱい | すっぱい | suppai | N2 | Sour taste | [link](https://youtube.com/shorts/Z8jMtDHCSFw) |
 | 2026-05-27 | 2 | 肉 | にく | niku | N5 | Meat or animal flesh | [link](https://youtube.com/shorts/UGqbxHdZXbs) |
+| 2026-05-28 | 0 | 比べる | くらべる | kuraberu | N4 | to compare; to make a comparison (between) | [link](https://youtube.com/shorts/CHhMlILXdJM) |
