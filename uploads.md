@@ -104,3 +104,4 @@ by the pipeline after each successful upload.
 | 2026-05-28 | 3 | 魚 | さかな | sakana | N3 | Fish or seafood | [link](https://youtube.com/shorts/gTysPwBLnxA) |
 | 2026-05-29 | 0 | 見る | みる | miru | N5 | To see or look at something | [link](https://youtube.com/shorts/7qNycWroJNE) |
 | 2026-05-29 | 0 | 義務 | ぎむ | gimu | N3 | Moral or social responsibility | [link](https://youtube.com/shorts/9yuFnhN-lhk) |
+| 2026-05-29 | 2 | 普通 | ふつう | futsuu | N4 | Normal or ordinary | [link](https://youtube.com/shorts/WBOavST03b8) |
