@@ -109,3 +109,4 @@ by the pipeline after each successful upload.
 | 2026-05-30 | 0 | 好き | すき | suki | N5 | To like or be fond of | [link](https://youtube.com/shorts/OqLAmeSuYDI) |
 | 2026-05-30 | 0 | 忘れる | わすれる | wasureru | N5 | to forget | [link](https://youtube.com/shorts/thrZjnwo6Z0) |
 | 2026-05-30 | 1 | 広い | ひろい | hiroi | N5 | Spacious or wide | [link](https://youtube.com/shorts/VFnO6cv47uE) |
+| 2026-05-30 | 2 | 進歩 | しんぽ | shinpo | N3 | Making things better | [link](https://youtube.com/shorts/7UEEPc9aVBI) |
