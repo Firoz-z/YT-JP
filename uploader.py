@@ -4,6 +4,19 @@ from google.auth.transport.requests import Request
 from googleapiclient.discovery import build
 from googleapiclient.http import MediaFileUpload
 from config import YT_TAGS, YT_CATEGORY_ID
+from playlists import add_to_level_playlist
+
+
+# We need the broader "youtube" scope (not just youtube.upload) so we can
+# create playlists and add videos to them. If the refresh token in your
+# GitHub secret was generated with only youtube.upload, video uploads
+# still work — playlist additions just no-op with a clear log message.
+# Re-run setup_oauth.py and update YOUTUBE_REFRESH_TOKEN to enable
+# playlists.
+_SCOPES = [
+    "https://www.googleapis.com/auth/youtube.upload",
+    "https://www.googleapis.com/auth/youtube",
+]
 
 
 def _get_client():
@@ -13,7 +26,7 @@ def _get_client():
         token_uri="https://oauth2.googleapis.com/token",
         client_id=os.environ["YOUTUBE_CLIENT_ID"],
         client_secret=os.environ["YOUTUBE_CLIENT_SECRET"],
-        scopes=["https://www.googleapis.com/auth/youtube.upload"],
+        scopes=_SCOPES,
     )
     creds.refresh(Request())
     return build("youtube", "v3", credentials=creds)
@@ -72,7 +85,8 @@ def _insert(yt, video_path: str, title: str, description: str, tags: list) -> st
 
 
 def upload_short_only(short_path: str, word_data: dict) -> str:
-    """Upload only the Short. Returns video ID."""
+    """Upload the Short, then drop it into its JLPT-level playlist.
+    Returns video ID."""
     kanji       = word_data["kanji"]
     romaji      = word_data.get("romaji", "")
     base_tags   = YT_TAGS + [kanji, romaji, f"learn {romaji}", f"{romaji} japanese"]
@@ -85,9 +99,19 @@ def upload_short_only(short_path: str, word_data: dict) -> str:
     title_parts.append("| Japanese Word of the Day #shorts")
     title = " ".join(title_parts)
 
-    return _insert(
+    video_id = _insert(
         yt, short_path,
         title       = title,
         description = description + "\n\n#japanese #learnjapanese #nihongo #jlpt #shorts",
         tags        = base_tags + ["shorts"],
     )
+
+    # Add to the playlist for this JLPT level. Failures here are logged
+    # but do not raise — the video is already uploaded and that's what
+    # matters most.
+    level = word_data.get("jlpt_level", "")
+    if level:
+        if add_to_level_playlist(yt, video_id, level):
+            print(f"  playlist: added {video_id} to {level}")
+
+    return video_id

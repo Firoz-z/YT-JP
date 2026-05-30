@@ -45,17 +45,23 @@ jobs:
           GROQ_API_KEY:          ${{ secrets.GROQ_API_KEY }}
         run: python pipeline.py
 
-      - name: Commit upload history
-        # Run even if the pipeline failed — uploads.md only changes when
-        # an upload actually succeeded, so committing is always safe.
+      - name: Commit upload history and playlist cache
+        # Run even if the pipeline failed — these files only change when
+        # the upload succeeded, so committing is always safe.
         if: always()
         run: |
-          if [ -f uploads.md ] && ! git diff --quiet uploads.md; then
-            git config user.name  "github-actions[bot]"
-            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            git add uploads.md
-            git commit -m "Log upload: $(date -u +%Y-%m-%d) slot ${{ github.run_id }}"
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          CHANGED=0
+          for f in uploads.md playlists.json; do
+            if [ -f "$f" ] && ! git diff --quiet "$f"; then
+              git add "$f"
+              CHANGED=1
+            fi
+          done
+          if [ $CHANGED -eq 1 ]; then
+            git commit -m "Log upload + playlist state: $(date -u +%Y-%m-%d) slot ${{ github.run_id }}"
             git push
           else
-            echo "uploads.md unchanged, nothing to commit"
+            echo "No tracked state files changed, nothing to commit"
           fi

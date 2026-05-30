@@ -105,3 +105,30 @@ YT_TAGS = [
 ]
 YT_CATEGORY_ID = "27"   # Education
 YT_CHANNEL_NAME = "@EverydayJapanese"
+
+# ---------- Playlists ----------
+#
+# After each upload, the video is added to the playlist that matches its
+# JLPT level. Playlists are auto-created the first time a level is used —
+# their YouTube IDs get cached in playlists.json so we don't hit the
+# search API on every upload.
+#
+# Rename these here if you decide to use longer descriptive titles later
+# (changing them won't break existing playlists, but the cache will need
+# to be reset — see playlists.json).
+
+PLAYLIST_BY_LEVEL = {
+    "N5": "N5",
+    "N4": "N4",
+    "N3": "N3",
+    "N2": "N2",
+    "N1": "N1",
+}
+
+# Description shown on the YouTube playlist page (one per level if you want
+# them distinct, or a single string used for all)
+PLAYLIST_DESCRIPTION_TEMPLATE = (
+    "Daily Japanese vocabulary at JLPT {level} level. "
+    "One word per video — kanji, hiragana, romaji, meaning, example, and a "
+    "memory tip. New videos added every day. {channel}"
+)
