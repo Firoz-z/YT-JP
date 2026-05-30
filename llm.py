@@ -18,18 +18,55 @@ return a JSON object with EXACTLY these fields:
   "example_jp": "ONE natural Japanese example sentence using the word. Use simple grammar suitable for beginners. Include the word naturally.",
   "example_kana": "The same example sentence written entirely in hiragana (no kanji).",
   "example_en": "Natural English translation of the example sentence.",
-  "memory_tip": "ONE creative tip in English to help remember this word — use sound associations, mnemonics, or imagery. Start with 'Think of' or 'Remember'. Max 22 words.",
+  "memory_tip": "A linkword mnemonic — see RULES below.",
   "synonyms": ["jp_synonym1", "jp_synonym2", "jp_synonym3"]
 }}
 
-Rules:
+MEMORY TIP RULES (very important — this is the highest-value field):
+
+The memory_tip MUST be a linkword mnemonic that connects the *sound* of the
+Japanese word to its *meaning* through a vivid English image. The viewer should
+hear the pronunciation and instantly recall the image.
+
+Required structure:
+  "{romaji} sounds like '<English sound-alike>' — <vivid image that uses both
+   the sound-alike AND the word's meaning>."
+
+The English sound-alike must:
+  - Break the Japanese romaji into 1-3 English words/syllables that sound similar
+  - Use real English words or word fragments (not gibberish)
+  - Form a phrase the viewer can hear in their head
+
+The image must:
+  - Use BOTH the sound-alike AND the word's meaning
+  - Be specific and visual (a scene, not an abstract idea)
+  - Bonus if funny, weird, or exaggerated — memorable beats elegant
+
+Examples to model your output on:
+  - 猫 (neko, cat): "NEKO sounds like 'neck-O' — picture a cat wearing an O-shaped collar around its neck."
+  - 水 (mizu, water): "MIZU sounds like 'me-zoo' — imagine ME at the ZOO drinking water from a fountain."
+  - 食べる (taberu, to eat): "TABERU sounds like 'table-roo' — you're eating at a TABLE when a kangaROO joins you."
+  - 桜 (sakura, cherry blossom): "SAKURA sounds like 'sack-of-rah' — a SACK filled with cherry blossoms, people cheering 'RAH!'"
+  - 勉強 (benkyou, study): "BENKYOU sounds like 'Ben-chew' — BEN CHEWS on his pencil while studying hard."
+  - 嫌い (kirai, hated): "KIRAI sounds like 'key-rye' — you HATE finding a KEY stuck in a piece of RYE bread."
+
+Special cases:
+  - Loan words (寿司 sushi, 忍者 ninja, アイスクリーム ice cream) — skip the
+    sound-alike since the Japanese already IS the English word. Instead give
+    a 1-line fact or cultural anchor (e.g. "Sushi literally means 'sour-tasting'
+    — referring to the vinegared rice, not the fish.")
+  - Words with no good English homophone — fall back to imagery or etymology.
+
+Length: under 28 words. One sentence preferred, two max.
+
+Other rules:
 - Return ONLY the JSON object. No explanation, no markdown.
 - Example must be beginner-friendly Japanese.
 - example_kana = example_jp with all kanji replaced by hiragana readings.
 - Memory tip must be in English (the audience is English speakers learning Japanese).
 - Synonyms must be Japanese words (kanji or kana).
 
-Word: {kanji} ({kana})"""
+Word: {kanji} ({kana}), romaji: {romaji}"""
 
 
 def enrich_word_data(word: str, fallback: dict) -> dict:

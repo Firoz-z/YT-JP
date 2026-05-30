@@ -1,6 +1,36 @@
 import os
+from datetime import date
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
+# ---------- Curriculum / level unlocking ----------
+#
+# The picker only draws words from levels that have unlocked. Days are
+# measured from CHANNEL_START_DATE — the first day the channel published
+# (so day 1 = first upload, day 121 = N4 unlocks for the first time, etc.)
+#
+# Adjust these if you want a faster or slower progression. Lowering a
+# number unlocks a level earlier; raising it delays the unlock.
+#
+# Empirically a 4-month dwell at each level matches how long it takes a
+# typical viewer to actually internalize the vocabulary, and it keeps the
+# channel positioned for a clear audience segment at any given moment.
+
+CHANNEL_START_DATE = date(2026, 4, 29)   # first published upload
+
+LEVEL_UNLOCK_DAYS = {
+    "N5":   0,     # day 1 — beginner foundation
+    "N4":   120,   # day 121 — ~4 months in
+    "N3":   240,   # day 241 — ~8 months in
+    "N2":   540,   # day 541 — ~18 months in
+    "N1":   900,   # day 901 — ~30 months in
+}
+
+# When a higher level is unlocked, the picker still pulls some words from
+# lower levels for variety (so viewers who joined later see beginner
+# content sometimes). This is the % of picks that come from the LATEST
+# unlocked level; the remainder is spread across older unlocked levels.
+LATEST_LEVEL_BIAS = 0.70   # 70% latest level, 30% mix of older levels
 
 # Short (9:16 vertical)
 WIDTH  = 1080

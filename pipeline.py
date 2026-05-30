@@ -9,7 +9,8 @@ from video_builder import create_short
 from image_fetcher import fetch_word_images
 from llm import enrich_word_data
 from uploader import upload_short_only
-from config import TEMP_DIR, OUTPUT_DIR
+from config import (TEMP_DIR, OUTPUT_DIR,
+                    CHANNEL_START_DATE, LEVEL_UNLOCK_DAYS, LATEST_LEVEL_BIAS)
 
 VIDEOS_PER_DAY = 4
 
@@ -71,44 +72,124 @@ def _already_uploaded() -> set:
     return used
 
 
+_LEVEL_HEADER_PREFIX = "# ===== LEVEL:"
+
+
+def _load_words_by_level() -> dict:
+    """Parse words.txt into {level_name: [words]}.
+
+    A line like "# ===== LEVEL: N5 =====" starts a new section. Comment
+    lines starting with "# ---" or "#" between section headers are
+    ignored (they're sub-theme labels inside a level). Returns a dict
+    in the order levels appear in the file.
+    """
+    levels = {}
+    current = None
+    with open("words.txt", encoding="utf-8") as f:
+        for raw in f:
+            line = raw.strip()
+            if not line:
+                continue
+            if line.startswith(_LEVEL_HEADER_PREFIX):
+                # "# ===== LEVEL: N5 =====" → "N5"
+                name = line[len(_LEVEL_HEADER_PREFIX):].strip()
+                name = name.split()[0].strip()   # drop trailing "====="
+                name = name.rstrip("=").strip()
+                current = name
+                levels.setdefault(current, [])
+                continue
+            if line.startswith("#"):
+                continue
+            if current is None:
+                # Pre-section words (legacy / pre-level) — bucket as "N5"
+                current = "N5"
+                levels.setdefault(current, [])
+            levels[current].append(line)
+    return levels
+
+
+def _unlocked_levels(today: date) -> list:
+    """Return the list of unlocked level names in order (oldest first)."""
+    days_since_start = (today - CHANNEL_START_DATE).days
+    unlocked = [
+        level for level, unlock_day in LEVEL_UNLOCK_DAYS.items()
+        if days_since_start >= unlock_day
+    ]
+    return unlocked or ["N5"]   # always at least N5 unlocked
+
+
 def _get_word(slot: int) -> str:
     """Pick a Japanese word for this slot.
 
-    The base position is deterministic from date + slot, but we then
-    walk forward in the shuffled list past any word that's already
-    appeared in uploads.md. That guarantees no repeat even when a
-    manual run collides with the cron, or when VIDEOS_PER_DAY shifts
-    the position formula mid-cycle.
+    Selection logic:
+      1. Read words.txt into per-level buckets.
+      2. Compute which levels are unlocked based on today's date.
+      3. The newest unlocked level gets LATEST_LEVEL_BIAS of slots; older
+         levels share the rest evenly. Which pool this slot uses is
+         determined deterministically by (date + slot).
+      4. Within the chosen pool, deterministic shuffle by (date + slot),
+         then walk forward past anything already in uploads.md so we
+         never publish a duplicate.
     """
-    with open("words.txt") as f:
-        words = [
-            w.strip()
-            for w in f
-            if w.strip() and not w.startswith("#")
-        ]
-    used = _already_uploaded()
+    levels         = _load_words_by_level()
+    unlocked       = _unlocked_levels(date.today())
+    used           = _already_uploaded()
 
-    days        = (date.today() - date(2024, 1, 1)).days
+    # Decide which level pool this slot draws from
+    days        = (date.today() - CHANNEL_START_DATE).days
     global_slot = days * VIDEOS_PER_DAY + slot
-    cycle       = global_slot // len(words)
-    position    = global_slot % len(words)
+    # Deterministic float in [0, 1) for this slot
+    rng_pool    = random.Random(f"pool-{global_slot}").random()
 
-    # Walk through the shuffled list, advancing across cycle boundaries
-    # if needed, until we find a word that hasn't been uploaded yet.
-    for offset in range(len(words) * 4):
-        c = cycle + (position + offset) // len(words)
-        i = (position + offset) % len(words)
-        rng = random.Random(c)
-        shuffled = words[:]
+    latest = unlocked[-1]
+    if len(unlocked) == 1 or rng_pool < LATEST_LEVEL_BIAS:
+        chosen_level = latest
+    else:
+        # Spread the remaining (1 - bias) across older levels
+        older = unlocked[:-1]
+        idx   = int((rng_pool - LATEST_LEVEL_BIAS) /
+                    ((1 - LATEST_LEVEL_BIAS) / len(older)))
+        idx   = min(idx, len(older) - 1)
+        chosen_level = older[idx]
+
+    pool = levels.get(chosen_level, [])
+    if not pool:
+        # Defensive: chosen level is empty (config drift) — fall back to latest
+        pool = levels.get(latest, [])
+    if not pool:
+        # Last resort: any unlocked level with words
+        for lvl in reversed(unlocked):
+            if levels.get(lvl):
+                pool = levels[lvl]
+                chosen_level = lvl
+                break
+
+    if not pool:
+        raise RuntimeError("No words available in any unlocked level — "
+                           "check words.txt has level sections populated.")
+
+    cycle    = global_slot // len(pool)
+    position = global_slot % len(pool)
+
+    print(f"  [picker] level={chosen_level}  pool={len(pool)}  "
+          f"position={position}  cycle={cycle}  unlocked={unlocked}")
+
+    # Walk forward past any already-uploaded words
+    for offset in range(len(pool) * 4):
+        c = cycle + (position + offset) // len(pool)
+        i = (position + offset) % len(pool)
+        rng = random.Random(f"{chosen_level}-{c}")
+        shuffled = pool[:]
         rng.shuffle(shuffled)
         candidate = shuffled[i]
         if candidate not in used:
             return candidate
 
-    # Astronomically unlikely — would mean every word was already used
-    # across 4 full cycles. Fall back to the deterministic pick.
-    rng = random.Random(cycle)
-    shuffled = words[:]
+    # Every word in the pool has been used — fall back to the
+    # deterministic pick (will get caught by the unique-by-slot upload
+    # constraint or just publish a known repeat in extreme edge cases).
+    rng = random.Random(f"{chosen_level}-{cycle}")
+    shuffled = pool[:]
     rng.shuffle(shuffled)
     return shuffled[position]
 
