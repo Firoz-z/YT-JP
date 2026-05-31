@@ -7,26 +7,27 @@ from config import YT_TAGS, YT_CATEGORY_ID
 from playlists import add_to_level_playlist
 
 
-# We need the broader "youtube" scope (not just youtube.upload) so we can
-# create playlists and add videos to them. If the refresh token in your
-# GitHub secret was generated with only youtube.upload, video uploads
-# still work — playlist additions just no-op with a clear log message.
-# Re-run setup_oauth.py and update YOUTUBE_REFRESH_TOKEN to enable
-# playlists.
-_SCOPES = [
-    "https://www.googleapis.com/auth/youtube.upload",
-    "https://www.googleapis.com/auth/youtube",
-]
-
-
 def _get_client():
+    """Build a YouTube client from a refresh token.
+
+    IMPORTANT: we do NOT pass `scopes=` here. Doing so makes the refresh
+    request explicitly ask Google for those scopes, and if the token
+    was originally authorized for a narrower set, Google rejects the
+    whole refresh with `invalid_scope: Bad Request`. By omitting scopes,
+    the refresh succeeds with whatever the token actually has — so
+    uploads work even when only youtube.upload was authorized, and
+    playlist calls fail per-call with a clean 403 (handled in
+    playlists.py).
+
+    To unlock playlist management, re-run setup_oauth.py — that flow
+    requests the broader youtube scope at authorization time.
+    """
     creds = Credentials(
         token=None,
         refresh_token=os.environ["YOUTUBE_REFRESH_TOKEN"],
         token_uri="https://oauth2.googleapis.com/token",
         client_id=os.environ["YOUTUBE_CLIENT_ID"],
         client_secret=os.environ["YOUTUBE_CLIENT_SECRET"],
-        scopes=_SCOPES,
     )
     creds.refresh(Request())
     return build("youtube", "v3", credentials=creds)

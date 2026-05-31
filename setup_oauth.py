@@ -14,7 +14,13 @@ Steps:
 """
 from google_auth_oauthlib.flow import InstalledAppFlow
 
-SCOPES = ["https://www.googleapis.com/auth/youtube.upload"]
+# youtube.upload is enough for uploading videos.
+# The broader "youtube" scope also lets the bot create + manage playlists
+# (so videos auto-sort into per-JLPT-level playlists after upload).
+SCOPES = [
+    "https://www.googleapis.com/auth/youtube.upload",
+    "https://www.googleapis.com/auth/youtube",
+]
 
 flow = InstalledAppFlow.from_client_secrets_file("client_secret.json", SCOPES)
 creds = flow.run_local_server(port=0)
