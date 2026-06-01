@@ -112,3 +112,4 @@ by the pipeline after each successful upload.
 | 2026-05-30 | 2 | 進歩 | しんぽ | shinpo | N3 | Making things better | [link](https://youtube.com/shorts/7UEEPc9aVBI) |
 | 2026-05-31 | 3 | 午前 | ごぜん | gozen | N5 | Morning time | [link](https://youtube.com/shorts/RrFnQC7p3mk) |
 | 2026-06-01 | 2 | 都市 | とし | toshi | N3 | City or town area | [link](https://youtube.com/shorts/3-MG52WlyEg) |
+| 2026-06-01 | 3 | 為る | する | suru | N3 | To do something | [link](https://youtube.com/shorts/vhs1doMByYE) |
