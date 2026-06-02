@@ -117,3 +117,4 @@ by the pipeline after each successful upload.
 | 2026-06-01 | 3 | 為る | する | suru | N3 | To do or perform | [link](https://youtube.com/shorts/EuWhV11Hfiw) |
 | 2026-06-02 | 1 | テレビ | テレビ | terebi | N5 | Television set | [link](https://youtube.com/shorts/IljpZicFVmw) |
 | 2026-06-02 | 2 | カメラ | カメラ | kamera | N5 | Device for taking photos | [link](https://youtube.com/shorts/FjiwDI4YcK8) |
+| 2026-06-02 | 3 | 指 | ゆび | yubi | N4 | Finger or toe | [link](https://youtube.com/shorts/_bgZnoSxyE4) |
