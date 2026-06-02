@@ -115,3 +115,4 @@ by the pipeline after each successful upload.
 | 2026-06-01 | 3 | 為る | する | suru | N3 | To do something | [link](https://youtube.com/shorts/vhs1doMByYE) |
 | 2026-06-01 | 3 | 為る | する | suru | N3 | To do something | [link](https://youtube.com/shorts/o7oMCzE8xRk) |
 | 2026-06-01 | 3 | 為る | する | suru | N3 | To do or perform | [link](https://youtube.com/shorts/EuWhV11Hfiw) |
+| 2026-06-02 | 1 | テレビ | テレビ | terebi | N5 | Television set | [link](https://youtube.com/shorts/IljpZicFVmw) |
