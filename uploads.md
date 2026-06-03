@@ -120,3 +120,4 @@ by the pipeline after each successful upload.
 | 2026-06-02 | 3 | 指 | ゆび | yubi | N4 | Finger or toe | [link](https://youtube.com/shorts/_bgZnoSxyE4) |
 | 2026-06-03 | 1 | 授業 | じゅぎょう | jugyou | N5 | Class or lesson | [short](https://youtube.com/shorts/vP9F2Th5_Kw) | [long](https://youtube.com/watch?v=53Eqp9dPCCs) |
 | 2026-06-03 | 1 | 私 | わたし | watashi | N5 | I, me | [short](https://youtube.com/shorts/AK92ANTp5QM) | [long](https://youtube.com/watch?v=CGYz_jgtezs) |
+| 2026-06-03 | 2 | 猫 | ねこ | neko | N5 | Domestic cat | [short](https://youtube.com/shorts/QgCBG8qbOZE) | [long](https://youtube.com/watch?v=TokhjaadJ4Y) |
