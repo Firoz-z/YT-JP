@@ -5,10 +5,10 @@ import random
 from datetime import date, datetime, timezone
 
 from word_fetcher import fetch_word_data
-from video_builder import create_short
+from video_builder import create_short, create_long_form
 from image_fetcher import fetch_word_images
 from llm import enrich_word_data
-from uploader import upload_short_only
+from uploader import upload_short_only, upload_long_form
 from config import (TEMP_DIR, OUTPUT_DIR,
                     CHANNEL_START_DATE, LEVEL_UNLOCK_DAYS, LATEST_LEVEL_BIAS)
 
@@ -17,32 +17,33 @@ VIDEOS_PER_DAY = 4
 UPLOAD_LOG = "uploads.md"
 UPLOAD_LOG_HEADER = (
     "# Upload History\n\n"
-    "Every published Short, in chronological order. Appended automatically\n"
-    "by the pipeline after each successful upload.\n\n"
-    "| Date | Slot | Kanji | Kana | Romaji | JLPT | Meaning | Video |\n"
-    "|------|------|-------|------|--------|------|---------|-------|\n"
+    "Every published video pair (Short + Long), in chronological order.\n"
+    "Appended automatically by the pipeline after each successful upload.\n\n"
+    "| Date | Slot | Kanji | Kana | Romaji | JLPT | Meaning | Short | Long |\n"
+    "|------|------|-------|------|--------|------|---------|-------|------|\n"
 )
 
 
-def _log_upload(word_data: dict, video_id: str, slot: int) -> None:
-    """Append a row to uploads.md so we have a permanent history of what
-    was published when. The GitHub Actions workflow commits this file
-    back to the repo after the pipeline succeeds."""
+def _log_upload(word_data: dict, short_id: str, slot: int,
+                long_id: str = None) -> None:
+    """Append a row to uploads.md — one row per word, with Short and Long
+    video links. The GitHub Actions workflow commits this file back to the
+    repo after each successful run."""
     path = os.path.join(os.path.dirname(__file__), UPLOAD_LOG)
     if not os.path.exists(path):
         with open(path, "w", encoding="utf-8") as f:
             f.write(UPLOAD_LOG_HEADER)
-    today = date.today().isoformat()
+    today  = date.today().isoformat()
     kanji  = word_data.get("kanji", "")
     kana   = word_data.get("kana", "") or "—"
     romaji = word_data.get("romaji", "") or "—"
     jlpt   = word_data.get("jlpt_level", "") or "—"
-    defn   = (word_data.get("definition", "") or "")
-    # Markdown table cells can't contain raw pipes — escape them
-    defn   = defn.replace("|", "\\|")
-    url    = f"https://youtube.com/shorts/{video_id}"
+    defn   = (word_data.get("definition", "") or "").replace("|", "\\|")
+    short_cell = f"[short](https://youtube.com/shorts/{short_id})"
+    long_cell  = (f"[long](https://youtube.com/watch?v={long_id})"
+                  if long_id else "—")
     row = (f"| {today} | {slot} | {kanji} | {kana} | {romaji} | "
-           f"{jlpt} | {defn} | [link]({url}) |\n")
+           f"{jlpt} | {defn} | {short_cell} | {long_cell} |\n")
     with open(path, "a", encoding="utf-8") as f:
         f.write(row)
     print(f"  history → {UPLOAD_LOG}")
@@ -220,18 +221,31 @@ def run(slot: int = 0) -> None:
     print(f"  images     : {len(word_images)} fetched")
 
     today = date.today().isoformat()
-
-    # 4 — build Short
     safe_name = word_data["romaji"].replace(" ", "_") or "word"
+
+    # 4a — build Short (1080×1920 vertical)
     short_path = os.path.join(OUTPUT_DIR, f"{safe_name}_{today}_s{slot}_short.mp4")
     create_short(word_data, short_path, word_images=word_images)
 
-    # 5 — upload
+    # 4b — build Long-form (1920×1080 landscape) — same scenes, different hook
+    long_path = os.path.join(OUTPUT_DIR, f"{safe_name}_{today}_s{slot}_long.mp4")
+    create_long_form(word_data, long_path, word_images=word_images)
+
+    # 5a — upload Short
     short_id = upload_short_only(short_path, word_data)
     print(f"  short  → https://youtube.com/shorts/{short_id}")
 
+    # 5b — upload Long-form (failure here is logged but does NOT abort the run;
+    #       the Short is already live and that's what matters most)
+    long_id = None
+    try:
+        long_id = upload_long_form(long_path, word_data)
+        print(f"  long   → https://youtube.com/watch?v={long_id}")
+    except Exception as exc:
+        print(f"  [warn] long-form upload failed — {exc}")
+
     # 6 — append to upload history (committed back by the workflow)
-    _log_upload(word_data, short_id, slot)
+    _log_upload(word_data, short_id, slot, long_id=long_id)
 
 
 def _slot_from_hour() -> int:

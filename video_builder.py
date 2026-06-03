@@ -7,6 +7,7 @@ import time
 from PIL import Image, ImageDraw, ImageFont, ImageFilter
 from pykakasi import kakasi
 from config import *
+from config import LONG_WIDTH, LONG_HEIGHT
 from tts import generate_speech
 
 AUDIO_PADDING = 0.15
@@ -178,6 +179,51 @@ def _make_hook_frame(word_data: dict, w: int, h: int) -> Image.Image:
         y = _draw_centered(draw, romaji, f_romaji, ROMAJI_COLOR, y, w)
     y += gap_outer
     _draw_centered(draw, "means?", f_hook, DEFINITION_COLOR, y, w)
+    return img
+
+
+def _make_long_hook_frame(word_data: dict, w: int, h: int) -> Image.Image:
+    """Landscape hook frame — 'Let's learn the word' + kanji + reading aids."""
+    scale  = w / 1080
+    img    = _make_bg(w, h)
+    draw   = ImageDraw.Draw(img)
+    _draw_brand(draw, w, h)
+
+    f_label  = _load_font("regular", int(52 * scale))
+    f_word   = _load_font("bold",    int(150 * scale))
+    f_kana   = _load_font("regular", int(54 * scale))
+    f_romaji = _load_font("italic",  int(44 * scale))
+
+    kanji  = word_data["kanji"]
+    kana   = word_data.get("kana", "")
+    romaji = word_data.get("romaji", "")
+
+    show_kana   = bool(kana)   and kana   != kanji
+    show_romaji = bool(romaji) and romaji != kanji
+
+    h_label  = f_label.getbbox("Let's learn the word")[3]
+    raw_kanji_h = f_word.getbbox(kanji)[3]
+    h_kanji  = int(raw_kanji_h * 1.10)   # 10% pad for CJK overshoot
+    h_kana   = f_kana.getbbox(kana)[3]     if show_kana   else 0
+    h_rom    = f_romaji.getbbox(romaji)[3] if show_romaji else 0
+
+    gap_outer       = int(44 * scale)
+    gap_below_kanji = int(12 * scale)
+    gap_inner       = int(18 * scale)
+
+    total = (h_label + gap_outer + h_kanji
+             + (gap_below_kanji + h_kana if show_kana   else 0)
+             + (gap_inner       + h_rom  if show_romaji else 0))
+    y = (h - total) // 2
+
+    y = _draw_centered(draw, "Let's learn the word", f_label,
+                       DEFINITION_COLOR, y, w) + gap_outer
+    _draw_centered(draw, kanji, f_word, WORD_COLOR, y, w)
+    y += h_kanji + gap_below_kanji
+    if show_kana:
+        y = _draw_centered(draw, kana, f_kana, KANA_COLOR, y, w) + gap_inner
+    if show_romaji:
+        _draw_centered(draw, romaji, f_romaji, ROMAJI_COLOR, y, w)
     return img
 
 
@@ -752,6 +798,145 @@ def create_short(word_data: dict, output_path: str,
         pre_music = output_path + ".no_music.mp4"
         _concat_clips(clip_paths, pre_music)
         print(f"  [music] mixing {os.path.basename(music)}")
+        _mix_background_music(pre_music, music, output_path)
+        os.remove(pre_music)
+    else:
+        _concat_clips(clip_paths, output_path)
+
+    for p in clip_paths:
+        if os.path.exists(p):
+            os.remove(p)
+
+
+def create_long_form(word_data: dict, output_path: str,
+                     word_images: list = None) -> None:
+    """Build a 1920×1080 landscape companion video.
+
+    Same scene structure as create_short() but:
+      - Landscape dimensions (1920×1080)
+      - Hook says 'Let's learn the word {romaji}' instead of 'Do you know what...'
+      - No #shorts tag — rendered as a regular YouTube video
+    Temp files use a 'long_' prefix so they don't collide with the Short's
+    temp files when both run in the same pipeline invocation.
+    """
+    os.makedirs(TEMP_DIR, exist_ok=True)
+
+    W = LONG_WIDTH
+    H = LONG_HEIGHT
+
+    kanji   = word_data["kanji"]
+    kana    = word_data.get("kana", "")
+    romaji  = word_data.get("romaji", "")
+    pos     = word_data.get("part_of_speech", "")
+    defn    = word_data["definition"]
+    syns    = word_data.get("synonyms", [])
+    tip     = word_data.get("memory_tip", "")
+    images  = word_images or []
+
+    def img(i):
+        return images[i] if i < len(images) else (images[-1] if images else None)
+
+    img_slot = 0
+
+    # Scene 1: hook — landscape style, affirming ("Let's learn") vs questioning
+    hook_word = romaji or kanji
+    specs = [{
+        "frame": _make_long_hook_frame(word_data, W, H),
+        "segments": [
+            {"text": f"Let's learn the word {hook_word}.",
+             "lang": "en", "rate": "+10%"},
+        ],
+    }]
+
+    # Scene 2: pronunciation — say word in Japanese twice
+    specs.append({
+        "frame": _make_word_frame(word_data, W, H),
+        "segments": [
+            {"text": kanji, "lang": "jp", "rate": "+0%",
+             "pause_after": 0.30},
+            {"text": kanji, "lang": "jp", "rate": "+0%"},
+        ],
+    })
+
+    # Scene 3: definition
+    specs.append({
+        "frame": _make_definition_frame(word_data, W, H, bg_image=img(img_slot)),
+        "segments": [
+            {"text": (f"{pos}. " if pos else "") + defn + ".",
+             "lang": "en", "rate": "+10%"},
+        ],
+    })
+    img_slot += 1
+
+    # Scene 4: example sentence
+    example_jp = word_data.get("example_jp", "")
+    example_en = word_data.get("example_en", "")
+    if example_jp:
+        ex_segments = [{"text": example_jp, "lang": "jp", "rate": "+0%"}]
+        if example_en:
+            ex_segments.append({"text": f"In English: {example_en}",
+                                 "lang": "en", "rate": "+10%"})
+        specs.append({
+            "frame":    _make_example_frame(word_data, W, H, img(img_slot)),
+            "segments": ex_segments,
+        })
+        img_slot += 1
+
+    # Scene 5: synonyms
+    if syns:
+        syn_segments = [
+            {"text": "Related words.", "lang": "en", "rate": "+10%",
+             "pause_after": 0.25},
+        ]
+        top = syns[:3]
+        for j, s in enumerate(top):
+            syn_segments.append({
+                "text": s, "lang": "jp", "rate": "+0%",
+                "pause_after": 0.25 if j < len(top) - 1 else 0.0,
+            })
+        specs.append({
+            "frame":    _make_synonyms_frame(word_data, W, H, img(img_slot)),
+            "segments": syn_segments,
+        })
+        img_slot += 1
+
+    # Scene 6: memory tip
+    if tip:
+        specs.append({
+            "frame": _make_tip_frame(word_data, tip, W, H, img(img_slot)),
+            "segments": [
+                {"text": f"Memory tip. {tip}", "lang": "en", "rate": "+10%"},
+            ],
+        })
+
+    # Scene 7: recap — final pronunciation
+    specs.append({
+        "frame": _make_word_frame(word_data, W, H),
+        "segments": [
+            {"text": kanji, "lang": "jp", "rate": "+0%"},
+        ],
+    })
+
+    # Render each scene
+    clip_paths = []
+    for i, spec in enumerate(specs):
+        apath = os.path.join(TEMP_DIR, f"long_a_{i}.mp3")
+        _multi_tts(spec["segments"], apath,
+                   trim_silence=spec.get("trim_silence", False))
+
+        dur  = get_audio_duration(apath) + AUDIO_PADDING
+        clip = os.path.join(TEMP_DIR, f"long_clip_{i}.mp4")
+        _render_one_scene(spec["frame"], apath, dur, clip, W, H)
+        clip_paths.append(clip)
+
+        if os.path.exists(apath):
+            os.remove(apath)
+
+    music = _select_music_track()
+    if music:
+        pre_music = output_path + ".no_music.mp4"
+        _concat_clips(clip_paths, pre_music)
+        print(f"  [music] mixing {os.path.basename(music)} (long form)")
         _mix_background_music(pre_music, music, output_path)
         os.remove(pre_music)
     else:

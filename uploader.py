@@ -85,6 +85,35 @@ def _insert(yt, video_path: str, title: str, description: str, tags: list) -> st
     return response["id"]
 
 
+def upload_long_form(long_path: str, word_data: dict) -> str:
+    """Upload the 1920×1080 landscape companion video. Returns video ID."""
+    kanji     = word_data["kanji"]
+    romaji    = word_data.get("romaji", "")
+    # Same tag set as the Short minus 'shorts' — this is a regular upload
+    base_tags = [t for t in YT_TAGS if t != "shorts"] + [
+        kanji, romaji, f"learn {romaji}", f"{romaji} japanese",
+        "japanese lesson", "japanese tutorial",
+    ]
+    description = _build_description(word_data)
+    yt          = _get_client()
+
+    title = f"Let's Learn: 「{kanji}」 ({romaji}) — Japanese Word of the Day"
+
+    video_id = _insert(
+        yt, long_path,
+        title       = title,
+        description = description + "\n\n#japanese #learnjapanese #nihongo #jlpt",
+        tags        = base_tags,
+    )
+
+    level = word_data.get("jlpt_level", "")
+    if level:
+        if add_to_level_playlist(yt, video_id, level):
+            print(f"  playlist: added long-form {video_id} to {level}")
+
+    return video_id
+
+
 def upload_short_only(short_path: str, word_data: dict) -> str:
     """Upload the Short, then drop it into its JLPT-level playlist.
     Returns video ID."""
