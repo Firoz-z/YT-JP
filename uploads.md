@@ -124,3 +124,4 @@ by the pipeline after each successful upload.
 | 2026-06-03 | 3 | お帰り | おかえり | okaeri | N2 | Welcome back home | [short](https://youtube.com/shorts/ONB1J07s6Js) | [long](https://youtube.com/watch?v=N9s-kAfhjgE) |
 | 2026-06-04 | 0 | お帰り | おかえり | okaeri | N2 | Welcome back home | [short](https://youtube.com/shorts/6_ak_QZPQJc) | [long](https://youtube.com/watch?v=-L3c7QJsUTo) |
 | 2026-06-04 | 0 | お帰り | おかえり | okaeri | N2 | Welcome back home | [short](https://youtube.com/shorts/ZrDNC-4ZgQ4) | [long](https://youtube.com/watch?v=aint1oOen1Q) |
+| 2026-06-04 | 2 | 只今 | ただいま | tadaima | — | I'm home! | [short](https://youtube.com/shorts/Zl3Y3EcB_sE) | [long](https://youtube.com/watch?v=NeNWX1prAwg) |
