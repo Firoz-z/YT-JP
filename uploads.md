@@ -122,3 +122,4 @@ by the pipeline after each successful upload.
 | 2026-06-03 | 1 | 私 | わたし | watashi | N5 | I, me | [short](https://youtube.com/shorts/AK92ANTp5QM) | [long](https://youtube.com/watch?v=CGYz_jgtezs) |
 | 2026-06-03 | 2 | 猫 | ねこ | neko | N5 | Domestic cat | [short](https://youtube.com/shorts/QgCBG8qbOZE) | [long](https://youtube.com/watch?v=TokhjaadJ4Y) |
 | 2026-06-03 | 3 | お帰り | おかえり | okaeri | N2 | Welcome back home | [short](https://youtube.com/shorts/ONB1J07s6Js) | [long](https://youtube.com/watch?v=N9s-kAfhjgE) |
+| 2026-06-04 | 0 | お帰り | おかえり | okaeri | N2 | Welcome back home | [short](https://youtube.com/shorts/6_ak_QZPQJc) | [long](https://youtube.com/watch?v=-L3c7QJsUTo) |
