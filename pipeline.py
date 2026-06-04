@@ -227,22 +227,22 @@ def run(slot: int = 0) -> None:
     short_path = os.path.join(OUTPUT_DIR, f"{safe_name}_{today}_s{slot}_short.mp4")
     create_short(word_data, short_path, word_images=word_images)
 
-    # 4b — build Long-form (1920×1080 landscape) — same scenes, different hook
-    long_path = os.path.join(OUTPUT_DIR, f"{safe_name}_{today}_s{slot}_long.mp4")
-    create_long_form(word_data, long_path, word_images=word_images)
+    # 4b — DISABLED: long-form build+upload paused; re-enable when ready
+    # long_path = os.path.join(OUTPUT_DIR, f"{safe_name}_{today}_s{slot}_long.mp4")
+    # create_long_form(word_data, long_path, word_images=word_images)
 
     # 5a — upload Short
     short_id = upload_short_only(short_path, word_data)
     print(f"  short  → https://youtube.com/shorts/{short_id}")
 
-    # 5b — upload Long-form (failure here is logged but does NOT abort the run;
-    #       the Short is already live and that's what matters most)
+    # 5b — DISABLED: long-form upload paused
+    # long_id = None
+    # try:
+    #     long_id = upload_long_form(long_path, word_data)
+    #     print(f"  long   → https://youtube.com/watch?v={long_id}")
+    # except Exception as exc:
+    #     print(f"  [warn] long-form upload failed — {exc}")
     long_id = None
-    try:
-        long_id = upload_long_form(long_path, word_data)
-        print(f"  long   → https://youtube.com/watch?v={long_id}")
-    except Exception as exc:
-        print(f"  [warn] long-form upload failed — {exc}")
 
     # 6 — append to upload history (committed back by the workflow)
     _log_upload(word_data, short_id, slot, long_id=long_id)
