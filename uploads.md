@@ -127,3 +127,4 @@ by the pipeline after each successful upload.
 | 2026-06-04 | 2 | 只今 | ただいま | tadaima | — | I'm home! | [short](https://youtube.com/shorts/Zl3Y3EcB_sE) | [long](https://youtube.com/watch?v=NeNWX1prAwg) |
 | 2026-06-04 | 2 | 只今 | ただいま | tadaima | — | I'm home!; I'm back!; it's me! | [short](https://youtube.com/shorts/joEupdi48gU) | — |
 | 2026-06-04 | 3 | 寿司 | すし | sushi | — | Vinegared rice with fish or vegetables | [short](https://youtube.com/shorts/9uOKpxx6ivM) | — |
+| 2026-06-05 | 1 | お早う | おはよう | ohayou | N2 | Good morning | [short](https://youtube.com/shorts/vuFI5dA4Zng) | — |
