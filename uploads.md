@@ -133,3 +133,4 @@ by the pipeline after each successful upload.
 | 2026-06-05 | 3 | ピンク | ピンク | pinku | N2 | Pink color | [short](https://youtube.com/shorts/cg1jHb4r064) | — |
 | 2026-06-06 | 0 | ネズミ | ネズミ | nezumi | N3 | Mouse or rat | [short](https://youtube.com/shorts/724L3aO2jgw) | — |
 | 2026-06-06 | 1 | ネズミ | ネズミ | nezumi | N3 | Mouse or rat | [short](https://youtube.com/shorts/ifC7W4tgh2A) | — |
+| 2026-06-06 | 2 | 灰色 | はいいろ | haiiro | N2 | Grey color | [short](https://youtube.com/shorts/IerwP2rmAGw) | — |
