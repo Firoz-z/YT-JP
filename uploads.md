@@ -134,3 +134,4 @@ by the pipeline after each successful upload.
 | 2026-06-06 | 0 | ネズミ | ネズミ | nezumi | N3 | Mouse or rat | [short](https://youtube.com/shorts/724L3aO2jgw) | — |
 | 2026-06-06 | 1 | ネズミ | ネズミ | nezumi | N3 | Mouse or rat | [short](https://youtube.com/shorts/ifC7W4tgh2A) | — |
 | 2026-06-06 | 2 | 灰色 | はいいろ | haiiro | N2 | Grey color | [short](https://youtube.com/shorts/IerwP2rmAGw) | — |
+| 2026-06-06 | 3 | テニス | テニス | tenisu | N4 | Racket sport played on court | [short](https://youtube.com/shorts/KafR6Np366s) | — |
