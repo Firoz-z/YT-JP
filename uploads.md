@@ -131,3 +131,4 @@ by the pipeline after each successful upload.
 | 2026-06-05 | 2 | 分かる | わかる | wakaru | N2 | To understand something | [short](https://youtube.com/shorts/ED02N6bVN8I) | — |
 | 2026-06-05 | 2 | 道路 | どうろ | douro | N3 | Road or highway | [short](https://youtube.com/shorts/P91XyYtCygE) | — |
 | 2026-06-05 | 3 | ピンク | ピンク | pinku | N2 | Pink color | [short](https://youtube.com/shorts/cg1jHb4r064) | — |
+| 2026-06-06 | 0 | ネズミ | ネズミ | nezumi | N3 | Mouse or rat | [short](https://youtube.com/shorts/724L3aO2jgw) | — |
