@@ -137,3 +137,4 @@ by the pipeline after each successful upload.
 | 2026-06-06 | 3 | テニス | テニス | tenisu | N4 | Racket sport played on court | [short](https://youtube.com/shorts/KafR6Np366s) | — |
 | 2026-06-07 | 0 | 信号 | しんごう | shingou | N3 | Traffic signal or signal | [short](https://youtube.com/shorts/SqMq9w1GiaM) | — |
 | 2026-06-07 | 1 | 目 | め | me | N5 | Eye or eyeball | [short](https://youtube.com/shorts/-u519ojg5xw) | — |
+| 2026-06-07 | 2 | 姉 | あね | ane | N5 | Older sister | [short](https://youtube.com/shorts/vRlY-r-UV0U) | — |
