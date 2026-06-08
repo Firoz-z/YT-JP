@@ -140,3 +140,4 @@ by the pipeline after each successful upload.
 | 2026-06-07 | 2 | 姉 | あね | ane | N5 | Older sister | [short](https://youtube.com/shorts/vRlY-r-UV0U) | — |
 | 2026-06-07 | 3 | 物 | もの | mono | N5 | Thing or object | [short](https://youtube.com/shorts/QD_Dpwz1-74) | — |
 | 2026-06-08 | 1 | 八 | はち | hachi | N5 | Eight | [short](https://youtube.com/shorts/JZ86KW1_4Ks) | — |
+| 2026-06-08 | 2 | 書く | かく | kaku | N5 | To write something | [short](https://youtube.com/shorts/AHitGgCba7I) | — |
