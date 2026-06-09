@@ -144,3 +144,4 @@ by the pipeline after each successful upload.
 | 2026-06-08 | 2 | ケーキ | ケーキ | keeki | N4 | Sweet baked dessert | [short](https://youtube.com/shorts/R3jHwqQr0Hw) | — |
 | 2026-06-09 | 0 | 味噌 | みそ | miso | N4 | Fermented soybean condiment | [short](https://youtube.com/shorts/IuawyLoRK-E) | — |
 | 2026-06-09 | 0 | 卵 | たまご | tamago | N5 | Eggs or egg | [short](https://youtube.com/shorts/S70K7ADVNdQ) | — |
+| 2026-06-09 | 2 | 一つ | ひとつ | hitotsu | N5 | One item or thing | [short](https://youtube.com/shorts/MACjh71CY5Y) | — |
