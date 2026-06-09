@@ -142,3 +142,4 @@ by the pipeline after each successful upload.
 | 2026-06-08 | 1 | 八 | はち | hachi | N5 | Eight | [short](https://youtube.com/shorts/JZ86KW1_4Ks) | — |
 | 2026-06-08 | 2 | 書く | かく | kaku | N5 | To write something | [short](https://youtube.com/shorts/AHitGgCba7I) | — |
 | 2026-06-08 | 2 | ケーキ | ケーキ | keeki | N4 | Sweet baked dessert | [short](https://youtube.com/shorts/R3jHwqQr0Hw) | — |
+| 2026-06-09 | 0 | 味噌 | みそ | miso | N4 | Fermented soybean condiment | [short](https://youtube.com/shorts/IuawyLoRK-E) | — |
