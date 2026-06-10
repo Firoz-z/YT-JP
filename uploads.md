@@ -149,3 +149,4 @@ by the pipeline after each successful upload.
 | 2026-06-10 | 0 | 少ない | すくない | sukunai | N5 | Small amount | [short](https://youtube.com/shorts/CgE0rkCFO3M) | — |
 | 2026-06-10 | 1 | 五 | ご | go | N5 | Number five | [short](https://youtube.com/shorts/IQiBh2Aw3qE) | — |
 | 2026-06-10 | 2 | 幾つ | いくつ | ikutsu | N3 | How many | [short](https://youtube.com/shorts/OjjFZWSH9wU) | — |
+| 2026-06-10 | 3 | 幾つ | いくつ | ikutsu | N3 | How many | [short](https://youtube.com/shorts/oU5Qis9qXK4) | — |
