@@ -146,3 +146,4 @@ by the pipeline after each successful upload.
 | 2026-06-09 | 0 | 卵 | たまご | tamago | N5 | Eggs or egg | [short](https://youtube.com/shorts/S70K7ADVNdQ) | — |
 | 2026-06-09 | 2 | 一つ | ひとつ | hitotsu | N5 | One item or thing | [short](https://youtube.com/shorts/MACjh71CY5Y) | — |
 | 2026-06-09 | 2 | 車 | くるま | kuruma | N5 | Car or automobile | [short](https://youtube.com/shorts/puI3mrXS8sU) | — |
+| 2026-06-10 | 0 | 少ない | すくない | sukunai | N5 | Small amount | [short](https://youtube.com/shorts/CgE0rkCFO3M) | — |
