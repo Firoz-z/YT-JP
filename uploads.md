@@ -152,3 +152,4 @@ by the pipeline after each successful upload.
 | 2026-06-10 | 3 | 幾つ | いくつ | ikutsu | N3 | How many | [short](https://youtube.com/shorts/oU5Qis9qXK4) | — |
 | 2026-06-11 | 0 | 幾つ | いくつ | ikutsu | N3 | How many | [short](https://youtube.com/shorts/0WVsK_3JBQY) | — |
 | 2026-06-11 | 1 | 両親 | りょうしん | ryoushin | N5 | Parents | [short](https://youtube.com/shorts/LCWL-R4AXdQ) | — |
+| 2026-06-11 | 2 | 御目出度う | おめでとう | omedetou | N3 | Congratulations or best wishes | [short](https://youtube.com/shorts/eiw0GT5TZQI) | — |
