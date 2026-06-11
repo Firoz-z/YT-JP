@@ -154,3 +154,4 @@ by the pipeline after each successful upload.
 | 2026-06-11 | 1 | 両親 | りょうしん | ryoushin | N5 | Parents | [short](https://youtube.com/shorts/LCWL-R4AXdQ) | — |
 | 2026-06-11 | 2 | 御目出度う | おめでとう | omedetou | N3 | Congratulations or best wishes | [short](https://youtube.com/shorts/eiw0GT5TZQI) | — |
 | 2026-06-11 | 2 | 御目出度う | おめでとう | omedetou | N3 | Congratulations, well done | [short](https://youtube.com/shorts/KExgHp_TcaI) | — |
+| 2026-06-11 | 2 | 御目出度う | おめでとう | omedetou | N3 | Congratulations, well done | [short](https://youtube.com/shorts/WM3U5PpI_xI) | — |
