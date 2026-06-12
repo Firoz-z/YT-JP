@@ -157,3 +157,4 @@ by the pipeline after each successful upload.
 | 2026-06-11 | 2 | 御目出度う | おめでとう | omedetou | N3 | Congratulations, well done | [short](https://youtube.com/shorts/WM3U5PpI_xI) | — |
 | 2026-06-12 | 0 | 座る | すわる | suwaru | N5 | To sit down | [short](https://youtube.com/shorts/6UlEvBI8xow) | — |
 | 2026-06-12 | 1 | 凄い | すごい | sugoi | N4 | Amazing or awesome | [short](https://youtube.com/shorts/UkPrhOIqx4w) | — |
+| 2026-06-12 | 1 | 凄い | すごい | sugoi | N4 | Amazing or awesome | [short](https://youtube.com/shorts/pM97YnjmaT4) | — |
