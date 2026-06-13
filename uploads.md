@@ -160,3 +160,4 @@ by the pipeline after each successful upload.
 | 2026-06-12 | 1 | 凄い | すごい | sugoi | N4 | Amazing or awesome | [short](https://youtube.com/shorts/pM97YnjmaT4) | — |
 | 2026-06-12 | 2 | 何処 | どこ | doko | N1 | Where or what place | [short](https://youtube.com/shorts/74n8ggAcfRw) | — |
 | 2026-06-13 | 0 | 医者 | いしゃ | isha | N5 | Medical doctor | [short](https://youtube.com/shorts/5gHIPHbG3_E) | — |
+| 2026-06-13 | 0 | 床 | ゆか | yuka | N3 | Floor of a room | [short](https://youtube.com/shorts/GMMLZ8U08TQ) | — |
