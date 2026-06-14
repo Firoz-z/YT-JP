@@ -164,3 +164,4 @@ by the pipeline after each successful upload.
 | 2026-06-13 | 1 | 多い | おおい | ooi | N5 | Many or numerous | [short](https://youtube.com/shorts/xO12lUeVIQ4) | — |
 | 2026-06-13 | 2 | 値段 | ねだん | nedan | N4 | Price or cost of something | [short](https://youtube.com/shorts/dkZVIT9e37k) | — |
 | 2026-06-14 | 0 | 蜜柑 | みかん | mikan | — | Mandarin orange | [short](https://youtube.com/shorts/jmiiKo8XvCk) | — |
+| 2026-06-14 | 0 | 蜜柑 | みかん | mikan | — | Mandarin orange | [short](https://youtube.com/shorts/-l9IFD8Vam0) | — |
