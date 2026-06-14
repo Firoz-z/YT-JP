@@ -165,3 +165,4 @@ by the pipeline after each successful upload.
 | 2026-06-13 | 2 | 値段 | ねだん | nedan | N4 | Price or cost of something | [short](https://youtube.com/shorts/dkZVIT9e37k) | — |
 | 2026-06-14 | 0 | 蜜柑 | みかん | mikan | — | Mandarin orange | [short](https://youtube.com/shorts/jmiiKo8XvCk) | — |
 | 2026-06-14 | 0 | 蜜柑 | みかん | mikan | — | Mandarin orange | [short](https://youtube.com/shorts/-l9IFD8Vam0) | — |
+| 2026-06-14 | 1 | 蜜柑 | みかん | mikan | — | Mandarin orange | [short](https://youtube.com/shorts/9qjmwrxGb60) | — |
