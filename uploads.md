@@ -167,3 +167,4 @@ by the pipeline after each successful upload.
 | 2026-06-14 | 0 | 蜜柑 | みかん | mikan | — | Mandarin orange | [short](https://youtube.com/shorts/-l9IFD8Vam0) | — |
 | 2026-06-14 | 1 | 蜜柑 | みかん | mikan | — | Mandarin orange | [short](https://youtube.com/shorts/9qjmwrxGb60) | — |
 | 2026-06-14 | 2 | 何時 | いつ | itsu | N1 | When or at what time | [short](https://youtube.com/shorts/fKBSlAq__rU) | — |
+| 2026-06-15 | 0 | 夢 | ゆめ | yume | N4 | Dream or vision | [short](https://youtube.com/shorts/JV4k6ThKUNY) | — |
