@@ -172,3 +172,4 @@ by the pipeline after each successful upload.
 | 2026-06-15 | 2 | 遠い | とおい | tooi | N5 | Far or distant | [short](https://youtube.com/shorts/CO3TqoUGO68) | — |
 | 2026-06-15 | 3 | 弱い | よわい | yowai | N5 | Weak or fragile | [short](https://youtube.com/shorts/T_x6efrErCU) | — |
 | 2026-06-16 | 0 | 牛 | うし | ushi | N3 | Domesticated cattle, cow or bull | [short](https://youtube.com/shorts/rcdegQco7UM) | — |
+| 2026-06-16 | 1 | トラック | トラック | torakku | N3 | Large vehicle for goods | [short](https://youtube.com/shorts/cFtHnqct7I8) | — |
