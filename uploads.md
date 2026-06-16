@@ -171,3 +171,4 @@ by the pipeline after each successful upload.
 | 2026-06-15 | 1 | 切る | きる | kiru | N5 | To cut something | [short](https://youtube.com/shorts/REpAKYKyDaM) | — |
 | 2026-06-15 | 2 | 遠い | とおい | tooi | N5 | Far or distant | [short](https://youtube.com/shorts/CO3TqoUGO68) | — |
 | 2026-06-15 | 3 | 弱い | よわい | yowai | N5 | Weak or fragile | [short](https://youtube.com/shorts/T_x6efrErCU) | — |
+| 2026-06-16 | 0 | 牛 | うし | ushi | N3 | Domesticated cattle, cow or bull | [short](https://youtube.com/shorts/rcdegQco7UM) | — |
