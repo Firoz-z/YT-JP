@@ -176,3 +176,4 @@ by the pipeline after each successful upload.
 | 2026-06-16 | 2 | 本棚 | ほんだな | hondana | N5 | Bookshelves | [short](https://youtube.com/shorts/v5O5FF6fFbc) | — |
 | 2026-06-16 | 3 | サッカー | サッカー | sakkaa | — | Association football sport | [short](https://youtube.com/shorts/-x2P9l6EIDo) | — |
 | 2026-06-17 | 0 | 問題 | もんだい | mondai | N5 | Problem or question | [short](https://youtube.com/shorts/y2hBJZ3YMNE) | — |
+| 2026-06-17 | 1 | 明日 | あした | ashita | N4 | Tomorrow | [short](https://youtube.com/shorts/Ogs7ct0OxN0) | — |
