@@ -180,3 +180,4 @@ by the pipeline after each successful upload.
 | 2026-06-17 | 2 | 赤 | あか | aka | N5 | Red color | [short](https://youtube.com/shorts/6OA4Cl8azao) | — |
 | 2026-06-17 | 2 | 美しい | うつくしい | utsukushii | N4 | Beautiful, pretty | [short](https://youtube.com/shorts/OMft6KYYUwo) | — |
 | 2026-06-18 | 0 | 名前 | なまえ | namae | N5 | Person's name | [short](https://youtube.com/shorts/Xc2B16cwPMM) | — |
+| 2026-06-18 | 0 | 空港 | くうこう | kuukou | N4 | Airport | [short](https://youtube.com/shorts/K1m14bXq1-M) | — |
