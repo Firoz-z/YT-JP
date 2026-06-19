@@ -184,3 +184,4 @@ by the pipeline after each successful upload.
 | 2026-06-18 | 2 | 古い | ふるい | furui | N5 | Old or aged | [short](https://youtube.com/shorts/sWqoqXM7mnU) | — |
 | 2026-06-18 | 2 | 自然 | しぜん | shizen | N3 | Natural environment | [short](https://youtube.com/shorts/jRqaf1vI-C8) | — |
 | 2026-06-19 | 0 | ドレス | ドレス | doresu | N3 | Woman's garment | [short](https://youtube.com/shorts/3jXAPB-NvwI) | — |
+| 2026-06-19 | 1 | 日曜日 | にちようび | nichiyoubi | N5 | Sunday of the week | [short](https://youtube.com/shorts/h-14kR2rFm0) | — |
