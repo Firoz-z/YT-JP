@@ -186,3 +186,4 @@ by the pipeline after each successful upload.
 | 2026-06-19 | 0 | ドレス | ドレス | doresu | N3 | Woman's garment | [short](https://youtube.com/shorts/3jXAPB-NvwI) | — |
 | 2026-06-19 | 1 | 日曜日 | にちようび | nichiyoubi | N5 | Sunday of the week | [short](https://youtube.com/shorts/h-14kR2rFm0) | — |
 | 2026-06-19 | 1 | 犬 | いぬ | inu | N5 | Domestic dog | [short](https://youtube.com/shorts/V0gOJt0MaKg) | — |
+| 2026-06-19 | 2 | 初めまして | はじめまして | hajimemashite | N2 | Nice to meet you | [short](https://youtube.com/shorts/zaXv95zslco) | — |
