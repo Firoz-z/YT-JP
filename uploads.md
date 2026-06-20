@@ -187,3 +187,4 @@ by the pipeline after each successful upload.
 | 2026-06-19 | 1 | 日曜日 | にちようび | nichiyoubi | N5 | Sunday of the week | [short](https://youtube.com/shorts/h-14kR2rFm0) | — |
 | 2026-06-19 | 1 | 犬 | いぬ | inu | N5 | Domestic dog | [short](https://youtube.com/shorts/V0gOJt0MaKg) | — |
 | 2026-06-19 | 2 | 初めまして | はじめまして | hajimemashite | N2 | Nice to meet you | [short](https://youtube.com/shorts/zaXv95zslco) | — |
+| 2026-06-20 | 0 | 初めまして | はじめまして | hajimemashite | N2 | Nice to meet you | [short](https://youtube.com/shorts/IMZKL53V8MA) | — |
