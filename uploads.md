@@ -190,3 +190,4 @@ by the pipeline after each successful upload.
 | 2026-06-20 | 0 | 初めまして | はじめまして | hajimemashite | N2 | Nice to meet you | [short](https://youtube.com/shorts/IMZKL53V8MA) | — |
 | 2026-06-20 | 0 | 初めまして | はじめまして | hajimemashite | N2 | Nice to meet you | [short](https://youtube.com/shorts/ptiDvCpuYBA) | — |
 | 2026-06-20 | 1 | 初めまして | はじめまして | hajimemashite | N2 | Nice to meet you | [short](https://youtube.com/shorts/86rdLS7FFbA) | — |
+| 2026-06-20 | 2 | 初めまして | はじめまして | hajimemashite | N2 | Nice to meet you | [short](https://youtube.com/shorts/vI9iaubxVv0) | — |
