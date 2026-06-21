@@ -191,3 +191,4 @@ by the pipeline after each successful upload.
 | 2026-06-20 | 0 | 初めまして | はじめまして | hajimemashite | N2 | Nice to meet you | [short](https://youtube.com/shorts/ptiDvCpuYBA) | — |
 | 2026-06-20 | 1 | 初めまして | はじめまして | hajimemashite | N2 | Nice to meet you | [short](https://youtube.com/shorts/86rdLS7FFbA) | — |
 | 2026-06-20 | 2 | 初めまして | はじめまして | hajimemashite | N2 | Nice to meet you | [short](https://youtube.com/shorts/vI9iaubxVv0) | — |
+| 2026-06-21 | 0 | 黄色 | きいろ | kiiro | N1 | Yellow color | [short](https://youtube.com/shorts/VjcdH7HlW4o) | — |
