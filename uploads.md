@@ -194,3 +194,4 @@ by the pipeline after each successful upload.
 | 2026-06-21 | 0 | 黄色 | きいろ | kiiro | N1 | Yellow color | [short](https://youtube.com/shorts/VjcdH7HlW4o) | — |
 | 2026-06-21 | 0 | 待つ | まつ | matsu | N5 | To wait patiently | [short](https://youtube.com/shorts/KkwtLjXOJJQ) | — |
 | 2026-06-21 | 1 | 重い | おもい | omoi | N5 | Heavy or weighty | [short](https://youtube.com/shorts/j7cMC__amFM) | — |
+| 2026-06-21 | 2 | 短い | みじかい | mijikai | N5 | Short in length or duration | [short](https://youtube.com/shorts/osRXVH_Vh4Q) | — |
