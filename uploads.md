@@ -198,3 +198,4 @@ by the pipeline after each successful upload.
 | 2026-06-22 | 0 | 切符 | きっぷ | kippu | N5 | Ticket for travel | [short](https://youtube.com/shorts/QB3QpXCSDUU) | — |
 | 2026-06-22 | 1 | 携帯 | けいたい | keitai | N1 | Portable phone | [short](https://youtube.com/shorts/CpxMTjgBklU) | — |
 | 2026-06-22 | 2 | 男の子 | おとこのこ | otokonoko | N5 | Boy or young male | [short](https://youtube.com/shorts/7g8VCX_6gDs) | — |
+| 2026-06-22 | 3 | 六 | ろく | roku | N1 | Six | [short](https://youtube.com/shorts/5DFILv_6lc4) | — |
