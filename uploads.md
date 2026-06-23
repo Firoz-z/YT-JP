@@ -201,3 +201,4 @@ by the pipeline after each successful upload.
 | 2026-06-22 | 3 | 六 | ろく | roku | N1 | Six | [short](https://youtube.com/shorts/5DFILv_6lc4) | — |
 | 2026-06-23 | 0 | 夫 | おっと | otto | N4 | Husband | [short](https://youtube.com/shorts/-Hanmn9W3OI) | — |
 | 2026-06-23 | 0 | 迚も | とても | totemo | N1 | Very or extremely | [short](https://youtube.com/shorts/S0jwyin7xp8) | — |
+| 2026-06-23 | 1 | 迚も | とても | totemo | N1 | Very or extremely | [short](https://youtube.com/shorts/UFA8IqeXEbY) | — |
