@@ -205,3 +205,4 @@ by the pipeline after each successful upload.
 | 2026-06-23 | 2 | メール | メール | meeru | — | Email message | [short](https://youtube.com/shorts/s4XOLJcpBDU) | — |
 | 2026-06-24 | 0 | 御免なさい | ごめんなさい | gomennasai | N3 | I'm sorry | [short](https://youtube.com/shorts/DQx7GkomETw) | — |
 | 2026-06-24 | 0 | 御免なさい | ごめんなさい | gomennasai | N3 | I'm sorry | [short](https://youtube.com/shorts/gLedayMp4KE) | — |
+| 2026-06-24 | 1 | 病院 | びょういん | byouin | N5 | Hospital or clinic | [short](https://youtube.com/shorts/QJ1nk4hh31o) | — |
