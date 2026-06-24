@@ -204,3 +204,4 @@ by the pipeline after each successful upload.
 | 2026-06-23 | 1 | 迚も | とても | totemo | N1 | Very or extremely | [short](https://youtube.com/shorts/UFA8IqeXEbY) | — |
 | 2026-06-23 | 2 | メール | メール | meeru | — | Email message | [short](https://youtube.com/shorts/s4XOLJcpBDU) | — |
 | 2026-06-24 | 0 | 御免なさい | ごめんなさい | gomennasai | N3 | I'm sorry | [short](https://youtube.com/shorts/DQx7GkomETw) | — |
+| 2026-06-24 | 0 | 御免なさい | ごめんなさい | gomennasai | N3 | I'm sorry | [short](https://youtube.com/shorts/gLedayMp4KE) | — |
