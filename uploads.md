@@ -208,3 +208,4 @@ by the pipeline after each successful upload.
 | 2026-06-24 | 1 | 病院 | びょういん | byouin | N5 | Hospital or clinic | [short](https://youtube.com/shorts/QJ1nk4hh31o) | — |
 | 2026-06-24 | 2 | 買う | かう | kau | N5 | To buy something | [short](https://youtube.com/shorts/UW64woAhAkQ) | — |
 | 2026-06-25 | 0 | 階段 | かいだん | kaidan | N5 | Stairs or staircase | [short](https://youtube.com/shorts/Ntb2jM_2E_8) | — |
+| 2026-06-25 | 0 | 一人 | ひとり | hitori | N3 | One person alone | [short](https://youtube.com/shorts/Wvde_vzwtns) | — |
