@@ -209,3 +209,4 @@ by the pipeline after each successful upload.
 | 2026-06-24 | 2 | 買う | かう | kau | N5 | To buy something | [short](https://youtube.com/shorts/UW64woAhAkQ) | — |
 | 2026-06-25 | 0 | 階段 | かいだん | kaidan | N5 | Stairs or staircase | [short](https://youtube.com/shorts/Ntb2jM_2E_8) | — |
 | 2026-06-25 | 0 | 一人 | ひとり | hitori | N3 | One person alone | [short](https://youtube.com/shorts/Wvde_vzwtns) | — |
+| 2026-06-25 | 1 | 珈琲 | コーヒー | koohii | N5 | Hot coffee drink | [short](https://youtube.com/shorts/xu54ojKcfkw) | — |
