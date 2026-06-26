@@ -213,3 +213,4 @@ by the pipeline after each successful upload.
 | 2026-06-25 | 2 | 珈琲 | コーヒー | koohii | N5 | Hot brewed coffee drink | [short](https://youtube.com/shorts/W4zRweqCsgM) | — |
 | 2026-06-26 | 0 | 嘘 | うそ | uso | N3 | False statement or lie | [short](https://youtube.com/shorts/oyuYbM5obCk) | — |
 | 2026-06-26 | 0 | 別 | べつ | betsu | N4 | Difference or distinction | [short](https://youtube.com/shorts/weAbBEUPhXg) | — |
+| 2026-06-26 | 1 | 入る | はいる | hairu | N5 | To enter or go in | [short](https://youtube.com/shorts/fVUwt2jSisk) | — |
