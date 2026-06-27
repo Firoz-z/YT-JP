@@ -217,3 +217,4 @@ by the pipeline after each successful upload.
 | 2026-06-26 | 2 | 豚 | ぶた | buta | — | Domestic pig | [short](https://youtube.com/shorts/PN4OKzjlHEU) | — |
 | 2026-06-27 | 0 | 高い | たかい | takai | N5 | High or tall | [short](https://youtube.com/shorts/mxB1tZ-ezUU) | — |
 | 2026-06-27 | 0 | 場所 | ばしょ | basho | N4 | Place or location | [short](https://youtube.com/shorts/GlMgatlANuM) | — |
+| 2026-06-27 | 1 | バナナ | バナナ | banana | — | Yellow tropical fruit | [short](https://youtube.com/shorts/MiPPt58TnBc) | — |
