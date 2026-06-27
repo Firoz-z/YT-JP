@@ -215,3 +215,4 @@ by the pipeline after each successful upload.
 | 2026-06-26 | 0 | 別 | べつ | betsu | N4 | Difference or distinction | [short](https://youtube.com/shorts/weAbBEUPhXg) | — |
 | 2026-06-26 | 1 | 入る | はいる | hairu | N5 | To enter or go in | [short](https://youtube.com/shorts/fVUwt2jSisk) | — |
 | 2026-06-26 | 2 | 豚 | ぶた | buta | — | Domestic pig | [short](https://youtube.com/shorts/PN4OKzjlHEU) | — |
+| 2026-06-27 | 0 | 高い | たかい | takai | N5 | High or tall | [short](https://youtube.com/shorts/mxB1tZ-ezUU) | — |
