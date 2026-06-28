@@ -219,3 +219,4 @@ by the pipeline after each successful upload.
 | 2026-06-27 | 0 | 場所 | ばしょ | basho | N4 | Place or location | [short](https://youtube.com/shorts/GlMgatlANuM) | — |
 | 2026-06-27 | 1 | バナナ | バナナ | banana | — | Yellow tropical fruit | [short](https://youtube.com/shorts/MiPPt58TnBc) | — |
 | 2026-06-27 | 2 | 冷蔵庫 | れいぞうこ | reizouko | N5 | Electric home appliance to keep food cool | [short](https://youtube.com/shorts/RMEsQRaafA8) | — |
+| 2026-06-28 | 0 | お握り | おにぎり | onigiri | — | Japanese rice ball | [short](https://youtube.com/shorts/XcvD62hR15Y) | — |
