@@ -223,3 +223,4 @@ by the pipeline after each successful upload.
 | 2026-06-28 | 0 | お握り | おにぎり | onigiri | — | Japanese rice ball | [short](https://youtube.com/shorts/KN4xb0p7bhs) | — |
 | 2026-06-28 | 1 | お握り | おにぎり | onigiri | — | Japanese rice ball | [short](https://youtube.com/shorts/L15dqGenptg) | — |
 | 2026-06-28 | 2 | 会社 | かいしゃ | kaisha | N5 | Company or corporation | [short](https://youtube.com/shorts/vdz2Y01jjeI) | — |
+| 2026-06-29 | 0 | 体 | からだ | karada | N3 | Human body | [short](https://youtube.com/shorts/w08NYhhCgLw) | — |
