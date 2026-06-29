@@ -225,3 +225,4 @@ by the pipeline after each successful upload.
 | 2026-06-28 | 2 | 会社 | かいしゃ | kaisha | N5 | Company or corporation | [short](https://youtube.com/shorts/vdz2Y01jjeI) | — |
 | 2026-06-29 | 0 | 体 | からだ | karada | N3 | Human body | [short](https://youtube.com/shorts/w08NYhhCgLw) | — |
 | 2026-06-29 | 1 | 祖母 | そぼ | sobo | N4 | Grandmother | [short](https://youtube.com/shorts/d3k31J2DjJY) | — |
+| 2026-06-29 | 2 | 冬 | ふゆ | fuyu | N5 | Winter season | [short](https://youtube.com/shorts/IFj-hqc22wo) | — |
