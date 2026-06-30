@@ -230,3 +230,4 @@ by the pipeline after each successful upload.
 | 2026-06-30 | 0 | お休み | おやすみ | oyasumi | N2 | Day off or holiday | [short](https://youtube.com/shorts/dOaoFWBNfkU) | — |
 | 2026-06-30 | 0 | お休み | おやすみ | oyasumi | N2 | Day off or holiday | [short](https://youtube.com/shorts/K070wmWSQLg) | — |
 | 2026-06-30 | 1 | お休み | おやすみ | oyasumi | N2 | Day off or holiday | [short](https://youtube.com/shorts/IUz5a3eEEmk) | — |
+| 2026-06-30 | 2 | 九 | きゅう | kyuu | N3 | Nine | [short](https://youtube.com/shorts/S59lwav_oQE) | — |
