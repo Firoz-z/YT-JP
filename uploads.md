@@ -227,3 +227,4 @@ by the pipeline after each successful upload.
 | 2026-06-29 | 1 | 祖母 | そぼ | sobo | N4 | Grandmother | [short](https://youtube.com/shorts/d3k31J2DjJY) | — |
 | 2026-06-29 | 2 | 冬 | ふゆ | fuyu | N5 | Winter season | [short](https://youtube.com/shorts/IFj-hqc22wo) | — |
 | 2026-06-29 | 2 | 安い | やすい | yasui | N5 | Cheap or inexpensive | [short](https://youtube.com/shorts/wsDHvuXAfr4) | — |
+| 2026-06-30 | 0 | お休み | おやすみ | oyasumi | N2 | Day off or holiday | [short](https://youtube.com/shorts/dOaoFWBNfkU) | — |
