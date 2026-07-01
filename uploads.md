@@ -233,3 +233,4 @@ by the pipeline after each successful upload.
 | 2026-06-30 | 2 | 九 | きゅう | kyuu | N3 | Nine | [short](https://youtube.com/shorts/S59lwav_oQE) | — |
 | 2026-07-01 | 0 | 土 | つち | tsuchi | N3 | Soil or earth | [short](https://youtube.com/shorts/e38XS3rkYHo) | — |
 | 2026-07-01 | 1 | 水泳 | すいえい | suiei | N4 | Swimming sport | [short](https://youtube.com/shorts/P7lILarG-3M) | — |
+| 2026-07-01 | 2 | 近い | ちかい | chikai | N5 | Near or close | [short](https://youtube.com/shorts/BVrcL4ew3Bg) | — |
