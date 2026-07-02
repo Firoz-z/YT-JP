@@ -236,3 +236,4 @@ by the pipeline after each successful upload.
 | 2026-07-01 | 2 | 近い | ちかい | chikai | N5 | Near or close | [short](https://youtube.com/shorts/BVrcL4ew3Bg) | — |
 | 2026-07-01 | 2 | 朝ごはん | あさごはん | asagohan | N5 | Morning meal | [short](https://youtube.com/shorts/j0pZzXNQ8I8) | — |
 | 2026-07-02 | 0 | 趣味 | しゅみ | shumi | N4 | Hobby or pastime activity | [short](https://youtube.com/shorts/J38fR2J3n2o) | — |
+| 2026-07-02 | 0 | インターネット | インターネット | intaanetto | — | Global computer network | [short](https://youtube.com/shorts/Urm1vl7b2P4) | — |
