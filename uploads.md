@@ -238,3 +238,4 @@ by the pipeline after each successful upload.
 | 2026-07-02 | 0 | 趣味 | しゅみ | shumi | N4 | Hobby or pastime activity | [short](https://youtube.com/shorts/J38fR2J3n2o) | — |
 | 2026-07-02 | 0 | インターネット | インターネット | intaanetto | — | Global computer network | [short](https://youtube.com/shorts/Urm1vl7b2P4) | — |
 | 2026-07-02 | 1 | 悪い | わるい | warui | N5 | Bad or undesirable | [short](https://youtube.com/shorts/ALAu3IwwsiU) | — |
+| 2026-07-02 | 2 | 道 | みち | michi | N5 | Road or path | [short](https://youtube.com/shorts/y-L7MXOV85U) | — |
