@@ -235,3 +235,4 @@ by the pipeline after each successful upload.
 | 2026-07-01 | 1 | 水泳 | すいえい | suiei | N4 | Swimming sport | [short](https://youtube.com/shorts/P7lILarG-3M) | — |
 | 2026-07-01 | 2 | 近い | ちかい | chikai | N5 | Near or close | [short](https://youtube.com/shorts/BVrcL4ew3Bg) | — |
 | 2026-07-01 | 2 | 朝ごはん | あさごはん | asagohan | N5 | Morning meal | [short](https://youtube.com/shorts/j0pZzXNQ8I8) | — |
+| 2026-07-02 | 0 | 趣味 | しゅみ | shumi | N4 | Hobby or pastime activity | [short](https://youtube.com/shorts/J38fR2J3n2o) | — |
