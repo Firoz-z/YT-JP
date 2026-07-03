@@ -242,3 +242,4 @@ by the pipeline after each successful upload.
 | 2026-07-03 | 0 | 来る | くる | kuru | N5 | To come or arrive | [short](https://youtube.com/shorts/HUhR-BXaHq8) | — |
 | 2026-07-03 | 0 | 地下鉄 | ちかてつ | chikatetsu | N5 | Subway or underground railway | [short](https://youtube.com/shorts/PRh3PPBJOG4) | — |
 | 2026-07-03 | 1 | 意味 | いみ | imi | N5 | Meaning or significance | [short](https://youtube.com/shorts/UPP3t0U-yJE) | — |
+| 2026-07-03 | 2 | 映画館 | えいがかん | eigakan | N5 | Movie theater | [short](https://youtube.com/shorts/kL1sIkPl-DA) | — |
