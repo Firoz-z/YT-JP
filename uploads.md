@@ -246,3 +246,4 @@ by the pipeline after each successful upload.
 | 2026-07-04 | 0 | 走る | はしる | hashiru | N5 | To run quickly | [short](https://youtube.com/shorts/SFfkU8Gl0Rs) | — |
 | 2026-07-04 | 0 | 鳥 | とり | tori | N5 | Bird, flying creature | [short](https://youtube.com/shorts/wWQnXS3vOq8) | — |
 | 2026-07-04 | 1 | 茶色 | ちゃいろ | chairo | N5 | Brown color | [short](https://youtube.com/shorts/pqOWNjQTIag) | — |
+| 2026-07-04 | 2 | 千 | せん | sen | N5 | Thousand, one thousand | [short](https://youtube.com/shorts/tCLxw-_sb44) | — |
