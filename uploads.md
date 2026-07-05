@@ -250,3 +250,4 @@ by the pipeline after each successful upload.
 | 2026-07-05 | 0 | 靴 | くつ | kutsu | N5 | Footwear | [short](https://youtube.com/shorts/g2ofGcW_K0Q) | — |
 | 2026-07-05 | 0 | 花 | はな | hana | N5 | Flower or blossom | [short](https://youtube.com/shorts/nZsJI-pDQQw) | — |
 | 2026-07-05 | 1 | 太陽 | たいよう | taiyou | N3 | The Sun | [short](https://youtube.com/shorts/oshbClvwZh0) | — |
+| 2026-07-05 | 2 | 四 | し | shi | N3 | Four, number 4 | [short](https://youtube.com/shorts/nuLaXCnPHi8) | — |
