@@ -252,3 +252,4 @@ by the pipeline after each successful upload.
 | 2026-07-05 | 1 | 太陽 | たいよう | taiyou | N3 | The Sun | [short](https://youtube.com/shorts/oshbClvwZh0) | — |
 | 2026-07-05 | 2 | 四 | し | shi | N3 | Four, number 4 | [short](https://youtube.com/shorts/nuLaXCnPHi8) | — |
 | 2026-07-06 | 0 | 映画 | えいが | eiga | N5 | Movie or film | [short](https://youtube.com/shorts/gqBYipCoFI4) | — |
+| 2026-07-06 | 1 | コート | コート | kooto | N5 | Outerwear for cold weather | [short](https://youtube.com/shorts/NvrCtlwRIcI) | — |
