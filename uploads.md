@@ -253,3 +253,4 @@ by the pipeline after each successful upload.
 | 2026-07-05 | 2 | 四 | し | shi | N3 | Four, number 4 | [short](https://youtube.com/shorts/nuLaXCnPHi8) | — |
 | 2026-07-06 | 0 | 映画 | えいが | eiga | N5 | Movie or film | [short](https://youtube.com/shorts/gqBYipCoFI4) | — |
 | 2026-07-06 | 1 | コート | コート | kooto | N5 | Outerwear for cold weather | [short](https://youtube.com/shorts/NvrCtlwRIcI) | — |
+| 2026-07-06 | 2 | タクシー | タクシー | takushii | N5 | Car for hire with driver | [short](https://youtube.com/shorts/HMoEGXemGEg) | — |
