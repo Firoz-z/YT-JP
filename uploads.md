@@ -256,3 +256,4 @@ by the pipeline after each successful upload.
 | 2026-07-06 | 2 | タクシー | タクシー | takushii | N5 | Car for hire with driver | [short](https://youtube.com/shorts/HMoEGXemGEg) | — |
 | 2026-07-06 | 2 | 橋 | はし | hashi | N5 | Structure over water or gap | [short](https://youtube.com/shorts/eshDUGzZffA) | — |
 | 2026-07-07 | 0 | 財布 | さいふ | saifu | N5 | Wallet or purse | [short](https://youtube.com/shorts/BXaRIxBLovY) | — |
+| 2026-07-07 | 0 | 全部 | ぜんぶ | zenbu | N5 | All or entire thing | [short](https://youtube.com/shorts/n5Setgltqf8) | — |
