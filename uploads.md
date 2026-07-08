@@ -260,3 +260,4 @@ by the pipeline after each successful upload.
 | 2026-07-07 | 2 | 答え | こたえ | kotae | N4 | Answer or response | [short](https://youtube.com/shorts/Apm0Q4jCNZg) | — |
 | 2026-07-08 | 0 | 神社 | じんじゃ | jinja | N4 | Shinto shrine | [short](https://youtube.com/shorts/lJsRyvGEMho) | — |
 | 2026-07-08 | 1 | 押す | おす | osu | N5 | To push something | [short](https://youtube.com/shorts/hcgy63pCQUA) | — |
+| 2026-07-08 | 2 | パーティー | パーティー | paateii | N5 | Social gathering with friends | [short](https://youtube.com/shorts/51Ihvj_JGB8) | — |
