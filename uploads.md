@@ -259,3 +259,4 @@ by the pipeline after each successful upload.
 | 2026-07-07 | 0 | 全部 | ぜんぶ | zenbu | N5 | All or entire thing | [short](https://youtube.com/shorts/n5Setgltqf8) | — |
 | 2026-07-07 | 2 | 答え | こたえ | kotae | N4 | Answer or response | [short](https://youtube.com/shorts/Apm0Q4jCNZg) | — |
 | 2026-07-08 | 0 | 神社 | じんじゃ | jinja | N4 | Shinto shrine | [short](https://youtube.com/shorts/lJsRyvGEMho) | — |
+| 2026-07-08 | 1 | 押す | おす | osu | N5 | To push something | [short](https://youtube.com/shorts/hcgy63pCQUA) | — |
