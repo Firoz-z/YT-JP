@@ -264,3 +264,4 @@ by the pipeline after each successful upload.
 | 2026-07-09 | 0 | トマト | トマト | tomato | — | Red or yellowish fruit | [short](https://youtube.com/shorts/xWtfVCOcpAI) | — |
 | 2026-07-09 | 0 | 息子 | むすこ | musuko | N4 | Son | [short](https://youtube.com/shorts/j83JI7FWaZY) | — |
 | 2026-07-09 | 1 | 方法 | ほうほう | houhou | N3 | Method or way of doing | [short](https://youtube.com/shorts/FjGGxxsePSw) | — |
+| 2026-07-09 | 2 | 一回 | いっかい | ikkai | — | Once or one time | [short](https://youtube.com/shorts/LwFP8rX9aP8) | — |
