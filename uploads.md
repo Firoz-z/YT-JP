@@ -261,3 +261,4 @@ by the pipeline after each successful upload.
 | 2026-07-08 | 0 | 神社 | じんじゃ | jinja | N4 | Shinto shrine | [short](https://youtube.com/shorts/lJsRyvGEMho) | — |
 | 2026-07-08 | 1 | 押す | おす | osu | N5 | To push something | [short](https://youtube.com/shorts/hcgy63pCQUA) | — |
 | 2026-07-08 | 2 | パーティー | パーティー | paateii | N5 | Social gathering with friends | [short](https://youtube.com/shorts/51Ihvj_JGB8) | — |
+| 2026-07-09 | 0 | トマト | トマト | tomato | — | Red or yellowish fruit | [short](https://youtube.com/shorts/xWtfVCOcpAI) | — |
