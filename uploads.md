@@ -268,3 +268,4 @@ by the pipeline after each successful upload.
 | 2026-07-10 | 0 | 机 | つくえ | tsukue | N5 | Office or school desk | [short](https://youtube.com/shorts/iu-j6KBOvqE) | — |
 | 2026-07-10 | 0 | 食べ物 | たべもの | tabemono | N5 | Food to eat | [short](https://youtube.com/shorts/Det3CdpWBnY) | — |
 | 2026-07-10 | 1 | レストラン | レストラン | resutoran | N5 | Western style restaurant | [short](https://youtube.com/shorts/QCWB9K5lZnc) | — |
+| 2026-07-10 | 2 | 足 | あし | ashi | N5 | Foot or leg | [short](https://youtube.com/shorts/7fkArxjSMS8) | — |
