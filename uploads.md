@@ -270,3 +270,4 @@ by the pipeline after each successful upload.
 | 2026-07-10 | 1 | レストラン | レストラン | resutoran | N5 | Western style restaurant | [short](https://youtube.com/shorts/QCWB9K5lZnc) | — |
 | 2026-07-10 | 2 | 足 | あし | ashi | N5 | Foot or leg | [short](https://youtube.com/shorts/7fkArxjSMS8) | — |
 | 2026-07-11 | 0 | セーター | セーター | seetaa | N5 | A sweater or jumper | [short](https://youtube.com/shorts/4j52A5fruUo) | — |
+| 2026-07-11 | 0 | 紙 | かみ | kami | N5 | Thin material for writing | [short](https://youtube.com/shorts/KZkXjfU6VAs) | — |
