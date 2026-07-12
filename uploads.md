@@ -274,3 +274,4 @@ by the pipeline after each successful upload.
 | 2026-07-11 | 1 | ストーブ | ストーブ | sutoobu | N5 | Room heater device | [short](https://youtube.com/shorts/d7A7l9fiIV8) | — |
 | 2026-07-11 | 2 | 宿題 | しゅくだい | shukudai | N5 | Homework assignment | [short](https://youtube.com/shorts/Dwt_gaaJZjM) | — |
 | 2026-07-12 | 0 | 銀行 | ぎんこう | ginkou | N5 | Banking institution | [short](https://youtube.com/shorts/U5bBpAvLkC8) | — |
+| 2026-07-12 | 0 | 木曜日 | もくようび | mokuyoubi | N5 | Thursday | [short](https://youtube.com/shorts/b1Wy-498-Dg) | — |
