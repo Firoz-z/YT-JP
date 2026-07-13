@@ -280,3 +280,4 @@ by the pipeline after each successful upload.
 | 2026-07-13 | 0 | 林檎 | りんご | ringo | — | A type of sweet fruit | [short](https://youtube.com/shorts/esWdl-dJ9Jk) | — |
 | 2026-07-13 | 1 | 林檎 | りんご | ringo | — | A common sweet fruit | [short](https://youtube.com/shorts/6owi9-q5Vzs) | — |
 | 2026-07-13 | 2 | 林檎 | りんご | ringo | — | Apple fruit | [short](https://youtube.com/shorts/5G_v9x8wW3c) | — |
+| 2026-07-13 | 2 | 林檎 | りんご | ringo | — | Apple fruit | [short](https://youtube.com/shorts/SxU47Yv3dec) | — |
