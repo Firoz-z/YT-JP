@@ -277,3 +277,4 @@ by the pipeline after each successful upload.
 | 2026-07-12 | 0 | 木曜日 | もくようび | mokuyoubi | N5 | Thursday | [short](https://youtube.com/shorts/b1Wy-498-Dg) | — |
 | 2026-07-12 | 1 | 三 | さん | san | N1 | Three | [short](https://youtube.com/shorts/SVnibl0FdwM) | — |
 | 2026-07-12 | 2 | 行く | いく | iku | N1 | To go or move | [short](https://youtube.com/shorts/31PA_IqGmFI) | — |
+| 2026-07-13 | 0 | 林檎 | りんご | ringo | — | A type of sweet fruit | [short](https://youtube.com/shorts/esWdl-dJ9Jk) | — |
