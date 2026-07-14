@@ -284,3 +284,4 @@ by the pipeline after each successful upload.
 | 2026-07-14 | 0 | 音楽 | おんがく | ongaku | N5 | Music | [short](https://youtube.com/shorts/3j_rlGVsKkA) | — |
 | 2026-07-14 | 0 | 羊 | ひつじ | hitsuji | — | Domesticated mammal | [short](https://youtube.com/shorts/NT7e-jwe06s) | — |
 | 2026-07-14 | 1 | 森 | もり | mori | N4 | Wooded land | [short](https://youtube.com/shorts/slylD0BzsIg) | — |
+| 2026-07-14 | 2 | 白 | しろ | shiro | N5 | White color | [short](https://youtube.com/shorts/wO4DFDVw3Js) | — |
