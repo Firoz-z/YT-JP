@@ -283,3 +283,4 @@ by the pipeline after each successful upload.
 | 2026-07-13 | 2 | 林檎 | りんご | ringo | — | Apple fruit | [short](https://youtube.com/shorts/SxU47Yv3dec) | — |
 | 2026-07-14 | 0 | 音楽 | おんがく | ongaku | N5 | Music | [short](https://youtube.com/shorts/3j_rlGVsKkA) | — |
 | 2026-07-14 | 0 | 羊 | ひつじ | hitsuji | — | Domesticated mammal | [short](https://youtube.com/shorts/NT7e-jwe06s) | — |
+| 2026-07-14 | 1 | 森 | もり | mori | N4 | Wooded land | [short](https://youtube.com/shorts/slylD0BzsIg) | — |
