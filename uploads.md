@@ -288,3 +288,4 @@ by the pipeline after each successful upload.
 | 2026-07-15 | 0 | 大事 | だいじ | daiji | N4 | Very important | [short](https://youtube.com/shorts/JwAH-Ne_wlc) | — |
 | 2026-07-15 | 0 | ペン | ペン | pen | N2 | Writing instrument | [short](https://youtube.com/shorts/h6HHlHC8urU) | — |
 | 2026-07-15 | 1 | 悲しい | かなしい | kanashii | N4 | Sad or unhappy | [short](https://youtube.com/shorts/l5YtUb3_2o4) | — |
+| 2026-07-15 | 2 | ご飯 | ごはん | gohan | N5 | Cooked rice | [short](https://youtube.com/shorts/zPfS7EFpjw0) | — |
