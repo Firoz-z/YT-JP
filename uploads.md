@@ -292,3 +292,4 @@ by the pipeline after each successful upload.
 | 2026-07-16 | 0 | お菓子 | おかし | okashi | N5 | Japanese sweets or candies | [short](https://youtube.com/shorts/dYRB2QS8U0w) | — |
 | 2026-07-16 | 0 | スカート | スカート | sukaato | N5 | Woman's skirt | [short](https://youtube.com/shorts/7ihWkDCmGEc) | — |
 | 2026-07-16 | 1 | 何方 | どちら | dochira | N1 | Which way or direction | [short](https://youtube.com/shorts/4OHzNu8My7M) | — |
+| 2026-07-16 | 2 | 何方 | どちら | dochira | N1 | Which way or direction | [short](https://youtube.com/shorts/zL7StdQHXGs) | — |
