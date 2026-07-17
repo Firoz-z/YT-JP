@@ -294,3 +294,4 @@ by the pipeline after each successful upload.
 | 2026-07-16 | 1 | 何方 | どちら | dochira | N1 | Which way or direction | [short](https://youtube.com/shorts/4OHzNu8My7M) | — |
 | 2026-07-16 | 2 | 何方 | どちら | dochira | N1 | Which way or direction | [short](https://youtube.com/shorts/zL7StdQHXGs) | — |
 | 2026-07-17 | 0 | 何方 | どちら | dochira | N1 | Which direction or way | [short](https://youtube.com/shorts/a7rdwAtVEJE) | — |
+| 2026-07-17 | 0 | 何方 | どちら | dochira | N1 | Which direction or way | [short](https://youtube.com/shorts/s085GyUm5Nk) | — |
