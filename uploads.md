@@ -296,3 +296,4 @@ by the pipeline after each successful upload.
 | 2026-07-17 | 0 | 何方 | どちら | dochira | N1 | Which direction or way | [short](https://youtube.com/shorts/a7rdwAtVEJE) | — |
 | 2026-07-17 | 0 | 何方 | どちら | dochira | N1 | Which direction or way | [short](https://youtube.com/shorts/s085GyUm5Nk) | — |
 | 2026-07-17 | 1 | ジュース | ジュース | juusu | N3 | Fruit or vegetable liquid | [short](https://youtube.com/shorts/dBtWF3kUNog) | — |
+| 2026-07-17 | 2 | 二 | に | ni | N5 | Two; 2 | [short](https://youtube.com/shorts/svgkzzIb4D8) | — |
