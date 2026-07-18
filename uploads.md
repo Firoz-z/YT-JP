@@ -300,3 +300,4 @@ by the pipeline after each successful upload.
 | 2026-07-18 | 0 | 持つ | もつ | motsu | N5 | To hold in one's hand | [short](https://youtube.com/shorts/CxrODMcGEPQ) | — |
 | 2026-07-18 | 0 | 飲む | のむ | nomu | N5 | To drink | [short](https://youtube.com/shorts/WLSe2irCYpo) | — |
 | 2026-07-18 | 1 | ０ | ゼロ | zero | — | Number zero | [short](https://youtube.com/shorts/jQT0Pop1mtM) | — |
+| 2026-07-18 | 2 | ０ | ゼロ | zero | — | Number zero | [short](https://youtube.com/shorts/WW5iK8RPU_g) | — |
