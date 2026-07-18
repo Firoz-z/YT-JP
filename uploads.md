@@ -298,3 +298,4 @@ by the pipeline after each successful upload.
 | 2026-07-17 | 1 | ジュース | ジュース | juusu | N3 | Fruit or vegetable liquid | [short](https://youtube.com/shorts/dBtWF3kUNog) | — |
 | 2026-07-17 | 2 | 二 | に | ni | N5 | Two; 2 | [short](https://youtube.com/shorts/svgkzzIb4D8) | — |
 | 2026-07-18 | 0 | 持つ | もつ | motsu | N5 | To hold in one's hand | [short](https://youtube.com/shorts/CxrODMcGEPQ) | — |
+| 2026-07-18 | 0 | 飲む | のむ | nomu | N5 | To drink | [short](https://youtube.com/shorts/WLSe2irCYpo) | — |
