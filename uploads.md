@@ -301,3 +301,4 @@ by the pipeline after each successful upload.
 | 2026-07-18 | 0 | 飲む | のむ | nomu | N5 | To drink | [short](https://youtube.com/shorts/WLSe2irCYpo) | — |
 | 2026-07-18 | 1 | ０ | ゼロ | zero | — | Number zero | [short](https://youtube.com/shorts/jQT0Pop1mtM) | — |
 | 2026-07-18 | 2 | ０ | ゼロ | zero | — | Number zero | [short](https://youtube.com/shorts/WW5iK8RPU_g) | — |
+| 2026-07-19 | 0 | デパート | デパート | depaato | N5 | Large retail store | [short](https://youtube.com/shorts/ikVP59b6kKg) | — |
