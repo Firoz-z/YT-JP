@@ -305,3 +305,4 @@ by the pipeline after each successful upload.
 | 2026-07-19 | 0 | ライオン | ライオン | raion | — | Large carnivorous mammal | [short](https://youtube.com/shorts/WlUlp8nsYUQ) | — |
 | 2026-07-19 | 1 | 脱ぐ | ぬぐ | nugu | N5 | To take off clothes | [short](https://youtube.com/shorts/KhlPIpBHs60) | — |
 | 2026-07-19 | 2 | アイスクリーム | アイスクリーム | aisukuriimu | N3 | Frozen dessert | [short](https://youtube.com/shorts/sGevzQH3FPQ) | — |
+| 2026-07-20 | 0 | 金曜日 | きんようび | kinyoubi | N5 | Friday | [short](https://youtube.com/shorts/hf1Oj_56Y1k) | — |
