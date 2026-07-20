@@ -308,3 +308,4 @@ by the pipeline after each successful upload.
 | 2026-07-20 | 0 | 金曜日 | きんようび | kinyoubi | N5 | Friday | [short](https://youtube.com/shorts/hf1Oj_56Y1k) | — |
 | 2026-07-20 | 0 | 風 | かぜ | kaze | N5 | Natural movement of air | [short](https://youtube.com/shorts/4sjrOMndeng) | — |
 | 2026-07-20 | 1 | 大切 | たいせつ | taisetsu | N5 | Very important thing | [short](https://youtube.com/shorts/JzW-LFnBLB4) | — |
+| 2026-07-20 | 2 | 寒い | さむい | samui | N5 | Cold weather | [short](https://youtube.com/shorts/TDqJyhCPUio) | — |
