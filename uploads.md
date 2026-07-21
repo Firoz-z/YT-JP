@@ -309,3 +309,4 @@ by the pipeline after each successful upload.
 | 2026-07-20 | 0 | 風 | かぜ | kaze | N5 | Natural movement of air | [short](https://youtube.com/shorts/4sjrOMndeng) | — |
 | 2026-07-20 | 1 | 大切 | たいせつ | taisetsu | N5 | Very important thing | [short](https://youtube.com/shorts/JzW-LFnBLB4) | — |
 | 2026-07-20 | 2 | 寒い | さむい | samui | N5 | Cold weather | [short](https://youtube.com/shorts/TDqJyhCPUio) | — |
+| 2026-07-21 | 0 | 幾ら | いくら | ikura | N3 | How much or how many | [short](https://youtube.com/shorts/zZ8Jcb1DClE) | — |
