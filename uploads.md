@@ -312,3 +312,4 @@ by the pipeline after each successful upload.
 | 2026-07-21 | 0 | 幾ら | いくら | ikura | N3 | How much or how many | [short](https://youtube.com/shorts/zZ8Jcb1DClE) | — |
 | 2026-07-21 | 0 | 幾ら | いくら | ikura | N3 | How much or how many | [short](https://youtube.com/shorts/6xrkhjBbNaQ) | — |
 | 2026-07-21 | 1 | 試験 | しけん | shiken | N4 | Test or examination | [short](https://youtube.com/shorts/vUh-bUsZy4k) | — |
+| 2026-07-21 | 2 | 写真 | しゃしん | shashin | N5 | Photograph or picture | [short](https://youtube.com/shorts/MgabOqAt1fo) | — |
