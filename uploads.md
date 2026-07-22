@@ -314,3 +314,4 @@ by the pipeline after each successful upload.
 | 2026-07-21 | 1 | 試験 | しけん | shiken | N4 | Test or examination | [short](https://youtube.com/shorts/vUh-bUsZy4k) | — |
 | 2026-07-21 | 2 | 写真 | しゃしん | shashin | N5 | Photograph or picture | [short](https://youtube.com/shorts/MgabOqAt1fo) | — |
 | 2026-07-22 | 0 | 何れ | どれ | dore | N3 | Which one of many | [short](https://youtube.com/shorts/lJaqc95gD1M) | — |
+| 2026-07-22 | 0 | 何れ | どれ | dore | N3 | Which one of several things | [short](https://youtube.com/shorts/s_5wxXjRRys) | — |
