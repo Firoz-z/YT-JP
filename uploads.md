@@ -320,3 +320,4 @@ by the pipeline after each successful upload.
 | 2026-07-23 | 0 | 喫茶店 | きっさてん | kissaten | N5 | Coffee shop | [short](https://youtube.com/shorts/AiGy6ruDFN8) | — |
 | 2026-07-23 | 0 | 夜 | よる | yoru | N3 | Night or evening time | [short](https://youtube.com/shorts/bozTZYuO4ys) | — |
 | 2026-07-23 | 1 | 僕 | ぼく | boku | N4 | I, me | [short](https://youtube.com/shorts/4yVw_1o4IP4) | — |
+| 2026-07-23 | 2 | 耳 | みみ | mimi | N5 | Organ of hearing | [short](https://youtube.com/shorts/np4orceW1sQ) | — |
