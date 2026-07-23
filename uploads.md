@@ -319,3 +319,4 @@ by the pipeline after each successful upload.
 | 2026-07-22 | 2 | 大学 | だいがく | daigaku | N5 | University or college | [short](https://youtube.com/shorts/JX6A68pv8F0) | — |
 | 2026-07-23 | 0 | 喫茶店 | きっさてん | kissaten | N5 | Coffee shop | [short](https://youtube.com/shorts/AiGy6ruDFN8) | — |
 | 2026-07-23 | 0 | 夜 | よる | yoru | N3 | Night or evening time | [short](https://youtube.com/shorts/bozTZYuO4ys) | — |
+| 2026-07-23 | 1 | 僕 | ぼく | boku | N4 | I, me | [short](https://youtube.com/shorts/4yVw_1o4IP4) | — |
