@@ -322,3 +322,4 @@ by the pipeline after each successful upload.
 | 2026-07-23 | 1 | 僕 | ぼく | boku | N4 | I, me | [short](https://youtube.com/shorts/4yVw_1o4IP4) | — |
 | 2026-07-23 | 2 | 耳 | みみ | mimi | N5 | Organ of hearing | [short](https://youtube.com/shorts/np4orceW1sQ) | — |
 | 2026-07-24 | 0 | 明るい | あかるい | akarui | N1 | Bright, well-lit place | [short](https://youtube.com/shorts/I-s7j2nVOwY) | — |
+| 2026-07-24 | 0 | 全然 | ぜんぜん | zenzen | N3 | Not at all | [short](https://youtube.com/shorts/7gg-W29cW08) | — |
