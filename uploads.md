@@ -326,3 +326,4 @@ by the pipeline after each successful upload.
 | 2026-07-24 | 1 | 拉麺 | ラーメン | raamen | — | Japanese noodle soup dish | [short](https://youtube.com/shorts/g8upL_Ast0g) | — |
 | 2026-07-24 | 2 | 拉麺 | ラーメン | raamen | — | Chinese-style noodle soup | [short](https://youtube.com/shorts/QM0xGACkQUU) | — |
 | 2026-07-25 | 0 | 美術館 | びじゅつかん | bijutsukan | N4 | Art museum | [short](https://youtube.com/shorts/V-8vi_-iVuM) | — |
+| 2026-07-25 | 0 | 貸す | かす | kasu | N5 | To lend something | [short](https://youtube.com/shorts/XDNum41S5pA) | — |
