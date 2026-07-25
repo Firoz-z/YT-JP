@@ -325,3 +325,4 @@ by the pipeline after each successful upload.
 | 2026-07-24 | 0 | 全然 | ぜんぜん | zenzen | N3 | Not at all | [short](https://youtube.com/shorts/7gg-W29cW08) | — |
 | 2026-07-24 | 1 | 拉麺 | ラーメン | raamen | — | Japanese noodle soup dish | [short](https://youtube.com/shorts/g8upL_Ast0g) | — |
 | 2026-07-24 | 2 | 拉麺 | ラーメン | raamen | — | Chinese-style noodle soup | [short](https://youtube.com/shorts/QM0xGACkQUU) | — |
+| 2026-07-25 | 0 | 美術館 | びじゅつかん | bijutsukan | N4 | Art museum | [short](https://youtube.com/shorts/V-8vi_-iVuM) | — |
