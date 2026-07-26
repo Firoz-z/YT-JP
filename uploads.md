@@ -330,3 +330,4 @@ by the pipeline after each successful upload.
 | 2026-07-25 | 1 | 警察 | けいさつ | keisatsu | N4 | Police force | [short](https://youtube.com/shorts/CZizIDiaOf4) | — |
 | 2026-07-25 | 2 | 三人 | さんにん | sannin | — | Three people | [short](https://youtube.com/shorts/YDfMVtQVsZY) | — |
 | 2026-07-26 | 0 | カラオケ | カラオケ | karaoke | — | Singing with recorded music | [short](https://youtube.com/shorts/-GzJa-GjBXw) | — |
+| 2026-07-26 | 0 | 着る | きる | kiru | N5 | To wear clothes | [short](https://youtube.com/shorts/gWzGapsfYJc) | — |
