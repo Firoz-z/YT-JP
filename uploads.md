@@ -329,3 +329,4 @@ by the pipeline after each successful upload.
 | 2026-07-25 | 0 | 貸す | かす | kasu | N5 | To lend something | [short](https://youtube.com/shorts/XDNum41S5pA) | — |
 | 2026-07-25 | 1 | 警察 | けいさつ | keisatsu | N4 | Police force | [short](https://youtube.com/shorts/CZizIDiaOf4) | — |
 | 2026-07-25 | 2 | 三人 | さんにん | sannin | — | Three people | [short](https://youtube.com/shorts/YDfMVtQVsZY) | — |
+| 2026-07-26 | 0 | カラオケ | カラオケ | karaoke | — | Singing with recorded music | [short](https://youtube.com/shorts/-GzJa-GjBXw) | — |
