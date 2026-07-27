@@ -336,3 +336,4 @@ by the pipeline after each successful upload.
 | 2026-07-27 | 0 | 歌 | うた | uta | N5 | Song or singing | [short](https://youtube.com/shorts/wL-lDY-PAe4) | — |
 | 2026-07-27 | 1 | 違う | ちがう | chigau | N5 | To differ or be different | [short](https://youtube.com/shorts/PGyNv8kQKe8) | — |
 | 2026-07-27 | 1 | 紫 | むらさき | murasaki | N2 | Purple color | [short](https://youtube.com/shorts/nEs1oRr0jc4) | — |
+| 2026-07-27 | 2 | 駐車場 | ちゅうしゃじょう | chuushajou | N4 | Parking lot | [short](https://youtube.com/shorts/uQhilQcaQjQ) | — |
