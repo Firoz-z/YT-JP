@@ -333,3 +333,4 @@ by the pipeline after each successful upload.
 | 2026-07-26 | 0 | 着る | きる | kiru | N5 | To wear clothes | [short](https://youtube.com/shorts/gWzGapsfYJc) | — |
 | 2026-07-26 | 1 | 葉 | は | ha | N4 | Leaf or blade of grass | [short](https://youtube.com/shorts/frRPrycAi3U) | — |
 | 2026-07-26 | 2 | 熱い | あつい | atsui | N5 | Hot to the touch | [short](https://youtube.com/shorts/hJX7JiucR_U) | — |
+| 2026-07-27 | 0 | 歌 | うた | uta | N5 | Song or singing | [short](https://youtube.com/shorts/wL-lDY-PAe4) | — |
