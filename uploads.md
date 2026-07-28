@@ -340,3 +340,4 @@ by the pipeline after each successful upload.
 | 2026-07-28 | 0 | 腰 | こし | koshi | N3 | Lower back or waist area | [short](https://youtube.com/shorts/BpCVxOg4ycM) | — |
 | 2026-07-28 | 0 | お腹 | おなか | onaka | N3 | Belly or stomach area | [short](https://youtube.com/shorts/BJWjkrPHONo) | — |
 | 2026-07-28 | 1 | アプリ | アプリ | apuri | — | Mobile or computer application | [short](https://youtube.com/shorts/8rOJfOYvTOQ) | — |
+| 2026-07-28 | 2 | 自転車 | じてんしゃ | jitensha | N5 | Bicycle or bike | [short](https://youtube.com/shorts/zMQuyCOCtU0) | — |
