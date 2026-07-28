@@ -338,3 +338,4 @@ by the pipeline after each successful upload.
 | 2026-07-27 | 1 | 紫 | むらさき | murasaki | N2 | Purple color | [short](https://youtube.com/shorts/nEs1oRr0jc4) | — |
 | 2026-07-27 | 2 | 駐車場 | ちゅうしゃじょう | chuushajou | N4 | Parking lot | [short](https://youtube.com/shorts/uQhilQcaQjQ) | — |
 | 2026-07-28 | 0 | 腰 | こし | koshi | N3 | Lower back or waist area | [short](https://youtube.com/shorts/BpCVxOg4ycM) | — |
+| 2026-07-28 | 0 | お腹 | おなか | onaka | N3 | Belly or stomach area | [short](https://youtube.com/shorts/BJWjkrPHONo) | — |
