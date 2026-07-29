@@ -344,3 +344,4 @@ by the pipeline after each successful upload.
 | 2026-07-29 | 0 | 痛い | いたい | itai | N5 | Painful or sore | [short](https://youtube.com/shorts/yYTBJZxD2Bs) | — |
 | 2026-07-29 | 0 | 手紙 | てがみ | tegami | N5 | Written letter or note | [short](https://youtube.com/shorts/Yc9g_fafGSU) | — |
 | 2026-07-29 | 1 | 馬 | うま | uma | N3 | Horse or equine animal | [short](https://youtube.com/shorts/g8P7lJcb18I) | — |
+| 2026-07-29 | 2 | 土曜日 | どようび | doyoubi | N5 | Saturday | [short](https://youtube.com/shorts/bAZooLAxeD4) | — |
