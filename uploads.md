@@ -350,3 +350,4 @@ by the pipeline after each successful upload.
 | 2026-07-30 | 1 | 郵便局 | ゆうびんきょく | yuubinkyoku | N5 | Post office | [short](https://youtube.com/shorts/COoeX-ESnZ4) | — |
 | 2026-07-30 | 2 | 如何して | どうして | doushite | N1 | How, in what way | [short](https://youtube.com/shorts/NwRreGt_3_w) | — |
 | 2026-07-31 | 0 | 如何して | どうして | doushite | N1 | How, in what way | [short](https://youtube.com/shorts/O7EDatEwwAA) | — |
+| 2026-07-31 | 0 | 如何して | どうして | doushite | N1 | How, in what way | [short](https://youtube.com/shorts/rf_oxUDKBnk) | — |
