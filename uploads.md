@@ -352,3 +352,4 @@ by the pipeline after each successful upload.
 | 2026-07-31 | 0 | 如何して | どうして | doushite | N1 | How, in what way | [short](https://youtube.com/shorts/O7EDatEwwAA) | — |
 | 2026-07-31 | 0 | 如何して | どうして | doushite | N1 | How, in what way | [short](https://youtube.com/shorts/rf_oxUDKBnk) | — |
 | 2026-07-31 | 1 | 如何して | どうして | doushite | N1 | How, in what way | [short](https://youtube.com/shorts/YlPFz1E2BHs) | — |
+| 2026-07-31 | 2 | 昼ご飯 | ひるごはん | hirugohan | N5 | Midday meal | [short](https://youtube.com/shorts/-u4X6aaEuUY) | — |
