@@ -355,3 +355,4 @@ by the pipeline after each successful upload.
 | 2026-07-31 | 2 | 昼ご飯 | ひるごはん | hirugohan | N5 | Midday meal | [short](https://youtube.com/shorts/-u4X6aaEuUY) | — |
 | 2026-08-01 | 0 | 酒 | さけ | sake | N3 | Japanese alcoholic drink | [short](https://youtube.com/shorts/vojjAL5skyM) | — |
 | 2026-08-01 | 0 | 辛い | からい | karai | N5 | Spicy or hot food | [short](https://youtube.com/shorts/w_A_FbsddgY) | — |
+| 2026-08-01 | 1 | 出る | でる | deru | N5 | To leave or exit | [short](https://youtube.com/shorts/Bro5hbzrQX8) | — |
