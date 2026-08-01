@@ -354,3 +354,4 @@ by the pipeline after each successful upload.
 | 2026-07-31 | 1 | 如何して | どうして | doushite | N1 | How, in what way | [short](https://youtube.com/shorts/YlPFz1E2BHs) | — |
 | 2026-07-31 | 2 | 昼ご飯 | ひるごはん | hirugohan | N5 | Midday meal | [short](https://youtube.com/shorts/-u4X6aaEuUY) | — |
 | 2026-08-01 | 0 | 酒 | さけ | sake | N3 | Japanese alcoholic drink | [short](https://youtube.com/shorts/vojjAL5skyM) | — |
+| 2026-08-01 | 0 | 辛い | からい | karai | N5 | Spicy or hot food | [short](https://youtube.com/shorts/w_A_FbsddgY) | — |
