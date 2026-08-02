@@ -357,3 +357,4 @@ by the pipeline after each successful upload.
 | 2026-08-01 | 0 | 辛い | からい | karai | N5 | Spicy or hot food | [short](https://youtube.com/shorts/w_A_FbsddgY) | — |
 | 2026-08-01 | 1 | 出る | でる | deru | N5 | To leave or exit | [short](https://youtube.com/shorts/Bro5hbzrQX8) | — |
 | 2026-08-01 | 2 | 開ける | あける | akeru | N3 | To open something | [short](https://youtube.com/shorts/ZkS6e5x2o2Y) | — |
+| 2026-08-02 | 0 | 石 | いし | ishi | N4 | Stone or rock | [short](https://youtube.com/shorts/oOaCfGF86jg) | — |
