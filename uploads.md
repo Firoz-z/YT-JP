@@ -360,3 +360,4 @@ by the pipeline after each successful upload.
 | 2026-08-02 | 0 | 石 | いし | ishi | N4 | Stone or rock | [short](https://youtube.com/shorts/oOaCfGF86jg) | — |
 | 2026-08-02 | 0 | 暖かい | あたたかい | atatakai | N3 | Pleasantly warm | [short](https://youtube.com/shorts/rltfQJ2gm-w) | — |
 | 2026-08-02 | 1 | 暖かい | あたたかい | atatakai | N3 | Pleasantly warm | [short](https://youtube.com/shorts/tOoB3CVQmN0) | — |
+| 2026-08-02 | 2 | 秋 | あき | aki | N5 | Autumn season | [short](https://youtube.com/shorts/SscJU3Naxfs) | — |
