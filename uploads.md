@@ -364,3 +364,4 @@ by the pipeline after each successful upload.
 | 2026-08-03 | 0 | 一度 | いちど | ichido | N4 | Once or one time | [short](https://youtube.com/shorts/b3zEBFZeDks) | — |
 | 2026-08-03 | 1 | 背中 | せなか | senaka | N4 | Back of the body | [short](https://youtube.com/shorts/5idfWxGkrrc) | — |
 | 2026-08-03 | 1 | 女 | おんな | onna | N5 | Woman or female | [short](https://youtube.com/shorts/os18X7blSBU) | — |
+| 2026-08-03 | 2 | 教える | おしえる | oshieru | N5 | To teach or instruct | [short](https://youtube.com/shorts/SeblEo1ubPk) | — |
