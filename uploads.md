@@ -361,3 +361,4 @@ by the pipeline after each successful upload.
 | 2026-08-02 | 0 | 暖かい | あたたかい | atatakai | N3 | Pleasantly warm | [short](https://youtube.com/shorts/rltfQJ2gm-w) | — |
 | 2026-08-02 | 1 | 暖かい | あたたかい | atatakai | N3 | Pleasantly warm | [short](https://youtube.com/shorts/tOoB3CVQmN0) | — |
 | 2026-08-02 | 2 | 秋 | あき | aki | N5 | Autumn season | [short](https://youtube.com/shorts/SscJU3Naxfs) | — |
+| 2026-08-03 | 0 | 一度 | いちど | ichido | N4 | Once or one time | [short](https://youtube.com/shorts/b3zEBFZeDks) | — |
