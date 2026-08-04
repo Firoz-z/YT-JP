@@ -365,3 +365,4 @@ by the pipeline after each successful upload.
 | 2026-08-03 | 1 | 背中 | せなか | senaka | N4 | Back of the body | [short](https://youtube.com/shorts/5idfWxGkrrc) | — |
 | 2026-08-03 | 1 | 女 | おんな | onna | N5 | Woman or female | [short](https://youtube.com/shorts/os18X7blSBU) | — |
 | 2026-08-03 | 2 | 教える | おしえる | oshieru | N5 | To teach or instruct | [short](https://youtube.com/shorts/SeblEo1ubPk) | — |
+| 2026-08-04 | 0 | 船 | ふね | fune | N4 | Ship or boat on water | [short](https://youtube.com/shorts/PPF6GinHIuw) | — |
