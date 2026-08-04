@@ -367,3 +367,4 @@ by the pipeline after each successful upload.
 | 2026-08-03 | 2 | 教える | おしえる | oshieru | N5 | To teach or instruct | [short](https://youtube.com/shorts/SeblEo1ubPk) | — |
 | 2026-08-04 | 0 | 船 | ふね | fune | N4 | Ship or boat on water | [short](https://youtube.com/shorts/PPF6GinHIuw) | — |
 | 2026-08-04 | 0 | 今 | いま | ima | N5 | Now, present time | [short](https://youtube.com/shorts/Dcaj7NZ7Dck) | — |
+| 2026-08-04 | 1 | テーブル | テーブル | teeburu | N5 | Piece of furniture for meals or work | [short](https://youtube.com/shorts/5ZmjhePpJ4U) | — |
