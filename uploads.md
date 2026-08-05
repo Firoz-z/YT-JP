@@ -371,3 +371,4 @@ by the pipeline after each successful upload.
 | 2026-08-04 | 2 | 取る | とる | toru | N5 | To take or pick up | [short](https://youtube.com/shorts/NSG4fX85eHw) | — |
 | 2026-08-05 | 0 | 必要 | ひつよう | hitsuyou | N4 | Necessary or needed | [short](https://youtube.com/shorts/973MBISoyDI) | — |
 | 2026-08-05 | 0 | スーパー | スーパー | suupaa | — | Store that sells food and goods | [short](https://youtube.com/shorts/XIrTmpzNsMU) | — |
+| 2026-08-05 | 1 | 学生 | がくせい | gakusei | N5 | University student | [short](https://youtube.com/shorts/SGmmgDGQ_j8) | — |
