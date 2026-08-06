@@ -373,3 +373,4 @@ by the pipeline after each successful upload.
 | 2026-08-05 | 0 | スーパー | スーパー | suupaa | — | Store that sells food and goods | [short](https://youtube.com/shorts/XIrTmpzNsMU) | — |
 | 2026-08-05 | 1 | 学生 | がくせい | gakusei | N5 | University student | [short](https://youtube.com/shorts/SGmmgDGQ_j8) | — |
 | 2026-08-05 | 2 | 国 | くに | kuni | N5 | Country or nation | [short](https://youtube.com/shorts/D8bsmVN4yOI) | — |
+| 2026-08-06 | 0 | 大人 | おとな | otona | N5 | Grown-up person | [short](https://youtube.com/shorts/3mApLM-N7As) | — |
