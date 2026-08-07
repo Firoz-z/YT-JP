@@ -378,3 +378,4 @@ by the pipeline after each successful upload.
 | 2026-08-07 | 0 | 草 | くさ | kusa | N4 | Grass or weed | [short](https://youtube.com/shorts/_eTcq-6_aLc) | — |
 | 2026-08-07 | 0 | 狭い | せまい | semai | N5 | Narrow or small space | [short](https://youtube.com/shorts/eV_anRZEAP8) | — |
 | 2026-08-07 | 1 | 今週 | こんしゅう | konshuu | N5 | This week | [short](https://youtube.com/shorts/BmK4aFILqfo) | — |
+| 2026-08-07 | 2 | 二回 | にかい | nikai | — | Twice, two times | [short](https://youtube.com/shorts/NL0efpZE3Jk) | — |
