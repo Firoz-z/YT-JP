@@ -376,3 +376,4 @@ by the pipeline after each successful upload.
 | 2026-08-06 | 0 | 大人 | おとな | otona | N5 | Grown-up person | [short](https://youtube.com/shorts/3mApLM-N7As) | — |
 | 2026-08-06 | 0 | 弁当 | べんとう | bentou | N3 | Japanese box lunch | [short](https://youtube.com/shorts/6dIbMr1Yt24) | — |
 | 2026-08-07 | 0 | 草 | くさ | kusa | N4 | Grass or weed | [short](https://youtube.com/shorts/_eTcq-6_aLc) | — |
+| 2026-08-07 | 0 | 狭い | せまい | semai | N5 | Narrow or small space | [short](https://youtube.com/shorts/eV_anRZEAP8) | — |
