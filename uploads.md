@@ -379,3 +379,4 @@ by the pipeline after each successful upload.
 | 2026-08-07 | 0 | 狭い | せまい | semai | N5 | Narrow or small space | [short](https://youtube.com/shorts/eV_anRZEAP8) | — |
 | 2026-08-07 | 1 | 今週 | こんしゅう | konshuu | N5 | This week | [short](https://youtube.com/shorts/BmK4aFILqfo) | — |
 | 2026-08-07 | 2 | 二回 | にかい | nikai | — | Twice, two times | [short](https://youtube.com/shorts/NL0efpZE3Jk) | — |
+| 2026-08-07 | 3 | 緑 | みどり | midori | N5 | Green color | [short](https://youtube.com/shorts/zOUwwVaO7Q8) | — |
