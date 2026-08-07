@@ -375,3 +375,4 @@ by the pipeline after each successful upload.
 | 2026-08-05 | 2 | 国 | くに | kuni | N5 | Country or nation | [short](https://youtube.com/shorts/D8bsmVN4yOI) | — |
 | 2026-08-06 | 0 | 大人 | おとな | otona | N5 | Grown-up person | [short](https://youtube.com/shorts/3mApLM-N7As) | — |
 | 2026-08-06 | 0 | 弁当 | べんとう | bentou | N3 | Japanese box lunch | [short](https://youtube.com/shorts/6dIbMr1Yt24) | — |
+| 2026-08-07 | 0 | 草 | くさ | kusa | N4 | Grass or weed | [short](https://youtube.com/shorts/_eTcq-6_aLc) | — |
