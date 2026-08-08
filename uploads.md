@@ -382,3 +382,4 @@ by the pipeline after each successful upload.
 | 2026-08-07 | 3 | 緑 | みどり | midori | N5 | Green color | [short](https://youtube.com/shorts/zOUwwVaO7Q8) | — |
 | 2026-08-08 | 0 | 川 | かわ | kawa | N3 | River or stream | [short](https://youtube.com/shorts/NJIf2vjIA88) | — |
 | 2026-08-08 | 1 | 済みません | すみません | sumimasen | N3 | Excuse me, sorry | [short](https://youtube.com/shorts/9SYaAGEgSOw) | — |
+| 2026-08-08 | 2 | 済みません | すみません | sumimasen | N3 | Excuse me, I'm sorry | [short](https://youtube.com/shorts/PFy2UWmr-5c) | — |
