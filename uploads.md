@@ -387,3 +387,4 @@ by the pipeline after each successful upload.
 | 2026-08-09 | 0 | 晩御飯 | ばんごはん | bangohan | N5 | Evening meal | [short](https://youtube.com/shorts/qBDNUleEihA) | — |
 | 2026-08-09 | 1 | 晩御飯 | ばんごはん | bangohan | N5 | Evening meal | [short](https://youtube.com/shorts/5sroKuw9JhU) | — |
 | 2026-08-09 | 2 | 晩御飯 | ばんごはん | bangohan | N5 | Evening meal | [short](https://youtube.com/shorts/5L0AqI4U3X8) | — |
+| 2026-08-09 | 3 | 飛行機 | ひこうき | hikouki | N5 | Airplane | [short](https://youtube.com/shorts/zsoEt84-Ueg) | — |
