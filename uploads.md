@@ -383,3 +383,4 @@ by the pipeline after each successful upload.
 | 2026-08-08 | 0 | 川 | かわ | kawa | N3 | River or stream | [short](https://youtube.com/shorts/NJIf2vjIA88) | — |
 | 2026-08-08 | 1 | 済みません | すみません | sumimasen | N3 | Excuse me, sorry | [short](https://youtube.com/shorts/9SYaAGEgSOw) | — |
 | 2026-08-08 | 2 | 済みません | すみません | sumimasen | N3 | Excuse me, I'm sorry | [short](https://youtube.com/shorts/PFy2UWmr-5c) | — |
+| 2026-08-09 | 0 | 簡単 | かんたん | kantan | N4 | Easy to do | [short](https://youtube.com/shorts/yMkYcWPoIMk) | — |
