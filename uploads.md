@@ -390,3 +390,4 @@ by the pipeline after each successful upload.
 | 2026-08-09 | 3 | 飛行機 | ひこうき | hikouki | N5 | Airplane | [short](https://youtube.com/shorts/zsoEt84-Ueg) | — |
 | 2026-08-10 | 0 | 窓 | まど | mado | N5 | Opening in a building for light and air | [short](https://youtube.com/shorts/ioaKxyrbrWc) | — |
 | 2026-08-10 | 1 | パン | パン | pan | N5 | Bread or sweet pastry | [short](https://youtube.com/shorts/fzsuA2AShpg) | — |
+| 2026-08-10 | 2 | 深い | ふかい | fukai | N4 | Very deep | [short](https://youtube.com/shorts/_EkYHTx82lU) | — |
