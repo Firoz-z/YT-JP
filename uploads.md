@@ -392,3 +392,4 @@ by the pipeline after each successful upload.
 | 2026-08-10 | 1 | パン | パン | pan | N5 | Bread or sweet pastry | [short](https://youtube.com/shorts/fzsuA2AShpg) | — |
 | 2026-08-10 | 2 | 深い | ふかい | fukai | N4 | Very deep | [short](https://youtube.com/shorts/_EkYHTx82lU) | — |
 | 2026-08-11 | 0 | 自分 | じぶん | jibun | N5 | Myself, yourself, oneself | [short](https://youtube.com/shorts/YZvnS9pNR9E) | — |
+| 2026-08-11 | 0 | 今日は | こんにちは | konnichiha | N3 | Hello, good day | [short](https://youtube.com/shorts/nXaPYxawUkU) | — |
