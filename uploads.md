@@ -394,3 +394,4 @@ by the pipeline after each successful upload.
 | 2026-08-11 | 0 | 自分 | じぶん | jibun | N5 | Myself, yourself, oneself | [short](https://youtube.com/shorts/YZvnS9pNR9E) | — |
 | 2026-08-11 | 0 | 今日は | こんにちは | konnichiha | N3 | Hello, good day | [short](https://youtube.com/shorts/nXaPYxawUkU) | — |
 | 2026-08-11 | 1 | 今日は | こんにちは | konnichiha | N3 | Hello, good day | [short](https://youtube.com/shorts/OvspD9umoCw) | — |
+| 2026-08-11 | 2 | カレー | カレー | karee | N5 | Japanese curry dish | [short](https://youtube.com/shorts/f5Ne8JBW8BM) | — |
