@@ -397,3 +397,4 @@ by the pipeline after each successful upload.
 | 2026-08-11 | 2 | カレー | カレー | karee | N5 | Japanese curry dish | [short](https://youtube.com/shorts/f5Ne8JBW8BM) | — |
 | 2026-08-11 | 3 | 万 | まん | man | N5 | Ten thousand | [short](https://youtube.com/shorts/hKNl5H_BBAU) | — |
 | 2026-08-12 | 0 | 難しい | むずかしい | muzukashii | N5 | Difficult or hard | [short](https://youtube.com/shorts/fSEd4cbuYMI) | — |
+| 2026-08-12 | 1 | 運動 | うんどう | undou | N3 | Physical exercise or workout | [short](https://youtube.com/shorts/cvfVhNmJCLA) | — |
