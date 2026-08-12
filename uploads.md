@@ -398,3 +398,4 @@ by the pipeline after each successful upload.
 | 2026-08-11 | 3 | 万 | まん | man | N5 | Ten thousand | [short](https://youtube.com/shorts/hKNl5H_BBAU) | — |
 | 2026-08-12 | 0 | 難しい | むずかしい | muzukashii | N5 | Difficult or hard | [short](https://youtube.com/shorts/fSEd4cbuYMI) | — |
 | 2026-08-12 | 1 | 運動 | うんどう | undou | N3 | Physical exercise or workout | [short](https://youtube.com/shorts/cvfVhNmJCLA) | — |
+| 2026-08-12 | 2 | 鞄 | かばん | kaban | N5 | Bag or satchel | [short](https://youtube.com/shorts/FMTcNJT9o8w) | — |
