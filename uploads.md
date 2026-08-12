@@ -399,3 +399,4 @@ by the pipeline after each successful upload.
 | 2026-08-12 | 0 | 難しい | むずかしい | muzukashii | N5 | Difficult or hard | [short](https://youtube.com/shorts/fSEd4cbuYMI) | — |
 | 2026-08-12 | 1 | 運動 | うんどう | undou | N3 | Physical exercise or workout | [short](https://youtube.com/shorts/cvfVhNmJCLA) | — |
 | 2026-08-12 | 2 | 鞄 | かばん | kaban | N5 | Bag or satchel | [short](https://youtube.com/shorts/FMTcNJT9o8w) | — |
+| 2026-08-12 | 3 | 鞄 | かばん | kaban | N5 | Bag or satchel | [short](https://youtube.com/shorts/Qh0al57-vH8) | — |
