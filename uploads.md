@@ -400,3 +400,4 @@ by the pipeline after each successful upload.
 | 2026-08-12 | 1 | 運動 | うんどう | undou | N3 | Physical exercise or workout | [short](https://youtube.com/shorts/cvfVhNmJCLA) | — |
 | 2026-08-12 | 2 | 鞄 | かばん | kaban | N5 | Bag or satchel | [short](https://youtube.com/shorts/FMTcNJT9o8w) | — |
 | 2026-08-12 | 3 | 鞄 | かばん | kaban | N5 | Bag or satchel | [short](https://youtube.com/shorts/Qh0al57-vH8) | — |
+| 2026-08-13 | 0 | 早い | はやい | hayai | N5 | Fast or quick | [short](https://youtube.com/shorts/QeyMXxjdYM4) | — |
