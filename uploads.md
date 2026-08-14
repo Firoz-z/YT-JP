@@ -405,3 +405,4 @@ by the pipeline after each successful upload.
 | 2026-08-13 | 2 | 散歩 | さんぽ | sanpo | N3 | Leisurely walk | [short](https://youtube.com/shorts/6ACaQCTpb4U) | — |
 | 2026-08-14 | 0 | 水曜日 | すいようび | suiyoubi | N5 | Wednesday | [short](https://youtube.com/shorts/WagnONrCuDM) | — |
 | 2026-08-14 | 0 | 所 | ところ | tokoro | N5 | Place or spot | [short](https://youtube.com/shorts/xIq3fZZvTL0) | — |
+| 2026-08-14 | 1 | 心 | こころ | kokoro | N4 | Mind or heart | [short](https://youtube.com/shorts/MSiME_AD75U) | — |
