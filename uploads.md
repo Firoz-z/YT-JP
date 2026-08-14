@@ -403,3 +403,4 @@ by the pipeline after each successful upload.
 | 2026-08-13 | 0 | 早い | はやい | hayai | N5 | Fast or quick | [short](https://youtube.com/shorts/QeyMXxjdYM4) | — |
 | 2026-08-13 | 1 | 図書館 | としょかん | toshokan | N5 | Public library building | [short](https://youtube.com/shorts/JXTcizuYaRs) | — |
 | 2026-08-13 | 2 | 散歩 | さんぽ | sanpo | N3 | Leisurely walk | [short](https://youtube.com/shorts/6ACaQCTpb4U) | — |
+| 2026-08-14 | 0 | 水曜日 | すいようび | suiyoubi | N5 | Wednesday | [short](https://youtube.com/shorts/WagnONrCuDM) | — |
