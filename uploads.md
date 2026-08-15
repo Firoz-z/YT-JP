@@ -411,3 +411,4 @@ by the pipeline after each successful upload.
 | 2026-08-15 | 0 | 理由 | りゆう | riyuu | N4 | Reason or grounds | [short](https://youtube.com/shorts/pZAhV00wFsE) | — |
 | 2026-08-15 | 1 | 有難う | ありがとう | arigatou | N3 | Expressing gratitude | [short](https://youtube.com/shorts/zS9gQ4alu34) | — |
 | 2026-08-15 | 2 | 有難う | ありがとう | arigatou | N3 | Expressing gratitude | [short](https://youtube.com/shorts/J_QQ0GDTDq0) | — |
+| 2026-08-15 | 3 | タオル | タオル | taoru | N3 | Absorbent cloth | [short](https://youtube.com/shorts/zjNYON_ZCEE) | — |
