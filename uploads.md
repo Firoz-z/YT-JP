@@ -408,3 +408,4 @@ by the pipeline after each successful upload.
 | 2026-08-14 | 1 | 心 | こころ | kokoro | N4 | Mind or heart | [short](https://youtube.com/shorts/MSiME_AD75U) | — |
 | 2026-08-14 | 2 | 星 | ほし | hoshi | N4 | Star or heavenly body | [short](https://youtube.com/shorts/9yV7aYrT--A) | — |
 | 2026-08-15 | 0 | 起きる | おきる | okiru | N5 | To get up or rise | [short](https://youtube.com/shorts/TrFsCwtwolM) | — |
+| 2026-08-15 | 0 | 理由 | りゆう | riyuu | N4 | Reason or grounds | [short](https://youtube.com/shorts/pZAhV00wFsE) | — |
