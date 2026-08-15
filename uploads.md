@@ -410,3 +410,4 @@ by the pipeline after each successful upload.
 | 2026-08-15 | 0 | 起きる | おきる | okiru | N5 | To get up or rise | [short](https://youtube.com/shorts/TrFsCwtwolM) | — |
 | 2026-08-15 | 0 | 理由 | りゆう | riyuu | N4 | Reason or grounds | [short](https://youtube.com/shorts/pZAhV00wFsE) | — |
 | 2026-08-15 | 1 | 有難う | ありがとう | arigatou | N3 | Expressing gratitude | [short](https://youtube.com/shorts/zS9gQ4alu34) | — |
+| 2026-08-15 | 2 | 有難う | ありがとう | arigatou | N3 | Expressing gratitude | [short](https://youtube.com/shorts/J_QQ0GDTDq0) | — |
