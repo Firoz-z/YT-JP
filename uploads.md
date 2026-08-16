@@ -414,3 +414,4 @@ by the pipeline after each successful upload.
 | 2026-08-15 | 3 | タオル | タオル | taoru | N3 | Absorbent cloth | [short](https://youtube.com/shorts/zjNYON_ZCEE) | — |
 | 2026-08-16 | 0 | 貴方 | あなた | anata | N1 | You, person being addressed | [short](https://youtube.com/shorts/5sUQAjgsYaI) | — |
 | 2026-08-16 | 1 | 貴方 | あなた | anata | N1 | You, person being addressed | [short](https://youtube.com/shorts/4JlVvGhEH98) | — |
+| 2026-08-16 | 2 | 弟 | おとうと | otouto | N1 | Younger brother | [short](https://youtube.com/shorts/Y-TePEELqho) | — |
