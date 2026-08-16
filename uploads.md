@@ -412,3 +412,4 @@ by the pipeline after each successful upload.
 | 2026-08-15 | 1 | 有難う | ありがとう | arigatou | N3 | Expressing gratitude | [short](https://youtube.com/shorts/zS9gQ4alu34) | — |
 | 2026-08-15 | 2 | 有難う | ありがとう | arigatou | N3 | Expressing gratitude | [short](https://youtube.com/shorts/J_QQ0GDTDq0) | — |
 | 2026-08-15 | 3 | タオル | タオル | taoru | N3 | Absorbent cloth | [short](https://youtube.com/shorts/zjNYON_ZCEE) | — |
+| 2026-08-16 | 0 | 貴方 | あなた | anata | N1 | You, person being addressed | [short](https://youtube.com/shorts/5sUQAjgsYaI) | — |
