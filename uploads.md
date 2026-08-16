@@ -415,3 +415,4 @@ by the pipeline after each successful upload.
 | 2026-08-16 | 0 | 貴方 | あなた | anata | N1 | You, person being addressed | [short](https://youtube.com/shorts/5sUQAjgsYaI) | — |
 | 2026-08-16 | 1 | 貴方 | あなた | anata | N1 | You, person being addressed | [short](https://youtube.com/shorts/4JlVvGhEH98) | — |
 | 2026-08-16 | 2 | 弟 | おとうと | otouto | N1 | Younger brother | [short](https://youtube.com/shorts/Y-TePEELqho) | — |
+| 2026-08-16 | 3 | 市場 | いちば | ichiba | N3 | Town or street market | [short](https://youtube.com/shorts/z820PZD4jls) | — |
