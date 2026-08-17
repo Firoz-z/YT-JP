@@ -419,3 +419,4 @@ by the pipeline after each successful upload.
 | 2026-08-17 | 0 | エアコン | エアコン | eakon | — | air conditioner; air conditioning; aircon | [short](https://youtube.com/shorts/gVbM73tefJU) | — |
 | 2026-08-17 | 1 | 洗う | あらう | arau | N5 | to wash; to cleanse; to rinse | [short](https://youtube.com/shorts/uC7dS0kjM-M) | — |
 | 2026-08-17 | 2 | パンダ | パンダ | panda | — | panda | [short](https://youtube.com/shorts/XesfcxuhlPY) | — |
+| 2026-08-17 | 3 | 檸檬 | レモン | remon | — | lemon | [short](https://youtube.com/shorts/XCA6x_tAKwc) | — |
