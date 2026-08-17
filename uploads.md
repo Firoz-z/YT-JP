@@ -417,3 +417,4 @@ by the pipeline after each successful upload.
 | 2026-08-16 | 2 | 弟 | おとうと | otouto | N1 | Younger brother | [short](https://youtube.com/shorts/Y-TePEELqho) | — |
 | 2026-08-16 | 3 | 市場 | いちば | ichiba | N3 | Town or street market | [short](https://youtube.com/shorts/z820PZD4jls) | — |
 | 2026-08-17 | 0 | エアコン | エアコン | eakon | — | air conditioner; air conditioning; aircon | [short](https://youtube.com/shorts/gVbM73tefJU) | — |
+| 2026-08-17 | 1 | 洗う | あらう | arau | N5 | to wash; to cleanse; to rinse | [short](https://youtube.com/shorts/uC7dS0kjM-M) | — |
