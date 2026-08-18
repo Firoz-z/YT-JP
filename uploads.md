@@ -423,3 +423,4 @@ by the pipeline after each successful upload.
 | 2026-08-18 | 0 | 檸檬 | レモン | remon | — | lemon | [short](https://youtube.com/shorts/9_IJbRcrJHg) | — |
 | 2026-08-18 | 1 | 長い | ながい | nagai | N2 | long (distance, length) | [short](https://youtube.com/shorts/5LCxida0X-s) | — |
 | 2026-08-18 | 2 | 七 | しち | shichi | N3 | seven | [short](https://youtube.com/shorts/ehKynHJiBzA) | — |
+| 2026-08-18 | 3 | ノート | ノート | nooto | N5 | notebook; copy-book; exercise book | [short](https://youtube.com/shorts/aXIQGtQ0S30) | — |
