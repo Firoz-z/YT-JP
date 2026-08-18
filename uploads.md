@@ -421,3 +421,4 @@ by the pipeline after each successful upload.
 | 2026-08-17 | 2 | パンダ | パンダ | panda | — | panda | [short](https://youtube.com/shorts/XesfcxuhlPY) | — |
 | 2026-08-17 | 3 | 檸檬 | レモン | remon | — | lemon | [short](https://youtube.com/shorts/XCA6x_tAKwc) | — |
 | 2026-08-18 | 0 | 檸檬 | レモン | remon | — | lemon | [short](https://youtube.com/shorts/9_IJbRcrJHg) | — |
+| 2026-08-18 | 1 | 長い | ながい | nagai | N2 | long (distance, length) | [short](https://youtube.com/shorts/5LCxida0X-s) | — |
