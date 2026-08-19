@@ -425,3 +425,4 @@ by the pipeline after each successful upload.
 | 2026-08-18 | 2 | 七 | しち | shichi | N3 | seven | [short](https://youtube.com/shorts/ehKynHJiBzA) | — |
 | 2026-08-18 | 3 | ノート | ノート | nooto | N5 | notebook; copy-book; exercise book | [short](https://youtube.com/shorts/aXIQGtQ0S30) | — |
 | 2026-08-19 | 1 | 答える | こたえる | kotaeru | N5 | to answer; to reply | [short](https://youtube.com/shorts/isFEdq6tB4U) | — |
+| 2026-08-19 | 2 | お金 | おかね | okane | N5 | money | [short](https://youtube.com/shorts/PZOqlzsZWXs) | — |
