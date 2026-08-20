@@ -430,3 +430,4 @@ by the pipeline after each successful upload.
 | 2026-08-20 | 0 | ドア | ドア | doa | N5 | door | [short](https://youtube.com/shorts/2nU9cmnTtmw) | — |
 | 2026-08-20 | 1 | 月曜日 | げつようび | getsuyoubi | N5 | Monday | [short](https://youtube.com/shorts/0LW-uIKd5_s) | — |
 | 2026-08-20 | 2 | 海 | うみ | umi | N5 | sea; ocean; waters | [short](https://youtube.com/shorts/gazsOgqqXv8) | — |
+| 2026-08-20 | 3 | ダンス | ダンス | dansu | N3 | dance; dancing | [short](https://youtube.com/shorts/7C6bIFP_rKY) | — |
