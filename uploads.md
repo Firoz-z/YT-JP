@@ -433,3 +433,4 @@ by the pipeline after each successful upload.
 | 2026-08-20 | 3 | ダンス | ダンス | dansu | N3 | dance; dancing | [short](https://youtube.com/shorts/7C6bIFP_rKY) | — |
 | 2026-08-21 | 0 | 約束 | やくそく | yakusoku | N4 | promise; agreement; arrangement | [short](https://youtube.com/shorts/Qpdb0pclw0s) | — |
 | 2026-08-21 | 1 | 呼ぶ | よぶ | yobu | N5 | to call out (to); to call; to invoke | [short](https://youtube.com/shorts/5QiGdHDsSnQ) | — |
+| 2026-08-21 | 2 | 牛乳 | ぎゅうにゅう | gyuunyuu | N5 | (cow's) milk | [short](https://youtube.com/shorts/_xSXcAqG10o) | — |
