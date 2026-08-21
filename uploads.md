@@ -432,3 +432,4 @@ by the pipeline after each successful upload.
 | 2026-08-20 | 2 | 海 | うみ | umi | N5 | sea; ocean; waters | [short](https://youtube.com/shorts/gazsOgqqXv8) | — |
 | 2026-08-20 | 3 | ダンス | ダンス | dansu | N3 | dance; dancing | [short](https://youtube.com/shorts/7C6bIFP_rKY) | — |
 | 2026-08-21 | 0 | 約束 | やくそく | yakusoku | N4 | promise; agreement; arrangement | [short](https://youtube.com/shorts/Qpdb0pclw0s) | — |
+| 2026-08-21 | 1 | 呼ぶ | よぶ | yobu | N5 | to call out (to); to call; to invoke | [short](https://youtube.com/shorts/5QiGdHDsSnQ) | — |
