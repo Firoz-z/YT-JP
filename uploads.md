@@ -434,3 +434,4 @@ by the pipeline after each successful upload.
 | 2026-08-21 | 0 | 約束 | やくそく | yakusoku | N4 | promise; agreement; arrangement | [short](https://youtube.com/shorts/Qpdb0pclw0s) | — |
 | 2026-08-21 | 1 | 呼ぶ | よぶ | yobu | N5 | to call out (to); to call; to invoke | [short](https://youtube.com/shorts/5QiGdHDsSnQ) | — |
 | 2026-08-21 | 2 | 牛乳 | ぎゅうにゅう | gyuunyuu | N5 | (cow's) milk | [short](https://youtube.com/shorts/_xSXcAqG10o) | — |
+| 2026-08-22 | 0 | 壁 | かべ | kabe | N4 | wall; partition | [short](https://youtube.com/shorts/DAvUJqsULO4) | — |
