@@ -437,3 +437,4 @@ by the pipeline after each successful upload.
 | 2026-08-22 | 0 | 壁 | かべ | kabe | N4 | wall; partition | [short](https://youtube.com/shorts/DAvUJqsULO4) | — |
 | 2026-08-22 | 0 | 日 | にち | nichi | N3 | Sunday | [short](https://youtube.com/shorts/LZp_FyOcqbk) | — |
 | 2026-08-22 | 1 | 甘い | あまい | amai | N5 | sweet-tasting; sweet; sugary | [short](https://youtube.com/shorts/lCv1xJa_St0) | — |
+| 2026-08-22 | 2 | 済みません | すみません | sumimasen | N3 | excuse me; pardon me; I'm sorry | [short](https://youtube.com/shorts/RdwHi4atnZo) | — |
