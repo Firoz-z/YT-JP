@@ -440,3 +440,4 @@ by the pipeline after each successful upload.
 | 2026-08-22 | 2 | 済みません | すみません | sumimasen | N3 | excuse me; pardon me; I'm sorry | [short](https://youtube.com/shorts/RdwHi4atnZo) | — |
 | 2026-08-22 | 3 | 済みません | すみません | sumimasen | N3 | excuse me; pardon me; I'm sorry | [short](https://youtube.com/shorts/70dqIHo8AcM) | — |
 | 2026-08-23 | 0 | 晩御飯 | ばんごはん | bangohan | N5 | dinner; evening meal | [short](https://youtube.com/shorts/VCxAdXf4fTE) | — |
+| 2026-08-23 | 1 | 晩御飯 | ばんごはん | bangohan | N5 | dinner; evening meal | [short](https://youtube.com/shorts/-k_bgk60y6I) | — |
