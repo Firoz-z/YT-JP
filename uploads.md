@@ -443,3 +443,4 @@ by the pipeline after each successful upload.
 | 2026-08-23 | 1 | 晩御飯 | ばんごはん | bangohan | N5 | dinner; evening meal | [short](https://youtube.com/shorts/-k_bgk60y6I) | — |
 | 2026-08-23 | 2 | 晩御飯 | ばんごはん | bangohan | N5 | dinner; evening meal | [short](https://youtube.com/shorts/-gXZxCwirwc) | — |
 | 2026-08-23 | 3 | 晩御飯 | ばんごはん | bangohan | N5 | dinner; evening meal | [short](https://youtube.com/shorts/bum8THg6tqI) | — |
+| 2026-08-24 | 0 | 晩御飯 | ばんごはん | bangohan | N5 | dinner; evening meal | [short](https://youtube.com/shorts/LUK-icZzTm4) | — |
