@@ -445,3 +445,4 @@ by the pipeline after each successful upload.
 | 2026-08-23 | 3 | 晩御飯 | ばんごはん | bangohan | N5 | dinner; evening meal | [short](https://youtube.com/shorts/bum8THg6tqI) | — |
 | 2026-08-24 | 0 | 晩御飯 | ばんごはん | bangohan | N5 | dinner; evening meal | [short](https://youtube.com/shorts/LUK-icZzTm4) | — |
 | 2026-08-24 | 1 | 天ぷら | てんぷら | tenpura | — | tempura; deep-fried fish and vegetables in a light batter | [short](https://youtube.com/shorts/1Y6KN1dU-MQ) | — |
+| 2026-08-24 | 2 | 可愛い | かわいい | kawaii | N1 | cute; adorable; charming | [short](https://youtube.com/shorts/nZdW5TM9p_A) | — |
