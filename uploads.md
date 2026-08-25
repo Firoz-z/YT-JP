@@ -447,3 +447,4 @@ by the pipeline after each successful upload.
 | 2026-08-24 | 1 | 天ぷら | てんぷら | tenpura | — | tempura; deep-fried fish and vegetables in a light batter | [short](https://youtube.com/shorts/1Y6KN1dU-MQ) | — |
 | 2026-08-24 | 2 | 可愛い | かわいい | kawaii | N1 | cute; adorable; charming | [short](https://youtube.com/shorts/nZdW5TM9p_A) | — |
 | 2026-08-24 | 3 | お握り | おにぎり | onigiri | — | onigiri; rice ball (often triangular, sometimes with a filling and wrapped in nori) | [short](https://youtube.com/shorts/p_C27H3jUOY) | — |
+| 2026-08-25 | 0 | お握り | おにぎり | onigiri | — | onigiri; rice ball (often triangular, sometimes with a filling and wrapped in nori) | [short](https://youtube.com/shorts/6unbqI8DdLU) | — |
