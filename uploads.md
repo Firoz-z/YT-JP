@@ -451,3 +451,4 @@ by the pipeline after each successful upload.
 | 2026-08-25 | 1 | お握り | おにぎり | onigiri | — | onigiri; rice ball (often triangular, sometimes with a filling and wrapped in nori) | [short](https://youtube.com/shorts/InAVSkzwPS0) | — |
 | 2026-08-25 | 2 | お握り | おにぎり | onigiri | — | onigiri; rice ball (often triangular, sometimes with a filling and wrapped in nori) | [short](https://youtube.com/shorts/ProM2uePEZY) | — |
 | 2026-08-25 | 3 | お握り | おにぎり | onigiri | — | onigiri; rice ball (often triangular, sometimes with a filling and wrapped in nori) | [short](https://youtube.com/shorts/tqUHNaew4J0) | — |
+| 2026-08-26 | 0 | お握り | おにぎり | onigiri | — | onigiri; rice ball (often triangular, sometimes with a filling and wrapped in nori) | [short](https://youtube.com/shorts/J5Af2nad8p8) | — |
