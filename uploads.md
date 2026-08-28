@@ -457,3 +457,4 @@ by the pipeline after each successful upload.
 | 2026-08-27 | 0 | お握り | おにぎり | onigiri | — | onigiri; rice ball (often triangular, sometimes with a filling and wrapped in nori) | [short](https://youtube.com/shorts/3aemi_rpPms) | — |
 | 2026-08-27 | 2 | 迚も | とても | totemo | N1 | very; awfully; exceedingly | [short](https://youtube.com/shorts/ZJeGm-OMKyQ) | — |
 | 2026-08-27 | 3 | 最初 | さいしょ | saisho | N4 | beginning; outset; first | [short](https://youtube.com/shorts/pyy0TAvaJ6w) | — |
+| 2026-08-28 | 0 | 作家 | さっか | sakka | N3 | author; writer; novelist | [short](https://youtube.com/shorts/IObt8olCzAk) | — |
