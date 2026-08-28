@@ -459,3 +459,4 @@ by the pipeline after each successful upload.
 | 2026-08-27 | 3 | 最初 | さいしょ | saisho | N4 | beginning; outset; first | [short](https://youtube.com/shorts/pyy0TAvaJ6w) | — |
 | 2026-08-28 | 0 | 作家 | さっか | sakka | N3 | author; writer; novelist | [short](https://youtube.com/shorts/IObt8olCzAk) | — |
 | 2026-08-28 | 0 | 完成 | かんせい | kansei | N3 | completion; perfection; accomplishment | [short](https://youtube.com/shorts/heZiir00gWA) | — |
+| 2026-08-28 | 2 | 予報 | よほう | yohou | N3 | forecast; prediction | [short](https://youtube.com/shorts/_XdIXyyevlg) | — |
