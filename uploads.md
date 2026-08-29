@@ -463,3 +463,4 @@ by the pipeline after each successful upload.
 | 2026-08-28 | 3 | 怪我 | けが | kega | N3 | injury; wound | [short](https://youtube.com/shorts/ygkCcB28vVc) | — |
 | 2026-08-29 | 0 | 内容 | ないよう | naiyou | N3 | contents; content; substance | [short](https://youtube.com/shorts/VsrM0I8O0ME) | — |
 | 2026-08-29 | 0 | 眩暈 | めまい | memai | N2 | dizziness; giddiness; vertigo | [short](https://youtube.com/shorts/T1BCN01Xecw) | — |
+| 2026-08-29 | 1 | 眩暈 | めまい | memai | N2 | dizziness; giddiness; vertigo | [short](https://youtube.com/shorts/oQLGk4uAl7k) | — |
