@@ -465,3 +465,4 @@ by the pipeline after each successful upload.
 | 2026-08-29 | 0 | 眩暈 | めまい | memai | N2 | dizziness; giddiness; vertigo | [short](https://youtube.com/shorts/T1BCN01Xecw) | — |
 | 2026-08-29 | 1 | 眩暈 | めまい | memai | N2 | dizziness; giddiness; vertigo | [short](https://youtube.com/shorts/oQLGk4uAl7k) | — |
 | 2026-08-29 | 2 | 二人 | ふたり | futari | N1 | two persons; two people; pair | [short](https://youtube.com/shorts/U3xd4XEXwy8) | — |
+| 2026-08-29 | 3 | 首 | くび | kubi | N4 | neck | [short](https://youtube.com/shorts/CUfBF0gbmDU) | — |
