@@ -468,3 +468,4 @@ by the pipeline after each successful upload.
 | 2026-08-29 | 3 | 首 | くび | kubi | N4 | neck | [short](https://youtube.com/shorts/CUfBF0gbmDU) | — |
 | 2026-08-30 | 0 | 絵 | え | e | N5 | picture; drawing; painting | [short](https://youtube.com/shorts/2XB-NK_du60) | — |
 | 2026-08-30 | 1 | 平日 | へいじつ | heijitsu | N2 | weekday; ordinary days (i.e. non-holiday) | [short](https://youtube.com/shorts/2QN7aV4D8Ps) | — |
+| 2026-08-30 | 2 | 彼女 | かのじょ | kanojo | N4 | she; her | [short](https://youtube.com/shorts/VmGcsGUL1os) | — |
