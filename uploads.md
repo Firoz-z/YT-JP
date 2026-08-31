@@ -473,3 +473,4 @@ by the pipeline after each successful upload.
 | 2026-08-31 | 0 | 先週 | せんしゅう | senshuu | N5 | last week; the week before | [short](https://youtube.com/shorts/A8SCe1x2EwY) | — |
 | 2026-08-31 | 1 | 同じ | おなじ | onaji | N5 | same; identical; equal | [short](https://youtube.com/shorts/adGhpOhdt5M) | — |
 | 2026-08-31 | 2 | 軽い | かるい | karui | N5 | light (i.e. not heavy); feeling light (i.e. offering little resistance, moving easily) | [short](https://youtube.com/shorts/3Ys1pV6XmTs) | — |
+| 2026-08-31 | 3 | 腹痛 | ふくつう | fukutsuu | — | stomach ache; abdominal pain | [short](https://youtube.com/shorts/H9P1PWHQ4Ns) | — |
