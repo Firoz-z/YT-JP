@@ -470,3 +470,4 @@ by the pipeline after each successful upload.
 | 2026-08-30 | 1 | 平日 | へいじつ | heijitsu | N2 | weekday; ordinary days (i.e. non-holiday) | [short](https://youtube.com/shorts/2QN7aV4D8Ps) | — |
 | 2026-08-30 | 2 | 彼女 | かのじょ | kanojo | N4 | she; her | [short](https://youtube.com/shorts/VmGcsGUL1os) | — |
 | 2026-08-30 | 3 | 時計 | とけい | tokei | N5 | clock; watch; timepiece | [short](https://youtube.com/shorts/la7WYn3JjHs) | — |
+| 2026-08-31 | 0 | 先週 | せんしゅう | senshuu | N5 | last week; the week before | [short](https://youtube.com/shorts/A8SCe1x2EwY) | — |
