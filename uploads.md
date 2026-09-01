@@ -476,3 +476,4 @@ by the pipeline after each successful upload.
 | 2026-08-31 | 3 | 腹痛 | ふくつう | fukutsuu | — | stomach ache; abdominal pain | [short](https://youtube.com/shorts/H9P1PWHQ4Ns) | — |
 | 2026-09-01 | 0 | 相談 | そうだん | soudan | N3 | consultation; discussion; discussing | [short](https://youtube.com/shorts/11vd-PfcPOk) | — |
 | 2026-09-01 | 1 | 発明 | はつめい | hatsumei | N3 | invention | [short](https://youtube.com/shorts/lW1AQTf7sfE) | — |
+| 2026-09-01 | 2 | 本当 | ほんとう | hontou | N3 | truth; reality; actuality | [short](https://youtube.com/shorts/Gwpvj86Gzg4) | — |
