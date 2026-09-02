@@ -480,3 +480,4 @@ by the pipeline after each successful upload.
 | 2026-09-01 | 2 | 女の子 | おんなのこ | onnanoko | N5 | girl; daughter; baby girl | [short](https://youtube.com/shorts/t-RdpgM20Dk) | — |
 | 2026-09-02 | 0 | 音楽家 | おんがくか | ongakuka | — | musician | [short](https://youtube.com/shorts/NDQ6UOVlCCM) | — |
 | 2026-09-02 | 1 | 意見 | いけん | iken | N4 | opinion; view; comment | [short](https://youtube.com/shorts/ZoqspUNUB-c) | — |
+| 2026-09-02 | 2 | 事故 | じこ | jiko | N4 | accident; incident; trouble | [short](https://youtube.com/shorts/z_lmpGPKbDA) | — |
