@@ -485,3 +485,4 @@ by the pipeline after each successful upload.
 | 2026-09-03 | 0 | 頂きます | いただきます | itadakimasu | N3 | thank you (for the meal just served); I receive (this meal) | [short](https://youtube.com/shorts/bLaNk3fRcrI) | — |
 | 2026-09-03 | 1 | 検査 | けんさ | kensa | N3 | inspection (e.g. customs, factory); examination; test | [short](https://youtube.com/shorts/JBc0u4g1bjQ) | — |
 | 2026-09-03 | 2 | 頂きます | いただきます | itadakimasu | N3 | thank you (for the meal just served); I receive (this meal) | [short](https://youtube.com/shorts/fIobgWYyjYE) | — |
+| 2026-09-03 | 3 | 台風 | たいふう | taifuu | N4 | typhoon; hurricane | [short](https://youtube.com/shorts/TFPs34pP5A8) | — |
