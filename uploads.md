@@ -482,3 +482,4 @@ by the pipeline after each successful upload.
 | 2026-09-02 | 1 | 意見 | いけん | iken | N4 | opinion; view; comment | [short](https://youtube.com/shorts/ZoqspUNUB-c) | — |
 | 2026-09-02 | 2 | 事故 | じこ | jiko | N4 | accident; incident; trouble | [short](https://youtube.com/shorts/z_lmpGPKbDA) | — |
 | 2026-09-02 | 3 | 頂きます | いただきます | itadakimasu | N3 | thank you (for the meal just served); I receive (this meal) | [short](https://youtube.com/shorts/O4RqcYTDkgc) | — |
+| 2026-09-03 | 0 | 頂きます | いただきます | itadakimasu | N3 | thank you (for the meal just served); I receive (this meal) | [short](https://youtube.com/shorts/bLaNk3fRcrI) | — |
