@@ -489,3 +489,4 @@ by the pipeline after each successful upload.
 | 2026-09-04 | 0 | 研究 | けんきゅう | kenkyuu | N4 | research; study; investigation | [short](https://youtube.com/shorts/cFxbVxcy74k) | — |
 | 2026-09-04 | 1 | 将来 | しょうらい | shourai | N4 | future; (future) prospects | [short](https://youtube.com/shorts/XNyiWkK57rw) | — |
 | 2026-09-04 | 2 | 歌手 | かしゅ | kashu | N3 | singer | [short](https://youtube.com/shorts/oCcfAhM8BAs) | — |
+| 2026-09-04 | 3 | 頂きます | いただきます | itadakimasu | N3 | thank you (for the meal just served); I receive (this meal) | [short](https://youtube.com/shorts/nLEtpVOLD8k) | — |
