@@ -492,3 +492,4 @@ by the pipeline after each successful upload.
 | 2026-09-04 | 3 | 頂きます | いただきます | itadakimasu | N3 | thank you (for the meal just served); I receive (this meal) | [short](https://youtube.com/shorts/nLEtpVOLD8k) | — |
 | 2026-09-05 | 0 | 普段 | ふだん | fudan | N3 | usual; normal; everyday | [short](https://youtube.com/shorts/m9vUAFqYJIE) | — |
 | 2026-09-05 | 0 | 気分 | きぶん | kibun | N4 | feeling; mood | [short](https://youtube.com/shorts/Aoq4Fi-uowM) | — |
+| 2026-09-05 | 1 | 発表 | はっぴょう | happyou | N3 | announcement; publication; presenting | [short](https://youtube.com/shorts/VPkx4CnY17g) | — |
