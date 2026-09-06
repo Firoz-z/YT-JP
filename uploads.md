@@ -495,3 +495,4 @@ by the pipeline after each successful upload.
 | 2026-09-05 | 1 | 発表 | はっぴょう | happyou | N3 | announcement; publication; presenting | [short](https://youtube.com/shorts/VPkx4CnY17g) | — |
 | 2026-09-05 | 2 | 予想 | よそう | yosou | N1 | expectation; anticipation; prediction | [short](https://youtube.com/shorts/LqJw3c3wgtg) | — |
 | 2026-09-06 | 1 | 成功 | せいこう | seikou | N3 | success; achievement | [short](https://youtube.com/shorts/rIfOMhlvtcI) | — |
+| 2026-09-06 | 2 | 鼻水 | はなみず | hanamizu | — | nasal mucus; dripping nose; snot | [short](https://youtube.com/shorts/04enpJPng74) | — |
