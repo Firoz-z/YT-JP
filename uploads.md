@@ -499,3 +499,4 @@ by the pipeline after each successful upload.
 | 2026-09-06 | 2 | 賛成 | さんせい | sansei | N3 | approval; agreement; support | [short](https://youtube.com/shorts/OtqdYO21OSU) | — |
 | 2026-09-07 | 0 | 頂きます | いただきます | itadakimasu | N3 | thank you (for the meal just served); I receive (this meal) | [short](https://youtube.com/shorts/JOohHOxAUx0) | — |
 | 2026-09-07 | 1 | 山頂 | さんちょう | sanchou | — | summit (of a mountain) | [short](https://youtube.com/shorts/wOe2di1gpmQ) | — |
+| 2026-09-07 | 2 | 戦争 | せんそう | sensou | N4 | war | [short](https://youtube.com/shorts/4XIis17oSDA) | — |
