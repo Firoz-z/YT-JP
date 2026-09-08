@@ -502,3 +502,4 @@ by the pipeline after each successful upload.
 | 2026-09-07 | 2 | 戦争 | せんそう | sensou | N4 | war | [short](https://youtube.com/shorts/4XIis17oSDA) | — |
 | 2026-09-07 | 3 | 予定 | よてい | yotei | N4 | plans; arrangement; schedule | [short](https://youtube.com/shorts/1uvPXDX5Gq8) | — |
 | 2026-09-08 | 0 | 不味い | まずい | mazui | N1 | bad(-tasting); unpalatable; unsavoury | [short](https://youtube.com/shorts/-qpQY-k_qxw) | — |
+| 2026-09-08 | 1 | 不味い | まずい | mazui | N1 | bad(-tasting); unpalatable; unsavoury | [short](https://youtube.com/shorts/P3BenL-8NPw) | — |
