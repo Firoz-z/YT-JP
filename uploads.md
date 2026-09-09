@@ -508,3 +508,4 @@ by the pipeline after each successful upload.
 | 2026-09-09 | 0 | 文化 | ぶんか | bunka | N4 | culture; civilization; civilisation | [short](https://youtube.com/shorts/xN8XNdbOI-Q) | — |
 | 2026-09-09 | 1 | 美味しい | おいしい | oishii | N1 | good(-tasting); nice; delicious | [short](https://youtube.com/shorts/eT_jjXzy8hc) | — |
 | 2026-09-09 | 2 | 誰 | だれ | dare | N1 | who | [short](https://youtube.com/shorts/uEfzFYOOz6w) | — |
+| 2026-09-09 | 2 | 貴方 | あなた | anata | N1 | you | [short](https://youtube.com/shorts/9KE_35HyqJI) | — |
