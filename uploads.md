@@ -506,3 +506,4 @@ by the pipeline after each successful upload.
 | 2026-09-08 | 2 | 不味い | まずい | mazui | N1 | bad(-tasting); unpalatable; unsavoury | [short](https://youtube.com/shorts/IQaCTUb0h-8) | — |
 | 2026-09-08 | 3 | 不味い | まずい | mazui | N1 | bad(-tasting); unpalatable; unsavoury | [short](https://youtube.com/shorts/UDumU4wqb0M) | — |
 | 2026-09-09 | 0 | 文化 | ぶんか | bunka | N4 | culture; civilization; civilisation | [short](https://youtube.com/shorts/xN8XNdbOI-Q) | — |
+| 2026-09-09 | 1 | 美味しい | おいしい | oishii | N1 | good(-tasting); nice; delicious | [short](https://youtube.com/shorts/eT_jjXzy8hc) | — |
