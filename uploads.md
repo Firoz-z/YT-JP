@@ -511,3 +511,4 @@ by the pipeline after each successful upload.
 | 2026-09-09 | 2 | 貴方 | あなた | anata | N1 | you | [short](https://youtube.com/shorts/9KE_35HyqJI) | — |
 | 2026-09-10 | 0 | 野球選手 | やきゅうせんしゅ | yakyuusenshu | — | baseball player; ballplayer | [short](https://youtube.com/shorts/16GicOuIxhg) | — |
 | 2026-09-10 | 1 | 勉強 | べんきょう | benkyou | N3 | study | [short](https://youtube.com/shorts/Y6ktt8_V3_0) | — |
+| 2026-09-10 | 2 | 塩辛い | しおからい | shiokarai | N2 | salty (taste); briny | [short](https://youtube.com/shorts/t6SN_ukJM5k) | — |
