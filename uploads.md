@@ -514,3 +514,4 @@ by the pipeline after each successful upload.
 | 2026-09-10 | 2 | 塩辛い | しおからい | shiokarai | N2 | salty (taste); briny | [short](https://youtube.com/shorts/t6SN_ukJM5k) | — |
 | 2026-09-10 | 3 | 貴方 | あなた | anata | N1 | you | [short](https://youtube.com/shorts/6bEPOs2ZUUo) | — |
 | 2026-09-11 | 0 | 科学 | かがく | kagaku | N4 | science | [short](https://youtube.com/shorts/VgjJ-_czlsY) | — |
+| 2026-09-11 | 1 | 火山 | かざん | kazan | N2 | volcano | [short](https://youtube.com/shorts/GTRdzeOl6pw) | — |
