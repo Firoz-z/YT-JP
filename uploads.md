@@ -516,3 +516,4 @@ by the pipeline after each successful upload.
 | 2026-09-11 | 0 | 科学 | かがく | kagaku | N4 | science | [short](https://youtube.com/shorts/VgjJ-_czlsY) | — |
 | 2026-09-11 | 1 | 火山 | かざん | kazan | N2 | volcano | [short](https://youtube.com/shorts/GTRdzeOl6pw) | — |
 | 2026-09-11 | 2 | 料理 | りょうり | ryouri | N5 | cooking; cookery; cuisine | [short](https://youtube.com/shorts/UMQ0PQ0Sp7k) | — |
+| 2026-09-11 | 3 | 平均 | へいきん | heikin | N3 | average; mean | [short](https://youtube.com/shorts/W_K_u7iVD6U) | — |
