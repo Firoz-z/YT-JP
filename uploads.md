@@ -517,3 +517,4 @@ by the pipeline after each successful upload.
 | 2026-09-11 | 1 | 火山 | かざん | kazan | N2 | volcano | [short](https://youtube.com/shorts/GTRdzeOl6pw) | — |
 | 2026-09-11 | 2 | 料理 | りょうり | ryouri | N5 | cooking; cookery; cuisine | [short](https://youtube.com/shorts/UMQ0PQ0Sp7k) | — |
 | 2026-09-11 | 3 | 平均 | へいきん | heikin | N3 | average; mean | [short](https://youtube.com/shorts/W_K_u7iVD6U) | — |
+| 2026-09-12 | 0 | 貴方 | あなた | anata | N1 | you | [short](https://youtube.com/shorts/2T1k0QNf4I8) | — |
