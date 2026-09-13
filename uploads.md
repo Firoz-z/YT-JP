@@ -524,3 +524,4 @@ by the pipeline after each successful upload.
 | 2026-09-13 | 0 | 何時 | いつ | itsu | N1 | when; at what time; how soon | [short](https://youtube.com/shorts/IxjoZ4hjWXY) | — |
 | 2026-09-13 | 1 | 習慣 | しゅうかん | shuukan | N4 | habit | [short](https://youtube.com/shorts/CeQxJfzN_4g) | — |
 | 2026-09-13 | 2 | 活躍 | かつやく | katsuyaku | N2 | activity (esp. energetic or successful); great efforts; active participation | [short](https://youtube.com/shorts/OLaNaAHpDaA) | — |
+| 2026-09-13 | 2 | 新聞 | しんぶん | shinbun | N5 | newspaper | [short](https://youtube.com/shorts/rZgm4XvRo00) | — |
