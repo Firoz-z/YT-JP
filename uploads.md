@@ -522,3 +522,4 @@ by the pipeline after each successful upload.
 | 2026-09-12 | 1 | 事件 | じけん | jiken | N3 | event; affair; incident | [short](https://youtube.com/shorts/yV8kMYsPVT4) | — |
 | 2026-09-12 | 3 | 全体 | ぜんたい | zentai | N3 | whole; entirety | [short](https://youtube.com/shorts/W5wWA4M4U6A) | — |
 | 2026-09-13 | 0 | 何時 | いつ | itsu | N1 | when; at what time; how soon | [short](https://youtube.com/shorts/IxjoZ4hjWXY) | — |
+| 2026-09-13 | 1 | 習慣 | しゅうかん | shuukan | N4 | habit | [short](https://youtube.com/shorts/CeQxJfzN_4g) | — |
