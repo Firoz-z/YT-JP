@@ -526,3 +526,4 @@ by the pipeline after each successful upload.
 | 2026-09-13 | 2 | 活躍 | かつやく | katsuyaku | N2 | activity (esp. energetic or successful); great efforts; active participation | [short](https://youtube.com/shorts/OLaNaAHpDaA) | — |
 | 2026-09-13 | 2 | 新聞 | しんぶん | shinbun | N5 | newspaper | [short](https://youtube.com/shorts/rZgm4XvRo00) | — |
 | 2026-09-14 | 0 | 教育 | きょういく | kyouiku | N4 | education; schooling; training | [short](https://youtube.com/shorts/lgkoIRDyPR4) | — |
+| 2026-09-14 | 1 | 買い物 | かいもの | kaimono | N5 | shopping; purchased goods | [short](https://youtube.com/shorts/Jsl4_NTCw_8) | — |
