@@ -528,3 +528,4 @@ by the pipeline after each successful upload.
 | 2026-09-14 | 0 | 教育 | きょういく | kyouiku | N4 | education; schooling; training | [short](https://youtube.com/shorts/lgkoIRDyPR4) | — |
 | 2026-09-14 | 1 | 買い物 | かいもの | kaimono | N5 | shopping; purchased goods | [short](https://youtube.com/shorts/Jsl4_NTCw_8) | — |
 | 2026-09-14 | 2 | 試合 | しあい | shiai | N4 | match; game; bout | [short](https://youtube.com/shorts/G7x7lp_9dng) | — |
+| 2026-09-14 | 3 | 現在 | げんざい | genzai | N3 | the present; present time; now | [short](https://youtube.com/shorts/qm5PuA0wKUQ) | — |
