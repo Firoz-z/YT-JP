@@ -530,3 +530,4 @@ by the pipeline after each successful upload.
 | 2026-09-14 | 2 | 試合 | しあい | shiai | N4 | match; game; bout | [short](https://youtube.com/shorts/G7x7lp_9dng) | — |
 | 2026-09-14 | 3 | 現在 | げんざい | genzai | N3 | the present; present time; now | [short](https://youtube.com/shorts/qm5PuA0wKUQ) | — |
 | 2026-09-15 | 0 | 三つ | みっつ | mittsu | N5 | three | [short](https://youtube.com/shorts/wK1XMpw82pI) | — |
+| 2026-09-15 | 1 | 病気 | びょうき | byouki | N5 | illness (usu. excluding minor ailments, e.g. common cold); disease; sickness | [short](https://youtube.com/shorts/WEiTFivp0-A) | — |
