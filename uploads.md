@@ -535,3 +535,4 @@ by the pipeline after each successful upload.
 | 2026-09-15 | 3 | 返事 | へんじ | henji | N4 | reply; answer; response | [short](https://youtube.com/shorts/ybnBJ0GMMCE) | — |
 | 2026-09-16 | 0 | 最後 | さいご | saigo | N4 | end; conclusion | [short](https://youtube.com/shorts/eUMmm9ND-gE) | — |
 | 2026-09-16 | 1 | 技術 | ぎじゅつ | gijutsu | N4 | technology; engineering | [short](https://youtube.com/shorts/wMY8K-jz5w4) | — |
+| 2026-09-16 | 2 | 都合 | つごう | tsugou | N4 | circumstances; condition; convenience | [short](https://youtube.com/shorts/8oqNe9JvdTc) | — |
