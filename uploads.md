@@ -534,3 +534,4 @@ by the pipeline after each successful upload.
 | 2026-09-15 | 2 | 象 | ぞう | zou | N3 | elephant (Elephantidae spp.) | [short](https://youtube.com/shorts/dvWw9_Yci8M) | — |
 | 2026-09-15 | 3 | 返事 | へんじ | henji | N4 | reply; answer; response | [short](https://youtube.com/shorts/ybnBJ0GMMCE) | — |
 | 2026-09-16 | 0 | 最後 | さいご | saigo | N4 | end; conclusion | [short](https://youtube.com/shorts/eUMmm9ND-gE) | — |
+| 2026-09-16 | 1 | 技術 | ぎじゅつ | gijutsu | N4 | technology; engineering | [short](https://youtube.com/shorts/wMY8K-jz5w4) | — |
