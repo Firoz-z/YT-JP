@@ -537,3 +537,4 @@ by the pipeline after each successful upload.
 | 2026-09-16 | 1 | 技術 | ぎじゅつ | gijutsu | N4 | technology; engineering | [short](https://youtube.com/shorts/wMY8K-jz5w4) | — |
 | 2026-09-16 | 2 | 都合 | つごう | tsugou | N4 | circumstances; condition; convenience | [short](https://youtube.com/shorts/8oqNe9JvdTc) | — |
 | 2026-09-16 | 3 | 咳 | せき | seki | N3 | cough; coughing; tussis | [short](https://youtube.com/shorts/-P1Ol5r_izQ) | — |
+| 2026-09-17 | 0 | 調査 | ちょうさ | chousa | N3 | investigation; examination; inquiry | [short](https://youtube.com/shorts/sFuBjQfZqQ8) | — |
