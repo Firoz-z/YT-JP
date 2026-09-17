@@ -539,3 +539,4 @@ by the pipeline after each successful upload.
 | 2026-09-16 | 3 | 咳 | せき | seki | N3 | cough; coughing; tussis | [short](https://youtube.com/shorts/-P1Ol5r_izQ) | — |
 | 2026-09-17 | 0 | 調査 | ちょうさ | chousa | N3 | investigation; examination; inquiry | [short](https://youtube.com/shorts/sFuBjQfZqQ8) | — |
 | 2026-09-17 | 1 | 吐き気 | はきけ | hakike | N2 | nausea; feeling like throwing up; feeling sick | [short](https://youtube.com/shorts/2KmbRHMgxtI) | — |
+| 2026-09-17 | 2 | 経済 | けいざい | keizai | N4 | economy; economics | [short](https://youtube.com/shorts/Vun8Z44j72Y) | — |
