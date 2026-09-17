@@ -538,3 +538,4 @@ by the pipeline after each successful upload.
 | 2026-09-16 | 2 | 都合 | つごう | tsugou | N4 | circumstances; condition; convenience | [short](https://youtube.com/shorts/8oqNe9JvdTc) | — |
 | 2026-09-16 | 3 | 咳 | せき | seki | N3 | cough; coughing; tussis | [short](https://youtube.com/shorts/-P1Ol5r_izQ) | — |
 | 2026-09-17 | 0 | 調査 | ちょうさ | chousa | N3 | investigation; examination; inquiry | [short](https://youtube.com/shorts/sFuBjQfZqQ8) | — |
+| 2026-09-17 | 1 | 吐き気 | はきけ | hakike | N2 | nausea; feeling like throwing up; feeling sick | [short](https://youtube.com/shorts/2KmbRHMgxtI) | — |
