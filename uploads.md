@@ -542,3 +542,4 @@ by the pipeline after each successful upload.
 | 2026-09-17 | 2 | 経済 | けいざい | keizai | N4 | economy; economics | [short](https://youtube.com/shorts/Vun8Z44j72Y) | — |
 | 2026-09-17 | 3 | 海岸 | かいがん | kaigan | N4 | seashore; coast; seaside | [short](https://youtube.com/shorts/zapfGiDRA8c) | — |
 | 2026-09-18 | 0 | 政治 | せいじ | seiji | N4 | politics; government | [short](https://youtube.com/shorts/n-MYgG5ZPw8) | — |
+| 2026-09-18 | 1 | 優勝 | ゆうしょう | yuushou | N3 | overall victory; championship; winning the title | [short](https://youtube.com/shorts/pIomn6ZJeCU) | — |
