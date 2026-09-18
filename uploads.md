@@ -541,3 +541,4 @@ by the pipeline after each successful upload.
 | 2026-09-17 | 1 | 吐き気 | はきけ | hakike | N2 | nausea; feeling like throwing up; feeling sick | [short](https://youtube.com/shorts/2KmbRHMgxtI) | — |
 | 2026-09-17 | 2 | 経済 | けいざい | keizai | N4 | economy; economics | [short](https://youtube.com/shorts/Vun8Z44j72Y) | — |
 | 2026-09-17 | 3 | 海岸 | かいがん | kaigan | N4 | seashore; coast; seaside | [short](https://youtube.com/shorts/zapfGiDRA8c) | — |
+| 2026-09-18 | 0 | 政治 | せいじ | seiji | N4 | politics; government | [short](https://youtube.com/shorts/n-MYgG5ZPw8) | — |
