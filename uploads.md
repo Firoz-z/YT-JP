@@ -543,3 +543,4 @@ by the pipeline after each successful upload.
 | 2026-09-17 | 3 | 海岸 | かいがん | kaigan | N4 | seashore; coast; seaside | [short](https://youtube.com/shorts/zapfGiDRA8c) | — |
 | 2026-09-18 | 0 | 政治 | せいじ | seiji | N4 | politics; government | [short](https://youtube.com/shorts/n-MYgG5ZPw8) | — |
 | 2026-09-18 | 1 | 優勝 | ゆうしょう | yuushou | N3 | overall victory; championship; winning the title | [short](https://youtube.com/shorts/pIomn6ZJeCU) | — |
+| 2026-09-18 | 2 | 作品 | さくひん | sakuhin | N3 | work (e.g. book, film, painting, composition); piece; production | [short](https://youtube.com/shorts/FUasIbj3JWA) | — |
