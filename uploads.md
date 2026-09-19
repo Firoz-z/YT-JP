@@ -545,3 +545,4 @@ by the pipeline after each successful upload.
 | 2026-09-18 | 1 | 優勝 | ゆうしょう | yuushou | N3 | overall victory; championship; winning the title | [short](https://youtube.com/shorts/pIomn6ZJeCU) | — |
 | 2026-09-18 | 2 | 作品 | さくひん | sakuhin | N3 | work (e.g. book, film, painting, composition); piece; production | [short](https://youtube.com/shorts/FUasIbj3JWA) | — |
 | 2026-09-18 | 2 | 選手 | せんしゅ | senshu | N3 | player (of a sport); athlete; team member | [short](https://youtube.com/shorts/WkMzpyCshlY) | — |
+| 2026-09-19 | 0 | 初めまして | はじめまして | hajimemashite | N2 | nice to meet you; I'm glad to make your acquaintance; how do you do? | [short](https://youtube.com/shorts/thTj9Gnweqs) | — |
