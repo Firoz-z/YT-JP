@@ -547,3 +547,4 @@ by the pipeline after each successful upload.
 | 2026-09-18 | 2 | 選手 | せんしゅ | senshu | N3 | player (of a sport); athlete; team member | [short](https://youtube.com/shorts/WkMzpyCshlY) | — |
 | 2026-09-19 | 0 | 初めまして | はじめまして | hajimemashite | N2 | nice to meet you; I'm glad to make your acquaintance; how do you do? | [short](https://youtube.com/shorts/thTj9Gnweqs) | — |
 | 2026-09-19 | 1 | 休日 | きゅうじつ | kyuujitsu | — | holiday; day off | [short](https://youtube.com/shorts/1JH94RlmPwU) | — |
+| 2026-09-19 | 2 | 頂上 | ちょうじょう | choujou | N3 | top; summit; peak | [short](https://youtube.com/shorts/jc_3QXJkX5g) | — |
