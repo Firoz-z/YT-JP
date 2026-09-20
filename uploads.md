@@ -552,3 +552,4 @@ by the pipeline after each successful upload.
 | 2026-09-20 | 0 | 個人 | こじん | kojin | N3 | individual; private person; personal | [short](https://youtube.com/shorts/h_WBAOUbY-M) | — |
 | 2026-09-20 | 1 | 言う | いう | iu | N3 | to say; to utter; to declare | [short](https://youtube.com/shorts/Q7RZEY6egew) | — |
 | 2026-09-20 | 2 | 野菜 | やさい | yasai | N5 | vegetable | [short](https://youtube.com/shorts/11xL-MD8PVg) | — |
+| 2026-09-20 | 3 | 連絡 | れんらく | renraku | N4 | contacting; (making) contact; getting in touch | [short](https://youtube.com/shorts/PtucpMhMV_8) | — |
