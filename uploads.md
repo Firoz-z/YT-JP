@@ -550,3 +550,4 @@ by the pipeline after each successful upload.
 | 2026-09-19 | 2 | 頂上 | ちょうじょう | choujou | N3 | top; summit; peak | [short](https://youtube.com/shorts/jc_3QXJkX5g) | — |
 | 2026-09-19 | 3 | 浅い | あさい | asai | N4 | shallow; superficial | [short](https://youtube.com/shorts/uGLDG76Lb0A) | — |
 | 2026-09-20 | 0 | 個人 | こじん | kojin | N3 | individual; private person; personal | [short](https://youtube.com/shorts/h_WBAOUbY-M) | — |
+| 2026-09-20 | 1 | 言う | いう | iu | N3 | to say; to utter; to declare | [short](https://youtube.com/shorts/Q7RZEY6egew) | — |
