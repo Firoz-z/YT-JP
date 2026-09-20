@@ -549,3 +549,4 @@ by the pipeline after each successful upload.
 | 2026-09-19 | 1 | 休日 | きゅうじつ | kyuujitsu | — | holiday; day off | [short](https://youtube.com/shorts/1JH94RlmPwU) | — |
 | 2026-09-19 | 2 | 頂上 | ちょうじょう | choujou | N3 | top; summit; peak | [short](https://youtube.com/shorts/jc_3QXJkX5g) | — |
 | 2026-09-19 | 3 | 浅い | あさい | asai | N4 | shallow; superficial | [short](https://youtube.com/shorts/uGLDG76Lb0A) | — |
+| 2026-09-20 | 0 | 個人 | こじん | kojin | N3 | individual; private person; personal | [short](https://youtube.com/shorts/h_WBAOUbY-M) | — |
