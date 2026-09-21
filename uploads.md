@@ -554,3 +554,4 @@ by the pipeline after each successful upload.
 | 2026-09-20 | 2 | 野菜 | やさい | yasai | N5 | vegetable | [short](https://youtube.com/shorts/11xL-MD8PVg) | — |
 | 2026-09-20 | 3 | 連絡 | れんらく | renraku | N4 | contacting; (making) contact; getting in touch | [short](https://youtube.com/shorts/PtucpMhMV_8) | — |
 | 2026-09-21 | 0 | 失敗 | しっぱい | shippai | N4 | failure; mistake; blunder | [short](https://youtube.com/shorts/qW0KmfPz6oM) | — |
+| 2026-09-21 | 1 | 天気予報 | てんきよほう | tenkiyohou | N4 | weather forecast; weather report | [short](https://youtube.com/shorts/qONPotsow-c) | — |
