@@ -557,3 +557,4 @@ by the pipeline after each successful upload.
 | 2026-09-21 | 1 | 天気予報 | てんきよほう | tenkiyohou | N4 | weather forecast; weather report | [short](https://youtube.com/shorts/qONPotsow-c) | — |
 | 2026-09-21 | 2 | 小説 | しょうせつ | shousetsu | N4 | novel; story; (work of) fiction | [short](https://youtube.com/shorts/ig36-QyKWas) | — |
 | 2026-09-21 | 3 | 画家 | がか | gaka | N3 | painter; artist | [short](https://youtube.com/shorts/Xuz_U04znvY) | — |
+| 2026-09-22 | 0 | 体温 | たいおん | taion | N3 | body temperature | [short](https://youtube.com/shorts/UtS1BAjg--c) | — |
