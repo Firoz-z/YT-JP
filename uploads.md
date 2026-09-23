@@ -561,3 +561,4 @@ by the pipeline after each successful upload.
 | 2026-09-22 | 1 | 砂糖 | さとう | satou | N5 | sugar | [short](https://youtube.com/shorts/6l9VT5y6aBo) | — |
 | 2026-09-22 | 2 | 強い | つよい | tsuyoi | N5 | strong; potent; competent | [short](https://youtube.com/shorts/S34h5fBvnrM) | — |
 | 2026-09-22 | 2 | 天井 | てんじょう | tenjou | N1 | ceiling | [short](https://youtube.com/shorts/gqFZgYadiPg) | — |
+| 2026-09-23 | 0 | 経験 | けいけん | keiken | N3 | experience | [short](https://youtube.com/shorts/NHW1fhQt3z4) | — |
