@@ -564,3 +564,4 @@ by the pipeline after each successful upload.
 | 2026-09-23 | 0 | 経験 | けいけん | keiken | N3 | experience | [short](https://youtube.com/shorts/NHW1fhQt3z4) | — |
 | 2026-09-23 | 1 | 火事 | かじ | kaji | N4 | fire; conflagration | [short](https://youtube.com/shorts/gJfTwcEYiBs) | — |
 | 2026-09-23 | 2 | 反対 | はんたい | hantai | N4 | opposition; resistance; antagonism | [short](https://youtube.com/shorts/tT1UTP3StEg) | — |
+| 2026-09-23 | 3 | お早う | おはよう | ohayou | N2 | good morning | [short](https://youtube.com/shorts/6CtRALEeuNY) | — |
