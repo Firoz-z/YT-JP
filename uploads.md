@@ -562,3 +562,4 @@ by the pipeline after each successful upload.
 | 2026-09-22 | 2 | 強い | つよい | tsuyoi | N5 | strong; potent; competent | [short](https://youtube.com/shorts/S34h5fBvnrM) | — |
 | 2026-09-22 | 2 | 天井 | てんじょう | tenjou | N1 | ceiling | [short](https://youtube.com/shorts/gqFZgYadiPg) | — |
 | 2026-09-23 | 0 | 経験 | けいけん | keiken | N3 | experience | [short](https://youtube.com/shorts/NHW1fhQt3z4) | — |
+| 2026-09-23 | 1 | 火事 | かじ | kaji | N4 | fire; conflagration | [short](https://youtube.com/shorts/gJfTwcEYiBs) | — |
