@@ -566,3 +566,4 @@ by the pipeline after each successful upload.
 | 2026-09-23 | 2 | 反対 | はんたい | hantai | N4 | opposition; resistance; antagonism | [short](https://youtube.com/shorts/tT1UTP3StEg) | — |
 | 2026-09-23 | 3 | お早う | おはよう | ohayou | N2 | good morning | [short](https://youtube.com/shorts/6CtRALEeuNY) | — |
 | 2026-09-24 | 1 | 過去 | かこ | kako | N3 | the past; bygone days | [short](https://youtube.com/shorts/PdQC1ukfjHI) | — |
+| 2026-09-24 | 2 | お早う | おはよう | ohayou | N2 | good morning | [short](https://youtube.com/shorts/IXS72EO5swM) | — |
