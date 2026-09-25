@@ -568,3 +568,4 @@ by the pipeline after each successful upload.
 | 2026-09-24 | 1 | 過去 | かこ | kako | N3 | the past; bygone days | [short](https://youtube.com/shorts/PdQC1ukfjHI) | — |
 | 2026-09-24 | 2 | お早う | おはよう | ohayou | N2 | good morning | [short](https://youtube.com/shorts/IXS72EO5swM) | — |
 | 2026-09-24 | 3 | 幾つ | いくつ | ikutsu | N3 | how many | [short](https://youtube.com/shorts/roV_kx_0hIo) | — |
+| 2026-09-25 | 0 | 表面 | ひょうめん | hyoumen | N3 | surface; face | [short](https://youtube.com/shorts/WiAE3SXHk1o) | — |
