@@ -570,3 +570,4 @@ by the pipeline after each successful upload.
 | 2026-09-24 | 3 | 幾つ | いくつ | ikutsu | N3 | how many | [short](https://youtube.com/shorts/roV_kx_0hIo) | — |
 | 2026-09-25 | 0 | 表面 | ひょうめん | hyoumen | N3 | surface; face | [short](https://youtube.com/shorts/WiAE3SXHk1o) | — |
 | 2026-09-25 | 1 | 予算 | よさん | yosan | N3 | estimate (of costs); budget | [short](https://youtube.com/shorts/_Or7UjdbRFo) | — |
+| 2026-09-25 | 2 | 治療 | ちりょう | chiryou | N1 | (medical) treatment; care; therapy | [short](https://youtube.com/shorts/dp_nqRygYhA) | — |
