@@ -575,3 +575,4 @@ by the pipeline after each successful upload.
 | 2026-09-26 | 0 | 歴史 | れきし | rekishi | N4 | history | [short](https://youtube.com/shorts/ikwBeUfC3Mk) | — |
 | 2026-09-26 | 1 | 左様なら | さようなら | sayounara | N2 | farewell; adieu; goodbye | [short](https://youtube.com/shorts/oi_tMM7Wtv8) | — |
 | 2026-09-26 | 2 | 雑誌 | ざっし | zasshi | N5 | magazine; journal; periodical | [short](https://youtube.com/shorts/3IfALpZs_ms) | — |
+| 2026-09-26 | 3 | 診察 | しんさつ | shinsatsu | N3 | medical examination; checkup; consultation | [short](https://youtube.com/shorts/J0NQLBYuzLI) | — |
