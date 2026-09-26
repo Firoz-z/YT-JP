@@ -574,3 +574,4 @@ by the pipeline after each successful upload.
 | 2026-09-25 | 3 | 活動 | かつどう | katsudou | N3 | activity (of a person, organization, animal, volcano, etc.); action; operation | [short](https://youtube.com/shorts/iHHme4TQq-8) | — |
 | 2026-09-26 | 0 | 歴史 | れきし | rekishi | N4 | history | [short](https://youtube.com/shorts/ikwBeUfC3Mk) | — |
 | 2026-09-26 | 1 | 左様なら | さようなら | sayounara | N2 | farewell; adieu; goodbye | [short](https://youtube.com/shorts/oi_tMM7Wtv8) | — |
+| 2026-09-26 | 2 | 雑誌 | ざっし | zasshi | N5 | magazine; journal; periodical | [short](https://youtube.com/shorts/3IfALpZs_ms) | — |
