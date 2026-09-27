@@ -579,3 +579,4 @@ by the pipeline after each successful upload.
 | 2026-09-27 | 0 | 不味い | まずい | mazui | N1 | bad(-tasting); unpalatable; unsavoury | [short](https://youtube.com/shorts/Zf__6_bm2Pw) | — |
 | 2026-09-27 | 1 | お休み | おやすみ | oyasumi | N2 | holiday; day off; absence | [short](https://youtube.com/shorts/p4v_8lfgt_0) | — |
 | 2026-09-27 | 2 | 不味い | まずい | mazui | N1 | bad(-tasting); unpalatable; unsavoury | [short](https://youtube.com/shorts/VQpCfpOQTSs) | — |
+| 2026-09-27 | 3 | 朝 | あさ | asa | N5 | morning | [short](https://youtube.com/shorts/urdKBXMUoaE) | — |
