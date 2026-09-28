@@ -582,3 +582,4 @@ by the pipeline after each successful upload.
 | 2026-09-27 | 3 | 朝 | あさ | asa | N5 | morning | [short](https://youtube.com/shorts/urdKBXMUoaE) | — |
 | 2026-09-28 | 0 | 不味い | まずい | mazui | N1 | bad(-tasting); unpalatable; unsavoury | [short](https://youtube.com/shorts/VEBEmV76NEc) | — |
 | 2026-09-28 | 2 | 不味い | まずい | mazui | N1 | bad(-tasting); unpalatable; unsavoury | [short](https://youtube.com/shorts/R98gIZWWGIo) | — |
+| 2026-09-28 | 2 | 不味い | まずい | mazui | N1 | bad(-tasting); unpalatable; unsavoury | [short](https://youtube.com/shorts/ScqxJxr1XDk) | — |
