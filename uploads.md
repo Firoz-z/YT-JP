@@ -589,3 +589,4 @@ by the pipeline after each successful upload.
 | 2026-09-29 | 2 | 不味い | まずい | mazui | N1 | bad(-tasting); unpalatable; unsavoury | [short](https://youtube.com/shorts/Cw2QrU2XQ2w) | — |
 | 2026-09-29 | 3 | ０ | ゼロ | zero | — | zero; 0; nought | [short](https://youtube.com/shorts/J6qQqtyzjqM) | — |
 | 2026-09-30 | 0 | 不味い | まずい | mazui | N1 | bad(-tasting); unpalatable; unsavoury | [short](https://youtube.com/shorts/WzP1zyEUodw) | — |
+| 2026-09-30 | 1 | 不味い | まずい | mazui | N1 | bad(-tasting); unpalatable; unsavoury | [short](https://youtube.com/shorts/289q9QfPSlo) | — |
