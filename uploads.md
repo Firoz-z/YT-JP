@@ -593,3 +593,4 @@ by the pipeline after each successful upload.
 | 2026-09-30 | 2 | 不味い | まずい | mazui | N1 | bad(-tasting); unpalatable; unsavoury | [short](https://youtube.com/shorts/41Zz9fqW75Q) | — |
 | 2026-09-30 | 3 | 不味い | まずい | mazui | N1 | bad(-tasting); unpalatable; unsavoury | [short](https://youtube.com/shorts/L5G6zW571YQ) | — |
 | 2026-10-01 | 0 | お帰り | おかえり | okaeri | N2 | return | [short](https://youtube.com/shorts/QFALNOvGcCw) | — |
+| 2026-10-01 | 1 | 不味い | まずい | mazui | N1 | bad(-tasting); unpalatable; unsavoury | [short](https://youtube.com/shorts/hblfLot10DI) | — |
