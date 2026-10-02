@@ -596,3 +596,4 @@ by the pipeline after each successful upload.
 | 2026-10-01 | 1 | 不味い | まずい | mazui | N1 | bad(-tasting); unpalatable; unsavoury | [short](https://youtube.com/shorts/hblfLot10DI) | — |
 | 2026-10-01 | 2 | 不味い | まずい | mazui | N1 | bad(-tasting); unpalatable; unsavoury | [short](https://youtube.com/shorts/cWUHclFIVyM) | — |
 | 2026-10-01 | 3 | 遣る | やる | yaru | N1 | to do; to undertake; to perform | [short](https://youtube.com/shorts/K1Ek-wb_zxA) | — |
+| 2026-10-02 | 0 | 不味い | まずい | mazui | N1 | bad(-tasting); unpalatable; unsavoury | [short](https://youtube.com/shorts/X_KHKNOBKEE) | — |
