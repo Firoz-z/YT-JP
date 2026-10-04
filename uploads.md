@@ -605,3 +605,4 @@ by the pipeline after each successful upload.
 | 2026-10-03 | 2 | 何方 | どちら | dochira | N1 | which way; which direction; where | [short](https://youtube.com/shorts/LUB8rZztaaI) | — |
 | 2026-10-03 | 3 | 何方 | どちら | dochira | N1 | which way; which direction; where | [short](https://youtube.com/shorts/CNEPOuSGkS8) | — |
 | 2026-10-04 | 0 | 不味い | まずい | mazui | N1 | bad(-tasting); unpalatable; unsavoury | [short](https://youtube.com/shorts/VCxgx_TrT1w) | — |
+| 2026-10-04 | 1 | 不味い | まずい | mazui | N1 | bad(-tasting); unpalatable; unsavoury | [short](https://youtube.com/shorts/BarValw5_dU) | — |
