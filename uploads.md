@@ -615,3 +615,4 @@ by the pipeline after each successful upload.
 | 2026-10-06 | 0 | 不味い | まずい | mazui | N1 | bad(-tasting); unpalatable; unsavoury | [short](https://youtube.com/shorts/7l8cXH0Y0Mk) | — |
 | 2026-10-06 | 1 | 地震 | じしん | jishin | N4 | earthquake | [short](https://youtube.com/shorts/c3ElQ7DzDJQ) | — |
 | 2026-10-06 | 2 | バス | バス | basu | N5 | bus | [short](https://youtube.com/shorts/QawUk2TVALQ) | — |
+| 2026-10-06 | 3 | 記念 | きねん | kinen | N3 | commemoration; celebration; remembrance | [short](https://youtube.com/shorts/H2P6HjKZy6k) | — |
