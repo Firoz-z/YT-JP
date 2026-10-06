@@ -613,3 +613,4 @@ by the pipeline after each successful upload.
 | 2026-10-05 | 2 | 不味い | まずい | mazui | N1 | bad(-tasting); unpalatable; unsavoury | [short](https://youtube.com/shorts/-IHSge2OLfw) | — |
 | 2026-10-06 | 0 | 不味い | まずい | mazui | N1 | bad(-tasting); unpalatable; unsavoury | [short](https://youtube.com/shorts/es8CIhI-G1U) | — |
 | 2026-10-06 | 0 | 不味い | まずい | mazui | N1 | bad(-tasting); unpalatable; unsavoury | [short](https://youtube.com/shorts/7l8cXH0Y0Mk) | — |
+| 2026-10-06 | 1 | 地震 | じしん | jishin | N4 | earthquake | [short](https://youtube.com/shorts/c3ElQ7DzDJQ) | — |
