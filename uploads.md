@@ -616,3 +616,4 @@ by the pipeline after each successful upload.
 | 2026-10-06 | 1 | 地震 | じしん | jishin | N4 | earthquake | [short](https://youtube.com/shorts/c3ElQ7DzDJQ) | — |
 | 2026-10-06 | 2 | バス | バス | basu | N5 | bus | [short](https://youtube.com/shorts/QawUk2TVALQ) | — |
 | 2026-10-06 | 3 | 記念 | きねん | kinen | N3 | commemoration; celebration; remembrance | [short](https://youtube.com/shorts/H2P6HjKZy6k) | — |
+| 2026-10-07 | 0 | 怖い | こわい | kowai | N4 | scary; frightening; eerie | [short](https://youtube.com/shorts/BkeuL9CmeNI) | — |
