@@ -619,3 +619,4 @@ by the pipeline after each successful upload.
 | 2026-10-07 | 0 | 怖い | こわい | kowai | N4 | scary; frightening; eerie | [short](https://youtube.com/shorts/BkeuL9CmeNI) | — |
 | 2026-10-07 | 2 | 俳優 | はいゆう | haiyuu | N3 | actor; actress; player | [short](https://youtube.com/shorts/KOuBlErfgF4) | — |
 | 2026-10-08 | 0 | 記録 | きろく | kiroku | N3 | record; document; minutes | [short](https://youtube.com/shorts/9VxdyGyfeF4) | — |
+| 2026-10-08 | 0 | 眩暈 | めまい | memai | N2 | dizziness; giddiness; vertigo | [short](https://youtube.com/shorts/VJDDwvt5SBE) | — |
