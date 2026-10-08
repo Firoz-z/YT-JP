@@ -621,3 +621,4 @@ by the pipeline after each successful upload.
 | 2026-10-08 | 0 | 記録 | きろく | kiroku | N3 | record; document; minutes | [short](https://youtube.com/shorts/9VxdyGyfeF4) | — |
 | 2026-10-08 | 0 | 眩暈 | めまい | memai | N2 | dizziness; giddiness; vertigo | [short](https://youtube.com/shorts/VJDDwvt5SBE) | — |
 | 2026-10-08 | 1 | プレゼント | プレゼント | purezento | N4 | present; gift | [short](https://youtube.com/shorts/Lvfqo0q9foI) | — |
+| 2026-10-08 | 2 | 眩暈 | めまい | memai | N2 | dizziness; giddiness; vertigo | [short](https://youtube.com/shorts/8WdobzmXrKM) | — |
