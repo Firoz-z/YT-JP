@@ -622,3 +622,4 @@ by the pipeline after each successful upload.
 | 2026-10-08 | 0 | 眩暈 | めまい | memai | N2 | dizziness; giddiness; vertigo | [short](https://youtube.com/shorts/VJDDwvt5SBE) | — |
 | 2026-10-08 | 1 | プレゼント | プレゼント | purezento | N4 | present; gift | [short](https://youtube.com/shorts/Lvfqo0q9foI) | — |
 | 2026-10-08 | 2 | 眩暈 | めまい | memai | N2 | dizziness; giddiness; vertigo | [short](https://youtube.com/shorts/8WdobzmXrKM) | — |
+| 2026-10-09 | 0 | 眩暈 | めまい | memai | N2 | dizziness; giddiness; vertigo | [short](https://youtube.com/shorts/OnQkDwAFNwo) | — |
