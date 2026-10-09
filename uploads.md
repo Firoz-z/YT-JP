@@ -626,3 +626,4 @@ by the pipeline after each successful upload.
 | 2026-10-09 | 0 | 眩暈 | めまい | memai | N2 | dizziness; giddiness; vertigo | [short](https://youtube.com/shorts/Qqgm6y2eb4w) | — |
 | 2026-10-09 | 1 | 眩暈 | めまい | memai | N2 | dizziness; giddiness; vertigo | [short](https://youtube.com/shorts/ebzD3PmIXH8) | — |
 | 2026-10-09 | 2 | 眩暈 | めまい | memai | N2 | dizziness; giddiness; vertigo | [short](https://youtube.com/shorts/wfz6XdHBm-0) | — |
+| 2026-10-09 | 3 | 自由 | じゆう | jiyuu | N4 | freedom; liberty | [short](https://youtube.com/shorts/CdyWsFsO11s) | — |
