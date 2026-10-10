@@ -629,3 +629,4 @@ by the pipeline after each successful upload.
 | 2026-10-09 | 3 | 自由 | じゆう | jiyuu | N4 | freedom; liberty | [short](https://youtube.com/shorts/CdyWsFsO11s) | — |
 | 2026-10-10 | 0 | 眩暈 | めまい | memai | N2 | dizziness; giddiness; vertigo | [short](https://youtube.com/shorts/1N2i349HY08) | — |
 | 2026-10-10 | 1 | 手袋 | てぶくろ | tebukuro | N4 | glove; mitten; mitt | [short](https://youtube.com/shorts/q1v0UMKlE_4) | — |
+| 2026-10-10 | 2 | シャツ | シャツ | shatsu | N5 | shirt (undergarment); undershirt; singlet | [short](https://youtube.com/shorts/o-P_WBTdp4k) | — |
