@@ -632,3 +632,4 @@ by the pipeline after each successful upload.
 | 2026-10-10 | 2 | シャツ | シャツ | shatsu | N5 | shirt (undergarment); undershirt; singlet | [short](https://youtube.com/shorts/o-P_WBTdp4k) | — |
 | 2026-10-10 | 3 | 使う | つかう | tsukau | N5 | to use (a tool, method, etc.); to make use of; to put to use | [short](https://youtube.com/shorts/Wf2XniUX4I8) | — |
 | 2026-10-11 | 0 | 眩暈 | めまい | memai | N2 | dizziness; giddiness; vertigo | [short](https://youtube.com/shorts/-TZmIbReRiM) | — |
+| 2026-10-11 | 1 | 眩暈 | めまい | memai | N2 | dizziness; giddiness; vertigo | [short](https://youtube.com/shorts/zbUKYtR_VNk) | — |
