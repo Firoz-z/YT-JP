@@ -636,3 +636,4 @@ by the pipeline after each successful upload.
 | 2026-10-11 | 2 | 眩暈 | めまい | memai | N2 | dizziness; giddiness; vertigo | [short](https://youtube.com/shorts/xHc_0cxTwFU) | — |
 | 2026-10-11 | 3 | 珈琲 | コーヒー | koohii | N5 | coffee | [short](https://youtube.com/shorts/fy7_fjngUic) | — |
 | 2026-10-12 | 0 | 珈琲 | コーヒー | koohii | N5 | coffee | [short](https://youtube.com/shorts/r8OGIB4cV5o) | — |
+| 2026-10-13 | 1 | 眩暈 | めまい | memai | N2 | dizziness; giddiness; vertigo | [short](https://youtube.com/shorts/0Jq0gBfhQGg) | — |
