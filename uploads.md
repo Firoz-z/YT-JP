@@ -642,3 +642,4 @@ by the pipeline after each successful upload.
 | 2026-10-14 | 0 | 眩暈 | めまい | memai | N2 | dizziness; giddiness; vertigo | [short](https://youtube.com/shorts/QLHLU_Ltjs8) | — |
 | 2026-10-14 | 1 | 蜜柑 | みかん | mikan | — | mandarin (esp. the satsuma mandarin (Citrus unshiu)); mandarin orange; tangerine | [short](https://youtube.com/shorts/dSkgbIgeYEw) | — |
 | 2026-10-14 | 2 | 蜜柑 | みかん | mikan | — | mandarin (esp. the satsuma mandarin (Citrus unshiu)); mandarin orange; tangerine | [short](https://youtube.com/shorts/8gCpXyIzFk8) | — |
+| 2026-10-14 | 3 | 嚏 | くしゃみ | kushami | N2 | sneeze; sneezing | [short](https://youtube.com/shorts/Y_A_2Fy5T_M) | — |
