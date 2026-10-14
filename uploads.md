@@ -639,3 +639,4 @@ by the pipeline after each successful upload.
 | 2026-10-13 | 1 | 眩暈 | めまい | memai | N2 | dizziness; giddiness; vertigo | [short](https://youtube.com/shorts/0Jq0gBfhQGg) | — |
 | 2026-10-13 | 2 | お土産 | おみやげ | omiyage | N4 | local specialty or souvenir bought as a gift while traveling (travelling) | [short](https://youtube.com/shorts/4_ShMiAjHDI) | — |
 | 2026-10-13 | 3 | 眩暈 | めまい | memai | N2 | dizziness; giddiness; vertigo | [short](https://youtube.com/shorts/wrhoQlAtQsI) | — |
+| 2026-10-14 | 0 | 眩暈 | めまい | memai | N2 | dizziness; giddiness; vertigo | [short](https://youtube.com/shorts/QLHLU_Ltjs8) | — |
