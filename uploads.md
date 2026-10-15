@@ -644,3 +644,4 @@ by the pipeline after each successful upload.
 | 2026-10-14 | 2 | 蜜柑 | みかん | mikan | — | mandarin (esp. the satsuma mandarin (Citrus unshiu)); mandarin orange; tangerine | [short](https://youtube.com/shorts/8gCpXyIzFk8) | — |
 | 2026-10-14 | 3 | 嚏 | くしゃみ | kushami | N2 | sneeze; sneezing | [short](https://youtube.com/shorts/Y_A_2Fy5T_M) | — |
 | 2026-10-15 | 0 | 嚏 | くしゃみ | kushami | N2 | sneeze; sneezing | [short](https://youtube.com/shorts/5uqtBg-04HU) | — |
+| 2026-10-15 | 1 | 働く | はたらく | hataraku | N5 | to work; to labor; to labour | [short](https://youtube.com/shorts/ox8XWDdDew8) | — |
