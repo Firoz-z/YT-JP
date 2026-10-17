@@ -652,3 +652,4 @@ by the pipeline after each successful upload.
 | 2026-10-16 | 3 | 洋袴 | ズボン | zubon | N5 | trousers; pants | [short](https://youtube.com/shorts/BSTBoDX-6uI) | — |
 | 2026-10-17 | 0 | 洋袴 | ズボン | zubon | N5 | trousers; pants | [short](https://youtube.com/shorts/KRsIwGAIhuY) | — |
 | 2026-10-17 | 1 | 嚏 | くしゃみ | kushami | N2 | sneeze; sneezing | [short](https://youtube.com/shorts/2Q1nNkPToCQ) | — |
+| 2026-10-17 | 2 | 嚏 | くしゃみ | kushami | N2 | sneeze; sneezing | [short](https://youtube.com/shorts/b0Afq5atcYc) | — |
