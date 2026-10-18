@@ -654,3 +654,4 @@ by the pipeline after each successful upload.
 | 2026-10-17 | 1 | 嚏 | くしゃみ | kushami | N2 | sneeze; sneezing | [short](https://youtube.com/shorts/2Q1nNkPToCQ) | — |
 | 2026-10-17 | 2 | 嚏 | くしゃみ | kushami | N2 | sneeze; sneezing | [short](https://youtube.com/shorts/b0Afq5atcYc) | — |
 | 2026-10-17 | 2 | 嚏 | くしゃみ | kushami | N2 | sneeze; sneezing | [short](https://youtube.com/shorts/CGAbQNUJfPg) | — |
+| 2026-10-18 | 0 | 予約 | よやく | yoyaku | N4 | reservation; appointment; booking | [short](https://youtube.com/shorts/x5HVwjADnEQ) | — |
