@@ -656,3 +656,4 @@ by the pipeline after each successful upload.
 | 2026-10-17 | 2 | 嚏 | くしゃみ | kushami | N2 | sneeze; sneezing | [short](https://youtube.com/shorts/CGAbQNUJfPg) | — |
 | 2026-10-18 | 0 | 予約 | よやく | yoyaku | N4 | reservation; appointment; booking | [short](https://youtube.com/shorts/x5HVwjADnEQ) | — |
 | 2026-10-18 | 1 | 只今 | ただいま | tadaima | — | I'm home!; I'm back!; it's me! | [short](https://youtube.com/shorts/WPdY_xteWcg) | — |
+| 2026-10-18 | 2 | 眩暈 | めまい | memai | N2 | dizziness; giddiness; vertigo | [short](https://youtube.com/shorts/2916TOhvPOY) | — |
