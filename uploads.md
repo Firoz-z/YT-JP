@@ -660,3 +660,4 @@ by the pipeline after each successful upload.
 | 2026-10-18 | 2 | 眩暈 | めまい | memai | N2 | dizziness; giddiness; vertigo | [short](https://youtube.com/shorts/1wd-vWUjGm0) | — |
 | 2026-10-19 | 0 | 眩暈 | めまい | memai | N2 | dizziness; giddiness; vertigo | [short](https://youtube.com/shorts/uHZMYpbp4m8) | — |
 | 2026-10-19 | 1 | 眩暈 | めまい | memai | N2 | dizziness; giddiness; vertigo | [short](https://youtube.com/shorts/zrm0c3BYTFo) | — |
+| 2026-10-19 | 2 | 幾ら | いくら | ikura | N3 | how much | [short](https://youtube.com/shorts/rwlfuwyGi0o) | — |
