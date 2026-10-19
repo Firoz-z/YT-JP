@@ -658,3 +658,4 @@ by the pipeline after each successful upload.
 | 2026-10-18 | 1 | 只今 | ただいま | tadaima | — | I'm home!; I'm back!; it's me! | [short](https://youtube.com/shorts/WPdY_xteWcg) | — |
 | 2026-10-18 | 2 | 眩暈 | めまい | memai | N2 | dizziness; giddiness; vertigo | [short](https://youtube.com/shorts/2916TOhvPOY) | — |
 | 2026-10-18 | 2 | 眩暈 | めまい | memai | N2 | dizziness; giddiness; vertigo | [short](https://youtube.com/shorts/1wd-vWUjGm0) | — |
+| 2026-10-19 | 0 | 眩暈 | めまい | memai | N2 | dizziness; giddiness; vertigo | [short](https://youtube.com/shorts/uHZMYpbp4m8) | — |
