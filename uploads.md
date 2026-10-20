@@ -665,3 +665,4 @@ by the pipeline after each successful upload.
 | 2026-10-20 | 0 | 眩暈 | めまい | memai | N2 | dizziness; giddiness; vertigo | [short](https://youtube.com/shorts/SwP8neXj8vs) | — |
 | 2026-10-20 | 1 | 楽しい | たのしい | tanoshii | N5 | enjoyable; fun; pleasant | [short](https://youtube.com/shorts/8XjIeiFhBPE) | — |
 | 2026-10-20 | 2 | 知る | しる | shiru | N5 | to know; to be aware (of); to be conscious (of) | [short](https://youtube.com/shorts/rCzgI4rS0vU) | — |
+| 2026-10-20 | 3 | 眩暈 | めまい | memai | N2 | dizziness; giddiness; vertigo | [short](https://youtube.com/shorts/jT6re0rAbdM) | — |
