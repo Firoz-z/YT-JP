@@ -668,3 +668,4 @@ by the pipeline after each successful upload.
 | 2026-10-20 | 3 | 眩暈 | めまい | memai | N2 | dizziness; giddiness; vertigo | [short](https://youtube.com/shorts/jT6re0rAbdM) | — |
 | 2026-10-21 | 0 | 眩暈 | めまい | memai | N2 | dizziness; giddiness; vertigo | [short](https://youtube.com/shorts/QnVVNsh-bts) | — |
 | 2026-10-21 | 1 | 眩暈 | めまい | memai | N2 | dizziness; giddiness; vertigo | [short](https://youtube.com/shorts/QpENGn63r7M) | — |
+| 2026-10-21 | 2 | 眩暈 | めまい | memai | N2 | dizziness; giddiness; vertigo | [short](https://youtube.com/shorts/SmIDms7wuUI) | — |
