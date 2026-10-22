@@ -670,3 +670,4 @@ by the pipeline after each successful upload.
 | 2026-10-21 | 1 | 眩暈 | めまい | memai | N2 | dizziness; giddiness; vertigo | [short](https://youtube.com/shorts/QpENGn63r7M) | — |
 | 2026-10-21 | 2 | 眩暈 | めまい | memai | N2 | dizziness; giddiness; vertigo | [short](https://youtube.com/shorts/SmIDms7wuUI) | — |
 | 2026-10-21 | 3 | 眩暈 | めまい | memai | N2 | dizziness; giddiness; vertigo | [short](https://youtube.com/shorts/T_8j6aJ1Fkc) | — |
+| 2026-10-22 | 0 | 歩く | あるく | aruku | N5 | to walk | [short](https://youtube.com/shorts/73lhbt5nn0o) | — |
