@@ -675,3 +675,4 @@ by the pipeline after each successful upload.
 | 2026-10-22 | 2 | 眩暈 | めまい | memai | N2 | dizziness; giddiness; vertigo | [short](https://youtube.com/shorts/PJEC4N5hBkQ) | — |
 | 2026-10-22 | 3 | 眩暈 | めまい | memai | N2 | dizziness; giddiness; vertigo | [short](https://youtube.com/shorts/7gVOqBYueUo) | — |
 | 2026-10-23 | 0 | 眩暈 | めまい | memai | N2 | dizziness; giddiness; vertigo | [short](https://youtube.com/shorts/GdxSPSDdrLA) | — |
+| 2026-10-23 | 1 | 閉める | しめる | shimeru | N5 | to close; to shut | [short](https://youtube.com/shorts/WRCHL4mt9yA) | — |
