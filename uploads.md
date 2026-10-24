@@ -679,3 +679,4 @@ by the pipeline after each successful upload.
 | 2026-10-23 | 2 | 眩暈 | めまい | memai | N2 | dizziness; giddiness; vertigo | [short](https://youtube.com/shorts/CzIEp9AuGT4) | — |
 | 2026-10-23 | 3 | 町 | まち | machi | N3 | town; block; neighbourhood | [short](https://youtube.com/shorts/VWujXrwsBNI) | — |
 | 2026-10-24 | 0 | 眩暈 | めまい | memai | N2 | dizziness; giddiness; vertigo | [short](https://youtube.com/shorts/W_oA8WyW8XU) | — |
+| 2026-10-24 | 1 | 眩暈 | めまい | memai | N2 | dizziness; giddiness; vertigo | [short](https://youtube.com/shorts/l4cba-nHG7Q) | — |
