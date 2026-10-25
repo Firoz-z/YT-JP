@@ -685,3 +685,4 @@ by the pipeline after each successful upload.
 | 2026-10-25 | 0 | 百 | ひゃく | hyaku | N5 | hundred; 100 | [short](https://youtube.com/shorts/HfyblD8H4fw) | — |
 | 2026-10-25 | 1 | 眩暈 | めまい | memai | N2 | dizziness; giddiness; vertigo | [short](https://youtube.com/shorts/rAicONLqIV8) | — |
 | 2026-10-25 | 2 | 眩暈 | めまい | memai | N2 | dizziness; giddiness; vertigo | [short](https://youtube.com/shorts/AxBNw5p53rc) | — |
+| 2026-10-25 | 2 | 眩暈 | めまい | memai | N2 | dizziness; giddiness; vertigo | [short](https://youtube.com/shorts/tTTpVDk9gLE) | — |
