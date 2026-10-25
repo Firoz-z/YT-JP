@@ -683,3 +683,4 @@ by the pipeline after each successful upload.
 | 2026-10-24 | 2 | 眩暈 | めまい | memai | N2 | dizziness; giddiness; vertigo | [short](https://youtube.com/shorts/Vl66Vpq1MDc) | — |
 | 2026-10-24 | 3 | 帰る | かえる | kaeru | N5 | to return; to come home; to go home | [short](https://youtube.com/shorts/fY-IU2aNuXY) | — |
 | 2026-10-25 | 0 | 百 | ひゃく | hyaku | N5 | hundred; 100 | [short](https://youtube.com/shorts/HfyblD8H4fw) | — |
+| 2026-10-25 | 1 | 眩暈 | めまい | memai | N2 | dizziness; giddiness; vertigo | [short](https://youtube.com/shorts/rAicONLqIV8) | — |
