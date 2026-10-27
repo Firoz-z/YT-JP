@@ -693,3 +693,4 @@ by the pipeline after each successful upload.
 | 2026-10-27 | 0 | 眩暈 | めまい | memai | N2 | dizziness; giddiness; vertigo | [short](https://youtube.com/shorts/H6qygLEiQwc) | — |
 | 2026-10-27 | 1 | 眩暈 | めまい | memai | N2 | dizziness; giddiness; vertigo | [short](https://youtube.com/shorts/gpmHS7ZCpaY) | — |
 | 2026-10-27 | 2 | 男 | おとこ | otoko | N5 | man; male | [short](https://youtube.com/shorts/TvBsXiQmPUU) | — |
+| 2026-10-27 | 3 | 眩暈 | めまい | memai | N2 | dizziness; giddiness; vertigo | [short](https://youtube.com/shorts/kimnIBunP1Y) | — |
