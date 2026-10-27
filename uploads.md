@@ -691,3 +691,4 @@ by the pipeline after each successful upload.
 | 2026-10-26 | 2 | 眩暈 | めまい | memai | N2 | dizziness; giddiness; vertigo | [short](https://youtube.com/shorts/zJJylhrAJAA) | — |
 | 2026-10-26 | 3 | 電車 | でんしゃ | densha | N5 | train; electric train | [short](https://youtube.com/shorts/s5qkX-mjmYM) | — |
 | 2026-10-27 | 0 | 眩暈 | めまい | memai | N2 | dizziness; giddiness; vertigo | [short](https://youtube.com/shorts/H6qygLEiQwc) | — |
+| 2026-10-27 | 1 | 眩暈 | めまい | memai | N2 | dizziness; giddiness; vertigo | [short](https://youtube.com/shorts/gpmHS7ZCpaY) | — |
