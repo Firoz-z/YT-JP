@@ -696,3 +696,4 @@ by the pipeline after each successful upload.
 | 2026-10-27 | 3 | 眩暈 | めまい | memai | N2 | dizziness; giddiness; vertigo | [short](https://youtube.com/shorts/kimnIBunP1Y) | — |
 | 2026-10-28 | 0 | 店 | みせ | mise | N5 | store; shop; establishment | [short](https://youtube.com/shorts/-7sWLptSYMo) | — |
 | 2026-10-28 | 1 | 眩暈 | めまい | memai | N2 | dizziness; giddiness; vertigo | [short](https://youtube.com/shorts/f3YWQdMIIZI) | — |
+| 2026-10-28 | 2 | 有難う | ありがとう | arigatou | N3 | thank you; thanks | [short](https://youtube.com/shorts/beXFEZWN3kY) | — |
