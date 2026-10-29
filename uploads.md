@@ -699,3 +699,4 @@ by the pipeline after each successful upload.
 | 2026-10-28 | 2 | 有難う | ありがとう | arigatou | N3 | thank you; thanks | [short](https://youtube.com/shorts/beXFEZWN3kY) | — |
 | 2026-10-28 | 3 | 眩暈 | めまい | memai | N2 | dizziness; giddiness; vertigo | [short](https://youtube.com/shorts/JMZCFDq0_sw) | — |
 | 2026-10-29 | 0 | 有難う | ありがとう | arigatou | N3 | thank you; thanks | [short](https://youtube.com/shorts/rXdFfFk9xmA) | — |
+| 2026-10-29 | 1 | 有難う | ありがとう | arigatou | N3 | thank you; thanks | [short](https://youtube.com/shorts/PnHgBtxfvcw) | — |
