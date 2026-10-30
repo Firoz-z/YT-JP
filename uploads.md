@@ -704,3 +704,4 @@ by the pipeline after each successful upload.
 | 2026-10-29 | 3 | 有難う | ありがとう | arigatou | N3 | thank you; thanks | [short](https://youtube.com/shorts/qhPSmL_Q0z8) | — |
 | 2026-10-30 | 0 | 不味い | まずい | mazui | N1 | bad(-tasting); unpalatable; unsavoury | [short](https://youtube.com/shorts/57_L7uYuW5s) | — |
 | 2026-10-30 | 1 | 不味い | まずい | mazui | N1 | bad(-tasting); unpalatable; unsavoury | [short](https://youtube.com/shorts/gkYabB_Zr6g) | — |
+| 2026-10-30 | 2 | 不味い | まずい | mazui | N1 | bad(-tasting); unpalatable; unsavoury | [short](https://youtube.com/shorts/tQ4RkIjS4kE) | — |
