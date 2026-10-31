@@ -709,3 +709,4 @@ by the pipeline after each successful upload.
 | 2026-10-31 | 0 | ネズミ | ネズミ | nezumi | N3 | mouse; rat | [short](https://youtube.com/shorts/DVUeWdhYg34) | — |
 | 2026-10-31 | 1 | 不味い | まずい | mazui | N1 | bad(-tasting); unpalatable; unsavoury | [short](https://youtube.com/shorts/1ig8wnjtBU4) | — |
 | 2026-10-31 | 2 | 不味い | まずい | mazui | N1 | bad(-tasting); unpalatable; unsavoury | [short](https://youtube.com/shorts/9tedbjTHtP0) | — |
+| 2026-10-31 | 3 | 秒 | びょう | byou | N3 | second (unit of time) | [short](https://youtube.com/shorts/J3wFkymwuM0) | — |
