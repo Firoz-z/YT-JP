@@ -712,3 +712,4 @@ by the pipeline after each successful upload.
 | 2026-10-31 | 3 | 秒 | びょう | byou | N3 | second (unit of time) | [short](https://youtube.com/shorts/J3wFkymwuM0) | — |
 | 2026-11-01 | 0 | 嚏 | くしゃみ | kushami | N2 | sneeze; sneezing | [short](https://youtube.com/shorts/OCY9Dt_x1oo) | — |
 | 2026-11-01 | 1 | 嚏 | くしゃみ | kushami | N2 | sneeze; sneezing | [short](https://youtube.com/shorts/9w7hl8z-Jps) | — |
+| 2026-11-01 | 2 | 嚏 | くしゃみ | kushami | N2 | sneeze; sneezing | [short](https://youtube.com/shorts/MLMhIydyHd8) | — |
