@@ -718,3 +718,4 @@ by the pipeline after each successful upload.
 | 2026-11-02 | 2 | 帽子 | ぼうし | boushi | N5 | hat; cap | [short](https://youtube.com/shorts/z0k2GUzfCKs) | — |
 | 2026-11-02 | 3 | 為る | する | suru | N3 | to do; to carry out; to perform | [short](https://youtube.com/shorts/xLlv94CMC_Y) | — |
 | 2026-11-03 | 0 | 嚏 | くしゃみ | kushami | N2 | sneeze; sneezing | [short](https://youtube.com/shorts/ZZUYyL1NBRc) | — |
+| 2026-11-03 | 0 | 嚏 | くしゃみ | kushami | N2 | sneeze; sneezing | [short](https://youtube.com/shorts/O3t-5EluEUI) | — |
