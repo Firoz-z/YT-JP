@@ -725,3 +725,4 @@ by the pipeline after each successful upload.
 | 2026-11-04 | 0 | 嚏 | くしゃみ | kushami | N2 | sneeze; sneezing | [short](https://youtube.com/shorts/Pwf_8LzD2wo) | — |
 | 2026-11-04 | 1 | 嚏 | くしゃみ | kushami | N2 | sneeze; sneezing | [short](https://youtube.com/shorts/dyZ9U1Tzs-0) | — |
 | 2026-11-04 | 2 | 嚏 | くしゃみ | kushami | N2 | sneeze; sneezing | [short](https://youtube.com/shorts/v9odvbxmawI) | — |
+| 2026-11-05 | 0 | 雷 | かみなり | kaminari | N3 | lightning; thunder; thunderbolt | [short](https://youtube.com/shorts/4_yoO21p3Do) | — |
