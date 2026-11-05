@@ -727,3 +727,4 @@ by the pipeline after each successful upload.
 | 2026-11-04 | 2 | 嚏 | くしゃみ | kushami | N2 | sneeze; sneezing | [short](https://youtube.com/shorts/v9odvbxmawI) | — |
 | 2026-11-05 | 0 | 雷 | かみなり | kaminari | N3 | lightning; thunder; thunderbolt | [short](https://youtube.com/shorts/4_yoO21p3Do) | — |
 | 2026-11-05 | 0 | 午後 | ごご | gogo | N5 | afternoon; p.m. | [short](https://youtube.com/shorts/mKGJYkBlblg) | — |
+| 2026-11-05 | 1 | 嚏 | くしゃみ | kushami | N2 | sneeze; sneezing | [short](https://youtube.com/shorts/WBq0StMr8eQ) | — |
