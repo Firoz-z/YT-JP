@@ -729,3 +729,4 @@ by the pipeline after each successful upload.
 | 2026-11-05 | 0 | 午後 | ごご | gogo | N5 | afternoon; p.m. | [short](https://youtube.com/shorts/mKGJYkBlblg) | — |
 | 2026-11-05 | 1 | 嚏 | くしゃみ | kushami | N2 | sneeze; sneezing | [short](https://youtube.com/shorts/WBq0StMr8eQ) | — |
 | 2026-11-05 | 2 | 嚏 | くしゃみ | kushami | N2 | sneeze; sneezing | [short](https://youtube.com/shorts/63TzSLUPs2M) | — |
+| 2026-11-06 | 0 | 嚏 | くしゃみ | kushami | N2 | sneeze; sneezing | [short](https://youtube.com/shorts/mNnLrcFOjGk) | — |
