@@ -737,3 +737,4 @@ by the pipeline after each successful upload.
 | 2026-11-07 | 0 | 嚏 | くしゃみ | kushami | N2 | sneeze; sneezing | [short](https://youtube.com/shorts/ziLSFR1Gtr4) | — |
 | 2026-11-07 | 1 | 嚏 | くしゃみ | kushami | N2 | sneeze; sneezing | [short](https://youtube.com/shorts/NPr76WABYQg) | — |
 | 2026-11-07 | 2 | 妻 | つま | tsuma | N4 | wife | [short](https://youtube.com/shorts/-aC9UuqNaoA) | — |
+| 2026-11-07 | 3 | 嚏 | くしゃみ | kushami | N2 | sneeze; sneezing | [short](https://youtube.com/shorts/iqnC60ODRIE) | — |
