@@ -735,3 +735,4 @@ by the pipeline after each successful upload.
 | 2026-11-06 | 2 | 嚏 | くしゃみ | kushami | N2 | sneeze; sneezing | [short](https://youtube.com/shorts/2h5tEW5tUko) | — |
 | 2026-11-07 | 0 | 嚏 | くしゃみ | kushami | N2 | sneeze; sneezing | [short](https://youtube.com/shorts/hBSALqnQlpA) | — |
 | 2026-11-07 | 0 | 嚏 | くしゃみ | kushami | N2 | sneeze; sneezing | [short](https://youtube.com/shorts/ziLSFR1Gtr4) | — |
+| 2026-11-07 | 1 | 嚏 | くしゃみ | kushami | N2 | sneeze; sneezing | [short](https://youtube.com/shorts/NPr76WABYQg) | — |
