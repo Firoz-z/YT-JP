@@ -740,3 +740,4 @@ by the pipeline after each successful upload.
 | 2026-11-07 | 3 | 嚏 | くしゃみ | kushami | N2 | sneeze; sneezing | [short](https://youtube.com/shorts/iqnC60ODRIE) | — |
 | 2026-11-08 | 0 | 鳥 | とり | tori | N5 | bird | [short](https://youtube.com/shorts/ggGTGb5m8YM) | — |
 | 2026-11-08 | 1 | 嚏 | くしゃみ | kushami | N2 | sneeze; sneezing | [short](https://youtube.com/shorts/4FiO_k-UIXw) | — |
+| 2026-11-08 | 2 | 鳥 | とり | tori | N5 | bird | [short](https://youtube.com/shorts/1R_vv9Oftz0) | — |
