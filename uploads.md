@@ -742,3 +742,4 @@ by the pipeline after each successful upload.
 | 2026-11-08 | 1 | 嚏 | くしゃみ | kushami | N2 | sneeze; sneezing | [short](https://youtube.com/shorts/4FiO_k-UIXw) | — |
 | 2026-11-08 | 2 | 鳥 | とり | tori | N5 | bird | [short](https://youtube.com/shorts/1R_vv9Oftz0) | — |
 | 2026-11-08 | 3 | 母 | はは | haha | — | mother | [short](https://youtube.com/shorts/yWDCith3gC8) | — |
+| 2026-11-09 | 0 | 親 | おや | oya | N4 | parent; parents; mother and father | [short](https://youtube.com/shorts/hHZIgK4UFf0) | — |
