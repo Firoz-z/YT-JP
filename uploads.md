@@ -744,3 +744,4 @@ by the pipeline after each successful upload.
 | 2026-11-08 | 3 | 母 | はは | haha | — | mother | [short](https://youtube.com/shorts/yWDCith3gC8) | — |
 | 2026-11-09 | 0 | 親 | おや | oya | N4 | parent; parents; mother and father | [short](https://youtube.com/shorts/hHZIgK4UFf0) | — |
 | 2026-11-09 | 3 | 眩暈 | めまい | memai | N2 | dizziness; giddiness; vertigo | [short](https://youtube.com/shorts/_iNtjLjS1BE) | — |
+| 2026-11-10 | 0 | 眩暈 | めまい | memai | N2 | dizziness; giddiness; vertigo | [short](https://youtube.com/shorts/1k03mJwqbS0) | — |
