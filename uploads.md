@@ -755,3 +755,4 @@ by the pipeline after each successful upload.
 | 2026-11-12 | 2 | 眩暈 | めまい | memai | N2 | dizziness; giddiness; vertigo | [short](https://youtube.com/shorts/_LpFOinX5FQ) | — |
 | 2026-11-12 | 2 | 眩暈 | めまい | memai | N2 | dizziness; giddiness; vertigo | [short](https://youtube.com/shorts/ZkJWos7Ta_Q) | — |
 | 2026-11-13 | 0 | 凄い | すごい | sugoi | N4 | terrible; dreadful | [short](https://youtube.com/shorts/XS3HRmxcXWQ) | — |
+| 2026-11-13 | 0 | 凄い | すごい | sugoi | N4 | terrible; dreadful | [short](https://youtube.com/shorts/VuqGpGjjJw8) | — |
