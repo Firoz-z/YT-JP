@@ -762,3 +762,4 @@ by the pipeline after each successful upload.
 | 2026-11-14 | 0 | スポーツ | スポーツ | supootsu | N5 | sport; sports | [short](https://youtube.com/shorts/x8T7yIZGSEU) | — |
 | 2026-11-14 | 1 | 眩暈 | めまい | memai | N2 | dizziness; giddiness; vertigo | [short](https://youtube.com/shorts/0tntyjX5_Xs) | — |
 | 2026-11-14 | 2 | 眩暈 | めまい | memai | N2 | dizziness; giddiness; vertigo | [short](https://youtube.com/shorts/0cN8vudUMoY) | — |
+| 2026-11-14 | 3 | 眩暈 | めまい | memai | N2 | dizziness; giddiness; vertigo | [short](https://youtube.com/shorts/GzV0Nf8wk6c) | — |
