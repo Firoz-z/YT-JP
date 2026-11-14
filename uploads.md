@@ -759,3 +759,4 @@ by the pipeline after each successful upload.
 | 2026-11-13 | 1 | 眩暈 | めまい | memai | N2 | dizziness; giddiness; vertigo | [short](https://youtube.com/shorts/uYJI_dd4vr4) | — |
 | 2026-11-13 | 2 | 眩暈 | めまい | memai | N2 | dizziness; giddiness; vertigo | [short](https://youtube.com/shorts/Cy0Yq-f_fSE) | — |
 | 2026-11-14 | 0 | 年 | とし | toshi | N5 | year | [short](https://youtube.com/shorts/lpCpYhMyIyo) | — |
+| 2026-11-14 | 0 | スポーツ | スポーツ | supootsu | N5 | sport; sports | [short](https://youtube.com/shorts/x8T7yIZGSEU) | — |
