@@ -766,3 +766,4 @@ by the pipeline after each successful upload.
 | 2026-11-15 | 0 | 眩暈 | めまい | memai | N2 | dizziness; giddiness; vertigo | [short](https://youtube.com/shorts/FjoGcx9OkwM) | — |
 | 2026-11-15 | 1 | 眩暈 | めまい | memai | N2 | dizziness; giddiness; vertigo | [short](https://youtube.com/shorts/dnhln7rR5GQ) | — |
 | 2026-11-15 | 2 | 眩暈 | めまい | memai | N2 | dizziness; giddiness; vertigo | [short](https://youtube.com/shorts/vsm807I8h3M) | — |
+| 2026-11-15 | 3 | 宜しく | よろしく | yoroshiku | N3 | well; properly; suitably | [short](https://youtube.com/shorts/sDo3555r6Bg) | — |
