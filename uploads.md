@@ -772,3 +772,4 @@ by the pipeline after each successful upload.
 | 2026-11-16 | 3 | 公園 | こうえん | kouen | N5 | (public) park | [short](https://youtube.com/shorts/W5UYpeQ_-PM) | — |
 | 2026-11-17 | 0 | 眩暈 | めまい | memai | N2 | dizziness; giddiness; vertigo | [short](https://youtube.com/shorts/92YAfk_3v6k) | — |
 | 2026-11-17 | 0 | 眩暈 | めまい | memai | N2 | dizziness; giddiness; vertigo | [short](https://youtube.com/shorts/ZBvvAlUB-_E) | — |
+| 2026-11-17 | 2 | 眩暈 | めまい | memai | N2 | dizziness; giddiness; vertigo | [short](https://youtube.com/shorts/waogIvQ35Pw) | — |
