@@ -770,3 +770,4 @@ by the pipeline after each successful upload.
 | 2026-11-16 | 0 | 眩暈 | めまい | memai | N2 | dizziness; giddiness; vertigo | [short](https://youtube.com/shorts/3kI_1NqKVnA) | — |
 | 2026-11-16 | 2 | 宜しく | よろしく | yoroshiku | N3 | well; properly; suitably | [short](https://youtube.com/shorts/OTVpk6urXN4) | — |
 | 2026-11-16 | 3 | 公園 | こうえん | kouen | N5 | (public) park | [short](https://youtube.com/shorts/W5UYpeQ_-PM) | — |
+| 2026-11-17 | 0 | 眩暈 | めまい | memai | N2 | dizziness; giddiness; vertigo | [short](https://youtube.com/shorts/92YAfk_3v6k) | — |
