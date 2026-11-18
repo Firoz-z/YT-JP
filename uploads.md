@@ -775,3 +775,4 @@ by the pipeline after each successful upload.
 | 2026-11-17 | 2 | 眩暈 | めまい | memai | N2 | dizziness; giddiness; vertigo | [short](https://youtube.com/shorts/waogIvQ35Pw) | — |
 | 2026-11-17 | 3 | 教室 | きょうしつ | kyoushitsu | N5 | classroom; lecture room | [short](https://youtube.com/shorts/1QGEWR5Ji5w) | — |
 | 2026-11-18 | 0 | 眩暈 | めまい | memai | N2 | dizziness; giddiness; vertigo | [short](https://youtube.com/shorts/1l5GbSpZ-dw) | — |
+| 2026-11-18 | 0 | 眩暈 | めまい | memai | N2 | dizziness; giddiness; vertigo | [short](https://youtube.com/shorts/bKNZF2RPRzc) | — |
