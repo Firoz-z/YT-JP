@@ -776,3 +776,4 @@ by the pipeline after each successful upload.
 | 2026-11-17 | 3 | 教室 | きょうしつ | kyoushitsu | N5 | classroom; lecture room | [short](https://youtube.com/shorts/1QGEWR5Ji5w) | — |
 | 2026-11-18 | 0 | 眩暈 | めまい | memai | N2 | dizziness; giddiness; vertigo | [short](https://youtube.com/shorts/1l5GbSpZ-dw) | — |
 | 2026-11-18 | 0 | 眩暈 | めまい | memai | N2 | dizziness; giddiness; vertigo | [short](https://youtube.com/shorts/bKNZF2RPRzc) | — |
+| 2026-11-18 | 2 | メガネ | メガネ | megane | N1 | glasses; eyeglasses; spectacles | [short](https://youtube.com/shorts/r7fVcdywZa4) | — |
