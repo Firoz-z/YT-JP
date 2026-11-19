@@ -781,3 +781,4 @@ by the pipeline after each successful upload.
 | 2026-11-19 | 0 | 眩暈 | めまい | memai | N2 | dizziness; giddiness; vertigo | [short](https://youtube.com/shorts/Q_8X07mjDyw) | — |
 | 2026-11-19 | 0 | 眩暈 | めまい | memai | N2 | dizziness; giddiness; vertigo | [short](https://youtube.com/shorts/n29ye5udluc) | — |
 | 2026-11-19 | 2 | 手 | て | te | N5 | hand; arm | [short](https://youtube.com/shorts/eqzGHqzOZaM) | — |
+| 2026-11-19 | 3 | 眩暈 | めまい | memai | N2 | dizziness; giddiness; vertigo | [short](https://youtube.com/shorts/bWMPR9aDIS0) | — |
