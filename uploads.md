@@ -778,3 +778,4 @@ by the pipeline after each successful upload.
 | 2026-11-18 | 0 | 眩暈 | めまい | memai | N2 | dizziness; giddiness; vertigo | [short](https://youtube.com/shorts/bKNZF2RPRzc) | — |
 | 2026-11-18 | 2 | メガネ | メガネ | megane | N1 | glasses; eyeglasses; spectacles | [short](https://youtube.com/shorts/r7fVcdywZa4) | — |
 | 2026-11-18 | 2 | メガネ | メガネ | megane | N1 | glasses; eyeglasses; spectacles | [short](https://youtube.com/shorts/JrsDmp0IGOU) | — |
+| 2026-11-19 | 0 | 眩暈 | めまい | memai | N2 | dizziness; giddiness; vertigo | [short](https://youtube.com/shorts/Q_8X07mjDyw) | — |
