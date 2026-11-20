@@ -784,3 +784,4 @@ by the pipeline after each successful upload.
 | 2026-11-19 | 3 | 眩暈 | めまい | memai | N2 | dizziness; giddiness; vertigo | [short](https://youtube.com/shorts/bWMPR9aDIS0) | — |
 | 2026-11-20 | 0 | 如何して | どうして | doushite | N1 | how; in what way; by what means | [short](https://youtube.com/shorts/bF5JbED81vU) | — |
 | 2026-11-20 | 0 | 如何して | どうして | doushite | N1 | how; in what way; by what means | [short](https://youtube.com/shorts/eHuQEeeAsmc) | — |
+| 2026-11-20 | 2 | 人 | ひと | hito | N5 | person; someone; somebody | [short](https://youtube.com/shorts/zVJzoersxxY) | — |
