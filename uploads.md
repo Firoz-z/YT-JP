@@ -782,3 +782,4 @@ by the pipeline after each successful upload.
 | 2026-11-19 | 0 | 眩暈 | めまい | memai | N2 | dizziness; giddiness; vertigo | [short](https://youtube.com/shorts/n29ye5udluc) | — |
 | 2026-11-19 | 2 | 手 | て | te | N5 | hand; arm | [short](https://youtube.com/shorts/eqzGHqzOZaM) | — |
 | 2026-11-19 | 3 | 眩暈 | めまい | memai | N2 | dizziness; giddiness; vertigo | [short](https://youtube.com/shorts/bWMPR9aDIS0) | — |
+| 2026-11-20 | 0 | 如何して | どうして | doushite | N1 | how; in what way; by what means | [short](https://youtube.com/shorts/bF5JbED81vU) | — |
