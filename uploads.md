@@ -787,3 +787,4 @@ by the pipeline after each successful upload.
 | 2026-11-20 | 2 | 人 | ひと | hito | N5 | person; someone; somebody | [short](https://youtube.com/shorts/zVJzoersxxY) | — |
 | 2026-11-20 | 3 | 嚏 | くしゃみ | kushami | N2 | sneeze; sneezing | [short](https://youtube.com/shorts/fgx3g1ls9SQ) | — |
 | 2026-11-21 | 0 | 嚏 | くしゃみ | kushami | N2 | sneeze; sneezing | [short](https://youtube.com/shorts/k4VQpbfFBcs) | — |
+| 2026-11-21 | 0 | 嚏 | くしゃみ | kushami | N2 | sneeze; sneezing | [short](https://youtube.com/shorts/P70D8pJrk7Y) | — |
