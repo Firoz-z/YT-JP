@@ -786,3 +786,4 @@ by the pipeline after each successful upload.
 | 2026-11-20 | 0 | 如何して | どうして | doushite | N1 | how; in what way; by what means | [short](https://youtube.com/shorts/eHuQEeeAsmc) | — |
 | 2026-11-20 | 2 | 人 | ひと | hito | N5 | person; someone; somebody | [short](https://youtube.com/shorts/zVJzoersxxY) | — |
 | 2026-11-20 | 3 | 嚏 | くしゃみ | kushami | N2 | sneeze; sneezing | [short](https://youtube.com/shorts/fgx3g1ls9SQ) | — |
+| 2026-11-21 | 0 | 嚏 | くしゃみ | kushami | N2 | sneeze; sneezing | [short](https://youtube.com/shorts/k4VQpbfFBcs) | — |
