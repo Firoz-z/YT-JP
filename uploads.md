@@ -791,3 +791,4 @@ by the pipeline after each successful upload.
 | 2026-11-21 | 1 | 飲み物 | のみもの | nomimono | N5 | drink; beverage | [short](https://youtube.com/shorts/wgEwK8-kzSs) | — |
 | 2026-11-21 | 2 | 服 | ふく | fuku | N5 | clothes (esp. Western clothes); clothing; dress | [short](https://youtube.com/shorts/g7AvRfltYNQ) | — |
 | 2026-11-21 | 3 | 嚏 | くしゃみ | kushami | N2 | sneeze; sneezing | [short](https://youtube.com/shorts/RXQMr_2HS1g) | — |
+| 2026-11-22 | 0 | 嚏 | くしゃみ | kushami | N2 | sneeze; sneezing | [short](https://youtube.com/shorts/Q6LHOIGvJh4) | — |
