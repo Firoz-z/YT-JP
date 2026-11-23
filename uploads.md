@@ -796,3 +796,4 @@ by the pipeline after each successful upload.
 | 2026-11-22 | 2 | 嚏 | くしゃみ | kushami | N2 | sneeze; sneezing | [short](https://youtube.com/shorts/qCF7ueGzDB0) | — |
 | 2026-11-23 | 0 | 嚏 | くしゃみ | kushami | N2 | sneeze; sneezing | [short](https://youtube.com/shorts/Or4EJqS5AIY) | — |
 | 2026-11-23 | 0 | 嚏 | くしゃみ | kushami | N2 | sneeze; sneezing | [short](https://youtube.com/shorts/Q9FTD9Veodc) | — |
+| 2026-11-23 | 2 | 泳ぐ | およぐ | oyogu | N5 | to swim | [short](https://youtube.com/shorts/sTjMlCEx6sg) | — |
