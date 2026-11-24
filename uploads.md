@@ -801,3 +801,4 @@ by the pipeline after each successful upload.
 | 2026-11-24 | 0 | 嚏 | くしゃみ | kushami | N2 | sneeze; sneezing | [short](https://youtube.com/shorts/3QtT7HmHiJE) | — |
 | 2026-11-24 | 0 | 嚏 | くしゃみ | kushami | N2 | sneeze; sneezing | [short](https://youtube.com/shorts/QXx3G2QnKeo) | — |
 | 2026-11-24 | 2 | 口 | くち | kuchi | N5 | mouth | [short](https://youtube.com/shorts/39pLnmwJ6EI) | — |
+| 2026-11-24 | 3 | 果物 | くだもの | kudamono | N5 | fruit | [short](https://youtube.com/shorts/lCStW8ZtJkw) | — |
