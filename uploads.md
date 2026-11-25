@@ -804,3 +804,4 @@ by the pipeline after each successful upload.
 | 2026-11-24 | 3 | 果物 | くだもの | kudamono | N5 | fruit | [short](https://youtube.com/shorts/lCStW8ZtJkw) | — |
 | 2026-11-25 | 0 | 火曜日 | かようび | kayoubi | N5 | Tuesday | [short](https://youtube.com/shorts/qZiR7KJGamI) | — |
 | 2026-11-25 | 0 | 夏 | なつ | natsu | N5 | summer | [short](https://youtube.com/shorts/eaSqNBjd5v8) | — |
+| 2026-11-25 | 2 | 面白い | おもしろい | omoshiroi | N1 | interesting; fascinating; intriguing | [short](https://youtube.com/shorts/__OSGWyEbtw) | — |
