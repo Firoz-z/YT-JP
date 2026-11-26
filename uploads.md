@@ -806,3 +806,4 @@ by the pipeline after each successful upload.
 | 2026-11-25 | 0 | 夏 | なつ | natsu | N5 | summer | [short](https://youtube.com/shorts/eaSqNBjd5v8) | — |
 | 2026-11-25 | 2 | 面白い | おもしろい | omoshiroi | N1 | interesting; fascinating; intriguing | [short](https://youtube.com/shorts/__OSGWyEbtw) | — |
 | 2026-11-25 | 3 | 嚏 | くしゃみ | kushami | N2 | sneeze; sneezing | [short](https://youtube.com/shorts/FbB4izGcevo) | — |
+| 2026-11-26 | 0 | 鞄 | かばん | kaban | N5 | bag; satchel; briefcase | [short](https://youtube.com/shorts/gi2MFnzm5_o) | — |
