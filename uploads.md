@@ -809,3 +809,4 @@ by the pipeline after each successful upload.
 | 2026-11-26 | 0 | 鞄 | かばん | kaban | N5 | bag; satchel; briefcase | [short](https://youtube.com/shorts/gi2MFnzm5_o) | — |
 | 2026-11-26 | 0 | 鞄 | かばん | kaban | N5 | bag; satchel; briefcase | [short](https://youtube.com/shorts/s5qmbB9kVdE) | — |
 | 2026-11-26 | 2 | 嚏 | くしゃみ | kushami | N2 | sneeze; sneezing | [short](https://youtube.com/shorts/kFqTAIdP6D4) | — |
+| 2026-11-26 | 3 | 嚏 | くしゃみ | kushami | N2 | sneeze; sneezing | [short](https://youtube.com/shorts/ebr52bSkKaQ) | — |
